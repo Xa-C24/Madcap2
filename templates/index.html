@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madcap</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madcap</title>
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Lien vers Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>Bienvenue sur le site Madcap</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/histoire">Histoire</a></li>
-                <li><a href="/restauration">Restauration</a></li>
-                <li><a href="/evenements">Événements</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Découvrez le bateau Madcap</h2>
-        <p>L'association Madcap vous invite à découvrir un bateau historique restauré avec passion.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Madcap - Tous droits réservés</p>
-    </footer>
+  <header>
+    <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+      <!-- Logo à gauche -->
+      <div style="flex: 0;">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Madcap" style="height: 80px;">
+      </div>
+      <!-- Texte centré -->
+      <div style="flex: 1; text-align: center;">
+        <h1>Madcap 1874, l'unique cotre pilote encore en état de naviguer</h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/association">L'association</a></li>
+        <li><a href="/histoire">Histoire</a></li>
+        <li><a href="/don">Je fais un don</a></li>
+        <li><a href="/evenements">Événements</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Découvrez le bateau Madcap</h2>
+      <p>
+        L'association Madcap vous invite à découvrir un bateau historique restauré avec passion.
+      </p>
+    </section>
+    <section>
+      <h2>Un patrimoine maritime vivant</h2>
+      <p>
+        Le Madcap n’est pas seulement un bateau, mais un véritable trésor de l’histoire maritime. Avec des années de
+        restauration et l’amour des membres de l'association, il navigue encore aujourd'hui.
+      </p>
+    </section>
+    <section>
+      <h2>Rejoignez-nous !</h2>
+      <p>
+        Participez à nos sorties en mer et plongez dans l’histoire avec le Madcap. Inscrivez-vous pour vivre une
+        aventure inoubliable.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Madcap - Tous droits réservés</p>
+  </footer>
 </body>
+
 </html>

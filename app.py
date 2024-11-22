@@ -7,15 +7,19 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/association')
+def association():
+    return render_template('association.html')
+
 
 @app.route('/histoire')
 def histoire():
     return render_template('histoire.html')
 
 
-@app.route('/restauration')
+@app.route('/don')
 def restauration():
-    return render_template('restauration.html')
+    return render_template('don.html')
 
 
 @app.route('/evenements')
