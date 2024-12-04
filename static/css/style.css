@@ -106,3 +106,10 @@ section {
   transform: scale(1.5) rotate(20deg); /* Agrandit et incline légèrement le logo */
   filter: brightness(1.8); /* Rend le logo plus lumineux */
 }
+
+header img, .social-logo img {
+  background-color: transparent; /* Assure-toi que le fond est transparent */
+  border: none; /* Supprime toute bordure éventuelle */
+  padding: 0; /* Supprime les marges internes */
+  margin: 0; /* Supprime les marges externes */
+}
