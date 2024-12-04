@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'association - Madcap</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'association - Madcap</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
 </head>
 <body>
-    <header>
-        <h1>À propos de l'association Madcap</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/association">L'association</a></li>
-                <li><a href="/histoire">Histoire</a></li>
-                <li><a href="/don">Je fais un don</a></li>
-                <li><a href="/evenements">Événements</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Notre mission</h2>
-            <p>L'association Madcap a pour but de préserver et de partager le patrimoine maritime en maintenant en état de navigation le bateau historique Madcap.</p>
-        </section>
-        <section>
-            <h2>Nos activités</h2>
-            <p>Nous organisons des sorties en mer, des événements culturels et des ateliers éducatifs pour sensibiliser le public à l'histoire maritime.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Madcap - Tous droits réservés</p>
-    </footer>
+  {% include 'header.html' %}
+  <main>
+    <section>
+      <h2>Notre mission</h2>
+      <p>L'association Madcap a pour but de préserver et de partager le patrimoine maritime en maintenant en état de navigation le bateau historique Madcap.</p>
+    </section>
+    <section>
+      <h2>Nos activités</h2>
+      <p>Nous organisons des sorties en mer, des événements culturels et des ateliers éducatifs pour sensibiliser le public à l'histoire maritime.</p>
+    </section>
+  </main>
+  {% include 'footer.html' %}
 </body>
 </html>

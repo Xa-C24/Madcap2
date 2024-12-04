@@ -1,23 +1,20 @@
 /* Style global */
 body {
-  font-family: 'Roboto', sans-serif; /* Police moderne */
-  font-size: 12px; /* Taille globale plus petite */
-  line-height: 1.5; /* Espacement entre les lignes */
-  background-image: url("../images/test_image_fond.jpg");
-  background-size: cover; /* L'image couvre tout l'écran */
-  background-position: center; /* Centre l'image */
-  background-repeat: no-repeat; /* Empêche la répétition */
-  color: #fff; /* Change la couleur du texte pour qu'il soit lisible sur l'image */
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  background: url("../images/test_image_fond.jpg") center / cover no-repeat;
+  color: #fff;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Permet au footer de rester en bas */
-  min-height: 100vh; /* Assure que le body occupe au moins la hauteur de l'écran */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* En-tête */
 header {
-  background-color: #5b88b5;
+  background-color: #b6c5d5;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -27,39 +24,35 @@ header {
 header div {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Place le logo à gauche et le texte au centre */
-  max-width: 1200px; /* Limite la largeur totale */
-  margin: 0 auto; /* Centre le contenu horizontalement */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header img {
-  height: 80px; /* Hauteur de l'image */
-  margin-right: 20px; /* Espace entre le logo et le texte */
+  height: 80px;
+  border-radius: 50%; /* Rond si l'image est carrée */
+  margin-right: 20px;
 }
 
 header h1 {
-  font-size: 1.8em; /* Taille du titre principal */
+  font-size: 1.8em;
   margin: 0;
-  text-align: center;
-  flex: 1; /* Permet au texte de prendre l'espace restant */
+  flex: 1;
 }
 
 /* Navigation */
 nav {
-  margin-top: 15px; /* Espacement entre le titre et la navigation */
+  margin-top: 15px;
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centre les liens */
-  flex-wrap: wrap; /* Permet aux liens de passer à la ligne si l'écran est petit */
-}
-
-nav ul li {
-  margin: 5px 15px; /* Ajoute de l'espacement entre les liens */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Simplifie les marges entre les éléments */
 }
 
 nav ul li a {
@@ -67,19 +60,18 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
-  display: inline-block;
-  background-color: #34495E; /* Ajoute un fond bleu foncé aux liens */
-  border-radius: 5px; /* Arrondit les coins */
-  transition: background-color 0.3s ease; /* Transition douce pour le survol */
+  background-color: #34495E;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #2C3E50; /* Change de couleur au survol */
+  background-color: #2C3E50;
 }
 
 /* Contenu principal */
 main {
-  flex: 1; /* Fait en sorte que le contenu principal occupe tout l'espace restant */
+  flex: 1;
   padding: 20px;
   max-width: 1200px;
   margin: 20px auto;
@@ -87,8 +79,7 @@ main {
 
 main h2 {
   color: #2C3E50;
-  font-size: 1.5em; /* Taille des sous-titres */
-  margin-top: 0;
+  font-size: 1.5em;
 }
 
 main p {
@@ -99,32 +90,19 @@ main p {
 
 /* Sections */
 section {
-  background-color: transparent; /* Supprime le fond blanc */
-  color: #fff; /* Texte blanc pour qu'il soit lisible sur l'image de fond */
-  padding: 15px; /* Ajoute un espacement autour du texte */
-  margin-bottom: 20px; /* Ajoute un espace entre les sections */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Ajoute une ombre au texte pour améliorer la lisibilité */
-}
-
-/* Pied de page */
-footer {
-  background-color: #5b88b5;
+  background-color: transparent;
   color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: relative; /* Permet de positionner correctement sur des écrans longs */
-  width: 100%;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: auto; /* Pousse le footer tout en bas si le contenu est insuffisant */
+  padding: 10px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-/* Liens dans le footer */
-footer a {
-  color: #fff;
-  text-decoration: underline;
+/* Animation hover pour les logos */
+.social-logo .logo {
+  transition: transform 0.5s ease, filter 0.5s ease; /* Transition douce */
 }
 
-footer a:hover {
-  color: #F39C12;
-  text-decoration: none;
+.social-logo .logo:hover {
+  transform: scale(1.5) rotate(20deg); /* Agrandit et incline légèrement le logo */
+  filter: brightness(1.8); /* Rend le logo plus lumineux */
 }

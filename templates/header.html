@@ -1,0 +1,22 @@
+<header>
+  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+      <!-- Logo à gauche -->
+      <div style="flex: 0; margin-left: -20px;"> <!-- Décale le logo à gauche -->
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Madcap" style="height: 80px; border-radius: 50%;">
+      </div>
+      <!-- Texte centré -->
+      <div style="flex: 1; text-align: center;">
+          <h1>Madcap 1874, l'unique cotre pilote encore en état de naviguer</h1>
+      </div>
+  </div>
+  <nav>
+      <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/association">L'association</a></li>
+          <li><a href="/histoire">Histoire</a></li>
+          <li><a href="/don">Je fais un don</a></li>
+          <li><a href="/evenements">Événements</a></li>
+          <li><a href="/contact">Contact</a></li>
+      </ul>
+  </nav>
+</header>

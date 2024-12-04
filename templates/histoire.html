@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histoire du bateau - Madcap</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histoire du bateau - Madcap</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
 </head>
 <body>
-    <header>
-        <h1>Histoire du bateau Madcap</h1>
-        <nav>
-            <ul>
-              <li><a href="/">Accueil</a></li>
-              <li><a href="/association">L'association</a></li>
-              <li><a href="/histoire">Histoire</a></li>
-              <li><a href="/don">Je fais un don</a></li>
-              <li><a href="/evenements">Événements</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Une histoire riche en aventures</h2>
-        <p>Construit en 1874, le Madcap a traversé les époques. Récemment restauré, il est un témoignage vivant de l'histoire maritime.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Madcap - Tous droits réservés</p>
-    </footer>
+  {% include 'header.html' %}
+  <main>
+    <section>
+      <h2>Une histoire riche en aventures</h2>
+      <p>Construit en 1874, le Madcap a traversé les époques. Récemment restauré, il est un témoignage vivant de l'histoire maritime.</p>
+    </section>
+  </main>
+  {% include 'footer.html' %}
 </body>
 </html>
