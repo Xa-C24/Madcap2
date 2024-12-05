@@ -1,10 +1,11 @@
-/* Style global */
+/* === GLOBAL STYLES === */
+/* Style global pour la mise en page */
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
   line-height: 1.5;
   background: url("../images/test_image_fond.jpg") center / cover no-repeat;
-  color: #fff;
+  color: #b81515;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,104 +13,245 @@ body {
   min-height: 100vh;
 }
 
-/* En-tête */
-header {
-  background-color: #b6c5d5;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+h1, h2 {
+  color: #003b57; /* Bleu marine pour les titres */
+  font-weight: bold;
 }
 
+/* === HEADER STYLES === */
+.don-header {
+  background: url("../images/boat_header.jpg") center / cover no-repeat; /* Image d’en-tête */
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.don-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.don-header .subtitle {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 0;
+}
+
+/* === SECTIONS === */
+.don-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.don-section {
+  background: rgb(69, 88, 104);
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Couleur pour les titres don.html*/
+
+/* Style pour le sous-titre */
+.subtitle {
+  color: #5a0505;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre noire pour ressortir */
+  font-style: italic; /* Style en italique pour élégance */
+  font-size: 1.4em; /* Ajuste la taille du texte */
+  margin: 10px 0; /* Espacement autour */
+}
+
+.don-section h2 {
+  color: #a4b1bf; /* Blanc cassé */
+  font-size: 4.2em; /* Augmente la taille du titre */
+  font-weight: bold; /* Assure que le texte est en gras */
+  margin-bottom: 10px; /* Espacement avec le texte suivant */
+}
+
+/* Couleur pour les paragraphes */
+.don-section p {
+  color: #070707; /* Gris clair */
+}
+
+/* Couleur pour les listes */
+.don-section ul li {
+  color: #cdc7c7; /* Gris clair */
+}
+
+/* Couleur pour le texte en gras */
+.don-section ul li strong {
+  color: #5a0505;
+}
+
+
+.don-section h2 {
+  font-size: 2.0em;
+  margin-bottom: 2px;
+}
+
+.don-section p {
+  margin: 5px 0;
+}
+
+.don-list {
+  list-style: none;
+  padding: 0;
+}
+
+.don-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.don-list li:last-child {
+  border-bottom: none;
+}
+
+/* === CALL TO ACTION === */
+.call-to-action {
+  text-align: center;
+}
+
+.don-button {
+  display: inline-block;
+  background-color: #003b57;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.don-button:hover {
+  background-color: #005a87;
+}
+
+/* === HEADER STYLES === */
+/* Style de l'en-tête (header) */
+header {
+  background-color: #4f7093; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 20px 0; /* Espacement en haut et en bas */
+  text-align: center; /* Centre le texte */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Conteneur principal du header */
 header div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centre le contenu */
 }
 
+/* Logo dans le header */
 header img {
-  height: 80px;
-  border-radius: 50%; /* Rond si l'image est carrée */
-  margin-right: 20px;
+  height: 80px; /* Taille du logo */
+  border-radius: 50%; /* Forme circulaire si l'image est carrée */
+  margin-right: 20px; /* Espace à droite */
 }
 
+/* Titre principal du header */
 header h1 {
-  font-size: 1.8em;
-  margin: 0;
-  flex: 1;
+  font-size: 1.8em; /* Taille du texte */
+  margin: 0; /* Supprime les marges */
+  flex: 1; /* S'adapte à l'espace disponible */
 }
 
-/* Navigation */
+/* === NAVIGATION MENU === */
+/* Style du menu de navigation */
 nav {
   margin-top: 15px;
 }
 
+/* Liste des liens du menu */
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px; /* Simplifie les marges entre les éléments */
+  list-style: none; /* Supprime les puces */
+  padding: 0; /* Supprime les marges intérieures */
+  display: flex; /* Affichage en ligne */
+  justify-content: center; /* Centre le menu */
+  flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+  gap: 15px; /* Espace entre les éléments */
 }
 
+/* Liens du menu */
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 15px;
-  background-color: #34495E;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  color: #fff; /* Couleur du texte */
+  text-decoration: none; /* Supprime le soulignement */
+  font-weight: bold; /* Texte en gras */
+  padding: 10px 15px; /* Espacement intérieur */
+  background-color: #34495E; /* Couleur de fond */
+  border-radius: 5px; /* Coins arrondis */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour l'animation */
 }
 
+/* Animation au survol des liens */
 nav ul li a:hover {
-  background-color: #2C3E50;
+  background-color: #3971a8; /* Couleur de fond au survol */
+  transform: scale(5.60) !important; /* Effet de zoom */ 
 }
 
-/* Contenu principal */
-main {
-  flex: 1;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 20px auto;
+/* === SOCIAL MEDIA ICONS === */
+/* Style pour les logos des réseaux sociaux */
+.social-logo img {
+  display: inline-block; /* S'assure que les images s'affichent bien */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animation douce */
 }
 
-main h2 {
-  color: #2C3E50;
-  font-size: 1.5em;
-}
-
-main p {
-  margin: 10px 0;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Sections */
-section {
-  background-color: transparent;
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-/* Animation hover pour les logos */
-.social-logo .logo {
-  transition: transform 0.5s ease, filter 0.5s ease; /* Transition douce */
-}
-
-.social-logo .logo:hover {
-  transform: scale(1.5) rotate(20deg); /* Agrandit et incline légèrement le logo */
+/* Animation au survol des logos réseaux sociaux*/
+.social-logo img:hover {
+  transform: scale(1.5) rotate(20deg); /* Agrandit et incline légèrement */
   filter: brightness(1.8); /* Rend le logo plus lumineux */
 }
 
-header img, .social-logo img {
-  background-color: transparent; /* Assure-toi que le fond est transparent */
-  border: none; /* Supprime toute bordure éventuelle */
-  padding: 0; /* Supprime les marges internes */
-  margin: 0; /* Supprime les marges externes */
+/* === MAIN CONTENT === */
+/* Contenu principal */
+main {
+  flex: 1;
+  padding: 20px; /* Espacement intérieur */
+  max-width: 1200px; /* Largeur maximale */
+  margin: 20px auto; /* Centre le contenu */
+}
+
+/* Titres des sections principales */
+main h2 {
+  color: #2C3E50; /* Couleur du texte */
+  font-size: 1.5em; /* Taille du texte */
+}
+
+/* Paragraphes */
+main p {
+  margin: 10px 0; /* Espacement vertical */
+  line-height: 1.6; /* Hauteur de ligne */
+  color: #555; /* Couleur du texte */
+}
+
+/* === SECTIONS === */
+/* Style des sections */
+section {
+  background-color: transparent; /* Fond transparent */
+  color: #fff; /* Couleur du texte */
+  padding: 10px; /* Espacement intérieur */
+  margin-bottom: 20px; /* Espacement en bas */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Ombre portée sur le texte */
+}
+
+/* === FOOTER STYLES === */
+/* Style du pied de page */
+footer {
+  background-color: #34495E; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  text-align: center; /* Centre le contenu */
+  padding: 10px 0; /* Espacement en haut et en bas */
+  margin-top: auto; /* Place le footer en bas */
+}
+
+footer p {
+  margin: 0; /* Supprime les marges */
+  font-size: 0.9em; /* Taille du texte */
 }

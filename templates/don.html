@@ -10,24 +10,68 @@
 </head>
 <body>
     {% include 'header.html' %} <!-- Inclusion du header -->
-    <main style="max-width: 1200px; margin: 20px auto; padding: 0 15px;">
-        <section>
+
+    <main class="don-page">
+        <!-- Section titre principal -->
+        <header class="don-header">
+            <h1>Soutenez l'association Madcap</h1>
+            <p class="subtitle">Aidez-nous à le maintenir à flot. Ensemble, préservons un patrimoine maritime unique</p>
+        </header>
+
+        <!-- Section Pourquoi faire un don -->
+        <section class="don-section">
             <h2>Pourquoi faire un don ?</h2>
-            <p>En soutenant l'association Madcap, vous contribuez à préserver un patrimoine maritime unique et à organiser des sorties pour les passionnés.</p>
+            <p>En contribuant à l'association Madcap, vous participez à :</p>
+            <ul class="don-list">
+                <li><strong>Préserver le patrimoine maritime :</strong> maintenir le cotre pilote Madcap en état de naviguer.</li>
+                <li><strong>Organiser des sorties en mer :</strong> permettre aux passionnés de vivre une expérience unique.</li>
+                <li><strong>Partager l’histoire :</strong> transmettre notre héritage aux générations futures.</li>
+            </ul>
         </section>
-        <section>
+
+        <section class="don-section">
+          <h2>À quoi servent vos dons ?</h2>
+          <p>Les dons que vous effectuez à l'association Madcap sont essentiels pour :</p>
+          <ul>
+              <li><strong>Entretien du bateau :</strong> assurer les réparations nécessaires pour maintenir le cotre pilote en état de naviguer.</li>
+              <li><strong>Organisation des sorties en mer :</strong> financer les équipements de sécurité et l'entretien du matériel.</li>
+              <li><strong>Participation aux événements :</strong> représenter notre patrimoine lors d'expositions et de rassemblements maritimes.</li>
+              <li><strong>Préservation de l'histoire :</strong> partager l'héritage du cotre pilote à travers des actions éducatives et culturelles.</li>
+          </ul>
+      </section>
+
+        <!-- Section Avantages fiscaux -->
+        <section class="don-section">
+            <h2>Quels avantages fiscaux ?</h2>
+            <p>En faisant un don à une association d'intérêt général comme Madcap votre générosité est récompensée :</p>
+            <ul class="don-list">
+                <li><strong>Pour les particuliers :</strong> déduction fiscale de <strong>66%</strong> du montant du don, dans la limite de 20% du revenu imposable.</li>
+                <li><strong>Pour les entreprises :</strong> déduction fiscale de <strong>60%</strong> du montant, dans la limite de 0,5% du chiffre d'affaires.</li>
+            </ul>
+            <p class="note">Un reçu fiscal vous sera envoyé automatiquement après votre don.</p>
+        </section>
+
+        <!-- Section À propos de HelloAsso -->
+        <section class="don-section">
+            <h2>Qu'est-ce que HelloAsso ?</h2>
+            <p>HelloAsso est une plateforme française dédiée au financement participatif des associations. Vos dons y sont :</p>
+            <ul class="don-list">
+                <li><strong>100%</strong> sécurisés.</li>
+                <li><strong>100%</strong> gratuits pour l'association.</li>
+                <li><strong>100%</strong> dédiés à nos projets, sans frais cachés.</li>
+            </ul>
+        </section>
+
+        <!-- Section Faire un don -->
+        <section class="don-section call-to-action">
             <h2>Comment faire un don ?</h2>
-            <p>Veuillez nous contacter via la page <a href="/contact">Contact</a> ou effectuer un don en ligne via HelloAsso.</p>
-            <div style="text-align: center; margin: 20px 0;">
-                <!-- Bouton vers HelloAsso -->
-                <a href="https://www.helloasso.com/associations/madcap-1874/formulaires/1?fbclid=IwY2xjawGthMRleHRuA2FlbQIxMQABHeP_8SN0ktm1aH0gfskIJkbS9keT8l8HpSY72xkPS38MELHMya0AP4jwyw_aem_2wompJnsBZWaTVpzgfuUKg"
-                   target="_blank" 
-                   style="background-color: #2C3E50; color: white; padding: 15px 25px; text-decoration: none; font-size: 18px; border-radius: 5px; display: inline-block;">
-                    Faire un don via HelloAsso
-                </a>
-            </div>
+            <p>Cliquez sur le bouton ci-dessous pour accéder à notre formulaire de don sécurisé sur HelloAsso :</p>
+            <a href="https://www.helloasso.com/associations/madcap-1874/formulaires/1"
+               target="_blank"
+               class="don-button">Faire un don via HelloAsso</a>
         </section>
     </main>
-    {% include 'footer.html' %}
+
+    {% include 'footer.html' %} <!-- Inclusion du footer -->
 </body>
 </html>
