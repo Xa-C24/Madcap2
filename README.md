@@ -17,4 +17,8 @@ mkdir css
 
 app.py
 
+root@hey-coucou-xav:~/Madcap# pip install livereload
+Collecting livereload
+  Downloading livereload-2.7.0-py3-none-any.whl (22 kB)
+  
 README.md

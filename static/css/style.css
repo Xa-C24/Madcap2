@@ -37,7 +37,7 @@ h1, h2 {
   margin: 0;
 }
 
-/* === SECTIONS === */
+/* === SECTIONS don contact === */
 .don-page {
   max-width: 900px;
   margin: 0 auto;
@@ -85,6 +85,7 @@ h1, h2 {
 .don-section ul li strong {
   color: #5a0505;
 }
+
 
 
 .don-section h2 {
@@ -196,7 +197,7 @@ nav ul li a:hover {
   transform: scale(5.60) !important; /* Effet de zoom */ 
 }
 
-/* === SOCIAL MEDIA ICONS === */
+/* === SOCIAL MEDIA ICONS Fb Youtube === */
 /* Style pour les logos des réseaux sociaux */
 .social-logo img {
   display: inline-block; /* S'assure que les images s'affichent bien */
@@ -254,4 +255,79 @@ footer {
 footer p {
   margin: 0; /* Supprime les marges */
   font-size: 0.9em; /* Taille du texte */
+}
+
+/* === contact.html === */
+/* Contact Page Styles */
+.contact-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: center; /* Aligne verticalement les éléments */
+}
+
+.contact-info {
+  flex: 1; /* Prend tout l'espace disponible */
+}
+
+.contact-social {
+  margin-left: 20px; /* Un peu d'espace avec les infos */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center; /* Aligne verticalement les éléments */
+  justify-content: space-between; /* Espace entre le texte et le logo */
+}
+
+/* Conteneur pour les logos sociaux dans la page contact*/
+.contact-social-wrapper {
+  display: flex; /* Aligne les éléments en ligne */
+  justify-content: flex-end; /* Place les logos à droite */
+  gap: -20px; /* Espace entre les logos */
+  margin-right: 20px; /* Ajuste la marge droite du conteneur */
+  margin-top: -40px; /* Garde le positionnement vertical ajusté */
+}
+
+/* Logo Facebook */
+.contact-social.Fb img {
+  width: 40px; /* Taille du cercle */
+  height: 40px; /* Taille du cercle */
+  border-radius: 50%; /* Rend l'image ronde */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce */
+}
+
+/* Logo YouTube */
+.contact-social.YouTube img {
+  width: 35px; /* Taille du logo YouTube */
+  height: 35px;
+  border-radius: 6px; /* Bord légèrement arrondi pour le style YouTube */
+}
+
+/* Texte au-dessus des logos sociaux */
+.social-text {
+    font-size: 16px; /* Taille du texte */
+    color: #d4cbcb !important; /* Couleur rouge forcée */
+    margin-bottom: 10px; /* Espacement avec les logos */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+/* Style spécifique pour la section don-section Téléphone Adresse Email */
+.don-section p strong {
+  color: #5a0505; /* Rouge pour les labels */
+}
+
+.don-section a {
+  color: rgb(230, 218, 218); /* Change la couleur contact Email*/
+  text-decoration: yes; /* Supprime le soulignement */
+}
+
+.don-section a:hover {
+  color: #9c5f5f; /* Rouge foncé lors du survol */
+  text-decoration: underline; /* Ajoute un soulignement au survol */
 }
