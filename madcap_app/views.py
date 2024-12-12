@@ -17,3 +17,6 @@ def don(request):
 
 def histoire(request):
     return render(request, 'histoire.html')
+
+def evenements(request):
+    return render(request, 'evenements.html')

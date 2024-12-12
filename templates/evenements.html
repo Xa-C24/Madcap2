@@ -1,0 +1,23 @@
+{% load static %} <!-- inclure des fichiers statiques -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>
+        <h1>Événements</h1>
+        <p>Voici la liste des événements organisés par l'association Madcap :</p>
+        <ul>
+            <li>Événement 1 : Balade en mer - Date : 20 janvier 2024</li>
+            <li>Événement 2 : Journée découverte - Date : 15 février 2024</li>
+            <li>Événement 3 : Soirée gala - Date : 10 mars 2024</li>
+        </ul>
+    </main>
+    {% include 'footer.html' %}
+</body>
+</html>
