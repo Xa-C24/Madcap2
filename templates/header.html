@@ -1,8 +1,9 @@
+{% load static %} <!-- inclure des fichiers statiques -->
 <header>
   <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; position: relative;">
     <!-- Logo à gauche -->
     <div style="flex: 0; margin-left: -30px;">
-      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Madcap" style="height: 120px; border-radius: 50%;">
+      <img src="{% static 'images/logo.png' %}" alt="Logo Madcap" style="height: 80px;">
     </div>
 
     <!-- Texte centré -->
@@ -18,7 +19,7 @@
          target="_blank" 
          class="social-logo"
          style="text-decoration: none;">
-        <img src="{{ url_for('static', filename='images/Fb_logo2.png') }}" 
+        <img src="{% static 'images/Fb_logo2.png' %}" 
              alt="Logo Facebook"
              class="logo" 
              style="width: 35px; height: 35px;">
@@ -29,7 +30,7 @@
          target="_blank" 
          class="social-logo"
          style="text-decoration: none;">
-        <img src="{{ url_for('static', filename='images/Youtube_logo.png') }}" 
+        <img src="{% static 'images/Youtube_logo.png' %}" 
              alt="Logo YouTube" 
              class="logo" 
              style="width: 35px; height: 35px;">

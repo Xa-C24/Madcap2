@@ -1,12 +1,13 @@
+{% load static %} <!-- inclure des fichiers statiques -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Madcap</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Favicon -->
-    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
 </head>
 <body>
     {% include 'header.html' %} <!-- Inclusion du header -->
@@ -50,7 +51,7 @@
       <!-- Logo Facebook -->
       <div class="contact-social Fb">
           <a href="https://www.facebook.com/profile.php?id=100080106813212&locale=fr_FR" target="_blank" class="social-logo">
-              <img src="{{ url_for('static', filename='images/Fb_logo2.png') }}" 
+            <img src="{% static 'images/Fb_logo2.png' %}"
                    alt="Logo Facebook" 
                    class="logo" 
                    style="width: 35px; height: 35px;">
@@ -59,7 +60,7 @@
       <!-- Logo YouTube -->
       <div class="contact-social YouTube">
           <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank" class="social-logo">
-              <img src="{{ url_for('static', filename='images/Youtube_logo.png') }}" 
+            <img src="{% static 'images/Youtube_logo.png' %}"
                    alt="Logo YouTube" 
                    class="logo" 
                    style="width: 35px; height: 35px;">
