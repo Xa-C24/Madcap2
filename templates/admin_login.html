@@ -1,0 +1,29 @@
+{% load static %} <!-- inclure des fichiers statiques -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Admin</title>
+</head>
+<body>
+    <h1>Connexion Administrateur</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="email">Adress e-mail :</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Se connecter</button>
+    </form>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
