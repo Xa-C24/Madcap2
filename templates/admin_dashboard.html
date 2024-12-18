@@ -14,6 +14,7 @@
                 <th>Nom</th>
                 <th>Adresse</th>
                 <th>Téléphone</th>
+                <th>Membre depuis</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <td>{{ member.name }}</td>
                 <td>{{ member.address }}</td>
                 <td>{{ member.phone }}</td>
+                <td>{{ member.date_entree }}</td>
             </tr>
             {% endfor %}
         </tbody>

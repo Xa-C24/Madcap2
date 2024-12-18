@@ -12,7 +12,6 @@ urlpatterns = [
 
 
     # Routes spécifiques à l'administration
-    path('admin/', admin.site.urls),  # Interface admin par défaut
     path('admin-login/', views.admin_login, name='admin_login'),
     path('admin-dashboard/', views.admin_dashboard, name='admin_dashboard'),
 ]
