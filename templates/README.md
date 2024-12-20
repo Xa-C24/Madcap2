@@ -35,7 +35,8 @@ Lancer le shell de la base de données : python3 manage.py dbshell
     Insérer un membre avec une requête SQL :
     INSERT INTO madcap_app_member (name, address, phone) VALUES ('Xavier Dupont', '123 Rue de Paris, France', '0123456789');
     INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Thierry ROUSSELET', 'Avenue de Sceau, 92330', '06 63 02 09 82', '2020-02-01');
-
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Skipper Christian HURREAU', '..., 0000', '06 86 14 39 55', '2020-02-01');
+    
     Vérifier les données insérées :
     SELECT * FROM madcap_app_member;
 

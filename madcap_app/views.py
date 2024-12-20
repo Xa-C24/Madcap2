@@ -1,11 +1,31 @@
+# Importation de la fonction render pour générer des réponses HTTP à l'aide de modèles
 from django.shortcuts import render, redirect
+
+# Importation des fonctions pour authentifier un utilisateur et gérer les sessions
 from django.contrib.auth import authenticate, login
+
+# Importation pour afficher des messages flash (ex : erreurs ou confirmations)
 from django.contrib import messages
+
+# Importation du décorateur pour restreindre l'accès aux utilisateurs connectés
 from django.contrib.auth.decorators import login_required
+
+# Importation du modèle Member défini dans le fichier models.py
 from .models import Member
+
+# Importation du modèle User fourni par Django pour gérer les utilisateurs
 from django.contrib.auth.models import User
 
-# Create your views here.
+# Importation pour permettre des recherches complexes sur plusieurs champs
+from django.db.models import Q  # Pour les recherches multi-critères
+
+# Importation pour générer des réponses JSON, utile pour les API ou les requêtes AJAX
+from django.http import JsonResponse
+
+# Importation pour charger un modèle en tant que chaîne de caractères
+from django.template.loader import render_to_string
+
+# créer des réponses HTML à partir de templates
 from django.shortcuts import render
 
 
@@ -64,10 +84,29 @@ def admin_login(request):
     return render(request, 'admin_login.html')
 
 
+# Gestion des utilisateurs
 @login_required
 def admin_dashboard(request):
     if not request.user.is_staff:  # Vérifie si l'utilisateur est admin
         return redirect('admin_login')
-    # Récupération des données des membres
-    members = Member.objects.all()  # Assurez-vous que vous avez un modèle `Member`
-    return render(request, 'admin_dashboard.html', {'members': members})
+    
+    query = request.GET.get('q','').strip()  # Récupère la recherche et supprime les espaces inutiles
+
+    if query:   # Si la barre de recherche contient un texte
+        members = Member.objects.filter(
+           Q(name__icontains=query) |
+           Q(address__icontains=query) 
+        ).order_by('name')
+
+    # Récupération des données des membres triées par ordre alphabétique
+
+    else: # Si la barre de recherche est vide
+        members = Member.objects.all().order_by('name')
+
+    # Si la requête est AJAX (via XMLHttpRequest)
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        html = render_to_string('partials/members_table.html', {'members': members})
+        print(f"HTML retourné pour AJAX :\n{html}")
+        return JsonResponse({'html': html})
+    
+    return render(request, 'admin_dashboard.html', {'members': members, 'query': query})

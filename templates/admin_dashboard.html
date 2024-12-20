@@ -1,14 +1,29 @@
-{% load static %} <!-- inclure des fichiers statiques -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
     <title>Tableau de Bord Admin</title>
+    <script src="{% static 'js/search.js' %}"></script>
 </head>
 <body>
     <h1>Tableau de Bord Administrateur</h1>
-    <table>
+    <form method="get" action="{% url 'admin_dashboard' %}">
+      <input 
+          type="text" 
+          id="search-input" 
+          name="q" 
+          placeholder="Rechercher un membre..." 
+          value="{{ query }}" 
+          onkeyup="searchMembers()"
+          aria-label="Rechercher un membre"> 
+      <button type="submit">Rechercher</button>
+  </form>
+  
+    <div id="members-table">
+      <table>
         <thead>
             <tr>
                 <th>Nom</th>
@@ -28,5 +43,7 @@
             {% endfor %}
         </tbody>
     </table>
+     
+    </div>
 </body>
 </html>
