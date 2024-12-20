@@ -68,18 +68,18 @@ Si tout va bien, membre supprimer a la base de données par l'ID
 
 Lancer le shell de la base de données : python3 manage.py dbshell
 
-Affichez tous les membres pour identifier celui que vous voulez modifier :
-    SELECT * FROM madcap_app_member;
+    Affichez tous les membres pour identifier celui que vous voulez modifier :
+        SELECT * FROM madcap_app_member;
 
 
-Pour mettre à jour le numéro de téléphone d'un membre, utilisez la commande SQL UPDATE. Par exemple, si l'ID du membre est 1 :
-      UPDATE madcap_app_member 
-      SET phone = '0987654321'
-      WHERE id = 1;
+    Pour mettre à jour le numéro de téléphone d'un membre, utilisez la commande SQL UPDATE. Par exemple, si l'ID du membre est 1 :
+          UPDATE madcap_app_member 
+          SET phone = '0987654321'
+          WHERE id = 1;
 
 
-Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
-      SELECT * FROM madcap_app_member;
+    Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
+          SELECT * FROM madcap_app_member;
 
-Une fois les modifications terminées, quittez le shell avec :
-      .quit
+    Une fois les modifications terminées, quittez le shell avec :
+          .quit
