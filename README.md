@@ -35,7 +35,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
     Insérer un membre avec une requête SQL :
     INSERT INTO madcap_app_member (name, address, phone) VALUES ('Xavier Dupont', '123 Rue de Paris, France', '0123456789');
     INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Thierry ROUSSELET', 'Avenue de Sceau, 92330', '06 63 02 09 82', '2020-02-01');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Skipper Christian HURREAU', '..., 0000', '06 86 14 39 55', '2020-02-01');
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Skipper Christian HURREAU', 'Face au port, 06700', '06 86 14 39 55', '2020-02-01');
     
     Vérifier les données insérées :
     SELECT * FROM madcap_app_member;
@@ -68,18 +68,21 @@ Si tout va bien, membre supprimer a la base de données par l'ID
 
 Lancer le shell de la base de données : python3 manage.py dbshell
 
-    Affichez tous les membres pour identifier celui que vous voulez modifier :
-        SELECT * FROM madcap_app_member;
+Affichez tous les membres pour identifier celui que vous voulez modifier :
+    SELECT * FROM madcap_app_member;
 
 
-    Pour mettre à jour le numéro de téléphone d'un membre, utilisez la commande SQL UPDATE. Par exemple, si l'ID du membre est 1 :
-          UPDATE madcap_app_member 
-          SET phone = '0987654321'
-          WHERE id = 1;
+Pour mettre à jour le numéro de téléphone d'un membre, utilisez la commande SQL UPDATE. Par exemple, si l'ID du membre est 1 :
+      UPDATE madcap_app_member 
+      SET phone = '0987654321'
+      WHERE id = 1;
 
 
-    Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
-          SELECT * FROM madcap_app_member;
+Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
+      SELECT * FROM madcap_app_member;
 
-    Une fois les modifications terminées, quittez le shell avec :
-          .quit
+Une fois les modifications terminées, quittez le shell avec :
+      .quit
+
+
+Markdown Extension Pack

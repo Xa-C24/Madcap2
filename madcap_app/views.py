@@ -89,24 +89,34 @@ def admin_login(request):
 def admin_dashboard(request):
     if not request.user.is_staff:  # Vérifie si l'utilisateur est admin
         return redirect('admin_login')
-    
-    query = request.GET.get('q','').strip()  # Récupère la recherche et supprime les espaces inutiles
 
-    if query:   # Si la barre de recherche contient un texte
+    # Charge tous les membres pour l'affichage initial
+    members = Member.objects.all().order_by('name')
+    
+    return render(request, 'admin_dashboard.html', {'members': members})
+
+
+
+
+def search_members(request):
+    query = request.GET.get('q', '').strip()  # Récupère la recherche en supprimant les espaces inutiles
+    if query:
         members = Member.objects.filter(
-           Q(name__icontains=query) |
-           Q(address__icontains=query) 
-        ).order_by('name')
+            Q(name__icontains=query) |  # Recherche partielle sur le nom
+            Q(address__icontains=query)  # Recherche partielle sur l'adresse
+        ).order_by('name')  # Tri alphabétique
+    else:
+        members = Member.objects.all().order_by('name')  # Tous les membres si aucun filtre
 
-    # Récupération des données des membres triées par ordre alphabétique
+    # Préparer les données au format JSON
+    results = [
+        {
+            'name': member.name,
+            'address': member.address,
+            'phone': member.phone,
+            'date_entree': member.date_entree.strftime('%b. %d, %Y') if member.date_entree else ''
+        }
+        for member in members
+    ]
 
-    else: # Si la barre de recherche est vide
-        members = Member.objects.all().order_by('name')
-
-    # Si la requête est AJAX (via XMLHttpRequest)
-    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-        html = render_to_string('partials/members_table.html', {'members': members})
-        print(f"HTML retourné pour AJAX :\n{html}")
-        return JsonResponse({'html': html})
-    
-    return render(request, 'admin_dashboard.html', {'members': members, 'query': query})
+    return JsonResponse({'results': results})

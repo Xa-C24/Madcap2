@@ -17,9 +17,7 @@
           name="q" 
           placeholder="Rechercher un membre..." 
           value="{{ query }}" 
-          onkeyup="searchMembers()"
           aria-label="Rechercher un membre"> 
-      <button type="submit">Rechercher</button>
   </form>
   
     <div id="members-table">
@@ -45,5 +43,50 @@
     </table>
      
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Importation de la bibliothèque jQuery -->
+<script>
+    $(document).ready(function () {
+        // Lorsque le document est entièrement chargé
+        $("#search-input").on("input", function () {
+            // Récupère la valeur entrée dans le champ de recherche
+            const query = $(this).val();
+
+            // Affiche un message temporaire indiquant que le chargement est en cours
+            $("#members-table tbody").html("<tr><td colspan='4'>Chargement...</td></tr>");
+
+            // Envoie une requête AJAX pour effectuer la recherche
+            $.ajax({
+                url: "{% url 'search_members' %}",  // URL de la vue Django qui gère la recherche
+                data: { q: query },  // Envoie la recherche comme paramètre à la vue
+                success: function (data) {
+                    // Récupère les résultats retournés par le serveur
+                    let results = data.results;
+                    let tableRows = "";
+
+                    // Parcourt les résultats et génère les lignes HTML pour le tableau
+                    results.forEach(member => {
+                        tableRows += `
+                            <tr>
+                                <td>${member.name}</td>
+                                <td>${member.address}</td>
+                                <td>${member.phone}</td>
+                                <td>${member.date_entree}</td>
+                            </tr>`;
+                    });
+
+                    // Met à jour le contenu du tableau avec les nouvelles lignes
+                    $("#members-table tbody").html(tableRows);
+                },
+                error: function () {
+                    // En cas d'erreur, affiche un message d'erreur dans le tableau
+                    console.error("Erreur lors de la récupération des résultats.");
+                    $("#members-table tbody").html("<tr><td colspan='4'>Une erreur est survenue.</td></tr>");
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>

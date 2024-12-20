@@ -14,4 +14,5 @@ urlpatterns = [
     # Routes spécifiques à l'administration
     path('admin-login/', views.admin_login, name='admin_login'),
     path('admin-dashboard/', views.admin_dashboard, name='admin_dashboard'),
+    path('search-members/', views.search_members, name='search_members'),  # Route pour la recherche
 ]
