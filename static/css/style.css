@@ -153,8 +153,8 @@ header div {
 
 /* Logo dans le header */
 header img {
-  height: 80px; /* Taille du logo */
-  border-radius: 50%; /* Forme circulaire si l'image est carrée */
+  height: 30px; /* Taille du logo */
+  border-radius: 90%; /* Forme circulaire si l'image est carrée */
   margin-right: 20px; /* Espace à droite */
 }
 
