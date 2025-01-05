@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
     <title>Connexion Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Connexion Administrateur</h1>
+  {% include 'header.html' %}
+    <h1 class="admin-title">Connexion Administrateur</h1>
+    <section class="don-section login-form-container">
     <form method="POST">
         {% csrf_token %}
         <label for="email">Adress e-mail :</label>
@@ -15,15 +20,18 @@
         
         <label for="password">Mot de passe :</label>
         <input type="password" id="password" name="password" required>
-        
-        <button type="submit">Se connecter</button>
+      
+        <button type="submit" class="don-button"> Connexion</button>
+      
     </form>
+  </section>
     {% if messages %}
-    <ul>
+    <ul class="flash-messages">
         {% for message in messages %}
             <li>{{ message }}</li>
         {% endfor %}
     </ul>
     {% endif %}
+    {% include 'footer.html' %}
 </body>
 </html>

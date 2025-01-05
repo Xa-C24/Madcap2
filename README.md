@@ -86,3 +86,5 @@ Une fois les modifications terminées, quittez le shell avec :
 
 
 Markdown Extension Pack
+pip install django-livereload-server
+python3 manage.py livereload

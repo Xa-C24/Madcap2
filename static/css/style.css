@@ -45,7 +45,7 @@ h1, h2 {
 }
 
 .don-section {
-  background: rgb(69, 88, 104);
+  background: #455868;
   border: 1px solid #e0e0e0;
   padding: 20px;
   border-radius: 10px;
@@ -165,6 +165,35 @@ header h1 {
   flex: 1; /* S'adapte à l'espace disponible */
 }
 
+.admin-button {
+  position: absolute; /* Permet de positionner précisément */
+  bottom: 10px; /* Distance par rapport au bas du conteneur */
+  right: 10px; /* Distance par rapport au bord droit du conteneur */
+  background-color: #fbfbfb; /* Couleur de fond */
+  color: #e9db1c; /* Couleur du texte */
+  padding: 0px 3px; /* Espacement interne */
+  font-size: 1em; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  font-style: italic; /* Texte en italique */
+  text-decoration: none; /* Supprime le soulignement */
+  border: 2px solid #f2f1ec; /* Couleur Bordure */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ajoute une ombre douce */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animation pour l'interaction */
+}
+
+.admin-button:hover {
+  background-color: #e9db1c; /* Couleur au survol */
+  border-color: #eae8e4; /* Change aussi la couleur de la bordure au survol */
+  transform: scale(1.1); /* Agrandissement au survol */
+  color: #333; /* Texte un peu plus foncé au survol */
+}
+
+header {
+  position: relative; /* Définit le conteneur de référence pour le positionnement absolu */
+}
+
+
 /* === NAVIGATION MENU === */
 /* Style du menu de navigation */
 nav {
@@ -261,38 +290,37 @@ footer p {
 /* === contact.html === */
 /* Contact Page Styles */
 .contact-page {
-  max-width: 900px;
+  max-width: 900px !important;
   margin: 0 auto;
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour de la section */
 }
 
-.contact-content {
-  display: flex;
-  justify-content: space-between; /* Espace entre les éléments */
-  align-items: center; /* Aligne verticalement les éléments */
+/* === Section contact-section === */
+.contact-section {
+  background-color: #2c3e50; /* Bleu foncé pour le fond */
+  color: white; /* Texte blanc */
+  padding: 20px;
+  border-radius: 10px; /* Coins arrondis */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce */
 }
 
-.contact-info {
-  flex: 1; /* Prend tout l'espace disponible */
+/* Titres des sections */
+.contact-section h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #e5e5e5; /* Gris clair */
+  margin-bottom: 15px;
 }
 
-.contact-social {
-  margin-left: 20px; /* Un peu d'espace avec les infos */
-}
-
-.contact-info {
-  display: flex;
-  align-items: center; /* Aligne verticalement les éléments */
-  justify-content: space-between; /* Espace entre le texte et le logo */
-}
-
-/* Conteneur pour les logos sociaux dans la page contact*/
-.contact-social-wrapper {
-  display: flex; /* Aligne les éléments en ligne */
-  justify-content: flex-end; /* Place les logos à droite */
-  gap: -20px; /* Espace entre les logos */
-  margin-right: 20px; /* Ajuste la marge droite du conteneur */
-  margin-top: -40px; /* Garde le positionnement vertical ajusté */
+/* Paragraphes */
+.contact-section p {
+  color: #dcdcdc; /* Gris clair */
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
 /* Logo Facebook */
@@ -331,4 +359,125 @@ footer p {
 .don-section a:hover {
   color: #9c5f5f; /* Rouge foncé lors du survol */
   text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+
+/* === Section admin_login === */
+/* === Admin Login Page === */
+/* Conteneur principal pour la page de connexion admin */
+.admin-login-page {
+  max-width: 600px; /* Largeur maximale du conteneur */
+  margin: 50px auto; /* Centré horizontalement avec un espacement vertical */
+  padding: 20px; /* Espacement interne */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+/* Style des titres dans la page de connexion admin */
+.admin-login-page h2 {
+  font-size: 2em; /* Taille de la police */
+  color: #4b5255; /* Couleur grise pour le titre */
+  margin-bottom: 15px; /* Espacement avec l'élément suivant */
+}
+
+/* Style des champs de saisie dans la page admin */
+.admin-login-page input[type="text"], 
+.admin-login-page input[type="password"] {
+  width: 100%; /* Les champs occupent toute la largeur du conteneur */
+  padding: 10px; /* Espacement interne */
+  margin-bottom: 15px; /* Espacement entre chaque champ */
+  border: 1px solid #ccc; /* Bordure grise claire */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+/* Style des boutons dans la page admin */
+.admin-login-page button {
+  background: #003b57; /* Couleur de fond bleu foncé */
+  color: white; /* Texte blanc */
+  padding: 10px 20px; /* Espacement interne */
+  border: none; /* Supprime la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Change le curseur en pointeur */
+}
+
+/* Style au survol des boutons */
+.admin-login-page button:hover {
+  background: #005a87; /* Change la couleur de fond au survol */
+}
+
+/* === Login Form Container === */
+/* Conteneur principal du formulaire de connexion */
+.login-form-container {
+  max-width: 350px; /* Largeur maximale du formulaire */
+  margin: 0 auto; /* Centré horizontalement */
+  padding: 30px; /* Marges internes */
+  background: #455868; /* Couleur de fond gris-bleu */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce autour du conteneur */
+}
+
+/* Style des labels pour les champs */
+.login-form-container label {
+  display: block; /* Chaque label occupe une ligne distincte */
+  text-align: left; /* Texte aligné à gauche */
+  margin-bottom: 5px; /* Espacement entre le label et le champ */
+  font-weight: bold; /* Texte en gras */
+  color: #ffffff; /* Couleur blanche pour le texte */
+}
+
+/* Style des champs de saisie (e-mail et mot de passe) */
+.login-form-container input[type="email"],
+.login-form-container input[type="password"] {
+  display: block; /* Chaque champ occupe une ligne distincte */
+  width: 100%; /* Largeur totale */
+  padding: 10px; /* Espacement interne */
+  font-size: 14px; /* Taille du texte */
+  text-align: left; /* Texte aligné à gauche */
+  border: 1px solid #ccc; /* Bordure grise claire */
+  border-radius: 5px; /* Coins arrondis */
+  margin-bottom: 25px; /* Espacement entre les champs */
+}
+
+/* Effet visuel lors du focus sur les champs */
+.login-form-container input:focus {
+  outline: none; /* Supprime le contour par défaut */
+  border-color: #0b0b0b; /* Change la couleur de la bordure */
+  box-shadow: 0 0 5px rgba(0, 90, 135, 0.5); /* Ajoute une ombre lumineuse */
+}
+
+/* Style du bouton de connexion */
+.login-form-container .don-button {
+  width: 90%; /* Largeur réduite à 60% du conteneur */
+  padding: 8px; /* Marges internes */
+  font-size: 14px; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  text-transform: uppercase; /* Texte en majuscules */
+  color: #fff; /* Texte blanc */
+  background-color: #4b6b7b; /* Couleur de fond gris-bleu */
+  border: none; /* Supprime la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Change le curseur en pointeur */
+  margin: 0 auto; /* Centre le bouton dans le conteneur */
+  display: block; /* Permet de centrer horizontalement */
+}
+
+/* Effet visuel au survol du bouton de connexion */
+.login-form-container .don-button:hover {
+  background-color: #003b57; /* Change la couleur de fond au survol */
+}
+
+/* Centrer "Connexion administrateur" */
+.admin-title {
+  text-align: center; /* Aligne le titre à droite dans un conteneur flex */
+  font-size: 2em; /* Ajuste la taille si nécessaire */
+  color: #003b57; /* Couleur du texte */
+}
+
+/* Centrer message d'erreur d'identification de connexion */
+.flash-messages {
+  text-align: center; /* Centre le texte horizontalement */
+  margin: 20px auto; /* Ajoute un espacement autour du conteneur */
+}
+.flash-messages li {
+  font-size: 1.2em; /* Taille du texte */
+  color: red; /* Texte en rouge pour signaler une erreur */
 }
