@@ -13,10 +13,6 @@ body {
   min-height: 100vh;
 }
 
-h1, h2 {
-  color: #003b57; /* Bleu marine pour les titres */
-  font-weight: bold;
-}
 
 /* === HEADER STYLES === */
 .don-header {
@@ -53,63 +49,78 @@ h1, h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Couleur pour les titres don.html*/
-
-/* Style pour le sous-titre */
-.subtitle {
-  color: #5a0505;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre noire pour ressortir */
-  font-style: italic; /* Style en italique pour élégance */
-  font-size: 1.4em; /* Ajuste la taille du texte */
-  margin: 10px 0; /* Espacement autour */
+h1, h2 {
+  color: #003b57; /* Bleu marine pour les titres */
+  font-weight: bold;
 }
 
+/* === HEADER STYLES === */
+.don-header {
+  background: url("../images/boat_header.jpg") center / cover no-repeat; /* Image d’en-tête */
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.don-header h1 {
+  font-size: 2.8em; /* Augmenté pour une meilleure hiérarchisation */
+  margin-bottom: 10px;
+}
+
+.don-header .subtitle {
+  font-size: 1.4em; /* Ajusté pour plus de visibilité */
+  font-style: italic;
+  margin: 0;
+  color: #f4f4f4; /* Contraste amélioré */
+}
+
+/* === SECTIONS DON === */
+.don-page {
+  max-width: 1000px; /* Augmenté pour un affichage plus aéré */
+  margin: 0 auto;
+  padding: 30px; /* Espacement augmenté */
+}
+
+.don-section {
+  background: #455868;
+  border: 1px solid #e0e0e0;
+  padding: 25px; /* Ajout d’espace interne */
+  border-radius: 12px; /* Coins arrondis accentués */
+  margin-bottom: 25px; /* Espacement entre sections augmenté */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); /* Ombre renforcée */
+}
+
+/* Modification ajoutée : animation au survol */
+.don-section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sous-titre */
 .don-section h2 {
-  color: #a4b1bf; /* Blanc cassé */
-  font-size: 4.2em; /* Augmente la taille du titre */
-  font-weight: bold; /* Assure que le texte est en gras */
-  margin-bottom: 10px; /* Espacement avec le texte suivant */
+  font-size: 2.2em; /* Augmenté légèrement */
+  color: #a4b1bf;
+  margin-bottom: 15px; /* Ajout d’espace après le titre */
 }
 
-/* Couleur pour les paragraphes */
+/* Paragraphes */
 .don-section p {
-  color: #070707; /* Gris clair */
+  color: #070707;
+  font-size: 1.1em; /* Augmenté pour une meilleure lisibilité */
+  margin-bottom: 10px; /* Ajout d’espace */
+  line-height: 1.8; /* Espacement des lignes augmenté */
 }
 
-/* Couleur pour les listes */
+/* Listes */
 .don-section ul li {
-  color: #cdc7c7; /* Gris clair */
+  color: #cdc7c7;
+  font-size: 1.1em; /* Taille augmentée */
+  margin-bottom: 8px; /* Ajout d’espace entre les éléments */
 }
 
-/* Couleur pour le texte en gras */
 .don-section ul li strong {
-  color: #5a0505;
-}
-
-
-
-.don-section h2 {
-  font-size: 2.0em;
-  margin-bottom: 2px;
-}
-
-.don-section p {
-  margin: 5px 0;
-}
-
-.don-list {
-  list-style: none;
-  padding: 0;
-}
-
-.don-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.don-list li:last-child {
-  border-bottom: none;
+  color: #721f1f;
 }
 
 /* === CALL TO ACTION === */
@@ -122,15 +133,63 @@ h1, h2 {
   background-color: #003b57;
   color: white;
   text-decoration: none;
-  padding: 15px 25px;
-  border-radius: 5px;
+  padding: 15px 30px; /* Augmenté pour plus de confort */
+  border-radius: 8px; /* Coins plus arrondis */
   font-size: 1.2em;
-  transition: background-color 0.3s ease;  /* shadow box*/
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animation au survol */
 }
 
 .don-button:hover {
   background-color: #005a87;
+  transform: scale(1.05); /* Légère augmentation au survol */
 }
+
+/* === FOOTER STYLES === */
+footer {
+  background-color: #34495E;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0; /* Augmenté pour un meilleur espacement */
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95em; /* Légèrement augmenté */
+}
+
+/* === AMÉLIORATION MOBILE === */
+@media (max-width: 768px) {
+  .don-page {
+    padding: 15px;
+  }
+
+  .don-header h1 {
+    font-size: 2em; /* Taille réduite pour mobile */
+  }
+
+  .don-header .subtitle {
+    font-size: 1em; /* Taille réduite pour mobile */
+  }
+
+  .don-section {
+    padding: 15px;
+  }
+
+  .don-section h2 {
+    font-size: 1.6em; /* Ajusté pour mobile */
+  }
+
+  .don-section p, .don-section ul li {
+    font-size: 1em;
+  }
+
+  .don-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
 
 /* === HEADER STYLES === */
 /* Style de l'en-tête (header) */
@@ -224,7 +283,7 @@ nav ul li a {
 /* Animation au survol des liens */
 nav ul li a:hover {
   background-color: #3971a8; /* Couleur de fond au survol */
-  transform: scale(5.60) !important; /* Effet de zoom */ 
+  transform: scale(1.60) !important; /* Effet de zoom */ 
 }
 
 /* === SOCIAL MEDIA ICONS Fb Youtube === */
@@ -280,6 +339,8 @@ footer {
   text-align: center; /* Centre le contenu */
   padding: 10px 0; /* Espacement en haut et en bas */
   margin-top: auto; /* Place le footer en bas */
+  font-size: 0.9em; /* Taille du texte légèrement augmentée */
+  line-height: 1.4; /* Lisibilité améliorée */
 }
 
 footer p {
@@ -481,3 +542,4 @@ footer p {
   font-size: 1.2em; /* Taille du texte */
   color: red; /* Texte en rouge pour signaler une erreur */
 }
+

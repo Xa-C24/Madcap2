@@ -34,8 +34,9 @@ Lancer le shell de la base de données : python3 manage.py dbshell
 
     Insérer un membre avec une requête SQL :
     INSERT INTO madcap_app_member (name, address, phone) VALUES ('Xavier Dupont', '123 Rue de Paris, France', '0123456789');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Thierry ROUSSELET', 'Avenue de Sceau, 92330', '06 63 02 09 82', '2020-02-01');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Skipper Christian HURREAU', 'Face au port, 06700', '06 86 14 39 55', '2020-02-01');
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('ROUSSELET Thierry ', 'Avenue de Sceau, 92330', '06 63 02 09 82', '2020-02-01');
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('HURREAU Christian Skipper', 'Face au port, 06700', '06 86 14 39 55', '2020-02-01');
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Piedallu Xavier  Developpeur site Web ', 'Bellevaux , 74470', '06 87 74 02 73', '2025-01-01');
     
     Vérifier les données insérées :
     SELECT * FROM madcap_app_member;
@@ -53,7 +54,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
       SELECT * FROM madcap_app_member;
 
      Supprimer un membre par son ID : Par exemple, pour supprimer le membre avec l'ID (1) par exemple:
-      DELETE FROM madcap_app_member WHERE id = 3;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (5, 7, 8, 9); 
+      DELETE FROM madcap_app_member WHERE id = 3;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (1, 2, 4); 
     
       Vérifier que le membre a été supprimé :
       SELECT * FROM madcap_app_member;
@@ -76,6 +77,17 @@ Pour mettre à jour le numéro de téléphone d'un membre, utilisez la commande 
       UPDATE madcap_app_member 
       SET phone = '0987654321'
       WHERE id = 1;
+
+
+---Modifier le Nom Prénom d'un membre---
+
+Lancer le shell de la base de données : python3 manage.py dbshell
+
+  SELECT * FROM madcap_app_member WHERE id = 1;
+
+  UPDATE madcap_app_member
+  SET name = 'Nouveau Nom'
+  WHERE id = 1;
 
 
 Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :

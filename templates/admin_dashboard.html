@@ -7,9 +7,18 @@
     <title>Tableau de Bord Admin</title>
     <script src="{% static 'js/search.js' %}"></script>
     <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Tableau de Bord Administrateur</h1>
+        <!-- Logo cliquable -->
+        <a href="{% url 'index' %}" style="position: absolute; top: 60px; left: 80px;">
+          <img src="{% static 'images/logo.png' %}" alt="Logo" style="width: 99px; height: 99px; border-radius: 50%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+        </a>
+        
+    <h1>Tableau de Bord Administrateur </h1>
+    <h1> Liste des Membres <span>⚓⚓</span></h1>
     <form method="get" action="{% url 'admin_dashboard' %}">
       <input 
           type="text" 
@@ -18,31 +27,35 @@
           placeholder="Rechercher un membre..." 
           value="{{ query }}" 
           aria-label="Rechercher un membre"> 
+  
   </form>
   
-    <div id="members-table">
-      <table>
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Adresse</th>
-                <th>Téléphone</th>
-                <th>Membre depuis</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for member in members %}
-            <tr>
-                <td>{{ member.name }}</td>
-                <td>{{ member.address }}</td>
-                <td>{{ member.phone }}</td>
-                <td>{{ member.date_entree }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+  <div id="members-table">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Nom - Prenom - Fonction</th>
+          <th>Adresse</th>
+          <th>Téléphone</th>
+          <th>Membre depuis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Boucle Django pour afficher les membres -->
+        {% for member in members %}
+        <tr>
+          <td>{{ member.name }}</td>
+          <td>{{ member.address }}</td>
+          <td>{{ member.phone }}</td>
+          <td>{{ member.date_entree|date:"d F Y" }}</td>
+        </tr>
+        {% endfor %}
+        <!-- Fin de la boucle -->
+      </tbody>
     </table>
-     
-    </div>
+  </div>
+      
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Importation de la bibliothèque jQuery -->
 <script>
