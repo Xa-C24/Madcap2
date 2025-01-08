@@ -1,3 +1,4 @@
+
 /* === GLOBAL STYLES === */
 /* Style global pour la mise en page */
 body {
@@ -23,7 +24,7 @@ body {
 }
 
 .don-header h1 {
-  font-size: 2.5em;
+  font-size: .5em;
   margin-bottom: 10px;
 }
 
@@ -53,6 +54,10 @@ h1, h2 {
   color: #003b57; /* Bleu marine pour les titres */
   font-weight: bold;
 }
+.don-list li {
+  background: url("../images/icon-check.png") no-repeat left center;
+  padding-left: 25px;
+}
 
 /* === HEADER STYLES === */
 .don-header {
@@ -71,14 +76,14 @@ h1, h2 {
   font-size: 1.4em; /* Ajusté pour plus de visibilité */
   font-style: italic;
   margin: 0;
-  color: #f4f4f4; /* Contraste amélioré */
+  color: #702323; /* Contraste amélioré */
 }
 
 /* === SECTIONS DON === */
 .don-page {
   max-width: 1000px; /* Augmenté pour un affichage plus aéré */
   margin: 0 auto;
-  padding: 30px; /* Espacement augmenté */
+  padding: 90px; /* Espacement augmenté */
 }
 
 .don-section {
@@ -120,8 +125,9 @@ h1, h2 {
 }
 
 .don-section ul li strong {
-  color: #721f1f;
+  color: #9e2020;
 }
+
 
 /* === CALL TO ACTION === */
 .call-to-action {
@@ -224,34 +230,78 @@ header h1 {
   flex: 1; /* S'adapte à l'espace disponible */
 }
 
-.admin-button {
-  position: absolute; /* Permet de positionner précisément */
-  bottom: 10px; /* Distance par rapport au bas du conteneur */
-  right: 10px; /* Distance par rapport au bord droit du conteneur */
-  background-color: #fbfbfb; /* Couleur de fond */
-  color: #e9db1c; /* Couleur du texte */
-  padding: 0px 3px; /* Espacement interne */
-  font-size: 1em; /* Taille du texte */
-  font-weight: bold; /* Texte en gras */
-  font-style: italic; /* Texte en italique */
-  text-decoration: none; /* Supprime le soulignement */
-  border: 2px solid #f2f1ec; /* Couleur Bordure */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ajoute une ombre douce */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Animation pour l'interaction */
-}
 
-.admin-button:hover {
-  background-color: #e9db1c; /* Couleur au survol */
-  border-color: #eae8e4; /* Change aussi la couleur de la bordure au survol */
-  transform: scale(1.1); /* Agrandissement au survol */
-  color: #333; /* Texte un peu plus foncé au survol */
-}
 
 header {
   position: relative; /* Définit le conteneur de référence pour le positionnement absolu */
 }
 
+/* Bandeau supérieur (en haut du header) */
+.top-bar {
+  background-color: #34495E; /* Couleur du bandeau */
+  height: 44px; /* Hauteur du bandeau */
+  display: flex; /* Flexbox pour aligner les éléments */
+  align-items: center; /* Centrage vertical */
+  justify-content: flex-start; /* Aligne les éléments à gauche */
+  padding-left: 74%; /* Ajoute un espacement horizontal (gauche et droite) */
+  gap: 15px; /* Espacement uniforme entre les éléments */
+}
+
+/* Logos */
+.top-bar .social-logo img {
+  height: 35px; /* Taille des logos */
+  width: 35px; /* Garde les proportions carrées */
+  border-radius: 50%; /* Logos circulaires */
+  border: none; /* Supprime toute bordure */
+}
+
+/* Bouton Espace Admin */
+.admin-button {
+  background-color: #fbfbfb; /* Couleur de fond */
+  color: #e9db1c; /* Couleur du texte */
+  padding: 5px 10px; /* Espacement interne */
+  font-size: 14px; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  font-style: italic; /* Texte en italique */
+  text-decoration: none; /* Supprime le soulignement */
+  border: 3.5px solid #f2f1ec; /* Couleur de la bordure */
+  border-radius: 20px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animation */
+}
+
+/* Effets au survol */
+.admin-button:hover {
+  background-color: #e9db1c; /* Couleur au survol */
+  border-color: #eae8e4; /* Change aussi la couleur de la bordure au survol */
+  transform: scale(1.1); /* Agrandissement au survol */
+  color: #333; /* Texte un peu plus foncé */
+}
+/* Logo Facebook */
+.top-bar .social-logo.facebook {
+  margin-right: 0px; /* Ajoute un espace entre Facebook et YouTube */
+}
+
+/* Logo YouTube */
+.top-bar .social-logo.youtube {
+  margin: 0 /* Pas de décalage supplémentaire pour YouTube */
+}
+
+/* Style commun pour les logos */
+.top-bar .social-logo img {
+  height: 35px; /* Taille des logos */
+  width: 35px; /* Garde les proportions carrées */
+  border-radius: 50%; /* Logos circulaires */
+  border: none; /* Supprime toute bordure */
+}
+
+/* Style pour le logo Facebook */
+.top-bar .social-logo img {
+  height: 40px; /* Taille réduite du logo */
+  width: 40px; /* Taille égale pour rendre l'image carrée */
+  border-radius: 50%; /* Rend l'image circulaire */
+  margin-right: 10px; /* Espacement entre les icônes (si besoin) */
+}
 
 /* === NAVIGATION MENU === */
 /* Style du menu de navigation */
@@ -349,14 +399,99 @@ footer p {
 }
 
 /* === contact.html === */
+
 /* Contact Page Styles */
 .contact-page {
-  max-width: 900px !important;
+  max-width: 800px !important;
   margin: 0 auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
   border-radius: 10px; /* Coins arrondis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour de la section */
+}
+
+/* Formulaire de Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Aligne les champs verticalement */
+  gap: 15px; /* Espacement entre les champs */
+  width: 60%; /* Ajustez la largeur selon votre besoin */
+  margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+.contact-form label {
+  font-size: 1.1em; /* Agrandit légèrement les labels pour une meilleure lisibilité */
+  margin-bottom: 5px; /* Ajoute un espace sous les labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%; /* Champs prennent toute la largeur disponible */
+  padding: 10px;
+  border: 1px solid #ccc; /* Ajoute un contour léger */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 1em;
+}
+
+
+.contact-form button {
+  width: 50%; /* Bouton réduit pour un style plus moderne */
+  padding: 10px;
+  background-color: #0d2238;
+  color: rgb(240, 235, 235);
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center; /* Centre le bouton */
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0f4885; /* Change la couleur au survol */
+}
+
+/* Listes logo dans page contact */
+.logos {
+  display: flex;
+  justify-content: flex-end; /* Aligne les logos à droite */
+  gap: 20px; /* Espacement entre les icônes */
+  margin-right: 30px; /* Optionnel : ajustez l'espace entre les icônes et le bord droit */
+  margin-top: -50px; /* Remonte les logos en ajustant cette valeur */
+}
+
+.logos img {
+  width: 40px; /* Ajustez la taille des icônes si nécessaire */
+  height: auto;
+  cursor: pointer;
+
+  /* animation logos contact.html */
+}
+.animated-logo {
+  transition: transform 0.3s ease, filter 0.8s ease; /* Transition pour des animations douces */
+}
+
+.animated-logo:hover {
+  transform: rotate(30deg) scale(1.5); /* Tourne légèrement et agrandit un peu */
+  filter: brightness(2.5); /* Augmente la luminosité pour l'effet d'illumination */
+}
+
+.animated-logo.fb {
+  border-radius: 50%; /* Rend l'image circulaire */
+  overflow: hidden; /* S'assure que l'image reste bien dans le cercle */
+}
+
+/* Suivez-nous sur les réseaux */
+.contact-social-wrapper {
+  display: flex;
+  align-items: center; /* Aligne le texte et les logos sur une même ligne */
+  justify-content: flex-end; /* Aligne l'ensemble à droite du cadre */
+}
+
+.social-text {
+  margin-right: 30px !important; /* Ajoute un espace entre le texte et les logos */
+  position: relative;
+  top: 10px; /* Relève le texte au niveau du logo */
 }
 
 /* === Section contact-section === */
@@ -384,20 +519,6 @@ footer p {
   margin-bottom: 10px;
 }
 
-/* Logo Facebook */
-.contact-social.Fb img {
-  width: 40px; /* Taille du cercle */
-  height: 40px; /* Taille du cercle */
-  border-radius: 50%; /* Rend l'image ronde */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce */
-}
-
-/* Logo YouTube */
-.contact-social.YouTube img {
-  width: 35px; /* Taille du logo YouTube */
-  height: 35px;
-  border-radius: 6px; /* Bord légèrement arrondi pour le style YouTube */
-}
 
 /* Texte au-dessus des logos sociaux */
 .social-text {
@@ -405,6 +526,7 @@ footer p {
     color: #d4cbcb !important; /* Couleur rouge forcée */
     margin-bottom: 10px; /* Espacement avec les logos */
     font-weight: bold; /* Met le texte en gras */
+    margin-left: 50px; /* Décalage à droite */
 }
 
 /* Style spécifique pour la section don-section Téléphone Adresse Email */
@@ -523,7 +645,7 @@ footer p {
 
 /* Effet visuel au survol du bouton de connexion */
 .login-form-container .don-button:hover {
-  background-color: #003b57; /* Change la couleur de fond au survol */
+  background-color: #306680; /* Change la couleur de fond au survol */
 }
 
 /* Centrer "Connexion administrateur" */
@@ -542,4 +664,3 @@ footer p {
   font-size: 1.2em; /* Taille du texte */
   color: red; /* Texte en rouge pour signaler une erreur */
 }
-

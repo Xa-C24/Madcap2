@@ -1,4 +1,20 @@
-{% load static %} <!-- inclure des fichiers statiques -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="top-bar">
+  <!-- Lien vers Facebook -->
+  <a href="https://www.facebook.com/profile.php?id=100080106813212&locale=fr_FR" target="_blank" class="social-logo facebook">
+    <img src="{% static 'images/Fb_logo2.png' %}" alt="Logo Facebook" />
+  </a>
+
+  <!-- Lien vers YouTube -->
+  <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank" class="social-logo youtube">
+    <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" />
+  </a>
+
+  <!-- Bouton Espace Admin -->
+  <a href="{% url 'admin_login' %}" class="admin-button">Espace Admin</a>
+</div> <!-- Bandeau de couleur -->
+
 <header>
   <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; position: relative;">
     <!-- Logo à gauche -->
@@ -9,22 +25,6 @@
     <!-- Texte centré -->
     <div style="flex: 1; text-align: center;">
       <h1>Madcap 1874, l'unique cotre pilote encore en état de naviguer</h1>
-    </div>
-
-    <!-- Conteneur des icônes -->
-    <div class="header-icons">
-      <!-- Lien vers Facebook -->
-      <a href="https://www.facebook.com/profile.php?id=100080106813212&locale=fr_FR" target="_blank" class="social-logo">
-        <img src="{% static 'images/Fb_logo2.png' %}" alt="Logo Facebook" />
-      </a>
-
-      <!-- Lien vers YouTube -->
-      <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank" class="social-logo">
-        <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" />
-      </a>
-
-      <!-- Lien Espace Admin -->
-      <a href="{% url 'admin_login' %}" class="admin-button">Espace Admin</a>
     </div>
   </div>
 
@@ -38,7 +38,5 @@
       <li><a href="/evenements">Événements</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-     
   </nav>
-  
 </header>
