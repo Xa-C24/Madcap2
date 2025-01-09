@@ -83,6 +83,7 @@ Pour mettre à jour le numéro de téléphone d'un membre, utilisez la commande 
 
 Lancer le shell de la base de données : python3 manage.py dbshell
 
+  SELECT * FROM madcap_app_member;
   SELECT * FROM madcap_app_member WHERE id = 1;
 
   UPDATE madcap_app_member
@@ -98,5 +99,12 @@ Une fois les modifications terminées, quittez le shell avec :
 
 
 Markdown Extension Pack
-pip install django-livereload-server
-python3 manage.py livereload
+
+live server 
+
+npm install -g browser-sync
+browser-sync --version
+
+browser-sync start --proxy "127.0.0.1:8000" --files "templates/**/*.html, static/**/*.css, static/**/*.js"
+
+http://localhost:3000/
