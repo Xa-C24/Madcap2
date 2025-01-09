@@ -5,7 +5,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   line-height: 1.5;
-  background: url("../images/test_image_fond.jpg") center / cover no-repeat;
+  background: url("../images/Voile.png") center / cover no-repeat;
   color: #b81515;
   margin: 0;
   padding: 0;
@@ -17,7 +17,6 @@ body {
 
 /* === HEADER STYLES === */
 .don-header {
-  background: url("../images/boat_header.jpg") center / cover no-repeat; /* Image d’en-tête */
   text-align: center;
   padding: 60px 20px;
   color: white;
@@ -33,6 +32,9 @@ body {
   font-style: italic;
   margin: 0;
 }
+
+/* === SECTIONS Index === */
+
 
 /* === SECTIONS don contact === */
 .don-page {
@@ -54,14 +56,9 @@ h1, h2 {
   color: #003b57; /* Bleu marine pour les titres */
   font-weight: bold;
 }
-.don-list li {
-  background: url("../images/icon-check.png") no-repeat left center;
-  padding-left: 25px;
-}
 
 /* === HEADER STYLES === */
 .don-header {
-  background: url("../images/boat_header.jpg") center / cover no-repeat; /* Image d’en-tête */
   text-align: center;
   padding: 60px 20px;
   color: white;
@@ -76,8 +73,139 @@ h1, h2 {
   font-size: 1.4em; /* Ajusté pour plus de visibilité */
   font-style: italic;
   margin: 0;
-  color: #702323; /* Contraste amélioré */
+  color: #aa1a1a; /* Contraste amélioré */
 }
+.don-header {
+  background-color: transparent !important; /* Supprime le fond bleu */
+  border: none !important; /* Supprime la bordure */
+  box-shadow: none !important; /* Supprime toute ombre */
+}
+
+/* === SECTIONS l'association === */
+
+
+/* === STYLES GLOBAUX === */
+body {
+  font-family: 'Open Sans', sans-serif; /* Police moderne et lisible */
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: #f5f5f5; /* Fond gris clair pour toute la page */
+  color: #333; /* Texte gris foncé */
+  margin: 0;
+  padding: 0;
+}
+
+/* === CONTENEUR PRINCIPAL === */
+main {
+  max-width: 1200px; /* Largeur maximale */
+  margin: 20px auto; /* Centre le contenu horizontalement */
+  padding: 20px;
+}
+
+/* === SECTIONS === */
+section {
+  background-color: #fff; /* Fond blanc pour les sections */
+  border: 1px solid #ddd; /* Bordure grise claire */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 20px;
+  margin-bottom: 20px; /* Espacement entre les sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner de la profondeur */
+}
+
+/* === TITRES === */
+h1, h2 {
+  font-family: 'Playfair Display', serif; /* Police élégante pour les titres */
+  color: #003b57; /* Bleu marine */
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5em; /* Taille pour les titres principaux */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8em; /* Taille légèrement plus petite */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* === PARAGRAPHES === */
+p {
+  margin: 10px 0;
+  color: #555; /* Gris doux pour le texte */
+  line-height: 1.6;
+}
+
+/* === LISTES === */
+ul {
+  padding-left: 20px; /* Décalage des listes */
+  margin: 10px 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #444; /* Gris légèrement plus foncé */
+}
+
+ul li strong {
+  color: #003b57; /* Bleu pour les éléments importants */
+}
+
+/* === BOUTONS === */
+button, .don-button {
+  display: inline-block;
+  background-color: #003b57; /* Bleu marine */
+  color: #fff; /* Texte blanc */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .don-button:hover {
+  background-color: #005a87; /* Bleu plus clair au survol */
+  transform: translateY(-2px); /* Effet de soulèvement */
+}
+
+/* === LIENS === */
+a {
+  color: #0078d7; /* Bleu classique */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Soulignement au survol */
+  color: #0056a3; /* Bleu plus foncé */
+}
+
+/* === RÉSPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2em; /* Réduction de la taille des titres */
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.95em; /* Réduction de la taille des paragraphes */
+  }
+}
+
 
 /* === SECTIONS DON === */
 .don-page {
@@ -125,7 +253,7 @@ h1, h2 {
 }
 
 .don-section ul li strong {
-  color: #9e2020;
+  color: #dd1111;
 }
 
 
@@ -205,6 +333,8 @@ header {
   padding: 20px 0; /* Espacement en haut et en bas */
   text-align: center; /* Centre le texte */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  overflow: hidden; /* Empêche le contenu du header de dépasser sa limite */
+  position: relative; /* Définit le conteneur de référence pour le positionnement absolu */
 }
 
 /* Conteneur principal du header */
@@ -218,14 +348,24 @@ header div {
 
 /* Logo dans le header */
 header img {
-  height: 30px; /* Taille du logo */
-  border-radius: 90%; /* Forme circulaire si l'image est carrée */
-  margin-right: 20px; /* Espace à droite */
+  height: 110px !important; /* Taille du logo */
+  border-radius: 50%; /* Forme circulaire si l'image est carrée */
+  margin: 0 40px 0 30px; /* Ajuster l'espace autour du logo */
+  position: relative; /* Permet d'ajuster la position */
+  left: -80px; /* Descend le logo de 20px */
+  top: 10px; /* Ajuste la position verticale */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Transition fluide avec une courbe personnalisée */
+}
+header img:hover {
+  transform: scale(1.2); /* Agrandit le logo à 110% lors du survol */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ajoute une ombre élégante */
+  cursor: pointer; /* Change le curseur pour indiquer un élément cliquable */
 }
 
 /* Titre principal du header */
 header h1 {
-  font-size: 1.8em; /* Taille du texte */
+  font-size: 1.4em; /* Taille du texte */
   margin: 0; /* Supprime les marges */
   flex: 1; /* S'adapte à l'espace disponible */
 }
