@@ -591,6 +591,30 @@ footer p {
   background-color: #0f4885; /* Change la couleur au survol */
 }
 
+/* message de retour après envoie avec le formulaire */
+
+.message-success {
+  background-color: #dff0d8; /* Vert pâle */
+  border: 1px solid #3c763d; /* Vert plus foncé */
+  color: #3c763d; /* Couleur du texte */
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.message-error {
+  background-color: #f2dede; /* Rouge pâle */
+  border: 1px solid #a94442; /* Rouge plus foncé */
+  color: #a94442; /* Couleur du texte */
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
 /* Listes logo dans page contact */
 .logos {
   display: flex;
