@@ -31,6 +31,13 @@ from django.shortcuts import render
 # Importation pour envoyer des emails
 from django.core.mail import send_mail
 
+# Ckeck si le mail est valide
+from django.core.validators import validate_email
+
+# Sinon élève une erreur
+from django.core.exceptions import ValidationError
+import dns.resolver, re
+
 
 def index(request):
     return render(request, 'index.html')
@@ -99,32 +106,6 @@ def admin_dashboard(request):
     return render(request, 'admin_dashboard.html', {'members': members})
 
 
-
-
-def search_members(request):
-    query = request.GET.get('q', '').strip()  # Récupère la recherche en supprimant les espaces inutiles
-    if query:
-        members = Member.objects.filter(
-            Q(name__icontains=query) |  # Recherche partielle sur le nom
-            Q(address__icontains=query)  # Recherche partielle sur l'adresse
-        ).order_by('name')  # Tri alphabétique
-    else:
-        members = Member.objects.all().order_by('name')  # Tous les membres si aucun filtre
-
-    # Préparer les données au format JSON
-    results = [
-        {
-            'name': member.name,
-            'address': member.address,
-            'phone': member.phone,
-            'date_entree': member.date_entree.strftime('%b. %d, %Y') if member.date_entree else ''
-        }
-        for member in members
-    ]
-
-    return JsonResponse({'results': results})
-
-
 # Formulaire de contact
 
 def search_members(request):
@@ -152,29 +133,80 @@ def search_members(request):
     return JsonResponse({'results': results})
 
 
+def validate_email_domain(email):
+    """Valide si le domaine de l'adresse email existe et est cohérent."""
+    try:
+        domain = email.split('@')[1]  # Extrait le domaine
+        dns.resolver.resolve(domain, 'MX')  # Vérifie les enregistrements MX du domaine
+
+        # Vérifier les fautes courantes
+        common_domains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com']
+        if domain not in common_domains:
+            raise ValidationError(
+                f"L'adresse Email '{domain}' semble incorrect. Vouliez-vous écrire l'un de ceux-ci ? {', '.join(common_domains)}"
+            )
+    except (IndexError, dns.resolver.NXDOMAIN, dns.resolver.NoAnswer, dns.resolver.Timeout):
+        raise ValidationError("L'adresse email n'est pas valide.")
+
+# Formulaire de contact suite
+
 def submit_contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
+        phone = request.POST.get('phone', '').strip()  # Supprime les espaces inutiles
         message = request.POST.get('message')
 
-        # Validation des champs
+        # Validation des champs obligatoires
         if not name or not email or not message:
-            messages.error(request, "Veuillez remplir tous les champs.")
+            messages.error(request, "Veuillez remplir tous les champs obligatoires.")
             return redirect('contact')
 
-        # # Préparation de l'email
+        # Validation de l'email
+        try:
+            validate_email(email)
+            validate_email_domain(email)
+        except ValidationError as e:
+            messages.error(request, str(e))
+            return redirect('contact')
+
+        # Validation du téléphone (uniquement si renseigné)
+        if phone:
+            try:
+                phone = validate_phone_number(phone)  # Valide et normalise le numéro
+            except ValidationError as e:
+                messages.error(request, str(e))
+                return redirect('contact')
+
+        # Vérification de la longueur du message
+        if len(message) < 20:
+            messages.error(request, "Le message doit contenir au moins 20 caractères.")
+            return redirect('contact')
+
+        # Préparation de l'email
         subject = f"Nouveau message de {name} via le formulaire de contact"
-        message_body = f"Nom : {name}\nEmail : {email}\n\nMessage :\n{message}"
+        message_body = f"Nom et Prénom : {name}\nEmail : {email}\nTéléphone : {phone if phone else 'Non renseigné'}\n\nMessage :\n{message}"
         recipient_list = ['xr.piallu@gmail.com']
 
         try:
             send_mail(subject, message_body, email, recipient_list)
-            messages.success(request, 'Votre message a été envoyé avec succès.')
+            messages.success(request, 'Votre message a bien été envoyé. Nous reviendrons vers vous dans les meilleurs délais.')
         except Exception as e:
-            messages.error(request, f"Une erreur s'est produite : {str(e)}")
-            print(f"Erreur SMTP : {e}")  # Affichez l'erreur dans les logs
-
+            messages.error(request, "Une erreur est survenue lors de l'envoi de votre message.")
+           
         return redirect('contact')
 
     return render(request, 'contact.html')
+
+
+def validate_phone_number(phone):
+    """
+    Valide le format du numéro de téléphone :
+    - Formats acceptés :
+      - Français : 0687740273, 06 87 74 02 73
+      - International : +33687740273, +33 6 87 74 02 73, 0033687740273
+    """
+    print(f"Debug: Numéro reçu pour validation : {phone}")  # Affiche le numéro reçu
+    pattern = pattern = r'^(\+33|0033|0)(\d{9}|\d{2}(?:[ .-]?\d{2}){4})$'
+    if not re.match(pattern, phone):
+        raise ValidationError("Le numéro de téléphone n'est pas valide. Utilisez un format français ou international.")
