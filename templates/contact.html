@@ -1,33 +1,53 @@
-{% load static %} <!-- inclure des fichiers statiques -->
+{% load static %} <!-- Inclusion des fichiers statiques -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Madcap</title>
+
+    <!-- Lien vers les fichiers CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- Favicon --->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <!-- Favicon -->
     <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
 </head>
 <body>
     {% include 'header.html' %} <!-- Inclusion du header -->
 
     <main class="don-page">
+      <!-- Messages Flash -->
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
         <!-- Section Titre Principal -->
         <header class="don-header">
             <h1>Contactez-nous</h1>
-            <p class="subtitle">Nous sommes ravis de vous entendre. Remplissez le formulaire ci-dessous pour toute question ou information supplémentaire.</p>
+            <p class="subtitle">
+                Nous sommes ravis de vous entendre. Remplissez le formulaire ci-dessous pour toute question ou information supplémentaire.
+            </p>
         </header>
 
         <!-- Formulaire de Contact -->
         <section class="don-section">
             <h2>Formulaire de Contact</h2>
-            <form action="/submit_contact" method="POST" class="contact-form">
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            <form action="/submit_contact/" method="POST" class="contact-form">
+                {% csrf_token %} <!-- Sécurité Django pour les formulaires -->
+                <label for="name">Nom et Prenom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
 
                 <label for="email">Email :</label>
                 <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+
+                <label for="Telephone">Téléphone :</label>
+                <input typ="text" id="Telephone" name="Telephone" placeholder="Votre numéro de Téléphone" required>
 
                 <label for="message">Message :</label>
                 <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
@@ -39,24 +59,29 @@
         <!-- Section Contact Direct -->
         <section class="don-section">
             <h2>Nous Contacter Directement</h2>
-            <p><strong>Email :</strong> <a href="mailto:contact@madcap1874.fr">association.madcap.1874@gmail.com</a></p>
-            <p><strong>Téléphone :</strong> +33 .......</p>
-            <p><strong>Adresse :</strong> Port ....., 75000 ..., France</p>
+            <p><strong>Christian Hurreau, Président de l'Association Madcap-1874</strong></p>
+
+            <p><strong>Email :</strong> 
+                <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a>
+                <div class="contact-info">
+                  <p><strong>Téléphone :</strong> <a href="tel:+33686143955">+33 6 86 14 39 55</a></p>
+              </div>
+              
 
             <!-- Conteneur pour les logos sociaux -->
             <div class="logos">
-              <p class="social-text" style="margin: 0;">Suivez-nous sur les réseaux</p>
-              <!-- Logo Facebook -->
-              <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank">
-                  <img src="{% static 'images/Fb_logo2.png' %}" alt="Logo Facebook" class="logo animated-logo fb">
-                  
-              </a>
-              <!-- Logo YouTube -->
-              <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank">
-                  <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" class="logo animated-logo">
-              </a>
-          </div>
-          
+                <p class="social-text">Suivez-nous sur les réseaux :</p>
+
+                <!-- Logo Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'images/Fb_logo2.png' %}" alt="Logo Facebook" class="logo animated-logo fb">
+                </a>
+
+                <!-- Logo YouTube -->
+                <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" class="logo animated-logo">
+                </a>
+            </div>
         </section>
     </main>
 
