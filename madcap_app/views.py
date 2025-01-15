@@ -28,6 +28,9 @@ from django.template.loader import render_to_string
 # créer des réponses HTML à partir de templates
 from django.shortcuts import render
 
+# Importation pour envoyer des emails
+from django.core.mail import send_mail
+
 
 def index(request):
     return render(request, 'index.html')
@@ -120,3 +123,58 @@ def search_members(request):
     ]
 
     return JsonResponse({'results': results})
+
+
+# Formulaire de contact
+
+def search_members(request):
+    query = request.GET.get('q', '').strip()
+    if query:
+        members = Member.objects.filter(
+            Q(name__icontains=query) | Q(address__icontains=query)
+        ).order_by('name')
+    else:
+        members = Member.objects.all().order_by('name')
+
+    results = [
+        {
+            'name': member.name,
+            'address': member.address,
+            'phone': member.phone,
+            'date_entree': member.date_entree.strftime('%b. %d, %Y') if member.date_entree else ''
+        }
+        for member in members
+    ]
+
+    if not results:  # Message d'erreur si aucun résultat n'est trouvé
+        return JsonResponse({'error': 'Aucun membre trouvé.'})
+
+    return JsonResponse({'results': results})
+
+
+def submit_contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        # Validation des champs
+        if not name or not email or not message:
+            messages.error(request, "Veuillez remplir tous les champs.")
+            return redirect('contact')
+
+        # # Préparation de l'email
+        subject = f"Nouveau message de {name} via le formulaire de contact"
+        message_body = f"Nom : {name}\nEmail : {email}\n\nMessage :\n{message}"
+        recipient_list = ['xr.piallu@gmail.com']
+
+        try:
+            send_mail(subject, message_body, email, recipient_list)
+            messages.success(request, 'Votre message a été envoyé avec succès.')
+        except Exception as e:
+            messages.error(request, f"Une erreur s'est produite : {str(e)}")
+            print(f"Erreur SMTP : {e}")  # Affichez l'erreur dans les logs
+
+        return redirect('contact')
+
+    return render(request, 'contact.html')
