@@ -60,7 +60,7 @@ ROOT_URLCONF = "madcap_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"],  # Chemin vers vos fichiers HTML
+        "DIRS": [BASE_DIR / "templates"],  # Chemin vers vos fichiers HTML.
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
