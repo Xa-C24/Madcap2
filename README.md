@@ -25,6 +25,11 @@ Collecting livereload
   
 README.md
 
+Créer un SuperUser
+
+ python3 manage.py createsuperuser
+ association.madcap.1874@gmail.com
+
 xr.piallu@gmail.com
 LecotrepiloteMadcap1874
 
