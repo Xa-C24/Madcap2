@@ -9,6 +9,9 @@ urlpatterns = [
     path('don/', views.don, name='don'),
     path('histoire/', views.histoire, name='histoire'),
     path('evenements/', views. evenements, name='evenements'),
+    
+     # Route pour formulaire de contact
+    path('submit_contact/', views.submit_contact, name='submit_contact'),
 
 
     # Routes spécifiques à l'administration
