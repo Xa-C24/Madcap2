@@ -1,31 +1,77 @@
-{% load static %} <!-- inclure des fichiers statiques -->
+{% load static %} <!-- Charger les fichiers statiques Django -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Madcap</title>
+  
+  <!-- Lien vers la feuille de style CSS principale -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+  <!-- Favicon de la page (icône affichée dans l'onglet du navigateur) -->
   <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Google Fonts : Pacifico pour le titre et Montserrat pour le texte -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Script JavaScript Windy pour la carte -->
+  <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+  
+  <!-- Styles personnalisés pour la carte -->
+  <style>
+      #map { height: 45vh; margin: 20px 0; }
+  </style>
 </head>
 <body>
   {% include 'header.html' %}
   <main class="homepage-main">
-    <section class="intro">
-      <h2>Découvrez le bateau Madcap</h2>
-      <p>L'association Madcap vous invite à découvrir un bateau historique restauré avec passion.</p>
+    <!-- Section 1 : Introduction -->
+    <section class="don-section">
+      <h2>Classé Monument Historique</h2>
+      <h3>Construit en 1874, Madcap est le plus ancien cotre-pilote encore à flot. Autrefois actif dans le canal de Bristol jusqu’au début des années 1920, il a ensuite été transformé en voilier de plaisance. Aujourd’hui, après avoir rejoint la Méditerranée en 2020, il continue de voguer sous la bannière de l’association Madcap 1874, basée à Canet-en-Roussillon.</h3>
+      <h1>L'association Madcap vous invite à découvrir ce voilier historique restauré avec passion.</h1>
+      <h3>Madcap, témoin précieux de notre patrimoine maritime, vous invite à embarquer pour un voyage dans le temps. Restauré avec rigueur et minutie, ce bateau classé Monument Historique reflète l'excellence de l'artisanat naval de son époque. L'association se consacre à sa préservation et à la promotion du patrimoine maritime, permettant au public de découvrir les techniques de navigation à voile du XIXe siècle. Découvrez les secrets de sa construction, ses récits de navigation et les événements marquants qui ont façonné son histoire.</h3>
     </section>
-    <section class="highlight">
+
+    <!-- Section 2 : Patrimoine vivant -->
+    <section class="don-section">
       <h2>Un patrimoine maritime vivant</h2>
-      <p>Le Madcap n’est pas seulement un bateau, mais un véritable trésor de l’histoire maritime. Avec des années de restauration et l’amour des membres de l'association, il navigue encore aujourd'hui.</p>
+      <h3>Plus qu’un simple bateau, Madcap est un témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de naviguer, offrant à chacun une immersion dans les navigations d’autrefois.</h3>
     </section>
-    <section class="call-to-action">
+
+    <!-- Section 3 : Présentation vidéo -->
+    <section id="presentation">
+      <h1>Découvrez Madcap</h1>
+      <div class="video-container">
+          <iframe 
+              width="500" 
+              height="315" 
+              src="https://www.youtube.com/embed/_7lt_IaRsnc" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+          </iframe>
+      </div>
+    </section>
+
+    <!-- Section 4 : Carte interactive -->
+    <section id="map-section">
+      <h2>Live Météo</h2>
+      <div id="map"></div>
+      
+    </section>
+
+    <!-- Section 5 : Invitation à rejoindre -->
+    <section class="don-section">
       <h2>Rejoignez-nous !</h2>
-      <p>Participez à nos sorties en mer et plongez dans l’histoire avec le Madcap. Inscrivez-vous pour vivre une aventure inoubliable.</p>
-      <a href="/join" class="cta-button">Contactez-nous</a>
+      <h3>Participez à nos sorties en mer et plongez dans l’histoire avec le Madcap. Inscrivez-vous pour vivre une aventure inoubliable.</h3>
+      <a href="{% url 'contact' %}" class="Contactez-nous-index">Contactez-nous</a>
     </section>
   </main>
   {% include 'footer.html' %}
 </body>
+<!-- Inclusion du script de la carte Windy (fichier JavaScript externe) -->
+<script src="{% static 'js/map_meteo.js' %}"></script>
 </html>
