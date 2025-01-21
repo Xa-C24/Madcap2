@@ -207,6 +207,11 @@ def validate_phone_number(phone):
       - International : +33687740273, +33 6 87 74 02 73, 0033687740273
     """
     print(f"Debug: Numéro reçu pour validation : {phone}")  # Affiche le numéro reçu
+
+    # Supprime tous les espaces, tirets ou points pour normaliser le numéro
+    normalized_phone = re.sub(r'[ .-]', '', phone)
+
     pattern = pattern = r'^(\+33|0033|0)(\d{9}|\d{2}(?:[ .-]?\d{2}){4})$'
-    if not re.match(pattern, phone):
+    if not re.match(pattern, normalized_phone):
         raise ValidationError("Le numéro de téléphone n'est pas valide. Utilisez un format français ou international.")
+    return normalized_phone
