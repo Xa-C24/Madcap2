@@ -17,6 +17,15 @@ mkdir css
   images
   js
 
+Trailing Spaces
+highlight trailing spaces and delete them in a flash!
+
+This extension is a port of the popular Sublime Text plugin Trailing Spaces.
+
+Prettier Formatter for Visual Studio Code
+Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+
+
 app.py
 
 root@hey-coucou-xav:~/Madcap# pip install livereload
