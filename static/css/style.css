@@ -35,6 +35,26 @@ body {
 
 /* === SECTIONS Index === */
 
+/* Conteneur de la vidéo avec un cadre noir */
+.video-wrapper {
+  display: flex; /* Centre la vidéo dans son conteneur */
+  justify-content: center; /* Centre la vidéo horizontalement */
+  background: linear-gradient(135deg, #232426, #1f272f); /* Dégradé subtil du bleu marine */
+  padding: 10px; /* Espacement interne entre la vidéo et le cadre noir */
+  border: 1px solid #f5f5f6; /* Bordure noire fine autour du cadre */
+  border-radius: 10px; /* Coins légèrement arrondis */
+  max-width: 720px; /* Largeur maximale du conteneur (vidéo incluse) */
+  margin: 20px auto; /* Centre le conteneur horizontalement avec un espacement vertical */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre douce autour du cadre */
+}
+
+/* Vidéo */
+.video-wrapper iframe {
+  width: 700px; /* Largeur fixe pour la vidéo */
+  height: 400px; /* Hauteur proportionnelle (16:9) */
+  border: none; /* Supprime toute bordure de l'iframe */
+}
+
 
 /* === SECTIONS don contact === */
 .don-page {
@@ -379,34 +399,51 @@ header {
 /* Bandeau supérieur (en haut du header) */
 .top-bar {
   background-color: #34495E; /* Couleur du bandeau */
-  height: 44px; /* Hauteur du bandeau */
+  height: 60px; /* Hauteur ajustée */
   display: flex; /* Flexbox pour aligner les éléments */
   align-items: center; /* Centrage vertical */
-  justify-content: flex-start; /* Aligne les éléments à gauche */
-  padding-left: 74%; /* Ajoute un espacement horizontal (gauche et droite) */
-  gap: 15px; /* Espacement uniforme entre les éléments */
+  justify-content: space-between; /* Sépare la phrase et les icônes */
+  padding: 0 20px; /* Ajout de marges sur les côtés */
+  position: relative; /* Nécessaire pour le centrage absolu */
 }
 
-/* Logos */
-.top-bar .social-logo img {
-  height: 35px; /* Taille des logos */
-  width: 35px; /* Garde les proportions carrées */
-  border-radius: 50%; /* Logos circulaires */
-  border: none; /* Supprime toute bordure */
+/* Centrer la phrase */
+.top-bar-center {
+  position: absolute; /* Permet de positionner la phrase indépendamment */
+  left: 50%; /* Position horizontale au centre */
+  transform: translateX(-50%); /* Recentre exactement au milieu */
+  text-align: center; /* Centre le texte horizontalement */
+  z-index: 1; /* S'assure que la phrase reste au-dessus */
 }
+
+/* Style de la phrase */
+.top-bar-text {
+  color: white; /* Texte blanc */
+  font-size: 18px; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+}
+
+/* Conteneur des icônes et bouton */
+.top-bar-right {
+  display: flex; /* Aligne les éléments horizontalement */
+  gap: 15px; /* Espacement entre les éléments */
+  margin-left: auto; /* Garde les logos alignés à droite */
+  z-index: 2; /* Priorité au-dessus du texte si nécessaire */
+}
+
 
 /* Bouton Espace Admin */
 .admin-button {
   background-color: #fbfbfb; /* Couleur de fond */
   color: #e9db1c; /* Couleur du texte */
-  padding: 5px 10px; /* Espacement interne */
-  font-size: 14px; /* Taille du texte */
+  padding: 6px 2px; /* Espacement vertical (5px) et horizontal (20px) réduit */
+  font-size: 12px; /* Taille du texte */
   font-weight: bold; /* Texte en gras */
   font-style: italic; /* Texte en italique */
   text-decoration: none; /* Supprime le soulignement */
-  border: 3.5px solid #f2f1ec; /* Couleur de la bordure */
+  border: 2px solid #f2f1ec; /* Couleur de la bordure */
   border-radius: 20px; /* Coins arrondis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre douce */
   transition: transform 0.3s ease, background-color 0.3s ease; /* Animation */
 }
 
@@ -429,16 +466,16 @@ header {
 
 /* Style commun pour les logos */
 .top-bar .social-logo img {
-  height: 35px; /* Taille des logos */
-  width: 35px; /* Garde les proportions carrées */
+  height: 30px; /* Taille des logos */
+  width: 30px; /* Garde les proportions carrées */
   border-radius: 50%; /* Logos circulaires */
   border: none; /* Supprime toute bordure */
 }
 
 /* Style pour le logo Facebook */
 .top-bar .social-logo img {
-  height: 40px; /* Taille réduite du logo */
-  width: 40px; /* Taille égale pour rendre l'image carrée */
+  height: 35px; /* Taille réduite du logo */
+  width: 35px; /* Taille égale pour rendre l'image carrée */
   border-radius: 50%; /* Rend l'image circulaire */
   margin-right: 10px; /* Espacement entre les icônes (si besoin) */
 }
