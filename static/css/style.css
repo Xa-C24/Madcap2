@@ -16,22 +16,6 @@ body {
 
 
 /* === HEADER STYLES === */
-.don-header {
-  text-align: center;
-  padding: 60px 20px;
-  color: white;
-}
-
-.don-header h1 {
-  font-size: .5em;
-  margin-bottom: 10px;
-}
-
-.don-header .subtitle {
-  font-size: 1.2em;
-  font-style: italic;
-  margin: 0;
-}
 
 /* === SECTIONS Index === */
 
@@ -69,7 +53,48 @@ body {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
+  font-family: 'Playfair Display', serif; /* Ajout du changement de police */
+  font-size: 14px; /* Taille de la police */
+  color: #ffffff; /* Couleur du texte */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Police de texte pour formulaire contact */
+.contact-form textarea {
+  font-family: 'Playfair Display', serif; /* Change la police selon ton choix */
+  font-size: 14px; /* Ajuste la taille du texte */
+  color: #333; /* Couleur du texte */
+  padding: 10px; /* Garde un espace interne pour le confort */
+  border: 1px solid #ccc; /* Bordure subtile */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: #fff; /* Couleur de fond */
+}
+
+.contact-form textarea::placeholder {
+  font-family: 'Playfair Display', serif; /* Assure que le placeholder suit la même police */
+  font-size: 14px;
+  color: #aaa; /* Couleur du placeholder */
+}
+
+/* Police contact Nom Prenom Téléphone Email*/
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Playfair Display', serif; /* Change la police selon ton choix */
+  font-size: 14px; /* Ajuste la taille du texte */
+  color: #333; /* Couleur du texte */
+  padding: 10px; /* Espacement interne */
+  border: 1px solid #ccc; /* Bordure subtile */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: #fff; /* Couleur de fond */
+  width: 100%; /* Assure que les champs prennent toute la largeur */
+  box-sizing: border-box; /* Gère correctement les bordures */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: 'Playfair Display', serif; /* Placeholder avec la même police */
+  font-size: 14px;
+  color: #aaa; /* Couleur du placeholder */
 }
 
 h1, h2 {
@@ -80,17 +105,17 @@ h1, h2 {
 /* === HEADER STYLES === */
 .don-header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   color: white;
 }
 
 .don-header h1 {
-  font-size: 2.8em; /* Augmenté pour une meilleure hiérarchisation */
+  font-size: 2em; /* Augmenté pour une meilleure hiérarchisation */
   margin-bottom: 10px;
 }
 
 .don-header .subtitle {
-  font-size: 1.4em; /* Ajusté pour plus de visibilité */
+  font-size: 1em; /* Ajusté pour plus de visibilité */
   font-style: italic;
   margin: 0;
   color: #aa1a1a; /* Contraste amélioré */
@@ -119,7 +144,7 @@ body {
 main {
   max-width: 1200px; /* Largeur maximale */
   margin: 20px auto; /* Centre le contenu horizontalement */
-  padding: 20px;
+  padding: 10px;
 }
 
 /* === SECTIONS === */
@@ -140,7 +165,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.5em; /* Taille pour les titres principaux */
+  font-size: 2.2em; /* Taille pour les titres principaux */
   margin-bottom: 15px;
   text-align: center;
 }
@@ -211,25 +236,27 @@ a:hover {
 
   section {
     padding: 15px;
+    margin-bottom: 15px; /* Moins d’espace entre les sections */
   }
 
   h1 {
-    font-size: 2em; /* Réduction de la taille des titres */
+    font-size: 1.8em; /* Réduction de la taille des titres */
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   p {
-    font-size: 0.95em; /* Réduction de la taille des paragraphes */
+    font-size: 0.85em; /* Réduction de la taille des paragraphes */
+    line-height: 1.6; /* Espacement plus confortable */
   }
 }
 
 
 /* === SECTIONS DON === */
 .don-page {
-  max-width: 1000px; /* Augmenté pour un affichage plus aéré */
+  max-width: 750px; /* Augmenté pour un affichage plus aéré */
   margin: 0 auto;
   padding: 90px; /* Espacement augmenté */
 }
@@ -237,9 +264,9 @@ a:hover {
 .don-section {
   background: #455868;
   border: 1px solid #e0e0e0;
-  padding: 25px; /* Ajout d’espace interne */
+  padding: 10px; /* Ajout d’espace interne */
   border-radius: 12px; /* Coins arrondis accentués */
-  margin-bottom: 25px; /* Espacement entre sections augmenté */
+  margin-bottom: 20px; /* Espacement entre sections augmenté */
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); /* Ombre renforcée */
 }
 
@@ -346,6 +373,13 @@ footer p {
 
 
 /* === HEADER STYLES === */
+
+nav ul li a:hover {
+  text-decoration: none; /* Supprime le soulignement */
+  background-color: #005a87; /* Garde l'effet de changement de couleur (optionnel) */
+  transform: scale(1.7); /* Optionnel : effet de zoom */
+}
+
 /* Style de l'en-tête (header) */
 header {
   background-color: #4f7093; /* Couleur de fond */
@@ -434,17 +468,22 @@ header {
 
 /* Bouton Espace Admin */
 .admin-button {
-  background-color: #fbfbfb; /* Couleur de fond */
-  color: #e9db1c; /* Couleur du texte */
-  padding: 6px 2px; /* Espacement vertical (5px) et horizontal (20px) réduit */
-  font-size: 12px; /* Taille du texte */
-  font-weight: bold; /* Texte en gras */
-  font-style: italic; /* Texte en italique */
-  text-decoration: none; /* Supprime le soulignement */
-  border: 2px solid #f2f1ec; /* Couleur de la bordure */
-  border-radius: 20px; /* Coins arrondis */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre douce */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Animation */
+  background-color: #fbfbfb;
+  color: #e9db1c;
+  padding: 7px; /* Padding minimal */
+  font-size: 11px; /* Texte ajusté */
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  border: 2px solid #f2f1ec;
+  border-radius: 12px;
+  line-height: 1; /* Réduit l'espacement vertical interne */
+  height: 3%; /* Pas de hauteur forcée */
+  min-height: 0; /* Supprime toute hauteur minimale */
+  margin: 0; /* Supprime les marges externes */
+  vertical-align: middle; /* Aligne bien le texte */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Effets au survol */
@@ -499,18 +538,20 @@ nav ul {
 /* Liens du menu */
 nav ul li a {
   color: #fff; /* Couleur du texte */
+  font-size: 1em; /* Réduit la taille du texte */
   text-decoration: none; /* Supprime le soulignement */
   font-weight: bold; /* Texte en gras */
-  padding: 10px 15px; /* Espacement intérieur */
+  padding: 2px 5px; /* Espacement intérieur */
   background-color: #34495E; /* Couleur de fond */
   border-radius: 5px; /* Coins arrondis */
   transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour l'animation */
+  display: inline-block; /* Important pour que transform fonctionne correctement */
 }
 
 /* Animation au survol des liens */
 nav ul li a:hover {
-  background-color: #3971a8; /* Couleur de fond au survol */
-  transform: scale(1.60) !important; /* Effet de zoom */ 
+  background-color: #cddff2; /* Couleur de fond au survol */
+  transform: scale(1.09) !important; /* Effet de zoom */ 
 }
 
 /* === SOCIAL MEDIA ICONS Fb Youtube === */
@@ -791,9 +832,9 @@ footer p {
 /* === Login Form Container === */
 /* Conteneur principal du formulaire de connexion */
 .login-form-container {
-  max-width: 350px; /* Largeur maximale du formulaire */
+  max-width: 450px; /* Largeur maximale du formulaire */
   margin: 0 auto; /* Centré horizontalement */
-  padding: 30px; /* Marges internes */
+  padding: 50px; /* Marges internes */
   background: #455868; /* Couleur de fond gris-bleu */
   border-radius: 10px; /* Coins arrondis */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce autour du conteneur */
