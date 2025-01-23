@@ -1,4 +1,6 @@
 {% load static %}
+
+
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <div class="top-bar">
@@ -29,8 +31,18 @@
   <div>
     <a href="/">
       <img src="{% static 'images/logo.png' %}" alt="Logo Madcap">
+      <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="{% static 'videos/gif.mp4' %}" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+      </div>
     </a>
-    
+  </div>
+
+</div class="test-header">
+</a>
+</div>
   </div>
 
   <!-- Navigation -->
