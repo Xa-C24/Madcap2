@@ -18,44 +18,67 @@ body {
 /* === HEADER STYLES === */
 
 /* Conteneur de la vidéo */
-.video-container {
+.video-container-header {
   position: relative; /* Conteneur positionné */
-  width: 1000%; /* Prend toute la largeur de la page */
-  max-height: 45vh; /* Limite la hauteur à 60% de la hauteur de la fenêtre */
+  width: 120%; /* Prend toute la largeur de la page */
+  max-height: 55vh; /* Limite la hauteur à 60% de la hauteur de la fenêtre */
   overflow: hidden; /* Cache les parties qui débordent */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4A6A8F; /* Couleur de fond pour combler les espaces */
+  border-radius: 15px; /* Arrondit les bords du conteneur */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce */
+  border: 6px solid rgba(242, 243, 245, 0.993); /* Bordure translucide */
+  background-color: #d5dae0; /* Couleur de fond pour combler les espaces */
+  animation: glowing 3s infinite; /* Animation continue */
+
 }
 
-.video-container video {
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.video-container-header video {
   width: 100%;
   height: auto;
   object-fit: cover;
-  clip-path: inset(20px 0 0 0); /* Découpe 20px depuis le haut */
+  border-radius: 10px;
+  transform: scale(0.95); /* Dézoome à 90% */
+  transition: transform 0.3s ease; /* Transition fluide si besoin */
+  background: #000;
 }
 
 /* === SECTIONS Index === */
 
 /* Conteneur de la vidéo avec un cadre noir */
-.video-wrapper {
+.video-container-index {
   display: flex; /* Centre la vidéo dans son conteneur */
   justify-content: center; /* Centre la vidéo horizontalement */
-  background: linear-gradient(135deg, #232426, #1f272f); /* Dégradé subtil du bleu marine */
-  padding: 10px; /* Espacement interne entre la vidéo et le cadre noir */
-  border: 1px solid #f5f5f6; /* Bordure noire fine autour du cadre */
-  border-radius: 10px; /* Coins légèrement arrondis */
-  max-width: 720px; /* Largeur maximale du conteneur (vidéo incluse) */
+  padding: 20px; /* Espacement autour de la vidéo */
+  padding: 55px; /* Espacement interne entre la vidéo et le cadre noir */
+  max-width: 1120px; /* Largeur maximale du conteneur (vidéo incluse) */
   margin: 20px auto; /* Centre le conteneur horizontalement avec un espacement vertical */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre douce autour du cadre */
+  border-radius: 15px; /* Coins arrondis */
+  background: linear-gradient(135deg, #34495e, #2c3e50); /* Dégradé en fond */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre douce */
+  border: 2px solid #e0e0e0;
 }
 
 /* Vidéo */
-.video-wrapper iframe {
+.video-container-index iframe {
   width: 700px; /* Largeur fixe pour la vidéo */
-  height: 400px; /* Hauteur proportionnelle (16:9) */
+  height: 350px; /* Hauteur proportionnelle (16:9) */
   border: none; /* Supprime toute bordure de l'iframe */
+  border-radius: 10px; /* Coins légèrement arrondis pour l’iframe */
+  border: 15px solid #080808;
 }
 
 
@@ -282,7 +305,7 @@ a:hover {
 
 .don-section {
   background: #455868;
-  border: 1px solid #e0e0e0;
+  border: 2px solid #e0e0e0;
   padding: 10px; /* Ajout d’espace interne */
   border-radius: 12px; /* Coins arrondis accentués */
   margin-bottom: 20px; /* Espacement entre sections augmenté */
@@ -426,17 +449,26 @@ header div {
   margin: 0 auto; /* Centre le contenu */
 }
 
-/* Logo dans le header */
-header img {
-  height: 110px !important; /* Taille du logo */
-  border-radius: 50%; /* Forme circulaire si l'image est carrée */
-  margin: 0 40px 0 30px; /* Ajuster l'espace autour du logo */
-  position: relative; /* Permet d'ajuster la position */
-  left: -300px; /* Descend le logo de 20px */
-  top: 150px; /* Ajuste la position verticale */
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
-              box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Transition fluide avec une courbe personnalisée */
+/* Style pour le logo dans le cadre vidéo */
+.logo-in-video {
+  position: absolute; /* Positionnement relatif à .video-container */
+  top: 40px; /* Ajuste la distance par rapport au haut du cadre */
+  left: 60px; /* Ajuste la distance par rapport au côté gauche */
+  width: 100px; /* Taille du logo */
+  border-radius: 50%; /* Rend le logo circulaire */
+  overflow: hidden; /* Assure que les bords sont bien coupés */
+  border: 2px solid white; /* Optionnel : Ajoute une bordure blanche pour mieux ressortir */
+  height: auto; /* Garde les proportions */
+  z-index: 2; /* Assure que le logo reste au-dessus de la vidéo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.logo-in-video:hover {
+  transform: scale(1.2); /* Agrandit légèrement le logo au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ajoute une ombre élégante */
+  cursor: pointer; /* Change le curseur pour indiquer un lien cliquable */
+}
+
 header img:hover {
   transform: scale(1.2); /* Agrandit le logo à 110% lors du survol */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ajoute une ombre élégante */
