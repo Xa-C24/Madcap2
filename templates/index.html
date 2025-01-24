@@ -14,8 +14,9 @@
   <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
   
   <!-- Google Fonts : Pacifico pour le titre et Montserrat pour le texte -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+
   <!-- Script JavaScript Windy pour la carte -->
   <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
   
@@ -35,16 +36,23 @@
       <h3>Madcap, témoin précieux de notre patrimoine maritime, vous invite à embarquer pour un voyage dans le temps. Restauré avec rigueur et minutie, ce bateau classé Monument Historique reflète l'excellence de l'artisanat naval de son époque. L'association se consacre à sa préservation et à la promotion du patrimoine maritime, permettant au public de découvrir les techniques de navigation à voile du XIXe siècle. Découvrez les secrets de sa construction, ses récits de navigation et les événements marquants qui ont façonné son histoire.</h3>
     </section>
 
-    <!-- Section 2 : Patrimoine vivant -->
-    <section class="don-section">
-      <h2>Un patrimoine maritime vivant</h2>
-      <h3>Plus qu’un simple bateau, Madcap est un témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de naviguer, offrant à chacun une immersion dans les navigations d’autrefois.</h3>
+    <main>
+      <!-- Espace vide -->
+    </main>
+
+     <!-- Section 5 : Invitation à rejoindre -->
+     <section class="don-section">
+      <h3>Participez à nos sorties en mer et plongez dans l’histoire avec le Madcap. Inscrivez-vous pour vivre une aventure inoubliable.</h3>
+      <div class="cta-links">
+        <a href="https://www.helloasso.com/associations/madcap-1874" target="_blank" class="cta-button">Rejoignez-nous</a>
+        <a href="{% url 'contact' %}" class="cta-button">Contactez-nous</a>
+      </div>
     </section>
 
-<!-- Section 3 : Présentation vidéo -->
+    <!-- Section 3 : Présentation vidéo -->
 <section id="presentation">
-  <h1>Découvrez Madcap</h1>
-  <div class="video-wrapper">
+  
+  <div class="video-container-index">
     <iframe 
         src="https://www.youtube.com/embed/_7lt_IaRsnc" 
         title="YouTube video player" 
@@ -55,6 +63,18 @@
   </div>
 </section>
 
+<main>
+<!-- Espace vide -->
+</main>
+    <!-- Section 2 : Patrimoine vivant -->
+    <section class="don-section">
+      <h1>Découvrez Madcap</h1>
+      <h2>Un patrimoine maritime vivant</h2>
+      <h3>Plus qu’un simple bateau, Madcap est un témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de naviguer, offrant à chacun une immersion dans les navigations d’autrefois.</h3>
+    </section>
+  </main>
+
+
     <!-- Section 4 : Carte interactive -->
     <section id="map-section">
       <h2>Live Météo</h2>
@@ -62,13 +82,7 @@
       
     </section>
 
-    <!-- Section 5 : Invitation à rejoindre -->
-    <section class="don-section">
-      <h2>Rejoignez-nous !</h2>
-      <h3>Participez à nos sorties en mer et plongez dans l’histoire avec le Madcap. Inscrivez-vous pour vivre une aventure inoubliable.</h3>
-      <a href="{% url 'contact' %}" class="Contactez-nous-index">Contactez-nous</a>
-    </section>
-  </main>
+   
   {% include 'footer.html' %}
 </body>
 <!-- Inclusion du script de la carte Windy (fichier JavaScript externe) -->

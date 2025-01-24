@@ -46,6 +46,8 @@ body {
   }
 }
 
+/* Video GIF Header */
+
 .video-container-header video {
   width: 100%;
   height: auto;
@@ -58,7 +60,8 @@ body {
 
 /* === SECTIONS Index === */
 
-/* Conteneur de la vidéo avec un cadre noir */
+/* Conteneur de la vidéo index avec un cadre noir */
+
 .video-container-index {
   display: flex; /* Centre la vidéo dans son conteneur */
   justify-content: center; /* Centre la vidéo horizontalement */
@@ -69,9 +72,19 @@ body {
   border-radius: 15px; /* Coins arrondis */
   background: linear-gradient(135deg, #34495e, #2c3e50); /* Dégradé en fond */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre douce */
-  border: 2px solid #e0e0e0;
+  border: 2px solid #e0e0e0; /* cadre blanc */
+  box-shadow: 0 0 20px rgba(0, 183, 255, 0.5); /* Éclat lumineux */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Animation */
+
+
 }
 
+.video-container-index:hover {
+  transform: scale(1.01); /* Agrandit légèrement */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Ombre plus marquée */
+  border-color: rgb(239, 241, 241);
+  box-shadow: 0 0 30px rgb(235, 238, 240);
+}
 /* Vidéo */
 .video-container-index iframe {
   width: 700px; /* Largeur fixe pour la vidéo */
@@ -81,6 +94,79 @@ body {
   border: 15px solid #080808;
 }
 
+
+/* Conteneur pour les liens */
+.don-section {
+  text-align: left;
+  background-color: #4A6A8F; /* Couleur de fond */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 20px;
+  margin: 20px auto;
+  color: #fff; /* Texte blanc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+
+.don-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.don-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Boutons "Rejoignez-nous" et "Contactez-nous" */
+.cta-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espacement entre les boutons */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #003b57; /* Couleur du bouton */
+  color: #fdfbff; /* Couleur du texte */
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 8px; /* Coins arrondis */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden; /* Cache l'effet qui déborde */
+  
+  }
+
+.cta-button:hover {
+  transform: scale(1.55); /* Effet de zoom au survol */
+  transform: scale(1.10); /* Légère augmentation au survol */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5); /* Ombre avec brillance */
+  text-decoration: none; /* Supprime le soulignement */
+}
+
+/* Effet de brillance */
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(247, 245, 245, 0.4) 0%,
+    rgba(236, 233, 233, 0.2) 0%,
+    transparent 100%
+  );
+  transition: left 0.200s ease;
+}
+
+.cta-button:hover::after {
+  left: 100%; /* Fait glisser l'effet de brillance */
+}
 
 /* === SECTIONS don contact === */
 .don-page {
@@ -595,8 +681,9 @@ nav ul {
 
 /* Liens du menu */
 nav ul li a {
+  font-family: 'Playfair Display', serif;  /* Utilisation de la police choisie */
   color: #fff; /* Couleur du texte */
-  font-size: 1em; /* Réduit la taille du texte */
+  font-size: 1em; /* Taille du texte */
   text-decoration: none; /* Supprime le soulignement */
   font-weight: bold; /* Texte en gras */
   padding: 2px 5px; /* Espacement intérieur */
@@ -610,6 +697,7 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #cddff2; /* Couleur de fond au survol */
   transform: scale(1.09) !important; /* Effet de zoom */ 
+  
 }
 
 /* === SOCIAL MEDIA ICONS Fb Youtube === */
