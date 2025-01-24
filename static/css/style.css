@@ -119,6 +119,7 @@ body {
 }
 
 /* Boutons "Rejoignez-nous" et "Contactez-nous" */
+
 .cta-links {
   display: flex;
   justify-content: center;
@@ -127,46 +128,74 @@ body {
 
 .cta-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 10px;
   background-color: #003b57; /* Couleur du bouton */
   color: #fdfbff; /* Couleur du texte */
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.2em; /* Taille du texte */
   font-weight: bold;
   border-radius: 8px; /* Coins arrondis */
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease; /* Transition fluide pour tous les effets */
   position: relative;
-  overflow: hidden; /* Cache l'effet qui déborde */
-  
-  }
+}
 
+/* Effet au survol */
 .cta-button:hover {
-  transform: scale(1.55); /* Effet de zoom au survol */
-  transform: scale(1.10); /* Légère augmentation au survol */
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5); /* Ombre avec brillance */
-  text-decoration: none; /* Supprime le soulignement */
+  background-color: #005a87; /* Change légèrement la couleur de fond */
+  color: #fdfbff; /* Garde le texte blanc cassé */
+  text-decoration: none !important; /* Supprime le soulignement */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Lueur blanche subtile */
+  transform: scale(1.08); /* Zoom léger */
 }
 
-/* Effet de brillance */
-.cta-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
+/* Diaporama Index */
+
+.diaporama-index {
+  position: relative;
+  max-width: 550px;
+  margin: 20px auto;
+  border: 5px solid #f9fdff; /* Bordure pour délimiter le cadre */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.diaporama {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animation fluide */
+  width: 100%; /* Largeur totale du conteneur */
+}
+
+.diaporama-image {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(247, 245, 245, 0.4) 0%,
-    rgba(236, 233, 233, 0.2) 0%,
-    transparent 100%
-  );
-  transition: left 0.200s ease;
+  flex-shrink: 0;
 }
 
-.cta-button:hover::after {
-  left: 100%; /* Fait glisser l'effet de brillance */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
 }
+
+button.prev {
+  left: 1px;
+}
+
+button.next {
+  right: 1px;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 
 /* === SECTIONS don contact === */
 .don-page {
