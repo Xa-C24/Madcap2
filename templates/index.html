@@ -20,7 +20,7 @@
   <!-- Script JavaScript Windy pour la carte -->
   <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
 
-  <script src="{% static 'js/diaporama.js' %}"></script>
+  <script src="{% static 'js/diaporama_index.js' %}"></script>
 
   
   <!-- Styles personnalisés pour la carte -->
@@ -33,8 +33,9 @@
   <main class="homepage-main">
     <!-- Section 1 : Introduction -->
     <section class="don-section">
+      <h2>Un patrimoine maritime vivant</h2>
+      <h3>Construit en 1874, Madcap est le plus ancien côtre-pilote encore à flot. Autrefois actif dans le canal de Bristol jusqu’au début des années 1920, il a ensuite été transformé en voilier de plaisance. Aujourd’hui, après avoir rejoint la Méditerranée en 2020, il continue de voguer sous la bannière de l’association Madcap 1874, basée à Canet-en-Roussillon. L'association consacre à sa préservation et à la promotion du patrimoine maritime, permettant au public de découvrir les techniques de navigation à voile du XIXe siècle.</h3>
       <h2>Classé Monument Historique</h2>
-      <h3>Construit en 1874, Madcap est le plus ancien côtre-pilote encore à flot. Autrefois actif dans le canal de Bristol jusqu’au début des années 1920, il a ensuite été transformé en voilier de plaisance. Aujourd’hui, après avoir rejoint la Méditerranée en 2020, il continue de voguer sous la bannière de l’association Madcap 1874, basée à Canet-en-Roussillon.</h3>
 
       <!-- Diaporama -->
       <div class="diaporama-index">
@@ -58,14 +59,29 @@
 
      <!-- Section 5 : Invitation à rejoindre -->
      <section class="don-section">
-      <h3>Participez à nos sorties en mer et plongez dans l’histoire avec le Madcap. Inscrivez-vous pour vivre une aventure inoubliable.</h3>
+      <div class="content-container">
+        <div class="text-content">
+          <h2>Embarquez à bord du Madcap, naviguez avec nous et plongez dans son histoire.</h2>
+          
+        </div><br>
+        <img src="{% static 'images/Photo_index_contact.jpg' %}" alt="Détail du voilier" class="don-image-index">
+      </div>
+      <h2>Partagez des moments riches en émotions lors de nos sorties en mer.</h2>
       <div class="cta-links">
         <a href="https://www.helloasso.com/associations/madcap-1874" target="_blank" class="cta-button">Rejoignez-nous</a>
         <a href="{% url 'contact' %}" class="cta-button">Contactez-nous</a>
       </div>
     </section>
 
-    <!-- Section 3 : Présentation vidéo -->
+    
+
+<main>
+<!-- Espace vide -->
+</main>
+    <!-- Section 2 : Patrimoine vivant -->
+    <section class="don-section">
+      
+      <!-- Section 3 : Présentation vidéo -->
 <section id="presentation">
   
   <div class="video-container-index">
@@ -78,15 +94,7 @@
     </iframe>
   </div>
 </section>
-
-<main>
-<!-- Espace vide -->
-</main>
-    <!-- Section 2 : Patrimoine vivant -->
-    <section class="don-section">
-      <h1>Découvrez Madcap</h1>
-      <h2>Un patrimoine maritime vivant</h2>
-      <h3>Plus qu’un simple bateau, Madcap est un témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de naviguer, offrant à chacun une immersion dans les navigations d’autrefois.</h3>
+    <h3>Plus qu’un simple bateau, Madcap est un témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de naviguer, offrant à chacun une immersion dans les navigations d’autrefois.</h3>
     </section>
   </main>
 
