@@ -5,15 +5,12 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   line-height: 1.5;
-  background: url("../images/Voile.png") center / cover no-repeat;
+  background: url("../images/Voile.png") center center / cover no-repeat; /* Utilisation de 'contain' */
   color: #b81515;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Assurez-vous que l'image occupe toute la hauteur de la page */
 }
-
 
 /* === HEADER STYLES === */
 
@@ -113,7 +110,7 @@ body {
 }
 
 .don-section h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
 }
@@ -152,7 +149,8 @@ body {
 
 .diaporama-index {
   position: relative;
-  max-width: 550px;
+  max-width: 850px;
+  height: 450px; /* Ajustez ici la hauteur souhaitée */
   margin: 20px auto;
   border: 5px solid #f9fdff; /* Bordure pour délimiter le cadre */
   border-radius: 10px;
@@ -162,13 +160,15 @@ body {
 
 .diaporama {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Animation fluide */
+  transition: transform 1.5s ease-in-out; /* Animation fluide entre deux images */
   width: 100%; /* Largeur totale du conteneur */
 }
 
 .diaporama-image {
-  width: 100%;
   flex-shrink: 0;
+  width: 850px; /* Ajuste à la largeur souhaitée */
+  height: 450px; /* Ajuste à la hauteur souhaitée */
+  object-fit: cover; /* Coupe ou ajuste les images sans les déformer */
 }
 
 button.prev, button.next {
@@ -196,6 +196,20 @@ button.prev:hover, button.next:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+
+/* Style pour l'image  index */
+.don-image-index  {
+  width: 55%; /* Taille de l'image */
+  max-height: 600px; /* Limite la hauteur */
+  object-fit: cover; /* Ajuste l'image sans la déformer */
+  border-radius: 10px; /* Coins arrondis */
+  margin-bottom: 20px; /* Espacement sous l'image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre douce */
+  border: 6px solid #f9fdff;
+  display: block; /* Nécessaire pour le centrage avec margin auto */
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* === SECTIONS don contact === */
 .don-page {
@@ -267,7 +281,7 @@ h1, h2 {
 }
 
 .don-header h1 {
-  font-size: 2em; /* Augmenté pour une meilleure hiérarchisation */
+  font-size: 1.5em; /* Augmenté pour une meilleure hiérarchisation */
   margin-bottom: 10px;
 }
 
@@ -288,7 +302,7 @@ h1, h2 {
 
 /* === STYLES GLOBAUX === */
 body {
-  font-family: 'Open Sans', sans-serif; /* Police moderne et lisible */
+  font-family: 'Playfair Display', sans-serif; /* Police moderne et lisible */
   font-size: 16px;
   line-height: 1.8;
   background-color: #f5f5f5; /* Fond gris clair pour toute la page */
@@ -328,7 +342,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8em; /* Taille légèrement plus petite */
+  font-size: 1.5em; /* Taille légèrement plus petite */
   margin-bottom: 10px;
   text-align: center;
 }
@@ -436,7 +450,7 @@ a:hover {
 
 /* Sous-titre */
 .don-section h2 {
-  font-size: 2.2em; /* Augmenté légèrement */
+  font-size: 1.8em; /* Augmenté légèrement */
   color: #a4b1bf;
   margin-bottom: 15px; /* Ajout d’espace après le titre */
 }
@@ -458,7 +472,7 @@ a:hover {
 
 /* Largeur cadre page index.html*/
 .don-section {
-  max-width: 800px; /* Réduit la largeur maximale */
+  max-width: 1000px; /* Taille du padding de la page index */
   margin: 0 auto; /* Centre le rectangle */
 }
 
@@ -467,6 +481,19 @@ a:hover {
   color: #dd1111;
 }
 
+.bandeau-texte {
+  background-color: rgb(233, 228, 228); /* Bandeau blanc */
+  padding: 15px 25px; /* Espacement autour du texte */
+  border-radius: 15px; /* Coins arrondis pour un effet plus doux */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optionnel : petite ombre pour mettre en valeur */
+  display: inline-block; /* Bandeau ajusté au texte */
+  margin: 20px auto; /* Espace autour du bandeau */
+  text-align: center; /* Centrer le texte */
+  color: #b81515; /* Garder le texte rouge */
+  font-style: italic; /* Style en italique */
+  font-weight: bold; /* Texte plus lisible */
+  border: 5px solid #fafafa;
+}
 
 /* === CALL TO ACTION === */
 .call-to-action {
@@ -1007,9 +1034,9 @@ footer p {
 /* === Login Form Container === */
 /* Conteneur principal du formulaire de connexion */
 .login-form-container {
-  max-width: 450px; /* Largeur maximale du formulaire */
+  max-width: 300px; /* Largeur maximale du formulaire */
   margin: 0 auto; /* Centré horizontalement */
-  padding: 50px; /* Marges internes */
+  padding: 40px; /* Marges internes */
   background: #455868; /* Couleur de fond gris-bleu */
   border-radius: 10px; /* Coins arrondis */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce autour du conteneur */
@@ -1028,7 +1055,7 @@ footer p {
 .login-form-container input[type="email"],
 .login-form-container input[type="password"] {
   display: block; /* Chaque champ occupe une ligne distincte */
-  width: 100%; /* Largeur totale */
+  width: 80%; /* Largeur totale */
   padding: 10px; /* Espacement interne */
   font-size: 14px; /* Taille du texte */
   text-align: left; /* Texte aligné à gauche */
@@ -1046,7 +1073,7 @@ footer p {
 
 /* Style du bouton de connexion */
 .login-form-container .don-button {
-  width: 90%; /* Largeur réduite à 60% du conteneur */
+  width: 40%; /* Largeur réduite à 60% du conteneur */
   padding: 8px; /* Marges internes */
   font-size: 14px; /* Taille du texte */
   font-weight: bold; /* Texte en gras */
@@ -1080,4 +1107,43 @@ footer p {
 .flash-messages li {
   font-size: 1.2em; /* Taille du texte */
   color: red; /* Texte en rouge pour signaler une erreur */
+}
+
+/* Oeuil dans password admin login */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  }
+
+.password-container input {
+  display: block; /* Chaque champ occupe une ligne distincte */
+  width: 80%; /* Largeur totale */
+  padding: 10px; /* Espacement interne */
+  font-size: 14px; /* Taille du texte */
+  text-align: left; /* Texte aligné à gauche */
+  border: 1px solid #ccc; /* Bordure grise claire */
+  border-radius: 5px; /* Coins arrondis */
+  margin-bottom: 25px; /* Espacement entre les champs */
+}
+
+.eye-button {
+  position: absolute;
+  right: 30px; /* Positionner à droite */
+  top: 50%; /* Centrer verticalement */
+  transform: translateY(-70%); /* Correction pour rester centré */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555; /* Couleur de l'icône */
+}
+
+.eye-button:focus,
+.eye-button:hover {
+  outline: none; /* Supprime le contour */
+  background: none; /* Aucun changement de fond */
+  border: none; /* Aucun changement de bordure */
+  transform: translateY(-70%); /* Empêche tout déplacement */
+  color: #555; /* Conserve la même couleur */
 }
