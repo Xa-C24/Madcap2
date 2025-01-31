@@ -1,15 +1,16 @@
 
 /* === GLOBAL STYLES === */
 /* Style global pour la mise en page */
+
 body {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   line-height: 1.5;
-  background: url("../images/Voile.png") center center / cover no-repeat; /* Utilisation de 'contain' */
-  color: #b81515;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh; /* Assurez-vous que l'image occupe toute la hauteur de la page */
+  background: url("../images/Voile_Bronze.jpg"); /* Utilisation de 'contain' */
+  min-height: 100vh; /* l'image occupe toute la hauteur de la page */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* === HEADER STYLES === */
@@ -54,6 +55,70 @@ body {
   transition: transform 0.3s ease; /* Transition fluide si besoin */
   background: #000;
 }
+
+/*----------------- Conteneur principal pour le sélecteur de langue -------------- */
+
+.language-switcher {
+  position: absolute;
+  top: 89%; /* Ajuster en fonction de la hauteur souhaitée */
+  right: 30px; /* Ajuster selon la largeur souhaitée */
+  z-index: 1000;
+}
+
+.current-language {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.current-language .flag {
+  width: 25px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.current-language .arrow {
+  font-size: 14px;
+  color: #3b3a3a;  /* Couleur de la flèche */
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 90%;
+  right: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.language-options li {
+  padding: 5px 10px;
+}
+
+.language-options a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #dd1313;
+}
+
+.language-options a:hover {
+  background: #f0f0f0;
+}
+
+.language-options .language-flag {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+/* Affiche les options lorsque l'utilisateur survole ou clique */
+.language-switcher:hover .language-options {
+  display: block;
+}
+
 
 /* === SECTIONS Index === */
 
@@ -458,7 +523,7 @@ a:hover {
 /* Paragraphes */
 .don-section p {
   color: #070707;
-  font-size: 1.1em; /* Augmenté pour une meilleure lisibilité */
+  font-size: 1.2em; /* Augmenté pour une meilleure lisibilité */
   margin-bottom: 10px; /* Ajout d’espace */
   line-height: 1.8; /* Espacement des lignes augmenté */
 }
@@ -482,7 +547,7 @@ a:hover {
 }
 
 .bandeau-texte {
-  background-color: rgb(233, 228, 228); /* Bandeau blanc */
+  background-color: rgb(230, 233, 221); /* Bandeau blanc */
   padding: 15px 25px; /* Espacement autour du texte */
   border-radius: 15px; /* Coins arrondis pour un effet plus doux */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optionnel : petite ombre pour mettre en valeur */
