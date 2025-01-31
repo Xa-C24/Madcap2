@@ -1,4 +1,4 @@
-{% load static %} <!-- inclure des fichiers statiques -->
+{% load static %} <!-- Inclure des fichiers statiques -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,15 +12,184 @@
 </head>
 <body>
     {% include 'header.html' %}
+
     <main>
-        <h1>Événements</h1>
-        <p>Voici la liste des événements organisés par l'association Madcap :</p>
-        <ul>
-            <li>Événement 1 : Balade en mer - Date : 22 janvier 2024</li>
-            <li>Événement 2 : Journée découverte - Date : 16février 2024</li>
-            <li>Événement 3 : Soirée gala - Date : 10 mars 2024</li>
-        </ul>
+        
+        <header class="don-header">
+        <div class="bandeau-texte">
+              <p class="subtitle">Découvrez la liste des événements et sorties prévus en 2025 auxquels l'association Madcap 1874 participera</p>
+            </div>
+          </header>
+
+        <br>
+
+        <!-- Carénage -->
+        <section class="don-section">
+            <h1>Carénage </h1>
+            
+            <li
+            >Le carénage est une étape essentielle pour l’entretien du cotre-pilote qui aura 151ans en 2025.<strong>Madcap</strong>. Un rendez-vous incontournable pour l’association.
+            </li>
+            <div>
+             <img src= "{% static 'images/carenage.jpg' %}" alt="Détail du voilier" class="don-image-index">
+            </div>
+            <li>
+              Il consiste en un entretien complet du bateau, incluant le nettoyage de la coque, la vérification des éléments structurels immergés.
+                Ce travail minutieux, permet d’optimiser la navigation, de préserver le bois et d’assurer la sécurité en mer. C’est aussi un moment de convivialité et de transmission du savoir-faire maritime, où les membres de l’association se retrouvent pour prendre soin de ce patrimoine flottant.
+              </li>
+              <p><strong>Date :</strong> 13 au 21 avril 2025</p>
+          </section>
+
+        <br>
+        <br>
+
+        <!-- Régates d'Estartit -->
+        <section class="don-section">
+            <h1> Régates d’Estartit</h1>
+            <h3>La Régate d’Estartit est une compétition nautique incontournable qui se déroule à la mi-juin. Elle rassemble des voiliers classiques et modernes pour un week-end de course intense sur la côte catalane. L'événement combine sportivité, tradition et convivialité, offrant aux participants une expérience unique en mer.
+
+              L’équipage du Madcap 1874 aura l’opportunité de naviguer aux côtés d’autres bateaux historiques et de représenter le patrimoine maritime. Le programme inclut un convoyage aller-retour, des régates sur trois jours et des moments de partage entre marins.
+              
+              Les frais d’inscription couvrent la participation aux courses, les repas du soir et le petit-déjeuner. Chaque membre doit également prévoir un forfait journalier pour la navigation et la caisse de bord (alimentation et carburant).
+            </h3>
+
+            <h2>
+              Une immersion dans la tradition maritime
+            </h2>
+
+            <h3> 
+              Nous nous mesurerons à d’autres bateaux dans une compétition amicale. Une occasion parfaite pour les membres de l’association de vivre une aventure maritime tout en perfectionnant votre navigation en conditions réelles. 
+            </h3>
+
+            <p><strong>Date :</strong> Mi-juin 2025 (1 semaine, convoyage A/R + régate)</p>
+            <p>Les régates sont prévues le week-end (vendredi, samedi, dimanche), prévoir l’aller le jeudi et le retour le mardi.</p>
+            <p><strong>Tarif :</strong> 180€/personne</p>
+            <ul>
+                <li>Inscription régate incluse</li>
+                <li>Petit-déjeuner et repas du soir inclus</li>
+                <li>Forfait navigation : 25€/jour + caisse de bord</li>
+            </ul>
+            
+        </section>
+       
+        <br>
+        <br>
+        
+
+        <!-- Rassemblement des Vieux Gréements -->
+        <section class="don-section">
+            <h1> Rassemblement des Vieux Gréements - La Grande Motte</h1>
+            <h3>
+              Le Rassemblement des Vieux Gréements de La Grande Motte est un événement maritime emblématique mettant à l’honneur le patrimoine nautique et la navigation traditionnelle. Chaque année, ce rassemblement réunit des bateaux historiques, des cotres, des goélettes et des voiliers classiques, offrant une immersion unique dans l’univers des gréements d’antan.
+            </h3>
+            <h2>Un événement dédié à la tradition maritime</h2>
+            <h3>
+               Organisé dans le cadre pittoresque de La Grande Motte, ce rassemblement célèbre les savoir-faire anciens et permet aux visiteurs d’admirer de magnifiques voiliers restaurés avec passion. L’événement est ponctué de régates amicales, de parades nautiques et d’échanges entre marins, mettant en avant l’importance de la préservation du patrimoine maritime.
+            </h3>
+            <p>
+              <strong>Date :</strong> Dernier week-end de juin 2025
+            </p>
+            <p>
+              Prévoir l’aller le jeudi 26 juin et le retour le lundi 30 ou mardi 1er juillet</p>
+            <p>
+              <strong>Tarif :</strong> 25€/personne + caisse de bord
+            </p>
+            <li>
+              Un événement rassemblant les plus beaux voiliers traditionnels dans une atmosphère conviviale mêlant régates, festivités et partage autour du patrimoine maritime. Un événement incontournable pour les passionnés et amateur de patrimoine nautique
+            </li>
+        </section>
+
+        <br>
+        <br>
+        
+
+        <!-- Séjour Baléares -->
+        <section class="don-section">
+            <h1>Séjour aux Baléares</h1>
+            
+            <h3>
+              Embarquez à bord de Madcap pour un voyage en mer à la découverte des îles Baléares. Ce voyage vous offrira une expérience mêlant navigation authentique, paysages époustouflants et moments de convivialité à bord du voilier.
+            </h3>
+            
+            <h2>
+              Cap sur les Baléares
+            </h2>
+
+            <h3>
+              Naviguez au gré du vent vers les eaux cristallines et les villages pittoresques des Baléares. Ce séjour est une nouvelle occasion d’apprendre ou de perfectionner vos compétences en navigation aux côtés de l’équipage de l'association. Moments de détente, plongées dans des eaux turquoise, couchers de soleil sur l'horizon et échanges maritimes rythmeront cette expédition.
+            </h3>
+            
+            <p><strong>Date :</strong> 5 au 20 juillet 2025 (ou jusqu’au 27 juillet selon disponibilité des différents skippers)</p>
+              <li>
+              Sous réserve d’un nombre suffisant d’équipiers.
+              </li>
+        </section>
+
+        <br>
+        <br>
+        
+
+        <!-- Corsica Classic et Monaco Classic Week -->
+        <section class="don-section">
+            <h1>Corsica Classic & Monaco Classic Week</h1>
+            
+            <h3>
+              À cette occasion nous proposerons de convoyer MADCAP
+              une semaine avant et une semaine après la Corsica pour profiter de la cote Corse, et former ceux qui
+              le souhaitent à la navigation hauturière. A cette occasion vous découvrirez la vie en mer sur une période de 2 à 3 jours.
+            </h3>
+              <h3>
+                La Corsica Classic est une prestigieuse régate qui se déroule chaque année autour des côtes spectaculaires de la Corse. Réservée aux voiliers classiques et aux yachts d’époque, cette compétition allie sport, tradition et découverte de paysages maritimes d’exception. Organisée sous l’égide de l’Association Corsica Classic Yachting, cette course itinérante s’étend sur plusieurs jours, avec des escales dans des ports emblématiques de l’île de Beauté, tels que Bonifacio, Ajaccio, Saint-Florent ou Calvi entre falaises majestueuses, eaux cristallines et villages côtiers pittoresques.
+              </h3>
+
+              <br>
+
+              <h2>Monaco Classic Week : L’élégance et la tradition à l'honneur</h2>
+              
+              <h3>
+                Sur la route du retour, si notre dossier est accepté, nous participerons à la Monaco Classic Week du
+                10 au 13 septembre 2025. Avant de rentrer à Canet nous essaierons d’organiser une rencontre avec
+                l’association des Pilotes Côtier de Marseille.
+              </h3>
+
+                <br>
+
+                <h3>
+                  La Monaco Classic Week est un événement prestigieux rassemblant les plus beaux voiliers classiques, yachts d’époque et canots automobiles dans le cadre exceptionnel de la Principauté de Monaco. Organisée tous les deux ans par le Yacht Club de Monaco, cette rencontre célèbre l’histoire maritime et l’élégance intemporelle des bateaux traditionnels. 
+                  Pendant plusieurs jours, les équipages participent à des régates en Méditerranée, tandis que des concours d’élégance et des expositions mettent en lumière le savoir-faire artisanal de la construction navale. 
+                </h3>
+
+                <br>
+
+            <p><strong>Date :</strong> 21 au 29 août 2025 (Corsica Classic) + 10 au 13 septembre 2025 (Monaco) </p>
+            <li>Sous réserve de l’acceptation du dossier d’inscription</li>
+          </section>
+        
+            <br>
+            <br>
+            
+
+        <section class="don-section">
+            <h2>⚠️ Informations Importantes</h2>
+            <ul>
+                <li>Toutes les sorties sont soumises à un forfait navigation de <strong>25€/jour</strong>.</li>
+                <li>Les régates nécessitent une <strong>licence de la Fédération Française de Voile</strong>.</li>
+                <li>Ces propositions d’activités sont soumises : à l’acceptation de nos dossiers de candidature, à la
+                  participation des adhérents et des skippers, ainsi qu’aux aléas de la météo</li>
+            </ul>
+        </section>
+
+        <br>
+        <br>
+        
+
+        <section class="don-section call-to-action">
+          <h2>Pour toute question ou inscription, contactez-nous  </h2> 
+          <a href= "{% url 'contact' %}"    
+          class="don-button"> Formulaire</a>   
+
     </main>
+
     {% include 'footer.html' %}
 </body>
 </html>
