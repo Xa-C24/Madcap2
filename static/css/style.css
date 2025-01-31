@@ -29,20 +29,11 @@ body {
   border: 6px solid rgba(242, 243, 245, 0.993); /* Bordure translucide */
   background-color: #d5dae0; /* Couleur de fond pour combler les espaces */
   animation: glowing 3s infinite; /* Animation continue */
+  border: none !important;
 
 }
 
-@keyframes glowing {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  }
-}
+
 
 /* Video GIF Header */
 
@@ -783,6 +774,31 @@ header {
   border-radius: 50%; /* Rend l'image circulaire */
   margin-right: 10px; /* Espacement entre les icônes (si besoin) */
 }
+
+/* ====== Section Evenements ====== */
+.evenement-container {
+  display: flex; /* Active le mode flexbox */
+  align-items: center; /* Centre le texte et l’image verticalement */
+  justify-content: space-between; /* Répartit l’espace entre texte et image */
+  flex-wrap: wrap; /* Permet l’adaptation en version mobile */
+  gap: 10px; /* Espacement entre le texte et l’image */
+}
+
+.evenement-texte {
+  flex: 1; /* Prend tout l’espace disponible */
+  min-width: 300px; /* Assure une lisibilité correcte */
+}
+
+.evenement-image-droite{
+  float: right;  /* L'image est alignée à droite */
+  margin-left: 90px;  /* Ajoute un espace entre l'image et le texte */
+  max-width: 35%;  /* L'image prendra jusqu'à 40% de la largeur */
+  border-radius: 10px;  /* Coins arrondis */
+  border: 6px solid #f9fdff;
+  transform: translateX(-50px); /* Décale vers la gauche */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Ombre légère */
+}
+
 
 /* === NAVIGATION MENU === */
 /* Style du menu de navigation */
