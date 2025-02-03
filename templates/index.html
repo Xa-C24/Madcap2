@@ -102,17 +102,64 @@
     </section>
   </main>
 
-
     <!-- Section 4 : Carte interactive -->
-    <section id="map-section">
-      <h2>Live Météo</h2>
-      <div id="map"></div>
-      
-    </section>
+    <section class="don-section">
+      <h2>Carte météo interactive</h2>
+      <iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=42.7&lon=3.0&zoom=5&level=surface&overlay=wind&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&detailLat=42.7&detailLon=3.0&metricWind=kt&metricTemp=°C&radarRange=-1" frameborder="0"></iframe>
 
-   
+      </iframe>
+    </section>
+  </main>
+
   {% include 'footer.html' %}
+
+ <!-- Script pour charger Windy API dynamiquement -->
+<script>
+  function loadWindyAPI() {
+    return new Promise((resolve, reject) => {
+      console.log("Chargement de Windy API...");
+      let script = document.createElement("script");
+      script.src = "https://api.windy.com/assets/map-forecast/libBoot.js";
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        if (typeof windyInit === "function") {
+          console.log("Windy API chargée !");
+          resolve();
+        } else {
+          console.error("Windy API ne s'est pas correctement chargée.");
+          reject("Erreur de chargement de Windy API");
+        }
+      };
+      script.onerror = () => reject("Impossible de charger Windy API");
+      document.body.appendChild(script);
+    });
+  }
+
+  // Initialisation de la carte après chargement de Windy
+  async function initWindyMap() {
+    try {
+      await loadWindyAPI(); // Attendre que Windy API soit chargée
+
+      const options = {
+        key: 'auzPj4DKneQdPce8Lv1p9WDz1YwBM5Yi', // Clé API
+        lat: 42.7,
+        lon: 3.0,
+        zoom: 5,
+      };
+
+      windyInit(options, (windyAPI) => {
+        console.log("Carte Windy chargée !");
+        const { map } = windyAPI;
+      });
+    } catch (error) {
+      console.error("Erreur lors de l'initialisation de Windy :", error);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", initWindyMap);
+</script>
+
+
 </body>
-<!-- Inclusion du script de la carte Windy (fichier JavaScript externe) -->
-<script src="{% static 'js/map_meteo.js' %}"></script>
 </html>
