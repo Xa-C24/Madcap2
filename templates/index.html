@@ -105,61 +105,41 @@
     <!-- Section 4 : Carte interactive -->
     <section class="don-section">
       <h2>Carte météo interactive</h2>
-      <iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=42.7&lon=3.0&zoom=5&level=surface&overlay=wind&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&detailLat=42.7&detailLon=3.0&metricWind=kt&metricTemp=°C&radarRange=-1" frameborder="0"></iframe>
+      <div id="map-wrapper">
 
-      </iframe>
+        <!-- Carte Windy interactive -->
+          <div id="map-container">
+            <iframe width="1050" height="450" 
+              src="https://embed.windy.com/embed2.html?lat=42.7&lon=3.0&zoom=5&level=surface&overlay=waves&menu=true&message=true&marker=true&calendar=now&pressure=true&type=map&location=coordinates&detail=&detailLat=42.7&detailLon=3.0&metricWind=kt&metricTemp=°C&radarRange=-1" 
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+            <!-- Bouton pour afficher la carte en plein écran -->
+           <button id="fullscreen-btn">Afficher la carte en plein écran</button>
+      </div>
+
+      <!-- Panneau d'affichage des données météo -->
+      <div id="weather-info">
+        <h3>Données météo en temps réel 🌍</h3>
+        <ul>
+            <li>🌡️ Température de l'air : <span id="temp-air">--</span> °C</li>
+            <li>🌊 Température de l'eau : <span id="temp-water">--</span> °C</li>
+            <li>💨 Vent : <span id="wind-speed">--</span> km/h (<span id="wind-dir">--</span>)</li>
+            <li>🌊 Hauteur des vagues : <span id="wave-height">--</span> m</li>
+            <li>📈 Marée : <span id="tide">--</span></li>
+        </ul>
+    </div>
+
+
+    
     </section>
   </main>
 
   {% include 'footer.html' %}
 
- <!-- Script pour charger Windy API dynamiquement -->
-<script>
-  function loadWindyAPI() {
-    return new Promise((resolve, reject) => {
-      console.log("Chargement de Windy API...");
-      let script = document.createElement("script");
-      script.src = "https://api.windy.com/assets/map-forecast/libBoot.js";
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
-        if (typeof windyInit === "function") {
-          console.log("Windy API chargée !");
-          resolve();
-        } else {
-          console.error("Windy API ne s'est pas correctement chargée.");
-          reject("Erreur de chargement de Windy API");
-        }
-      };
-      script.onerror = () => reject("Impossible de charger Windy API");
-      document.body.appendChild(script);
-    });
-  }
-
-  // Initialisation de la carte après chargement de Windy
-  async function initWindyMap() {
-    try {
-      await loadWindyAPI(); // Attendre que Windy API soit chargée
-
-      const options = {
-        key: 'auzPj4DKneQdPce8Lv1p9WDz1YwBM5Yi', // Clé API
-        lat: 42.7,
-        lon: 3.0,
-        zoom: 5,
-      };
-
-      windyInit(options, (windyAPI) => {
-        console.log("Carte Windy chargée !");
-        const { map } = windyAPI;
-      });
-    } catch (error) {
-      console.error("Erreur lors de l'initialisation de Windy :", error);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", initWindyMap);
-</script>
-
+  <script src="{% static 'js/weather.js' %}" defer></script>
 
 </body>
 </html>
