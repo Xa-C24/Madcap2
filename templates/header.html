@@ -1,73 +1,63 @@
 {% load static %}
 
-
+<!-- Lien vers le CSS -->
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
+<!-- Barre supérieure avec icônes et texte -->
 <div class="top-bar">
-  <!-- Conteneur de la phrase -->
   <div class="top-bar-center">
     <h2 class="top-bar-text">Madcap, le plus vieux côtre-pilote encore en état de naviguer</h2>
   </div>
 
-  <!-- Conteneur des icônes et bouton -->
   <div class="top-bar-right">
-    <!-- Lien vers Facebook -->
     <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank" class="social-logo facebook">
       <img src="{% static 'images/Fb_logo2.png' %}" alt="Logo Facebook" />
     </a>
 
-    <!-- Lien vers YouTube -->
     <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank" class="social-logo youtube">
       <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" />
     </a>
 
-    <!-- Bouton Espace Admin -->
     <a href="{% url 'admin_login' %}" class="admin-button">Espace Admin</a>
   </div>
 </div>
 
-
+<!-- Header principal avec vidéo -->
 <header>
-  <div>
-    <div class="video-container-header">
-      <!-- Logo placé dans la vidéo -->
-      <a href="/">
-        <img src="{% static 'images/logo.png' %}" alt="Logo Madcap" class="logo-in-video">
-      </a>
-      <video autoplay muted loop playsinline>
-        <source src="{% static 'videos/gif.mp4' %}" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo HTML5.
-      </video>
-    </div>
+  <div class="video-container-header">
+    <a href="/">
+      <img src="{% static 'images/logo.png' %}" alt="Logo Madcap" class="logo-in-video">
+    </a>
+    <video autoplay muted loop playsinline>
+      <source src="{% static 'videos/gif.mp4' %}" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
   </div>
-
-  <!-- Navigation -->
-  <nav>
-    <ul class="nav-links">
-      <li><a href="/">Accueil</a></li>
-      <li><a href="/association">À propos de l'association</a></li>
-      <li><a href="/histoire">L'Histoire de Madcap</a></li>
-      <li><a href="/evenements">Événements</a></li>
-      <li><a href="/don">Soutenir le projet</a></li>
-      <li><a href="/contact">Nous Contacter</a></li>
-    </ul>
-
-    <div class="language-switcher">
-      <button class="current-language">
-        <img src="{% static 'images/Flag_Fr.jpg' %}" class="flag">
-        <span class="arrow">▼</span>
-      </button>
-      <ul class="language-options">
-        
-        <li>
-          <a href="#" class="language-option">
-            <img src="{% static 'images/Flag_Uk.jpg' %}" class="language-flag">
-            
-          </a>
-        </li>
-      </ul>
-    </div>
-    
-  </nav>
 </header>
+
+<!-- Navigation séparée pour le sticky -->
+<nav id="main-nav">
+  <ul class="nav-links">
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/association">À propos de l'association</a></li>
+    <li><a href="/histoire">L'Histoire de Madcap</a></li>
+    <li><a href="/evenements">Événements</a></li>
+    <li><a href="/don">Soutenir le projet</a></li>
+    <li><a href="/contact">Nous Contacter</a></li>
+  </ul>
+
+  <div class="language-switcher">
+    <button class="current-language">
+      <img src="{% static 'images/Flag_Fr.jpg' %}" class="flag">
+      <span class="arrow">▼</span>
+    </button>
+    <ul class="language-options">
+      <li>
+        <a href="#" class="language-option">
+          <img src="{% static 'images/Flag_Uk.jpg' %}" class="language-flag">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
