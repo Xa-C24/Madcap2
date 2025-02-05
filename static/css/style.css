@@ -1184,10 +1184,11 @@ nav {
   position: sticky; /* ✅ Le menu reste visible en haut */
   top: 0; /* ✅ Fixe le menu en haut */
   width: 100%; /* ✅ Prend toute la largeur */
-  background-color: #D5DAE0; /* ✅ Arrière-plan pour éviter la transparence */
+  background-color: #6B7E99;/* Arrière-plan pour éviter la transparence */
   z-index: 1000; /* ✅ S'assure qu'il passe au-dessus des autres éléments */
   padding: 5px 0; /* ✅ Ajoute un peu d’espace autour */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* ✅ Effet d’ombre pour démarquer le menu */
+  padding: 1px 0; /* Réduit l’espace vertical */
 }
 
 /* Liste des liens du menu */
