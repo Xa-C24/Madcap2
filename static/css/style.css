@@ -63,10 +63,11 @@ body {
 
 .language-switcher {
   position: absolute;
-  top: 89%;
+  top: 50%;
   /* Ajuster en fonction de la hauteur souhaitée */
   right: 30px;
   /* Ajuster selon la largeur souhaitée */
+  transform: translateY(-50%); /* Ajuste pour un bon alignement */
   z-index: 1000;
 }
 
@@ -81,7 +82,7 @@ body {
 .current-language .flag {
   width: 25px;
   height: auto;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .current-language .arrow {
@@ -93,7 +94,7 @@ body {
 .language-options {
   display: none;
   position: absolute;
-  top: 90%;
+  top: 80%;
   right: 0;
   list-style: none;
   margin: 0;
@@ -111,7 +112,7 @@ body {
 }
 
 .language-options a:hover {
-  background: #f0f0f0;
+  background: #236EB1;
 }
 
 .language-options .language-flag {
@@ -1190,9 +1191,15 @@ header {
 
 /* === NAVIGATION MENU === */
 
+/* === NAVIGATION MENU STICKY === */
 nav {
-  width: 100%;
-  padding: 10px 0;
+  position: sticky; /* ✅ Le menu reste visible en haut */
+  top: 0; /* ✅ Fixe le menu en haut */
+  width: 100%; /* ✅ Prend toute la largeur */
+  background-color: #D5DAE0; /* ✅ Arrière-plan pour éviter la transparence */
+  z-index: 1000; /* ✅ S'assure qu'il passe au-dessus des autres éléments */
+  padding: 5px 0; /* ✅ Ajoute un peu d’espace autour */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* ✅ Effet d’ombre pour démarquer le menu */
 }
 
 /* Liste des liens du menu */
@@ -1212,8 +1219,8 @@ nav ul li a {
   font-size: 1em;
   text-decoration: none;
   font-weight: bold;
-  padding: 3px 8px;
-  background-color: #34495E;
+  padding: 5px 8px;
+  background-color: #34495E; 
   border-radius: 5px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   display: inline-block;
