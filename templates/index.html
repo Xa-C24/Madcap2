@@ -98,12 +98,15 @@
 
 
     <main>
+     
       <!-- Espace vide -->
     </main>
+   
     <!-- Section 2 : Patrimoine vivant -->
     <section class="don-section">
 
       <!-- Section 3 : Présentation vidéo -->
+     
       <section id="presentation">
 
         <div class="video-container-index">
@@ -119,7 +122,9 @@
     </section>
   </main>
 
-  <!-- Section 4 : Carte interactive -->
+  
+  <!-- Section 4 : Carte interactive Windy -->
+ 
   <section class="don-section">
     <h2>Carte météo interactive</h2>
     <div id="map-wrapper">
@@ -138,8 +143,39 @@
       <button id="fullscreen-btn">Afficher la carte en plein écran</button>
     </div>
 
-    <!-- Panneau d'affichage des données météo -->
-     
+    
+    <!-- Panneau d'affichage des données météo Open Météo avec  https://uiverse.io/ -->
+
+    <div class="card">
+      <section class="info-section">
+        <div class="background-design">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="left-side">
+          <div class="weather">
+            <div id="weather-icon">
+              <!-- Icône météo insérée dynamiquement -->
+            </div>
+            <div id="weather-condition">--</div>
+          </div>
+          <div class="temperature" id="temperature-air">--°</div>
+          <div class="wind">
+            💨 <span id="vent-vitesse">--</span> km/h - <span id="vent-direction">--</span>°
+          </div>
+        </div>
+        <div class="right-side">
+          <div>
+            <div class="hour" id="current-time">--:--</div>
+            <div class="date" id="current-date">-- --</div>
+          </div>
+          <div class="city">Canet-en-Roussillon</div>
+        </div>
+      </section>
+    </div>
+    
+
 
 
   </section>
@@ -147,7 +183,8 @@
 
   {% include 'footer.html' %}
 
-  <script src="{% static 'js/weather.js' %}" defer></script>
+  <script src="{% static 'js/weather.js' %}" defer></script>           <!-- Map Windy -->
+  <script src="{% static 'js/open_meteo.js' %}" defer></script>        <!-- Donnée Météo Open météo -->
 
 </body>
 
