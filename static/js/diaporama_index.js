@@ -1,65 +1,53 @@
-let currentSlide = 0;
-let autoSlideInterval;
-
-function setupInfiniteLoop() {
+document.addEventListener('DOMContentLoaded', function() {
+  // Sélection des éléments
   const diaporama = document.querySelector('.diaporama');
-  const images = document.querySelectorAll('.diaporama-image');
+  const images = document.querySelectorAll('.diaporama img');
+  const nbImages = images.length;
+  let index = 0;
 
-  if (!diaporama || images.length === 0) {
-    console.error('Le diaporama ou les images ne sont pas trouvés.');
-    return;
+  // Fonction pour afficher l'image suivante
+  function suivante() {
+      if (images[index]) {
+          images[index].classList.remove('active');
+          index = (index + 1) % nbImages;
+          images[index].classList.add('active');
+      }
   }
 
-  // Clone la première et la dernière image
-  const firstClone = images[0].cloneNode(true);
-  const lastClone = images[images.length - 1].cloneNode(true);
-
-  // Ajoute les clones aux extrémités du conteneur
-  diaporama.appendChild(firstClone);
-  diaporama.insertBefore(lastClone, images[0]);
-
-  // Ajuste la position initiale pour afficher la première vraie image
-  diaporama.style.transform = `translateX(-${850}px)`; // Largeur = 750px
-}
-
-function changeSlide(direction) {
-  const diaporama = document.querySelector('.diaporama');
-  const images = document.querySelectorAll('.diaporama-image');
-
-  if (!diaporama || images.length === 0) {
-    console.error('Le diaporama ou les images ne sont pas trouvés.');
-    return;
+  // Fonction pour afficher l'image précédente
+  function precedente() {
+      if (images[index]) {
+          images[index].classList.remove('active');
+          index = (index - 1 + nbImages) % nbImages;
+          images[index].classList.add('active');
+      }
   }
 
-  const totalSlides = images.length;
+  // Initialisation : on active la première image
+  if (images.length > 0) {
+      images[0].classList.add('active');
+  }
 
-  // Met à jour l'index de la slide actuelle
-  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+  // Défilement automatique toutes les 3 secondes
+  let interval = setInterval(suivante, 3000);
 
-  // Applique la translation en fonction de l'index actuel
-  diaporama.style.transform = `translateX(-${currentSlide * 850}px)`; // Largeur = 800px
-}
+  // Ajout des écouteurs d'événements sur les boutons
+  const btnSuivant = document.querySelector('.suivant');
+  const btnPrecedent = document.querySelector('.precedent');
 
-// Fonction pour démarrer le défilement automatique
-function startAutoSlide() {
-  autoSlideInterval = setInterval(() => {
-    changeSlide(1); // Passe à la prochaine slide
-  }, 7000); // Change toutes les 3 secondes
-}
+  if (btnSuivant) {
+      btnSuivant.addEventListener('click', () => {
+          clearInterval(interval);
+          suivante();
+          interval = setInterval(suivante, 3000);
+      });
+  }
 
-// Fonction pour arrêter le défilement automatique
-function stopAutoSlide() {
-  clearInterval(autoSlideInterval);
-}
-
-// Démarrage du défilement automatique au chargement de la page
-document.addEventListener('DOMContentLoaded', () => {
-  startAutoSlide();
-
-  // Stoppe le défilement automatique si la souris passe sur le diaporama
-  const diaporamaIndex = document.querySelector('.diaporama-index');
-  diaporamaIndex.addEventListener('mouseenter', stopAutoSlide);
-
-  // Redémarre le défilement automatique si la souris quitte le diaporama
-  diaporamaIndex.addEventListener('mouseleave', startAutoSlide);
+  if (btnPrecedent) {
+      btnPrecedent.addEventListener('click', () => {
+          clearInterval(interval);
+          precedente();
+          interval = setInterval(suivante, 3000);
+      });
+  }
 });
