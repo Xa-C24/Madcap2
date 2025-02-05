@@ -1048,53 +1048,41 @@ header {
 
 /* Bouton Espace Admin */
 .admin-button {
-  background-color: #fbfbfb;
-  color: #e9db1c;
-  padding: 7px;
-  /* Padding minimal */
-  font-size: 11px;
-  /* Texte ajusté */
+  background-color: #ECC929;
+  color: #FFF;
+  padding: 7px;  /* Padding minimal */
+  font-size: 11px;  /* Texte ajusté */
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
   border: 2px solid #f2f1ec;
   border-radius: 12px;
-  line-height: 1;
-  /* Réduit l'espacement vertical interne */
-  height: 3%;
-  /* Pas de hauteur forcée */
-  min-height: 0;
-  /* Supprime toute hauteur minimale */
-  margin: 0;
-  /* Supprime les marges externes */
-  vertical-align: middle;
-  /* Aligne bien le texte */
+  line-height: 1; /* Réduit l'espacement vertical interne */
+  height: 3%;  /* Pas de hauteur forcée */
+  min-height: 0;  /* Supprime toute hauteur minimale */
+  margin: 0;  /* Supprime les marges externes */
+  vertical-align: middle; /* Aligne bien le texte */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Effets au survol */
+
 .admin-button:hover {
-  background-color: #e9db1c;
-  /* Couleur au survol */
-  border-color: #eae8e4;
-  /* Change aussi la couleur de la bordure au survol */
-  transform: scale(1.1);
-  /* Agrandissement au survol */
-  color: #333;
-  /* Texte un peu plus foncé */
+  background-color: #ECC929; /* Couleur au survol */
+  border-color: #eae8e4;  /* Change aussi la couleur de la bordure au survol */
+  transform: scale(1.1); /* Agrandissement au survol */
+  color: #333;  /* Texte un peu plus foncé */
 }
 
 /* Logo Facebook */
 .top-bar .social-logo.facebook {
-  margin-right: 0px;
-  /* Ajoute un espace entre Facebook et YouTube */
+  margin-right: 0px;  /* Ajoute un espace entre Facebook et YouTube */
 }
 
 /* Logo YouTube */
 .top-bar .social-logo.youtube {
-  margin: 0
-    /* Pas de décalage supplémentaire pour YouTube */
+  margin: 0  /* Pas de décalage supplémentaire pour YouTube */
 }
 
 /* Style commun pour les logos */
