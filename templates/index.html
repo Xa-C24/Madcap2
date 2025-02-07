@@ -36,11 +36,45 @@
 </head>
 
 <body>
+
+  
   {% include 'header.html' %}
   <main class="homepage-main">
+
+    <div class="card">
+      <section class="info-section">
+        <div class="background-design">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="left-side">
+          <div class="weather">
+            <div id="weather-icon">
+              <!-- Icône météo insérée dynamiquement -->
+            </div>
+            <div id="weather-condition">--</div>
+          </div>
+          <div class="temperature" id="temperature-air">--°</div>
+          <div class="wind">
+            💨 <span id="vent-vitesse">--</span> km/h - <span id="vent-direction">--</span>°
+          </div>
+        </div>
+        <div class="right-side">
+          <div>
+            <div class="hour" id="current-time">--:--</div>
+            <div class="date" id="current-date">-- --</div>
+          </div>
+          <div class="city">Canet-en-Roussillon</div>
+        </div>
+      </section>
+    </div>
+
+    <br>
+    
     <!-- Section 1 : Introduction -->
     <section class="don-section">
-      <h1>patrimoine maritime vivant</h1>
+      <h1>Un patrimoine maritime vivant</h1>
       <h3><span style="display: inline-block; padding-left: 1.5cm;"></span>Construit en 1874, Madcap est le plus ancien
         côtre-pilote encore à flot. Autrefois actif dans le canal de Bristol jusqu’au début des années 1920, il a
         ensuite été transformé en voilier de plaisance. Aujourd’hui, après avoir rejoint la Méditerranée en 2020, il
@@ -146,34 +180,7 @@
     
     <!-- Panneau d'affichage des données météo Open Météo avec  https://uiverse.io/ -->
 
-    <div class="card">
-      <section class="info-section">
-        <div class="background-design">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-        </div>
-        <div class="left-side">
-          <div class="weather">
-            <div id="weather-icon">
-              <!-- Icône météo insérée dynamiquement -->
-            </div>
-            <div id="weather-condition">--</div>
-          </div>
-          <div class="temperature" id="temperature-air">--°</div>
-          <div class="wind">
-            💨 <span id="vent-vitesse">--</span> km/h - <span id="vent-direction">--</span>°
-          </div>
-        </div>
-        <div class="right-side">
-          <div>
-            <div class="hour" id="current-time">--:--</div>
-            <div class="date" id="current-date">-- --</div>
-          </div>
-          <div class="city">Canet-en-Roussillon</div>
-        </div>
-      </section>
-    </div>
+    
     
 
 
@@ -185,6 +192,9 @@
 
   <script src="{% static 'js/weather.js' %}" defer></script>           <!-- Map Windy -->
   <script src="{% static 'js/open_meteo.js' %}" defer></script>        <!-- Donnée Météo Open météo -->
+<br>
+<br>
+<br>
 
 </body>
 
