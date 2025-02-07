@@ -214,6 +214,7 @@ body {
 .cta-links {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
   /* Espacement entre les boutons */
 }
@@ -429,7 +430,7 @@ body {
 
 #map-container iframe {
   width: 100%;
-  height: 100%;
+  height: 450px;
 }
 
 
