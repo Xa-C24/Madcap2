@@ -2,15 +2,10 @@
 /* Style global pour la mise en page */
 
 body {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background: url("../images/Voile_Bronze.jpg");
-  min-height: 100vh;
+  background: url("../images/Voile.png") no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: center 95%;
+  color: white;
 }
 
 /* === HEADER STYLES === */
@@ -612,6 +607,114 @@ button {
   width: 20px;
   height: 100%;
 }
+
+
+
+/* === STYLES UNIQUEMENT POUR LA PAGE HISTOIRE === */
+
+
+.histoire-page main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5%;
+}
+
+.histoire-page section {
+  max-width: 45%; /* Réduction pour séparer les blocs */
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 50px;
+  background: #455868 !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.histoire-page section:nth-child(even) {
+  margin-left: 5%; 
+  align-self: flex-start;
+  max-width: 50%;
+}
+
+.histoire-page section:nth-child(odd) {
+  margin-right: 5%;
+  align-self: flex-end;
+  max-width: 50%;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+li {
+  line-height: 1.6;
+}
+
+blockquote {
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-left: 4px solid #ddd;
+}
+
+
+/* Style pour l'image de la frégate dans l'histoire */
+.fregate-histoire {
+  display: block;
+  max-width: 80%; /* S'assure que l'image ne dépasse pas du cadre */
+  margin: 20px auto; /* Centre l'image horizontalement */
+  border-radius: 10px;  /* Coins arrondis */
+  border: 6px solid #f9fdff;
+  border-radius: 10px; /* Coins arrondis pour une meilleure intégration */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
+  cursor: pointer; /* Curseur en mode pointer pour indiquer un clic possible */
+}
+
+/* Style pour l'affichage en plein écran */
+.image-popup {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.image-popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+}
+
+.image-popup .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+} 
+
+@media (max-width: 768px) {
+  section {
+      width: 90%;
+      align-self: center;
+  }
+}
+
+
 
 
 /* ========== SECTIONS don contact ========= */
@@ -1288,49 +1391,37 @@ header {
 }
 
 /* ====== Section Evenements ====== */
+
 .evenement-container {
-  display: flex;
-  /* Active le mode flexbox */
-  align-items: center;
-  /* Centre le texte et l’image verticalement */
-  justify-content: space-between;
-  /* Répartit l’espace entre texte et image */
-  flex-wrap: wrap;
-  /* Permet l’adaptation en version mobile */
-  gap: 10px;
-  /* Espacement entre le texte et l’image */
+  display: flex; /* Active le mode flexbox */
+  align-items: center;  /* Centre le texte et l’image verticalement */
+  justify-content: space-between;  /* Répartit l’espace entre texte et image */
+  flex-wrap: wrap;  /* Permet l’adaptation en version mobile */
+  gap: 10px;   /* Espacement entre le texte et l’image */
+  max-width: 1000px; /* Limite la largeur pour éviter que ça s’étale trop */
+  margin: 0 auto; /* Centre le bloc */
+  padding: 20px; /* Ajoute un peu d’espace intérieur */
 }
 
 .evenement-texte {
-  flex: 1;
-  /* Prend tout l’espace disponible */
-  min-width: 300px;
-  /* Assure une lisibilité correcte */
+  flex: 1;  /* Prend tout l’espace disponible */
+  min-width: 300px;  /* Assure une lisibilité correcte */
 }
 
 .evenement-image-droite {
   float: right;
-  /* L'image est alignée à droite */
-  margin-left: 90px;
-  /* Ajoute un espace entre l'image et le texte */
-  max-width: 35%;
-  /* L'image prendra jusqu'à 40% de la largeur */
+  margin-left: 50px; /* Réduit l’espacement pour éviter trop de décalage */
+  max-width: 40%; /* Augmente un peu la largeur */
   border-radius: 10px;
-  /* Coins arrondis */
   border: 6px solid #f9fdff;
-  transform: translateX(-50px);
-  /* Décale vers la gauche */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Ombre légère */
+  transition: transform 0.3s ease-in-out;
 }
 
 .link-evenement {
-  display: flex;
-  /* Aligne les liens sur la même ligne */
-  gap: 15px;
-  /* Espacement entre les liens */
-  justify-content: center;
-  /* Centre les liens horizontalement */
+  display: flex;/* Aligne les liens sur la même ligne */
+  gap: 15px;/* Espacement entre les liens */
+  justify-content: center; /* Centre les liens horizontalement */
   margin: 10px 0;
 }
 
@@ -1352,6 +1443,17 @@ header {
   color: #02567e !important;
   /* Texte blanc au survol */
   text-decoration: underline;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+  .evenement-image-droite {
+    float: none; /* Désactive le float */
+    max-width: 100%; /* Image en pleine largeur */
+    margin-left: 0;
+    display: block;
+    margin: 0 auto; /* Centre l’image */
+  }
 }
 
 
