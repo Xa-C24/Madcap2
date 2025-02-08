@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{% static 'js/map_contact.js' %}"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="{% static 'images/logo3.png' %}" type="image/png">
@@ -71,14 +76,30 @@
         <!-- Section Contact Direct -->
         <section class="don-section">
             <h2>Nous Contacter Directement</h2>
-            <h3><strong>Christian Hurreau, Président de l'Association Madcap-1874</strong></h3>
+            <p><strong>Christian Hurreau,</strong><a> Président de l'Association Madcap-1874</a>
 
             <p><strong>Email :</strong> 
                 <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a>
                 <div class="contact-info">
                   <p><strong>Téléphone :</strong> <a href="tel:+33686143955">+33 6 86 14 39 55</a></p>
               </div>
-              
+
+              <!-- Map Interactive -->
+              <div style="display: flex; align-items: center; gap: 20px;">
+                <!-- Conteneur de la carte -->
+                <div id="map" style="height: 300px; width: 450px;"></div>
+            
+                <!-- Conteneur de l'adresse -->
+                <div style="color: white; font-size: 18px;">
+                    
+                    Quai de Barcelone <br>
+                    66140 Canet-en-Roussillon <br>
+                    France
+                </div>
+            </div>
+
+              <br>
+              <br>
 
             <!-- Conteneur pour les logos sociaux -->
             <div class="logos">
