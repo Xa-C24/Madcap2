@@ -19,6 +19,7 @@
       <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" />
     </a>
 
+
     <a href="{% url 'admin_login' %}" class="admin-button">Espace Admin</a>
   </div>
 </div>
@@ -34,11 +35,22 @@
       Votre navigateur ne supporte pas la vidéo HTML5.
     </video>
   </div>
+
+  
+
 </header>
 
 <!-- Navigation séparée pour le sticky -->
 <nav id="main-nav">
   <ul class="nav-links">
+
+<!-- Logo météo cliquable vers la carte Windy -->
+<div class="top-bar-right nav-weather-logo">
+<a href="/#map-container" class="social-logo weather" title="Voir la météo">
+  <img src="{% static 'images/logo_meteo2.png' %}" alt="Météo Windy" />
+</a>
+</div>
+
     <li><a href="/">Accueil</a></li>
     <li><a href="/association">À propos de l'association</a></li>
     <li><a href="/histoire">L'Histoire de Madcap</a></li>
