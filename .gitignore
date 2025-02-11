@@ -38,3 +38,5 @@ madcap_app/__pycache__/__init__.cpython-310.pyc
 madcap_app/migrations/0004_alter_member_options_alter_member_phone_and_more.py
 db.sqlite3
 db.sqlite3
+madcap_app/migrations/0003_alter_member_date_entree.py
+madcap_app/migrations/0002_member_date_entree.py
