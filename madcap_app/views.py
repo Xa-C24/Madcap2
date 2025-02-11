@@ -38,6 +38,8 @@ from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 import dns.resolver, re
 
+from .models import Avis  # Pour récupérer les avis
+from .forms import AvisForm  # Pour gérer le formulaire
 
 def index(request):
     return render(request, 'index.html')
@@ -61,6 +63,8 @@ def histoire(request):
 
 def evenements(request):
     return render(request, 'evenements.html')
+
+
 
 # Admin access
 
@@ -134,17 +138,11 @@ def search_members(request):
 
 
 def validate_email_domain(email):
-    """Valide si le domaine de l'adresse email existe et est cohérent."""
+    """Valide si le domaine de l'adresse email existe sans restriction spécifique."""
     try:
         domain = email.split('@')[1]  # Extrait le domaine
         dns.resolver.resolve(domain, 'MX')  # Vérifie les enregistrements MX du domaine
 
-        # Vérifier les fautes courantes
-        common_domains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com']
-        if domain not in common_domains:
-            raise ValidationError(
-                f"L'adresse Email '{domain}' semble incorrect. Vouliez-vous écrire l'un de ceux-ci ? {', '.join(common_domains)}"
-            )
     except (IndexError, dns.resolver.NXDOMAIN, dns.resolver.NoAnswer, dns.resolver.Timeout):
         raise ValidationError("L'adresse email n'est pas valide.")
 
@@ -215,3 +213,11 @@ def validate_phone_number(phone):
     if not re.match(pattern, normalized_phone):
         raise ValidationError("Le numéro de téléphone n'est pas valide. Utilisez un format français ou international.")
     return normalized_phone
+
+
+# Avis
+
+def livre_dor(request):
+  avis_list = Avis.objects.all()  # Récupère tous les avis
+  form = AvisForm()  # Formulaire pour ajouter un avis
+  return render(request, 'livre_dor.html', {'form': form, 'avis_list': avis_list})
