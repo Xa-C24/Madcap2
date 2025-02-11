@@ -22,3 +22,20 @@ class Member(models.Model):
 
     def __str__(self):
         return self.name
+
+
+# Gère les avis laissés 
+class Avis(models.Model):
+    nom = models.CharField(max_length=100)
+    email = models.EmailField()
+    telephone = models.CharField(max_length=15)
+    commentaire = models.TextField()
+    note = models.IntegerField(choices=[(i, str(i)) for i in range(1, 6)])  # Note de 1 à 5
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['date']
+
+    def __str__(self):
+        return f"{self.nom} - {self.note} étoiles"
+    
