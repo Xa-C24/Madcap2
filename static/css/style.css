@@ -453,7 +453,7 @@ body {
   width: 950px;  /* Taille normale au chargement */
   height: 450px;
   max-width: 100%;  /* Pour éviter tout écrasement */
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   border: 7px solid #e0e0e0;
   justify-content: center;
@@ -481,13 +481,17 @@ body {
 }
 
 #map-container iframe {
-  width: 100%;
-  height: 100vh;
+  width: 950px;
+  height: 450px;
+  
 }
 
 
 
-/* ================= Open Méteo ======= */
+/* ======== Open Méteo =========
+--                              --
+--                              --
+=================================*/
 
 
 /* From Uiverse.io by KSAplay */ 
