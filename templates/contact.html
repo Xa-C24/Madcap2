@@ -37,7 +37,7 @@
         <header class="don-header">
             
             <div class="bandeau-texte">
-                Nous sommes ravis de vous entendre. Remplissez le formulaire ci-dessous pour toute question ou information supplémentaire.
+              Pour toute question ou information supplémentaire, remplissez le formulaire ci-dessous.
             </p>
           </div>
         </header>
@@ -52,9 +52,12 @@
                 <label for="name">Nom et Prénom :</label>
                 <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
 
-                <!-- Champ Email -->
+            
+               <!-- Champ Email -->
                 <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" value="{{ request.POST.email }}" required>
+                 <!-- asssure la sauvegarde du message en cas de message d'erreur-->
+
 
                 <!-- Champ téléphone -->
                 <label for="Telephone">Téléphone (facultatif) :</label>
