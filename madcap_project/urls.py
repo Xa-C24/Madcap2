@@ -18,6 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),  # Route pour l'admin
     path('', include('madcap_app.urls')),  # Inclure les routes de l'application
