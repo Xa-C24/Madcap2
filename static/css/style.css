@@ -905,6 +905,11 @@ blockquote {
   margin-right: auto;
 }
 
+.livredor-form textarea {
+  height: 120px; /* Ajuster la hauteur sans trop élargir */
+  resize: vertical; /* Permettre d'ajuster si nécessaire */
+}
+
 /* Ajustement des champs Nom & Email côte à côte */
 .livredor-form .double-fields {
   display: flex;
@@ -914,6 +919,12 @@ blockquote {
 
 .livredor-form .double-fields div {
   width: 48%;
+}
+
+
+/* Réduire l'espace au-dessus de "Photo 1" */
+.livredor-form label[for="photo1"] {
+  margin-top: 0.1px; /* Réduit l'espace au-dessus */
 }
 
 /* Ajustement du champ "Note" */
@@ -948,32 +959,175 @@ h1, h2 {
 }
 
 li {
-  line-height: 1.6;
+  line-height: 1.9;
 }
+
+
+/* Message de retour après envoi */
+
 
 blockquote {
   font-style: italic;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.349);
   padding: 10px;
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #f8f7f7;
 }
 
 
-/* Style pour l'image de la frégate dans l'histoire */
-.fregate-histoire {
+.messages {
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Etoile pour notation Avis */
+
+/* Conteneur des étoiles */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse; /* Permet de commencer par 5 étoiles */
+  justify-content: center;
+  font-size: 30px;
+  gap: 5px;
+}
+
+/* Cache les boutons radio */
+.star-rating input {
+  display: none;
+}
+
+/* Style des étoiles */
+.star-rating .star {
+  cursor: pointer;
+  color: #f7f1f1; /* Couleur par défaut (gris) */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+  color: rgb(160, 147, 73);
+  transform: scale(1.2);
+}
+
+/* Effet lors de la sélection */
+.star-rating input:checked ~ .star {
+  color: rgb(250, 250, 3); /* Étoiles sélectionnées en doré */
+  animation: pop 0.4s ease-in-out;
+}
+
+/* Animation au clic */
+@keyframes pop {
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---- Coté avis postés -----*/
+
+/* Conteneur principal de chaque avis */
+.avis-container {
+  background-color:#455868; /* Fond semi-transparent */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Alignement du nom et des étoiles sur la même ligne */
+.avis-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacement entre le nom et les étoiles */
+}
+
+/* Style du nom */
+.avis-nom {
+  font-weight: bold;
+  font-size: 18px;
+  color: #f8f8f7; /* Doré pour faire ressortir */
+}
+
+/* Style des étoiles */
+.avis-stars {
+  color: gold;
+  font-size: 18px;
+}
+
+/* Style de la date */
+.avis-date {
   display: block;
-  max-width: 80%; /* S'assure que l'image ne dépasse pas du cadre */
-  margin: 20px auto; /* Centre l'image horizontalement */
-  border-radius: 10px;  /* Coins arrondis */
-  border: 6px solid #f9fdff;
+  font-weight: bold;
+  margin-top: 7px;
+  color:#C31415;
+  font-size: 16px;
+}
+
+/* Mise en forme du commentaire */
+.avis-commentaire {
+  font-style: italic;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* Mise en forme des images */
+.avis-photos img {
+  max-width: 160px;
+  border-radius: 5px;
+  border: 2px solid #f9fdff;
+  margin: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
   cursor: pointer; /* Curseur en mode pointer pour indiquer un clic possible */
-  transition: transform 0.7s ease, box-shadow 0.7s ease; /* Animation fluide */
+  transition: transform 0.9s ease, box-shadow 0.9s ease; /* Animation fluide */
 }
 
-.fregate-histoire:hover {
-  transform: scale(1.6); /* Zoom léger */
+.avis-photos img:hover {
+  transform: scale(3.3); /* Zoom léger */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+  z-index: 10; /* Place l'image agrandie au-dessus des autres */
+  position: relative; /* Évite les chevauchements avec les autres éléments */
+}
+
+/* Conteneur de chaque avis */
+.avis-container {
+    background: rgba(255, 255, 255, 0.1); /* Fond léger */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espacement entre chaque avis */
+}
+
+/* Séparateur entre les avis */
+.avis-separator {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-top: 15px;
 }
 
 
