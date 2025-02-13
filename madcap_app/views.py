@@ -218,6 +218,15 @@ def validate_phone_number(phone):
 # Avis
 
 def livre_dor(request):
-  avis_list = Avis.objects.all()  # Récupère tous les avis
-  form = AvisForm()  # Formulaire pour ajouter un avis
-  return render(request, 'livre_dor.html', {'form': form, 'avis_list': avis_list})
+    avis_list = Avis.objects.order_by('-date')  # Afficher les avis du plus récent au plus ancien
+
+    if request.method == 'POST':
+        form = AvisForm(request.POST)
+        if form.is_valid():
+            form.save()  # Enregistre l'avis dans la base de données
+            return redirect('livre_dor')  # Recharge la page pour afficher le nouvel avis
+
+    else:
+        form = AvisForm()
+
+    return render(request, 'livre_dor.html', {'form': form, 'avis_list': avis_list})
