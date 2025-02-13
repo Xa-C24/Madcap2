@@ -1,127 +1,130 @@
-## Madcap  
+# Projet Madcap1874
 
-creer un serveur  pip install flask
-extension qui gere les traductions des langues
-pip install flask-babel
+## ⛵ Présentation du Projet
+Madcap1874 est un site web développé pour présenter l'histoire du bateau Madcap, promouvoir l'association, permettre l'inscription de nouveaux membres et recueillir les témoignages des visiteurs. Le site est également un espace interactif avec une météo en temps réel, des informations sur les événements à venir et des liens pour soutenir l'association.
 
-for run Django serer  
+## ⚙ Technologies Utilisées
+- **Framework Backend** : Django (Python)
+- **Base de données** : SQLite
+- **Frontend** : HTML, CSS, JavaScript
+- **API météo** : Intégration de la carte Windy pour la météo en direct
+- **Système de gestion des avis** : Stockage et validation des avis avant affichage
+- **Traduction du site** : Flask-Babel pour la gestion des langues (FR & EN)
+
+## 🌐 Structure du Site
+### ⛵ Page d'Accueil (`index.html`)
+- Présentation du Madcap avec une vidéo.
+- Deux liens cliquables :
+  - **Adhérer à l'association** via HelloAsso.
+  - **Page de contact** pour plus d'informations.
+- Choix de la langue (français/anglais).
+
+### 📝 Histoire du Madcap (`histoire.html`)
+- Résumé de l'histoire du bateau de 1874 à aujourd'hui.
+- Illustrations et descriptions des différentes époques.
+
+### 🎣 Page Événements (`evenements.html`)
+- Calendrier des événements auxquels Madcap participera en 2025.
+
+### 👨‍🌾 Soutenir le Projet (`don.html`)
+- Explication des différents moyens de soutenir Madcap.
+- Lien cliquable vers HelloAsso pour les dons.
+
+### 💬 Livre d'Or - Votre Expérience (`livre_dor.html`)
+- Formulaire pour **poster un commentaire** sur l'expérience vécue à bord du Madcap.
+- **Affichage des avis** du plus récent au plus ancien.
+- **Validation des avis** avant affichage sur le site.
+
+### 📞 Page Contact (`contact.html`)
+- Formulaire de contact.
+- Numéro de téléphone et email de l'association.
+- **Carte interactive** situant Madcap à Canet-en-Roussillon.
+
+### 🏠 Interface Administrateur
+- Gestion des membres de l'association.
+- Validation des avis avant publication.
+- Interface de recherche dynamique pour les membres.
+
+## 📊 Gestion des Bases de Données
+### 👨‍🌾 Table des Membres (`madcap_app_member`)
+Stocke les informations des membres de l'association :
+```sql
+CREATE TABLE madcap_app_member (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    address TEXT NOT NULL,
+    phone TEXT UNIQUE NOT NULL,
+    date_entree DATE
+);
+```
+**Exemples de requêtes SQL :**
+```sql
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Xavier Dupont', '123 Rue de Paris', '0123456789', '2025-01-01');
+SELECT * FROM madcap_app_member;
+DELETE FROM madcap_app_member WHERE id = 3;
+UPDATE madcap_app_member SET phone = '0987654321' WHERE id = 1;
+```
+
+### 💬 Table des Avis (`madcap_app_avis`)
+Stocke les avis des visiteurs sur le site.
+```sql
+CREATE TABLE madcap_app_avis (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nom TEXT NOT NULL,
+    email TEXT NOT NULL,
+    telephone TEXT NOT NULL,
+    commentaire TEXT NOT NULL,
+    note INTEGER NOT NULL CHECK(note BETWEEN 1 AND 5),
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    valide BOOLEAN DEFAULT FALSE
+);
+```
+**Exemples de requêtes SQL :**
+```sql
+INSERT INTO madcap_app_avis (nom, email, telephone, commentaire, note, valide) VALUES ('Jean Dupont', 'jean.dupont@example.com', '0601020304', 'Super expérience !', 5, 0);
+SELECT * FROM madcap_app_avis WHERE valide = 1;
+UPDATE madcap_app_avis SET valide = 1 WHERE id = 1;
+```
+
+## 🛠 Commandes Utiles
+### ⚙ Installation des dépendances
+```bash
+pip install flask flask-babel django
+```
+
+### ⚡ Démarrer le serveur Django
+```bash
 python3 manage.py runserver
+```
 
-creation de la strucrure
-mkdir templates
-  histoire.html
-  index.html
+### 🔒 Créer un super-utilisateur
+```bash
+python3 manage.py createsuperuser
+```
 
-mkdir css
-  style.css
-  images
-  js
+### 📈 Gestion de la Base de Données SQLite
+```bash
+python3 manage.py dbshell
+.tables
+SELECT * FROM madcap_app_member;
+SELECT * FROM madcap_app_avis;
+```
 
-Trailing Spaces
-highlight trailing spaces and delete them in a flash!
+## 🎨 Outils de Développement
+- **Live Server** pour recharger les pages automatiquement :
+  ```bash
+  npm install -g browser-sync
+  browser-sync start --proxy "127.0.0.1:8000" --files "templates/**/*.html, static/**/*.css, static/**/*.js"
+  ```
+- **Extension VS Code** : Prettier pour le formatage du code.
 
-This extension is a port of the popular Sublime Text plugin Trailing Spaces.
+---
 
-Prettier Formatter for Visual Studio Code
-Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+## 🌟 Conclusion
+Le projet Madcap1874 vise à promouvoir et préserver l'histoire du bateau Madcap tout en facilitant l'implication des membres et des visiteurs. Le site est conçu pour être interactif, informatif et accessible.
 
+💡 **Prochaine étape :** Finaliser la page "À propos de l'association" et intégrer des améliorations graphiques.
 
-app.py
+---
+📖 **Dernière mise à jour :** [Date automatique lors de la mise à jour]
 
-root@hey-coucou-xav:~/Madcap# pip install livereload
-Collecting livereload
-  Downloading livereload-2.7.0-py3-none-any.whl (22 kB)
-  
-README.md
-
-
-j'utilise une base de donné sqlite mais je travail en ligne commande avec db shell
-
-Créer un SuperUser
-
- python3 manage.py createsuperuser
- association.madcap.1874@gmail.com
-
-xr.piallu@gmail.com
-LecotrepiloteMadcap1874
-
-Lancer le shell de la base de données : python3 manage.py dbshell
-
----Ajouter un nouveau membre---
-
-    Insérer un membre avec une requête SQL :
-    INSERT INTO madcap_app_member (name, address, phone) VALUES ('Xavier Dupont', '123 Rue de Paris, France', '0123456789');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('ROUSSELET Thierry ', 'Avenue de Sceau, 92330', '06 63 02 09 82', '2020-02-01');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('HURREAU Christian Skipper', 'Face au port, 06700', '06 86 14 39 55', '2020-02-01');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('PIEDALLU Xavier Développeur site Web', 'Bellevaux, 74470', '06 87 74 02 73', '2025-01-01');
-
-    Vérifier les données insérées :
-    SELECT * FROM madcap_app_member;
-
-    Quitter le shell SQL :
-    .quit
-
-Si tout va bien, membre ajouter a la base de données
-
----Supprimer un membre---
-
-Lancer le shell de la base de données : python3 manage.py dbshell
-
-      Lister les membres pour voir leurs informations :
-      SELECT * FROM madcap_app_member;
-
-     Supprimer un membre par son ID : Par exemple, pour supprimer le membre avec l'ID (1) par exemple:
-      DELETE FROM madcap_app_member WHERE id = 3;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (1, 2, 4); 
-    
-      Vérifier que le membre a été supprimé :
-      SELECT * FROM madcap_app_member;
-
-      Quitter le shell SQL :
-      .quit
-
-Si tout va bien, membre supprimer a la base de données par l'ID
-
-
----Modifier numero de tel d'un membre---
-
-Lancer le shell de la base de données : python3 manage.py dbshell
-
-Affichez tous les membres pour identifier celui que vous voulez modifier :
-    SELECT * FROM madcap_app_member;
-
-
-Pour mettre à jour le numéro de téléphone d'un membre, utilisez la commande SQL UPDATE. Par exemple, si l'ID du membre est 1 :
-      UPDATE madcap_app_member 
-      SET phone = '0987654321'
-      WHERE id = 1;
-
-
----Modifier le Nom Prénom d'un membre---
-
-Lancer le shell de la base de données : python3 manage.py dbshell
-
-  SELECT * FROM madcap_app_member;
-  SELECT * FROM madcap_app_member WHERE id = 1;
-
-  UPDATE madcap_app_member
-  SET name = 'Nouveau Nom'
-  WHERE id = 1;
-
-
-Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
-      SELECT * FROM madcap_app_member;
-
-Une fois les modifications terminées, quittez le shell avec :
-      .quit
-
-
-Markdown Extension Pack
-
-live server 
-
-npm install -g browser-sync
-browser-sync --version
-
-browser-sync start --proxy "127.0.0.1:8000" --files "templates/**/*.html, static/**/*.css, static/**/*.js"
-
-http://localhost:3000/
