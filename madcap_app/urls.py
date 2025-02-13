@@ -3,17 +3,19 @@ from . import views
 from django.contrib import admin
 
 urlpatterns = [
-    path('', views.index, name='index'),  # Route pour la page d'accueil
+    path('', views.index, name='index'),  # Page d'accueil
     path('association/', views.association, name='association'),
     path('contact/', views.contact, name='contact'),
     path('don/', views.don, name='don'),
     path('histoire/', views.histoire, name='histoire'),
-    path('evenements/', views. evenements, name='evenements'),
-    path('livre_dor/', views. livre_dor, name='livre_dor'),
-    
-     # Route pour formulaire de contact
+    path('evenements/', views.evenements, name='evenements'),
+    path('livre_dor/', views.livre_dor, name='livre_dor'),
+
+    # Formulaire de contact
     path('submit_contact/', views.submit_contact, name='submit_contact'),
 
+    # Interface d'administration Django
+    path('admin/', admin.site.urls),  # Ajout de l’interface admin
 
     # Routes spécifiques à l'administration
     path('admin-login/', views.admin_login, name='admin_login'),

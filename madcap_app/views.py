@@ -221,10 +221,48 @@ def livre_dor(request):
     avis_list = Avis.objects.order_by('-date')  # Afficher les avis du plus récent au plus ancien
 
     if request.method == 'POST':
-        form = AvisForm(request.POST)
+        form = AvisForm(request.POST, request.FILES)  # Prend en charge les textes et fichiers
+        
         if form.is_valid():
-            form.save()  # Enregistre l'avis dans la base de données
-            return redirect('livre_dor')  # Recharge la page pour afficher le nouvel avis
+            # Récupération des données
+            nom = form.cleaned_data['nom']
+            email = form.cleaned_data['email']
+            telephone = form.cleaned_data['telephone']
+            commentaire = form.cleaned_data['commentaire']
+            note = form.cleaned_data['note']
+
+            #  Validation de l'email
+            try:
+                validate_email(email)
+                validate_email_domain(email)
+            except ValidationError as e:
+                messages.error(request, f"Erreur email : {e}")
+                return redirect('livre_dor')
+
+            # Validation du numéro de téléphone
+            try:
+                telephone = validate_phone_number(telephone)  # Normalisation du numéro
+            except ValidationError as e:
+                messages.error(request, f"Erreur téléphone : {e}")
+                return redirect('livre_dor')
+
+            # Vérification de la longueur du message
+            if len(commentaire) < 20:
+                messages.error(request, "Le message doit contenir au moins 20 caractères.")
+                return redirect('livre_dor')
+
+            #  Enregistrement de l'avis dans la base de données
+            avis = form.save(commit=False)
+            avis.telephone = telephone  # Stocke la version normalisée du numéro
+            avis.save()
+
+
+            #  Ajout du message de confirmation
+            messages.success(request, "Votre partage d'expérience est bien pris en compte. Il sera en ligne dans les plus brefs délais après validation.")
+            return redirect('livre_dor')  # Recharge la page pour afficher le message
+
+        else:
+            messages.error(request, "Erreur lors de l'envoi de votre avis. Veuillez vérifier les champs et réessayer.")
 
     else:
         form = AvisForm()
