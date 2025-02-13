@@ -1,65 +1,85 @@
-{% load static %} <!-- Inclure des fichiers statiques -->
+{% load static %} <!-- Inclusion des fichiers statiques -->
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Livre d'or - Madcap</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="icon" href="{% static 'images/logo3.png' %}" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Madcap</title>
+
+    <!-- Lien vers les fichiers CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/logo3.png' %}" type="image/png">
 </head>
-
-<body class="don-section">
-  {% include 'header.html' %}
+<body>
+    {% include 'header.html' %} <!-- Inclusion du header -->
   
-  <main>
-    <section>
+    <br><br>
+
+    <main class="livredor-page">
       <h1>Livre d'or</h1>
-
-      <!-- Formulaire d'ajout d'un avis -->
-      <form method="post">
-          {% csrf_token %}
-          <label for="nom">Nom :</label>
-          {{ form.nom }}
-
-          <label for="email">Email :</label>
-          {{ form.email }}
-
-          <label for="telephone">Téléphone :</label>
-          {{ form.telephone }}
-
-          <label for="commentaire">Message :</label>
-          {{ form.commentaire }}
-
-          <label for="note">Note :</label>
-          {{ form.note }}
-
-          <button type="submit">Envoyer</button>
-      </form>
-
-      <hr>
-
-      <h2>Avis des visiteurs</h2>
-      {% if avis_list %}
-          <ul>
-              {% for avis in avis_list %}
-                  <li>
-                      <strong>{{ avis.nom }}</strong> - {{ avis.note }} ★<br>
-                      "{{ avis.commentaire }}"<br>
-                      <small>Posté le : {{ avis.date|date:"d/m/Y" }}</small>
-                  </li>
-              {% endfor %}
-          </ul>
-      {% else %}
-          <p>Aucun avis pour le moment.</p>
-      {% endif %}
-    </section>
+  
+      <div class="livredor-container">
+          <!-- Section des commentaires -->
+          <section class="livredor-avis">
+              <h2>Votre expérience</h2>
+              {% if avis_list %}
+                  <ul>
+                      {% for avis in avis_list %}
+                          <li>
+                              <blockquote>
+                                  "{{ avis.commentaire }}"
+                              </blockquote>
+                              <div class="author">
+                                  <strong>{{ avis.nom }}</strong> - {{ avis.note }} ★
+                                  <br>
+                                  <small>Posté le : {{ avis.date|date:"d/m/Y" }}</small>
+                              </div>
+                          </li>
+                          <div class="divider"></div>
+                      {% endfor %}
+                  </ul>
+              {% else %}
+                  <p>Aucun avis pour le moment.</p>
+              {% endif %}
+          </section>
+  
+          <!-- Section du formulaire -->
+          <section class="livredor-form">
+              <h2>Laissez votre avis</h2>
+              <form method="post">
+                  {% csrf_token %}
+  
+                  <label for="nom">Nom :</label>
+                  {{ form.nom }}
+  
+                  <label for="email">Email :</label>
+                  {{ form.email }}
+  
+                  <label for="telephone">Téléphone :</label>
+                  {{ form.telephone }}
+  
+                  <label for="commentaire">Message :</label>
+                  {{ form.commentaire }}
+  
+                  <label for="note">Note :</label>
+                  {{ form.note }}
+  
+                  <button type="submit">Envoyer</button>
+              </form>
+          </section>
+      </div>
   </main>
+  
 
-  {% include 'footer.html' %}
-
+    {% include 'footer.html' %}
 </body>
-
 </html>
