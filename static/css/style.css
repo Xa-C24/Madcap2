@@ -173,71 +173,42 @@ body {
 /* Conteneur de la vidéo index avec un cadre noir */
 
 .video-container-index {
-  display: flex;
-  /* Centre la vidéo dans son conteneur */
-  justify-content: center;
-  /* Centre la vidéo horizontalement */
-  padding: 20px;
-  /* Espacement autour de la vidéo */
-  padding: 55px;
-  /* Espacement interne entre la vidéo et le cadre noir */
-  max-width: 720px;
-  /* Largeur maximale du conteneur (vidéo incluse) */
-  margin: 20px auto;
-  /* Centre le conteneur horizontalement avec un espacement vertical */
-  border-radius: 15px;
-  /* Coins arrondis */
-  background: linear-gradient(135deg, #34495e, #2c3e50);
-  /* Dégradé en fond */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  /* Ombre douce */
-  border: 2px solid #e0e0e0;
-  /* cadre blanc */
-  box-shadow: 0 0 20px rgba(0, 183, 255, 0.5);
-  /* Éclat lumineux */
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  /* Animation */
+  display: flex; /* Centre la vidéo dans son conteneur */
+  justify-content: center;  /* Centre la vidéo horizontalement */
+  padding: 20px;  /* Espacement autour de la vidéo */
+  padding: 55px;  /* Espacement interne entre la vidéo et le cadre noir */
+  max-width: 720px; /* Largeur maximale du conteneur (vidéo incluse) */
+  margin: 20px auto;  /* Centre le conteneur horizontalement avec un espacement vertical */
+  border-radius: 15px;  /* Coins arrondis */
+  background: linear-gradient(125deg, #9dafbb, #1f2f3f); /* Dégradé en fond */
+  box-shadow: 0 8px 16px rgba(223, 16, 16, 0.3); /* Ombre douce */
+  border: 8px solid #e0e0e0; /* cadre blanc */
+  box-shadow: 0 0 50px rgba(240, 238, 238, 0.5);/* Éclat lumineux */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Animation */
 
 
 }
 
-.video-container-index:hover {
-  transform: scale(1.01);
-  /* Agrandit légèrement */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  /* Ombre plus marquée */
-  border-color: rgb(239, 241, 241);
-  box-shadow: 0 0 30px rgb(235, 238, 240);
-}
+
 
 /* Vidéo */
 .video-container-index iframe {
-  width: 700px;
-  /* Largeur fixe pour la vidéo */
-  height: 350px;
-  /* Hauteur proportionnelle (16:9) */
-  border: none;
-  /* Supprime toute bordure de l'iframe */
-  border-radius: 10px;
-  /* Coins légèrement arrondis pour l’iframe */
-  border: 15px solid #080808;
+  width: 700px; /* Largeur fixe pour la vidéo */
+  height: 350px;  /* Hauteur proportionnelle (16:9) */
+  border: none;  /* Supprime toute bordure de l'iframe */
+  border-radius: 10px;  /* Coins légèrement arrondis pour l’iframe */
+  border: 10px solid #0c0c0c;
 }
 
 
 /* Conteneur pour les liens */
 .don-section {
-  text-align: left;
-  /* background-color: transparent;
-  backdrop-filter: blur(25px); */
-  /* Couleur de fond */
-  border-radius: 10px;
-  /* Coins arrondis */
+  text-align: left;  /* Couleur de fond */
+  border-radius: 10px;  /* Coins arrondis */
   padding: 20px;
   margin: 20px auto;
-  color: #fff;
-  /* Texte blanc */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Ombre douce */
+  color: #fff;  /* Texte blanc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Ombre douce */
 }
 
 .don-section h2 {
@@ -301,6 +272,112 @@ body {
   }
 }
 
+
+/* ----- Diaporama asso page --- */
+
+.diaporama-asso {
+  position: relative;
+  max-width: 540px;
+  height: 720px; /* Ajustez ici la hauteur souhaitée */
+  margin: 20px auto;
+  border: 5px solid #f9fdff; /* Bordure pour délimiter le cadre */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.diaporama-asso {
+  position: relative;
+    width: 540px; /* Largeur fixe */
+    height: 720px; /* Hauteur fixe */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diaporama img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit la zone sans déformer l'image */
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.diaporama img.active {
+  opacity: 1;
+}
+
+/* Style des boutons de navigation */
+.precedent,
+.suivant {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.precedent {
+  left: 20px;
+}
+
+.suivant {
+  right: 20px;
+}
+
+/* Effet hover sur les boutons */
+.precedent:hover,
+.suivant:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style des flèches avec des triangles CSS */
+.precedent::before,
+.suivant::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.precedent::before {
+  transform: rotate(-135deg);
+}
+
+.suivant::before {
+  transform: rotate(45deg);
+}
+
+/* Style pour les boutons sur mobile */
+@media (max-width: 768px) {
+
+  .precedent,
+  .suivant {
+    padding: 10px 15px;
+  }
+
+  .precedent {
+    left: 10px;
+  }
+
+  .suivant {
+    right: 10px;
+  }
+}
+
+
 /* Diaporama Index */
 
 .diaporama-index {
@@ -314,7 +391,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.diaporama {
+.diaporama-index {
   position: relative;
     width: 850px; /* Largeur fixe */
     height: 450px; /* Hauteur fixe */
@@ -408,21 +485,14 @@ body {
 
 /* Style pour l'image  index */
 .don-image-index {
-  width: 55%;
-  /* Taille de l'image */
-  max-height: 600px;
-  /* Limite la hauteur */
-  object-fit: cover;
-  /* Ajuste l'image sans la déformer */
-  border-radius: 10px;
-  /* Coins arrondis */
-  margin-bottom: 20px;
-  /* Espacement sous l'image */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* Ombre douce */
+  width: 60%; /* Taille de l'image */
+  max-height: 550px; /* Limite la hauteur */
+  object-fit: cover;  /* Ajuste l'image sans la déformer */
+  border-radius: 10px; /* Coins arrondis */
+  margin-bottom: 20px; /* Espacement sous l'image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);/* Ombre douce */
   border: 6px solid #f9fdff;
-  display: block;
-  /* Nécessaire pour le centrage avec margin auto */
+  display: block; /* Nécessaire pour le centrage avec margin auto */
   margin-left: auto;
   margin-right: auto;
 }
@@ -495,6 +565,19 @@ body {
 
 
 /* ------------------- Styles principaux de la carte météo ------------------- */
+
+.card-wrapper {
+  display: flex;             /* Alignement horizontal */
+  justify-content: space-between; /* Espacement automatique */
+  align-items: flex-start;   /* Aligner les éléments en haut */
+  gap: 110px;                 /* Espacement entre les éléments */
+  max-width: 1100px;         /* Largeur max pour éviter que ça prenne tout l'écran */
+  margin: 0 auto;            /* Centrer le conteneur */
+  padding: 50px;
+  margin-left: -40px !important;
+ 
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -504,7 +587,7 @@ body {
   height: 340px;
   border-radius: 20px;
   overflow: hidden;
-
+  margin-top: -90px !important;
   background-color: rgb(228, 226, 233);
 }
 
@@ -795,6 +878,8 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   position: relative;
+  z-index: 5; /* Doit être inférieur à celui des images */
+  overflow: visible; /* S'assure que rien ne cache l'image zoomée */
 }
 
 .histoire-page section:nth-child(even) {
@@ -814,16 +899,36 @@ h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
-li {
-  line-height: 1.6;
+
+.histoire-page li {
+  color: #ffffff !important; /* Texte en blanc */
+  font-weight: bold;
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Ombre légère pour meilleure visibilité */
 }
 
+.histoire-page p {
+  color: #C2BEBE !important; /* Texte en blanc */
+  font-size: 1.1em; /* Augmente légèrement la taille pour une meilleure lisibilité */
+  font-weight: 500; /* Texte plus lisible sans être trop gras */
+  line-height: 1.6; /* Espacement pour une meilleure lecture */
+  padding: 5px 8px; /* Ajoute un peu d’espace autour */
+  background: rgba(255, 255, 255, 0.15); /* Fond légèrement transparent */
+  border-radius: 8px; /* Coins arrondis pour un look plus propre */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre pour détacher le texte */
+}
 blockquote {
   font-style: italic;
   background: rgba(255, 255, 255, 0.2);
   padding: 10px;
   border-left: 4px solid #ddd;
 }
+
+.histoire-page ul {
+  list-style: none; /* Supprime les puces par défaut */
+  padding: 0;
+}
+
 
 
 /* Style pour l'image de la frégate dans l'histoire */
@@ -836,11 +941,14 @@ blockquote {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
   cursor: pointer; /* Curseur en mode pointer pour indiquer un clic possible */
   transition: transform 0.7s ease, box-shadow 0.7s ease; /* Animation fluide */
+  position: relative; /* Positionnement contrôlé */
+  z-index: 5; /* Niveau initial */
 }
 
 .fregate-histoire:hover {
   transform: scale(1.6); /* Zoom léger */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+  z-index: 20; /* L'image passe au-dessus des autres éléments */
 }
 
 
@@ -1050,7 +1158,7 @@ blockquote {
 
 /* Conteneur principal de chaque avis */
 .avis-container {
-  background-color:#455868; /* Fond semi-transparent */
+  background-color:#0f84e4; /* Fond semi-transparent */
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -1242,12 +1350,9 @@ h2 {
 }
 
 .don-header {
-  background-color: transparent !important;
-  /* Supprime le fond bleu */
-  border: none !important;
-  /* Supprime la bordure */
-  box-shadow: none !important;
-  /* Supprime toute ombre */
+  background-color: transparent !important; /* Supprime le fond bleu */
+  border: none !important;  /* Supprime la bordure */
+  box-shadow: none !important;  /* Supprime toute ombre */
 }
 
 /* === SECTIONS l'association === */
@@ -1420,18 +1525,13 @@ a:hover {
 }
 
 .don-section {
-  background: #455868;
-  /* background-color: transparent; */
+  background: #455868;/* background-color: transparent; */
   backdrop-filter: blur(25px);
   border: 2px solid #e0e0e0;
-  padding: 10px;
-  /* Ajout d’espace interne */
-  border-radius: 12px;
-  /* Coins arrondis accentués */
-  margin-bottom: 20px;
-  /* Espacement entre sections augmenté */
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-  /* Ombre renforcée */
+  padding: 10px;  /* Ajout d’espace interne */
+  border-radius: 12px;  /* Coins arrondis accentués */
+  margin-bottom: 20px;  /* Espacement entre sections augmenté */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);  /* Ombre renforcée */
 }
 
 /* Modification ajoutée : animation au survol */
@@ -1567,7 +1667,7 @@ footer p {
   }
 
   .don-section {
-    background-color: transparent;
+    background-color: #455868;
     backdrop-filter: blur(25px);
     padding: 15px;
   }
@@ -1895,6 +1995,8 @@ header {
   }
 }
 
+/* -----Diaporama asso page ---- */
+
 
 /* === NAVIGATION MENU === */
 
@@ -1991,16 +2093,11 @@ main p {
 /* === SECTIONS === */
 /* Style des sections */
 section {
-  background-color: transparent;
-  /* Fond transparent */
-  color: #fff;
-  /* Couleur du texte */
-  padding: 10px;
-  /* Espacement intérieur */
-  margin-bottom: 20px;
-  /* Espacement en bas */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  /* Ombre portée sur le texte */
+  background-color: transparent;  /* Fond transparent */
+  color: #fff;  /* Couleur du texte */
+  padding: 10px;  /* Espacement intérieur */
+  margin-bottom: 20px;  /* Espacement en bas */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);  /* Ombre portée sur le texte */
 }
 
 /* === FOOTER STYLES === */
