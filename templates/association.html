@@ -1,51 +1,142 @@
-{% load static %} <!-- inclure des fichiers statiques -->
+{% load static %}
+{% load i18n %} <!-- Chargement du module de traduction -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Madcap</title>
+  <title>{% trans "L'Association Madcap 1874" %}</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="icon" href="{% static 'images/logo3.png' %}" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="{% static 'js/diaporama_index.js' %}"></script>
+
 </head>
-<body>
+<body class="histoire-page">
   {% include 'header.html' %}
   <main>
     <section>
-      <h2>L’association MADCAP 1874 a été créée le 16 octobre 2021 pour assurer la préservation du plus
-        vieux Cotre Pilote de Bristol construit en 1874 à Cardiff, classé au titre des monuments historiques
-        en France et en Angleterre. Il est le plus ancien des 17 cotres pilotes référencés, naviguant à ce jour
-        dans le monde. Nous souhaitons au travers de notre implication être des passeurs d’histoire. Madcap
-        a eu une vie avant nous, et continuera à tracer sa route après nous.</h2>
-        <p>Pour les membres fondateurs de l'association, l'acquisition de Madcap reposait sur une condition essentielle : faire du bateau un espace de mixité sociale et de partage. Pour atteindre cet objectif, nous collaborons avec des associations reconnues pour leur expertise dans divers domaines favorisant la création ou la reconstruction de liens sociaux :
+      <h2>{% trans "Qui sommes-nous ?" %}</h2>
+      <li>{% blocktrans %}
+        L’association MADCAP 1874 a été créée le 16 octobre 2021 pour assurer la préservation du plus vieux Cotre Pilote de Bristol construit en 1874 à Cardiff. Classé au titre des monuments historiques en France et en Angleterre, il est le plus ancien des 17 cotres pilotes encore en navigation dans le monde. Notre mission est d’être des passeurs d’histoire : Madcap a eu une vie avant nous, et il continuera à tracer sa route après nous.
+      {% endblocktrans %}</li>
+      <br>
+      <img src="{% static 'images/sunset.jpg' %}" alt="sunset voilier" class="fregate-histoire">
+    </section>
 
-          Prévention des risques suicidaires chez les jeunes.
-          Soutien aux personnes atteintes de syndromes post-traumatiques.
-          Réinsertion de personnes en difficulté à la suite d'un accident de la vie.
-          Organisation de sorties en voile handi-valides.
-          Promotion de la mixité dans le sport, en particulier dans la pratique de la voile.</p>
+    <section>
+      <h2>{% trans "Nos valeurs et nos actions" %}</h2>
+      <li>{% blocktrans %}
+        Pour les membres fondateurs de l’association, l’achat de Madcap devait permettre d’en faire un lieu de mixité sociale et de partage. Nous collaborons avec des associations spécialisées pour accompagner :
+      {% endblocktrans %}</li>
+      <ul>
+        <p>{% trans "Prévention des risques suicidaires chez les jeunes" %}</p>
+        <p>{% trans "Soutien aux personnes atteintes de syndromes post-traumatiques" %}</p>
+        <p>{% trans "Réinsertion de personnes en difficulté après un accident de la vie" %}</p>
+        <p>{% trans "Sorties à la voile handi-valides" %}</p>
+        <p>{% trans "Promotion de la mixité dans le sport, notamment la voile" %}</p>
+      </ul>
 
-          <p>Il existe plusieurs façons de rejoindre l'équipe et de participer à la vie de l’association :
-            • section navigation : chefs de bord et équipiers.
-            • travaux manuels : entretien et restauration du bateau.
-            • partie administrative et organisation des événements.</p>
-      <h2>Découvrez le bateau Madcap</h2>
-      <p>L'association Madcap vous invite à découvrir un bateau historique restauré avec passion.</p>
-      <p></p>
+      <br>
+      <img src="{% static 'images/boussole.jpg' %}" alt="Boussole" class="fregate-histoire">
+
+      <br>
+      <li>{% trans "L’association ouvre également ses portes à diverses initiatives :" %}</li>
+      <ul>
+        <p>{% trans "Réinsertion pour les jeunes en difficulté" %}</p>
+        <p>{% trans "Sorties organisées pour des clubs sportifs ou des associations" %}</p>
+        <p>{% trans "Séminaires et événements d'entreprise (team-building en mer)" %}</p>
+        <p>{% trans "Ateliers d’initiation à la navigation et aux métiers du patrimoine maritime" %}</p>
+        <p>{% trans "Événements éducatifs pour sensibiliser les jeunes au monde maritime" %}</p>
+        <p>{% trans "Sorties thématiques : histoire, faune marine, techniques de navigation" %}</p>
+      </ul>
     </section>
-    
+
+    <div class="diaporama-asso">
+      <div class="diaporama">
+        <img src="{% static 'images/Diapo_asso1.jpg' %}" alt="Madcap en mer">
+        <img src="{% static 'images/Diapo_asso2.jpg' %}" alt="Vue latérale">
+        <img src="{% static 'images/Diapo_asso3.jpg' %}" alt="Détail du voilier">
+        <img src="{% static 'images/Diapo_asso4.jpg' %}" alt="Détail du voilier">
+        <img src="{% static 'images/Diapo_asso5.jpg' %}" alt="Détail du voilier">
+        <img src="{% static 'images/Diapo_asso6.jpg' %}" alt="Détail du voilier">
+
+      </div>
+      <button class="precedent"></button>
+      <button class="suivant"></button>
+    </div>
+
+    <br>
+
     <section>
-      <h2>Un patrimoine maritime vivant</h2>
-      <h1> Madcap n’est pas seulement un bateau, mais un véritable trésor de l’histoire maritime. Avec des années de restauration et l’amour des membres de l'association, il navigue encore aujourd'hui.</h1>
+      <h2>{% trans "Faites partie de l’équipage" %}</h2>
+      <li>{% blocktrans %}
+        Il existe plusieurs façons de participer à la vie de l’association :
+      {% endblocktrans %}</li>
+      <ul>
+        <p>{% trans "Section navigation : chefs de bord et équipiers" %}</p>
+        <p>{% trans "Travaux manuels : entretien et restauration du bateau" %}</p>
+        <p>{% trans "Partie administrative et organisation des événements" %}</p>
+      </ul>
+
+      <br>
+      <img src="{% static 'images/hautdumat.jpg' %}" alt="En haut du mat" class="fregate-histoire">
+      <br>
     </section>
-    
-    
+
     <section>
-      <h2>Rejoignez-nous !</h2>
-      <p>Participez à nos sorties en mer et plongez dans l’histoire avec Madcap. Inscrivez-vous pour vivre une aventure inoubliable.</p>
+      <h2>{% trans "Financement et mécénat" %}</h2>
+      <li>{% blocktrans %}
+        Conserver Madcap en bon état demande un engagement financier important. Le bateau a bénéficié d’un refit complet de 2014 à 2018 et de gros travaux en 2022. Nos ressources financières proviennent de plusieurs sources :
+      {% endblocktrans %}</li>
+      <ul>
+        <p>{% trans "Les cotisations des membres" %}</p>
+        <p>{% trans "Le paiement des journées de navigation" %}</p>
+        <p>{% trans "Les dons de particuliers" %}</p>
+        <p>{% trans "Les subventions et le mécénat d’entreprises" %}</p>
+      </ul>
     </section>
-  
+
+    <section>
+      <h2>{% trans "Faire vivre l'association" %}</h2>
+
+        <br>
+
+      <div class="cta-links">
+        <a href="https://www.helloasso.com/associations/madcap-1874" target="_blank"
+          class="cta-button">Rejoignez-nous</a>
+        <a href="{% url 'contact' %}" class="cta-button">Contactez-nous</a>
+       </div>
+
+       <br>
+
+      <li>{% blocktrans %}
+        En adhérant à l’association, vous participez à la sauvegarde d’un patrimoine maritime précieux. Votre engagement permet de préserver et de faire vivre Madcap pour les générations futures.
+        {% endblocktrans %}</li>
+
+        <br>
+        <img src="{% static 'images/toutesvoiles.jpg' %}" alt="En avant !" class="fregate-histoire">
+        <br>
+
+      </div>
+      
+      <br>
+      <div class="don-section call-to-action">
+            <h2>Comment faire un don ?</h2>
+            
+            <a href="/don" class="don-button">Faire un don</a>
+      </div>       
+      
+    <br>
+
+      <li>{% blocktrans %}
+        Notre statut d’association d’intérêt général permet aux donateurs de bénéficier de réductions fiscales.
+      {% endblocktrans %}</li>
+
+      <br>
+      
+    </section>
   </main>
   {% include 'footer.html' %}
 </body>
