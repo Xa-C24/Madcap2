@@ -1,4 +1,5 @@
 {% load static %} <!-- Charger les fichiers statiques Django -->
+{% load i18n %} <!-- Fr vs En-->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -39,123 +40,59 @@
 
 <body>
 {% include 'header.html' %}
-  
 
-<!-- From Uiverse.io by KSAplay --> 
-<div class="card">
-  <section class="landscape-section">
-    <div class="sky"></div>
-    <div class="sun"></div>
-    <div class="hill-1"></div>
-    <div class="hill-2"></div>
-    <div class="ocean">
-      <div class="reflection"></div>
-      <div class="reflection"></div>
-      <div class="reflection"></div>
-      <div class="reflection"></div>
-      <div class="reflection"></div>
-      <div class="shadow-hill-1"></div>
-      <div class="shadow-hill-2"></div>
-    </div>
-    <div class="hill-3"></div>
-    <div class="hill-4"></div>
-    <div class="tree-1"></div>
-    <div class="tree-2"></div>
-    <div class="tree-3"></div>
-    <div class="filter"></div>
-  </section>
 
-  <section class="content-section">
-    <div class="weather-info">
-      <div class="left-side">
-    </div>
+<br>
+<br>
+<br>
 
-      <div class="right-side">
-        <div class="location">
-          <div>
-            <svg width="16px" height="16px" viewBox="0 0 64 64" fill="#ffffff">
-              <path
-                fill="#ffffff"
-                d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93l16,24C29.414,63.332,30.664,64,32,64
-                s2.586-0.668,3.328-1.781l16-24C54.289,34.008,56,29.219,56,24C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8
-                s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"
-              ></path>
-            </svg>
-            Canet-en-Roussillon
-            <br>
-            <p id="current-date" class="date"></p> <!-- Date dynamique -->
-            </div>
 
-            <br>
 
-       </div>
-        <p class="temperature" id="temperature-air">--°C</p> <!-- Température dynamique -->
-        <br>
-        <p class="vent">Vent : <span id="vent-vitesse">--</span> - <span id="vent-direction">--</span>°</p> <!-- Vent vitesse et direction dynamique -->
-         </div>
-       
-    </div>
-    <!--icône météo et la description-->
-    <div class="weather-condition">
-      <div id="weather-icon">☁️</div> <!-- Icône météo dynamique -->
-      
-  </div>
-
-  
-     <!-- Prévisions météo pour les 3 jours à venir -->
-
-    <div class="forecast">
-      <div>
-        <p id="forecast-1-date">--</p>
-        <p id="forecast-1-temp">--°C</p>
+    <!-- Card Open Météo -->
+    <div class="card-wrapper">
+      <div class="meteo-card">
+        {% include 'card_meteoopen.html' %}
       </div>
-      <div class="separator"></div>
-      <div>
-        <p id="forecast-2-date">--</p>
-        <p id="forecast-2-temp">--°C</p>
-      </div>
-      <div class="separator"></div>
-      <div>
-        <p id="forecast-3-date">--</p>
-        <p id="forecast-3-temp">--°C</p>
-      </div>
-    </div>
-
   
-    
-  </section>
-</div>
+      <!-- Section 1 : Introduction -->
+      <section class="don-section">
+        <h1>{% trans "Un patrimoine maritime vivant" %}</h1>
+        <h3>
+          {% blocktrans %}
+          Construit en 1874, Madcap est le plus ancien côtre-pilote encore à flot.
+          Autrefois actif dans le canal de Bristol jusqu’au début des années 1920, 
+          il a ensuite été transformé en voilier de plaisance. Aujourd’hui, après avoir 
+          rejoint la Méditerranée en 2020, il continue de voguer sous la bannière de 
+          l’association Madcap 1874, basée à Canet-en-Roussillon.
+          {% endblocktrans %}
+        </h3>
+        <h1>{% trans "Classé Monument Historique" %}</h1>
 
-
-    <br>
-    
-    <!-- Section 1 : Introduction -->
-    <section class="don-section">
-      <h1>Un patrimoine maritime vivant</h1>
-      <h3><span style="display: inline-block; padding-left: 1.5cm;"></span>Construit en 1874, Madcap est le plus ancien
-        côtre-pilote encore à flot. Autrefois actif dans le canal de Bristol jusqu’au début des années 1920, il a
-        ensuite été transformé en voilier de plaisance. Aujourd’hui, après avoir rejoint la Méditerranée en 2020, il
-        continue de voguer sous la bannière de l’association Madcap 1874, basée à Canet-en-Roussillon. L'association
-        consacre à sa préservation et à la promotion du patrimoine maritime, permettant au public de découvrir les
-        techniques de navigation à voile du XIXe siècle.</h3>
-      <h1>Classé Monument Historique</h1>
-
-      
-      <!-- Diaporama -->
+        <!-- Diaporama -->
       <div class="diaporama-index">
         <div class="diaporama">
           <img src="{% static 'images/DiapoHeader3.jpg' %}" alt="Madcap en mer">
           <img src="{% static 'images/DiapoHeader2.jpg' %}" alt="Vue latérale">
+          <img src="{% static 'images/sunset_madcap - Copie.jpg' %}" alt="Vue latérale">
           <img src="{% static 'images/DiapoHeader1.jpg' %}" alt="Détail du voilier">
           <img src="{% static 'images/DiapoHeader4.jpg' %}" alt="Détail du voilier">
         </div>
         <button class="precedent"></button>
         <button class="suivant"></button>
       </div>
+      </section>
+    </div> 
+  
+    <br>
+    <br>
+      
 
-      <h2>
-        L'association Madcap vous invite à découvrir ce voilier historique restauré avec passion.
-      </h2>
+      <section class="don-section">
+        <h2>
+          L'association Madcap vous invite à découvrir ce voilier historique restauré avec passion.
+        </h2>
+      
+      
       <h3>
         <span style="display: inline-block; padding-left: 1.5cm;"></span> Madcap, témoin précieux de notre patrimoine
         maritime, vous invite à embarquer pour un voyage dans le temps. Restauré avec rigueur et minutie, ce bateau
@@ -164,13 +101,30 @@
         navigation à voile du XIXe siècle. Découvrez les secrets de sa construction, ses récits de navigation et les
         événements marquants qui ont façonné son histoire.
       </h3>
+
+      <div id="presentation">
+
+        <div class="video-container-index">
+          <iframe src="https://www.youtube.com/embed/_7lt_IaRsnc" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      
+      <h3><span style="display: inline-block; padding-left: 1.5cm;"></span>Plus qu’un simple bateau, Madcap est un
+        témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de
+        naviguer, offrant à chacun une immersion dans les navigations d’autrefois.
+      </h3>
     </section>
+
+    <br>
 
     <main>
       <!-- Espace vide -->
     </main>
 
-    <!-- Section 5 : Invitation à rejoindre -->
+    <!-- Section 2 : Invitation à rejoindre -->
     <section class="don-section">
       <div class="content-container">
         <div class="text-content">
@@ -194,57 +148,30 @@
       <!-- Espace vide -->
     </main>
    
-    <!-- Section 2 : Patrimoine vivant -->
-    <section class="don-section">
-
-      <!-- Section 3 : Présentation vidéo -->
-     
-      <section id="presentation">
-
-        <div class="video-container-index">
-          <iframe src="https://www.youtube.com/embed/_7lt_IaRsnc" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </section>
-      <h3><span style="display: inline-block; padding-left: 1.5cm;"></span>Plus qu’un simple bateau, Madcap est un
-        témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de
-        naviguer, offrant à chacun une immersion dans les navigations d’autrefois.</h3>
-    </section>
-  </main>
-
+  
   <br>
   <br>
   
   <!-- Section 4 : Carte interactive Windy -->
  
-  <section class="don-section">
-    <h2>Carte météo Windy</h2>
-    <div id="map-wrapper">
+    <section class="don-section">
+      <h2>Carte météo Windy</h2>
+      <div id="map-wrapper">
 
-      <!-- Carte Windy interactive -->
-      <div id="map-container">
-        <iframe width="950" height="450"
-        src="https://embed.windy.com/embed2.html?lat=42.7&lon=3.0&zoom=5&level=surface&overlay=waves&menu=&type=map"
+        <!-- Carte Windy interactive -->
+        <div id="map-container">
+          <iframe width="950" height="450"
+          src="https://embed.windy.com/embed2.html?lat=42.7&lon=3.0&zoom=5&level=surface&overlay=waves&menu=&type=map"
 
-        frameborder="0" allowfullscreen>
-        </iframe>
+          frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Bouton pour afficher la carte en plein écran -->
+        <button id="fullscreen-btn">Afficher la carte en plein écran</button>
       </div>
 
-      <!-- Bouton pour afficher la carte en plein écran -->
-      <button id="fullscreen-btn">Afficher la carte en plein écran</button>
-    </div>
-
-    
-    <!-- Panneau d'affichage des données météo Open Météo avec  https://uiverse.io/ -->
-
-    
-    
-
-
-
-  </section>
+    </section>
   </main>
 
   <br>
