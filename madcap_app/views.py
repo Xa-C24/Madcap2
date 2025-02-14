@@ -41,6 +41,11 @@ import dns.resolver, re
 from .models import Avis  # Pour récupérer les avis
 from .forms import AvisForm  # Pour gérer le formulaire
 
+# Changement de langue FR/E
+from django.utils.translation import activate
+from django.conf import settings
+from django.http import HttpResponseRedirect
+
 def index(request):
     return render(request, 'index.html')
 
@@ -268,3 +273,16 @@ def livre_dor(request):
         form = AvisForm()
 
     return render(request, 'livre_dor.html', {'form': form, 'avis_list': avis_list})
+
+
+# Changement de langue FR/EN
+
+def change_language(request, lang_code):
+    if lang_code in dict(settings.LANGUAGES).keys():
+        activate(lang_code)  # 🔥 Active immédiatement la langue
+        request.session['django_language'] = lang_code  # 🔥 Stocke la langue dans la session
+        response = HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        response.set_cookie('django_language', lang_code, max_age=60*60*24*365)  # 🔥 Stocke aussi dans le cookie
+        return response
+    
+    return HttpResponseRedirect('/')
