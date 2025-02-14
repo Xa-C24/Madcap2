@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-14 11:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: madcap_project/settings.py:158
+msgid "Français"
+msgstr "Anglais"
+
+#: templates/index.html:59
+msgid "Un patrimoine maritime vivant"
+msgstr "A living maritime heritage"
+
+#: templates/index.html:61
+msgid ""
+"\n"
+"          Construit en 1874, Madcap est le plus ancien côtre-pilote encore à "
+"flot.\n"
+"          Autrefois actif dans le canal de Bristol jusqu’au début des années "
+"1920, \n"
+"          il a ensuite été transformé en voilier de plaisance. Aujourd’hui, "
+"après avoir \n"
+"          rejoint la Méditerranée en 2020, il continue de voguer sous la "
+"bannière de \n"
+"          l’association Madcap 1874, basée à Canet-en-Roussillon.\n"
+"          "
+msgstr ""
+"\n"
+"          Built in 1874, Madcap is the oldest pilot cutter still afloat.\n"
+"          Once active in the Bristol Channel until the early 1920s, \n"
+"          it was later converted into a pleasure yacht. Today, after \n"
+"          reaching the Mediterranean in 2020, it continues to sail under the \n"
+"          banner of the Madcap 1874 association, based in Canet-en-Roussillon.\n"
+"          "
+
+#: templates/index.html:69
+msgid "Classé Monument Historique"
+msgstr "Listed as a Historical Monument"
