@@ -53,9 +53,9 @@ Lancer le shell de la base de données : python3 manage.py dbshell
 ---Ajouter un nouveau membre---
 
     Insérer un membre avec une requête SQL :
-    INSERT INTO madcap_app_member (name, address, phone) VALUES ('Xavier Dupont', '123 Rue de Paris, France', '0123456789');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('ROUSSELET Thierry ', 'Avenue de Sceau, 92330', '06 63 02 09 82', '2020-02-01');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('HURREAU Christian Skipper', 'Face au port, 06700', '06 86 14 39 55', '2020-02-01');
+    
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('ROUSSELET Thierry ', 'Sceau, 92330', '06 63 02 09 82', '2020-02-01');
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('HURREAU Christian Skipper', 'CASTELSARRASIN 82100', '06 86 14 39 55', '2020-02-01');
     INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('PIEDALLU Xavier Développeur site Web', 'Bellevaux, 74470', '06 87 74 02 73', '2025-01-01');
 
     Vérifier les données insérées :
@@ -120,7 +120,34 @@ Une fois les modifications terminées, quittez le shell avec :
 
 -----------------------
 
-Autre table de la data base SQlite 
+-------Commandes SQLite pour gérer les avis dans madcap_app_avis --------
+
+python3 manage.py dbshell
+
+Liste toutes les tables      .tables
+
+Pour voir la structure de la table Avis, tape :
+    PRAGMA table_info(madcap_app_avis);
+
+Pour afficher tous les avis enregistrés :
+    SELECT * FROM madcap_app_avis;
+
+
+Supprimer un avis en fonction de son id (exemple : id = 3) 
+    DELETE FROM madcap_app_avis WHERE id = 3;
+
+ Supprimer TOUS les avis de la table :
+    DELETE FROM madcap_app_avis;
+
+
+Modifier le commentaire d’un avis (exemple : id = 5) :
+    UPDATE madcap_app_avis 
+    SET commentaire = "Nouveau message ici !" 
+    WHERE id = 5;
+    Autre table de la data base SQlite 
+
+
+---------------.quit-------
 
 3. Supprimer les migrations existantes et recréer les migrations
 Si Django ne détecte pas les changements, il faut forcer la recréation des fichiers de migration.
