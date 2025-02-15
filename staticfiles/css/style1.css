@@ -1,0 +1,100 @@
+/* === Tableau admin_dasboard === */
+
+/* === STYLE GLOBAL === */
+body {
+  font-family: 'Crimson Text', serif;
+  background-color: #d1daee; /* Fond gris clair pour la page */
+  margin: 0;
+  padding: 40px;
+  color: #cf7979; /* Texte gris foncé */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #385d6e; /* Bleu foncé */
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center; /* Centre le formulaire */
+  margin-bottom: 40px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* === STYLE DU TABLEAU === */
+#members-table {
+  max-width: 1000px; /* Largeur maximale */
+  margin: 0 auto; /* Centre le tableau */
+  border-radius: 15px; /* Coins arrondis */
+  overflow: hidden; /* Empêche les débordements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+#members-table table {
+  width: 100%;
+  border-collapse: collapse; /* Supprime les espaces entre les bordures */
+  background-color: #f0d1d1; /* Fond blanc pour le tableau */
+}
+
+#members-table th,
+#members-table td {
+  border: 1px solid #2e2424; /* Bordure légère */
+  text-align: left; /* Alignement à gauche */
+  padding: 15px; /* Espacement interne */
+}
+
+#members-table th {
+  background-color: #003b57; /* Fond bleu foncé */
+  color: #fff; /* Texte blanc */
+  text-transform: uppercase; /* Texte en majuscules */
+  font-size: 0.9em;
+}
+
+#members-table tbody tr:nth-child(even) {
+  background-color: #be8686; /* Gris clair pour les lignes paires */
+}
+
+#members-table tbody tr:hover {
+  background-color: #e0e0e0; /* Surlignage au survol */
+  cursor: pointer;
+}
+
+#members-table td {
+  font-size: 1.0em;
+  color: #1a1414; /* Texte gris foncé */
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* <!-- Logo cliquable --> */
+
+a[href="{% url 'index' %}"] img {
+  transition: transform 0.1s ease, box-shadow 0.1s ease; /* Animation fluide */
+}
+
+a[href="{% url 'index' %}"] img:hover {
+  transform: scale(0.5); /* Agrandissement lors du survol */
+  box-shadow: 0 8px 10px rgba(209, 43, 43, 0.2); /* Ombre douce */
+  filter: brightness(5.5); /* Éclaircissement lors du survol */
+}
+
+/* <!-- Barre de recherche --> */
+input[type="text"] {
+  box-shadow: 0 2px 5px rgba(158, 14, 14, 0.1); /* Ajout d'une ombre */
+  border: 3px solid #cf7979; /* Bordure plus douce */
+}

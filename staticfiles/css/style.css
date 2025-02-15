@@ -1,0 +1,2596 @@
+/* === GLOBAL STYLES === */
+/* Style global pour la mise en page */
+
+body {
+  background: url("../images/Voile.png") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center 95%;
+  color: white;
+}
+
+/* === HEADER STYLES === */
+
+/* Conteneur de la vidéo */
+.video-container-header {
+  position: relative;
+  /* Conteneur positionné */
+  width: 120%;
+  height: 420px;
+  /* Prend toute la largeur de la page */
+  max-height: 55vh;
+  /* Limite la hauteur à 60% de la hauteur de la fenêtre */
+  overflow: hidden;
+  /* Cache les parties qui débordent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  /* Arrondit les bords du conteneur */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* Ajoute une ombre douce */
+  border: 6px solid rgba(242, 243, 245, 0.993);
+  /* Bordure translucide */
+  background-color: #d5dae0;
+  /* Couleur de fond pour combler les espaces */
+  animation: glowing 3s infinite;
+  /* Animation continue */
+  border: none !important;
+
+}
+
+
+
+/* Video GIF Header */
+
+.video-container-header video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: scale(0.95);
+  /* Dézoome à 90% */
+  transition: transform 0.3s ease;
+  /* Transition fluide si besoin */
+  background: #000;
+}
+
+/*----------------- Conteneur principal pour le sélecteur de langue -------------- */
+
+.language-switcher {
+  position: absolute;
+  top: 50%;  /* Ajuster en fonction de la hauteur souhaitée */
+  right: 30px;  /* Ajuster selon la largeur souhaitée */
+  transform: translateY(-50%); /* Ajuste pour un bon alignement */
+  z-index: 1000;
+}
+
+.current-language {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.current-language .flag {
+  width: 25px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.current-language .arrow {
+  font-size: 14px;
+  color: #3b3a3a;
+  /* Couleur de la flèche */
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.language-options li {
+  padding: 5px 10px;
+}
+
+.language-options a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #dd1313;
+}
+
+.language-options a:hover {
+  background: #236EB1;
+}
+
+.language-options .language-flag {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+/* Affiche les options lorsque l'utilisateur survole ou clique */
+.language-switcher:hover .language-options {
+  display: block;
+}
+
+/* Conteneur du logo météo header*/
+
+.nav-weather-logo {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Permet de l'aligner tout à gauche */
+  left: 40px; /* Distance depuis le bord gauche */
+  top: 50%; /* Alignement vertical */
+  transform: translateY(-50%); /* Ajuste verticalement */
+} 
+
+/* Style du logo météo header */
+.nav-weather-logo img {
+  height: 50px; /* Taille ajustée */
+  width: 60px;
+  border-radius: 50%; /* Arrondi */
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* 🔹 Adaptation responsive pour tablettes et mobiles */
+@media (max-width: 1024px) {
+  .nav-weather-logo {
+    left: 5px; /* Réduction de l'écart */
+  }
+
+  .nav-weather-logo img {
+    height: 45px; /* Réduction de la taille */
+    width: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-weather-logo {
+    left: 5px; /* Encore plus proche du bord sur mobile */
+  }
+
+  .nav-weather-logo img {
+    height: 40px; /* Ajustement plus petit */
+    width: 45px;
+  }
+}
+
+/* Effet au survol */
+.nav-weather-logo img:hover {
+  transform: scale(1.0) rotate(5deg);
+  filter: brightness(1.5);
+}
+
+
+/* === SECTIONS Index === */
+
+/* Conteneur de la vidéo index avec un cadre noir */
+
+.video-container-index {
+  display: flex; /* Centre la vidéo dans son conteneur */
+  justify-content: center;  /* Centre la vidéo horizontalement */
+  padding: 20px;  /* Espacement autour de la vidéo */
+  padding: 55px;  /* Espacement interne entre la vidéo et le cadre noir */
+  max-width: 720px; /* Largeur maximale du conteneur (vidéo incluse) */
+  margin: 20px auto;  /* Centre le conteneur horizontalement avec un espacement vertical */
+  border-radius: 15px;  /* Coins arrondis */
+  background: linear-gradient(125deg, #9dafbb, #1f2f3f); /* Dégradé en fond */
+  box-shadow: 0 8px 16px rgba(223, 16, 16, 0.3); /* Ombre douce */
+  border: 8px solid #e0e0e0; /* cadre blanc */
+  box-shadow: 0 0 50px rgba(240, 238, 238, 0.5);/* Éclat lumineux */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Animation */
+
+
+}
+
+
+
+/* Vidéo */
+.video-container-index iframe {
+  width: 700px; /* Largeur fixe pour la vidéo */
+  height: 350px;  /* Hauteur proportionnelle (16:9) */
+  border: none;  /* Supprime toute bordure de l'iframe */
+  border-radius: 10px;  /* Coins légèrement arrondis pour l’iframe */
+  border: 10px solid #0c0c0c;
+}
+
+
+/* Conteneur pour les liens */
+.don-section {
+  text-align: left;  /* Couleur de fond */
+  border-radius: 10px;  /* Coins arrondis */
+  padding: 20px;
+  margin: 20px auto;
+  color: #fff;  /* Texte blanc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Ombre douce */
+}
+
+.don-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.don-section h3 {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Boutons "Rejoignez-nous" et "Contactez-nous" */
+
+.cta-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  /* Espacement entre les boutons */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 8px 10px;
+  background-color: #003b57;
+  /* Couleur du bouton */
+  color: #fdfbff;
+  /* Couleur du texte */
+  text-decoration: none !important;
+  font-size: 1.2em;
+  /* Taille du texte */
+  font-weight: bold;
+  border-radius: 8px;
+  /* Coins arrondis */
+  transition: all 0.3s ease;
+  /* Transition fluide pour tous les effets */
+  position: relative;
+}
+
+/* Effet au survol */
+.cta-button:hover {
+  background-color: #005a87;
+  /* Change légèrement la couleur de fond */
+  color: #fdfbff !important;
+  /* Garde le texte blanc cassé */
+  text-decoration: none !important;
+  /* Supprime le soulignement */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  /* Lueur blanche subtile */
+  transform: scale(1.08);
+  /* Zoom léger */
+}
+
+@media (max-width: 768px) {
+  .cta-button, .don-button, .admin-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ----- Diaporama asso page --- */
+
+.diaporama-asso {
+  position: relative;
+  max-width: 540px;
+  height: 720px; /* Ajustez ici la hauteur souhaitée */
+  margin: 20px auto;
+  border: 5px solid #f9fdff; /* Bordure pour délimiter le cadre */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.diaporama-asso {
+  position: relative;
+    width: 540px; /* Largeur fixe */
+    height: 720px; /* Hauteur fixe */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diaporama img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit la zone sans déformer l'image */
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.diaporama img.active {
+  opacity: 1;
+}
+
+/* Style des boutons de navigation */
+.precedent,
+.suivant {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.precedent {
+  left: 20px;
+}
+
+.suivant {
+  right: 20px;
+}
+
+/* Effet hover sur les boutons */
+.precedent:hover,
+.suivant:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style des flèches avec des triangles CSS */
+.precedent::before,
+.suivant::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.precedent::before {
+  transform: rotate(-135deg);
+}
+
+.suivant::before {
+  transform: rotate(45deg);
+}
+
+/* Style pour les boutons sur mobile */
+@media (max-width: 768px) {
+
+  .precedent,
+  .suivant {
+    padding: 10px 15px;
+  }
+
+  .precedent {
+    left: 10px;
+  }
+
+  .suivant {
+    right: 10px;
+  }
+}
+
+
+/* Diaporama Index */
+
+.diaporama-index {
+  position: relative;
+  max-width: 850px;
+  height: 450px; /* Ajustez ici la hauteur souhaitée */
+  margin: 20px auto;
+  border: 5px solid #f9fdff; /* Bordure pour délimiter le cadre */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.diaporama-index {
+  position: relative;
+    width: 850px; /* Largeur fixe */
+    height: 450px; /* Hauteur fixe */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diaporama img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit la zone sans déformer l'image */
+    position: absolute;
+    object-position: center bottom; /* Décale l’image vers le bas */
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.diaporama img.active {
+  opacity: 1;
+}
+
+/* Style des boutons de navigation */
+.precedent,
+.suivant {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.precedent {
+  left: 20px;
+}
+
+.suivant {
+  right: 20px;
+}
+
+/* Effet hover sur les boutons */
+.precedent:hover,
+.suivant:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style des flèches avec des triangles CSS */
+.precedent::before,
+.suivant::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.precedent::before {
+  transform: rotate(-135deg);
+}
+
+.suivant::before {
+  transform: rotate(45deg);
+}
+
+/* Style pour les boutons sur mobile */
+@media (max-width: 768px) {
+
+  .precedent,
+  .suivant {
+    padding: 10px 15px;
+  }
+
+  .precedent {
+    left: 10px;
+  }
+
+  .suivant {
+    right: 10px;
+  }
+}
+
+/* Style pour l'image  index */
+.don-image-index {
+  width: 60%; /* Taille de l'image */
+  max-height: 550px; /* Limite la hauteur */
+  object-fit: cover;  /* Ajuste l'image sans la déformer */
+  border-radius: 10px; /* Coins arrondis */
+  margin-bottom: 20px; /* Espacement sous l'image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);/* Ombre douce */
+  border: 6px solid #f9fdff;
+  display: block; /* Nécessaire pour le centrage avec margin auto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .don-image-index, .diaporama img, .video-container-index iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Style map météo */
+
+/* Carte météo en plein écran */
+
+/* Conteneur principal */
+#map-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centre la carte et le bouton */
+  justify-content: center;
+  width: 100%;   /* Prend toute la largeur */
+  margin: 0 auto;
+}
+
+/* Conteneur de la carte */
+#map-container {
+  width: 950px;  /* Taille normale au chargement */
+  height: 450px;
+  max-width: 100%;  /* Pour éviter tout écrasement */
+  overflow: visible;
+  display: flex;
+  border: 7px solid #e0e0e0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bouton clic vers plein écran */
+#fullscreen-btn {
+  margin-top: 15px;  /* Ajoute un espace entre la carte et le bouton */
+  padding: 10px 24px;
+  background-color: #ecc929;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+}
+
+/* Taille en plein écran */
+
+#map-container:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+#map-container iframe {
+  width: 950px;
+  height: 450px;
+  
+}
+
+
+
+/* ======== Open Méteo =========
+--                              --
+--                              --
+=================================*/
+
+
+/* ------------------- Styles principaux de la carte météo ------------------- */
+
+.card-wrapper {
+  display: flex;             /* Alignement horizontal */
+  justify-content: space-between; /* Espacement automatique */
+  align-items: flex-start;   /* Aligner les éléments en haut */
+  gap: 110px;                 /* Espacement entre les éléments */
+  max-width: 1100px;         /* Largeur max pour éviter que ça prenne tout l'écran */
+  margin: 0 auto;            /* Centrer le conteneur */
+  padding: 50px;
+  margin-left: -40px !important;
+ 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: -90px !important;
+  background-color: rgb(228, 226, 233);
+}
+
+/* ------------------- Paysage en arrière-plan ------------------- */
+.landscape-section {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.landscape-section * {
+  position: absolute;
+}
+
+/* Ciel avec un dégradé */
+.sky {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(247, 225, 87, 1) 0%, rgba(233, 101, 148, 1) 100%);
+}
+
+/* Soleil */
+.sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  bottom: 40%;
+  left: 18%;
+  filter: drop-shadow(0px 0px 10px white);
+}
+
+/* Effet lumineux du soleil */
+.sun::after, .sun::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background-color: white;
+}
+
+.sun::after {
+  width: 118%;
+  height: 118%;
+  opacity: 0.5;
+}
+
+.sun::before {
+  width: 134%;
+  height: 134%;
+  opacity: 0.1;
+}
+
+/* Océan avec dégradé */
+.ocean {
+  overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  height: 28%;
+  background: linear-gradient(0deg, rgba(241, 192, 125, 1) 0%, rgba(247, 218, 150, 1) 100%);
+}
+
+/* Reflets dans l'eau */
+.reflection {
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Montagnes et collines */
+.hill-1, .hill-2, .hill-3, .hill-4 {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.hill-1 {
+  right: -15%;
+  bottom: 15%;
+  width: 120px;
+  height: 40px;
+  background-color: #e6b29d;
+}
+
+.hill-2 {
+  right: -86%;
+  bottom: 10%;
+  width: 150px;
+  height: 80px;
+  background-color: #c29182;
+}
+
+.hill-3 {
+  left: -100%;
+  bottom: -28%;
+  width: 350px;
+  height: 150px;
+  background-color: #b77873;
+}
+
+.hill-4 {
+  right: -100%;
+  bottom: -40%;
+  width: 350px;
+  height: 150px;
+  background-color: #a16773;
+}
+
+/* Arbres sur les collines */
+.tree-1, .tree-2, .tree-3 {
+  position: absolute;
+  z-index: 8;
+}
+
+.tree-1 {
+  bottom: 10%;
+  left: 5%;
+  width: 30px;
+  height: 50px;
+}
+
+.tree-2 {
+  bottom: 10%;
+  left: 30%;
+  width: 35px;
+  height: 55px;
+}
+
+.tree-3 {
+  bottom: 10%;
+  right: 5%;
+  width: 40px;
+  height: 60px;
+}
+
+/* ------------------- Contenu météo ------------------- */
+.content-section {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Informations météo (température, vent) */
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0%;
+  width: 100%;
+  padding-top: 15px;
+  color: white;
+  z-index: 10;
+}
+
+/* Icône météo */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 40px;
+}
+
+/* Température */
+.temperature {
+  font-size: 18px !important;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Vent */
+.vent {
+  font-size: 18px !important;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ------------------- Conditions météo ------------------- */
+
+/* Conteneur pour l'icône et le texte météo */
+.weather-condition {
+  display: flex;
+  align-items: center; /* Aligner horizontalement */
+  justify-content: center;
+  position: absolute;
+  top: 42%; /* Ajuste la position verticale */
+  left: 1%; /* Ajuste la position horizontale */
+  color: white;
+  font-size: 14px; /* Ajuste la taille du texte */
+  font-weight: bold;
+}
+
+/* Icône météo */
+#weather-icon {
+  font-size: 18px; /* Ajuste la taille de l'icône */
+  margin-right: 5px; /* Espacement entre l'icône et le texte */
+}
+
+
+
+/* ------------------- Prévisions sur 3 jours ------------------- */
+.forecast {
+  background-color: #f8f9fa; /* Fond clair */
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2px 3px;
+  height: auto;
+}
+
+.forecast > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.3px 0;
+}
+
+.forecast p {
+  margin: 0;
+}
+
+/* Met en majuscule la première lettre du jour */
+.forecast > div p:first-child {
+  text-transform: capitalize;
+}
+
+/* Températures affichées en gris */
+.forecast > div p:last-child {
+  font-size: 13px;
+  color: #747474;
+}
+
+/* ------------------- Séparateur entre les jours de prévisions ------------------- */
+.separator {
+  height: 1px !important;
+  width: 90%;
+  background-color: rgba(12, 11, 11, 0.5);
+  margin: 2px 0;
+}
+
+/* ------------------- Date actuelle ------------------- */
+.date {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+
+
+/* === STYLES UNIQUEMENT POUR LA PAGE HISTOIRE === */
+
+
+.histoire-page main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5%;
+}
+
+.histoire-page section {
+  max-width: 45%; /* Réduction pour séparer les blocs */
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 50px;
+  background: #455868 !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 5; /* Doit être inférieur à celui des images */
+  overflow: visible; /* S'assure que rien ne cache l'image zoomée */
+}
+
+.histoire-page section:nth-child(even) {
+  margin-left: 5%; 
+  align-self: flex-start;
+  max-width: 50%;
+}
+
+.histoire-page section:nth-child(odd) {
+  margin-right: 5%;
+  align-self: flex-end;
+  max-width: 50%;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+
+.histoire-page li {
+  color: #ffffff !important; /* Texte en blanc */
+  font-weight: bold;
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Ombre légère pour meilleure visibilité */
+}
+
+.histoire-page p {
+  color: #C2BEBE !important; /* Texte en blanc */
+  font-size: 1.1em; /* Augmente légèrement la taille pour une meilleure lisibilité */
+  font-weight: 500; /* Texte plus lisible sans être trop gras */
+  line-height: 1.6; /* Espacement pour une meilleure lecture */
+  padding: 5px 8px; /* Ajoute un peu d’espace autour */
+  background: rgba(255, 255, 255, 0.15); /* Fond légèrement transparent */
+  border-radius: 8px; /* Coins arrondis pour un look plus propre */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre pour détacher le texte */
+}
+blockquote {
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-left: 4px solid #ddd;
+}
+
+.histoire-page ul {
+  list-style: none; /* Supprime les puces par défaut */
+  padding: 0;
+}
+
+
+
+/* Style pour l'image de la frégate dans l'histoire */
+.fregate-histoire {
+  display: block;
+  max-width: 80%; /* S'assure que l'image ne dépasse pas du cadre */
+  margin: 20px auto; /* Centre l'image horizontalement */
+  border-radius: 10px;  /* Coins arrondis */
+  border: 6px solid #f9fdff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
+  cursor: pointer; /* Curseur en mode pointer pour indiquer un clic possible */
+  transition: transform 0.7s ease, box-shadow 0.7s ease; /* Animation fluide */
+  position: relative; /* Positionnement contrôlé */
+  z-index: 5; /* Niveau initial */
+}
+
+.fregate-histoire:hover {
+  transform: scale(1.6); /* Zoom léger */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+  z-index: 20; /* L'image passe au-dessus des autres éléments */
+}
+
+
+/* ========== SECTIONS livre d'or ========= */
+
+/* Conteneur principal qui regroupe le formulaire et les commentaires */
+.livredor-container {
+  display: flex;
+  justify-content: space-between; /* Sépare les deux blocs */
+  align-items: flex-start; /* Alignement en haut */
+  gap: 30px; /* Espacement entre les sections */
+  max-width: 1100px; /* Ajuste la largeur maximale */
+  margin: 0 auto; /* Centre le conteneur */
+  padding: 20px;
+}
+
+/* Section "Votre expérience" (les commentaires) */
+.livredor-avis {
+  flex: 1; /* Prend tout l'espace restant */
+  max-width: 500px; /* Ajuste la largeur */
+  background: #455868;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* Section "Laissez votre avis" (le formulaire) */
+.livredor-form {
+  width: 400px; /* Largeur fixe */
+  background: #455868;
+  border-radius: 10px;
+  padding: 25px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Labels */
+.livredor-form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+/* Champs de texte */
+.livredor-form input, 
+.livredor-form textarea, 
+.livredor-form select {
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.livredor-form textarea {
+  height: 120px; /* Ajuster la hauteur sans trop élargir */
+  resize: vertical; /* Permettre d'ajuster si nécessaire */
+}
+
+/* Ajustement des champs Nom & Email côte à côte */
+.livredor-form .double-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.livredor-form .double-fields div {
+  width: 48%;
+}
+
+
+/* Réduire l'espace au-dessus de "Photo 1" */
+.livredor-form label[for="photo1"] {
+  margin-top: 0.1px; /* Réduit l'espace au-dessus */
+}
+
+/* Ajustement du champ "Note" */
+.livredor-form .note-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Bouton d'envoi */
+.livredor-form button {
+  background-color: #003b57;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.livredor-form button:hover {
+  background-color: #005a80;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+li {
+  line-height: 1.9;
+}
+
+
+/* Message de retour après envoi */
+
+
+blockquote {
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.349);
+  padding: 10px;
+  border-left: 4px solid #f8f7f7;
+}
+
+
+.messages {
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Etoile pour notation Avis */
+
+/* Conteneur des étoiles */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse; /* Permet de commencer par 5 étoiles */
+  justify-content: center;
+  font-size: 30px;
+  gap: 5px;
+}
+
+/* Cache les boutons radio */
+.star-rating input {
+  display: none;
+}
+
+/* Style des étoiles */
+.star-rating .star {
+  cursor: pointer;
+  color: #f7f1f1; /* Couleur par défaut (gris) */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+  color: rgb(160, 147, 73);
+  transform: scale(1.2);
+}
+
+/* Effet lors de la sélection */
+.star-rating input:checked ~ .star {
+  color: rgb(250, 250, 3); /* Étoiles sélectionnées en doré */
+  animation: pop 0.4s ease-in-out;
+}
+
+/* Animation au clic */
+@keyframes pop {
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---- Coté avis postés -----*/
+
+/* Conteneur principal de chaque avis */
+.avis-container {
+  background-color:#0f84e4; /* Fond semi-transparent */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Alignement du nom et des étoiles sur la même ligne */
+.avis-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacement entre le nom et les étoiles */
+}
+
+/* Style du nom */
+.avis-nom {
+  font-weight: bold;
+  font-size: 18px;
+  color: #f8f8f7; /* Doré pour faire ressortir */
+}
+
+/* Style des étoiles */
+.avis-stars {
+  color: gold;
+  font-size: 18px;
+}
+
+/* Style de la date */
+.avis-date {
+  display: block;
+  font-weight: bold;
+  margin-top: 7px;
+  color:#C31415;
+  font-size: 16px;
+}
+
+/* Mise en forme du commentaire */
+.avis-commentaire {
+  font-style: italic;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* Mise en forme des images */
+.avis-photos img {
+  max-width: 160px;
+  border-radius: 5px;
+  border: 2px solid #f9fdff;
+  margin: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
+  cursor: pointer; /* Curseur en mode pointer pour indiquer un clic possible */
+  transition: transform 0.9s ease, box-shadow 0.9s ease; /* Animation fluide */
+}
+
+.avis-photos img:hover {
+  transform: scale(3.3); /* Zoom léger */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+  z-index: 10; /* Place l'image agrandie au-dessus des autres */
+  position: relative; /* Évite les chevauchements avec les autres éléments */
+}
+
+/* Conteneur de chaque avis */
+.avis-container {
+    background: rgba(255, 255, 255, 0.1); /* Fond léger */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espacement entre chaque avis */
+}
+
+/* Séparateur entre les avis */
+.avis-separator {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-top: 15px;
+}
+
+
+
+/* ========== SECTIONS don contact ========= */
+.don-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.don-section {
+  background: #455868;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  /* Ajout du changement de police */
+  font-size: 14px;
+  /* Taille de la police */
+  color: #ffffff;
+  /* Couleur du texte */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Police de texte pour formulaire contact */
+.contact-form textarea {
+  font-family: 'Playfair Display', serif;
+  /* Change la police selon ton choix */
+  font-size: 14px;
+  /* Ajuste la taille du texte */
+  color: #333;
+  /* Couleur du texte */
+  padding: 10px;
+  /* Garde un espace interne pour le confort */
+  border: 1px solid #ccc;
+  /* Bordure subtile */
+  border-radius: 5px;
+  /* Coins arrondis */
+  background-color: #fff;
+  /* Couleur de fond */
+}
+
+.contact-form textarea::placeholder {
+  font-family: 'Playfair Display', serif;
+  /* Assure que le placeholder suit la même police */
+  font-size: 14px;
+  color: #aaa;
+  /* Couleur du placeholder */
+}
+
+/* Police contact Nom Prenom Téléphone Email*/
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Playfair Display', serif;
+  /* Change la police selon ton choix */
+  font-size: 14px;
+  /* Ajuste la taille du texte */
+  color: #333;
+  /* Couleur du texte */
+  padding: 10px;
+  /* Espacement interne */
+  border: 1px solid #ccc;
+  /* Bordure subtile */
+  border-radius: 5px;
+  /* Coins arrondis */
+  background-color: #fff;
+  /* Couleur de fond */
+  width: 100%;
+  /* Assure que les champs prennent toute la largeur */
+  box-sizing: border-box;
+  /* Gère correctement les bordures */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: 'Playfair Display', serif;
+  /* Placeholder avec la même police */
+  font-size: 14px;
+  color: #aaa;
+  /* Couleur du placeholder */
+}
+
+h1,
+h2 {
+  color: #003b57;
+  /* Bleu marine pour les titres */
+  font-weight: bold;
+}
+
+/* === HEADER STYLES === */
+.don-header {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+.don-header h1 {
+  font-size: 1.5em;
+  /* Augmenté pour une meilleure hiérarchisation */
+  margin-bottom: 10px;
+}
+
+.don-header .subtitle {
+  font-size: 1em;
+  /* Ajusté pour plus de visibilité */
+  font-style: italic;
+  margin: 0;
+  color: #aa1a1a;
+  /* Contraste amélioré */
+}
+
+.don-header {
+  background-color: transparent !important; /* Supprime le fond bleu */
+  border: none !important;  /* Supprime la bordure */
+  box-shadow: none !important;  /* Supprime toute ombre */
+}
+
+/* === SECTIONS l'association === */
+
+
+/* === STYLES GLOBAUX === */
+body {
+  font-family: 'Playfair Display', sans-serif;
+  /* Police moderne et lisible */
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: #455868;
+  /* Fond gris clair pour toute la page */
+  color: #333;
+  /* Texte gris foncé */
+  margin: 0;
+  padding: 0;
+}
+
+/* === CONTENEUR PRINCIPAL === */
+main {
+  max-width: 1200px;
+  /* Largeur maximale */
+  margin: 20px auto;
+  /* Centre le contenu horizontalement */
+  padding: 10px;
+}
+
+/* === SECTIONS === */
+section {
+  background-color: #fff;
+  /* Fond blanc pour les sections */
+  border: 1px solid #ddd;
+  /* Bordure grise claire */
+  border-radius: 10px;
+  /* Coins arrondis */
+  padding: 20px;
+  margin-bottom: 20px;
+  /* Espacement entre les sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Ombre légère pour donner de la profondeur */
+}
+
+/* === TITRES === */
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+  /* Police élégante pour les titres */
+  color: #003b57;
+  /* Bleu marine */
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.2em;
+  /* Taille pour les titres principaux */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  /* Taille légèrement plus petite */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* === PARAGRAPHES === */
+p {
+  margin: 10px 0;
+  color: #555;
+  /* Gris doux pour le texte */
+  line-height: 1.6;
+}
+
+/* === LISTES === */
+ul {
+  padding-left: 20px;
+  /* Décalage des listes */
+  margin: 10px 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #444;
+  /* Gris légèrement plus foncé */
+}
+
+ul li strong {
+  color: #003b57;
+  /* Bleu pour les éléments importants */
+}
+
+/* === BOUTONS === */
+button,
+.don-button {
+  display: inline-block;
+  background-color: #003b57;
+  /* Bleu marine */
+  color: #fff;
+  /* Texte blanc */
+  border: none !important;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+.don-button:hover {
+  background-color: #005a87;
+  /* Bleu plus clair au survol */
+  transform: translateY(-2px);
+  /* Effet de soulèvement */
+}
+
+/* === LIENS === */
+a {
+  color: #0078d7;
+  /* Bleu classique */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  /* Soulignement au survol */
+  color: #0056a3;
+  /* Bleu plus foncé */
+}
+
+/* === RÉSPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Moins d’espace entre les sections */
+  }
+
+  h1 {
+    font-size: 1.8em;
+    /* Réduction de la taille des titres */
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.85em;
+    /* Réduction de la taille des paragraphes */
+    line-height: 1.6;
+    /* Espacement plus confortable */
+  }
+}
+
+
+/* === SECTIONS DON === */
+.don-page {
+  max-width: 750px;
+  /* Augmenté pour un affichage plus aéré */
+  margin: 0 auto;
+  padding: 90px;
+  /* Espacement augmenté */
+}
+
+.don-section {
+  background: #455868;/* background-color: transparent; */
+  backdrop-filter: blur(25px);
+  border: 2px solid #e0e0e0;
+  padding: 10px;  /* Ajout d’espace interne */
+  border-radius: 12px;  /* Coins arrondis accentués */
+  margin-bottom: 20px;  /* Espacement entre sections augmenté */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);  /* Ombre renforcée */
+}
+
+/* Modification ajoutée : animation au survol */
+.don-section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sous-titre */
+.don-section h2 {
+  font-size: 1.8em;
+  /* Augmenté légèrement */
+  color: #a4b1bf;
+  margin-bottom: 15px;
+  /* Ajout d’espace après le titre */
+}
+
+/* Paragraphes */
+.don-section p {
+  color: #070707;
+  font-size: 1.2em;
+  /* Augmenté pour une meilleure lisibilité */
+  margin-bottom: 10px;
+  /* Ajout d’espace */
+  line-height: 1.8;
+  /* Espacement des lignes augmenté */
+}
+
+/* Listes */
+.don-section ul li {
+  color: #cdc7c7;
+  font-size: 1.1em;
+  /* Taille augmentée */
+  margin-bottom: 8px;
+  /* Ajout d’espace entre les éléments */
+}
+
+/* Largeur cadre page index.html*/
+.don-section {
+  max-width: 1000px;
+  /* Taille du padding de la page index */
+  margin: 0 auto;
+  /* Centre le rectangle */
+}
+
+
+.don-section ul li strong {
+  color: #dd1111;
+}
+
+.bandeau-texte {
+  background-color: rgb(230, 233, 221);
+  /* Bandeau blanc */
+  padding: 15px 25px;
+  /* Espacement autour du texte */
+  border-radius: 15px;
+  /* Coins arrondis pour un effet plus doux */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Optionnel : petite ombre pour mettre en valeur */
+  display: inline-block;
+  /* Bandeau ajusté au texte */
+  margin: 20px auto;
+  /* Espace autour du bandeau */
+  text-align: center;
+  /* Centrer le texte */
+  color: #b81515;
+  /* Garder le texte rouge */
+  font-style: italic;
+  /* Style en italique */
+  font-weight: bold;
+  /* Texte plus lisible */
+  border: 5px solid #fafafa;
+}
+
+/* === CALL TO ACTION === */
+.call-to-action {
+  text-align: center;
+}
+
+.don-button {
+  display: inline-block;
+  background-color: #003b57;
+  color: white;
+  text-decoration: none !important;
+  padding: 15px 30px;
+  /* Augmenté pour plus de confort */
+  border-radius: 8px;
+  /* Coins plus arrondis */
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Animation au survol */
+}
+
+.don-button:hover {
+  background-color: #005a87;
+  color: #fff !important;
+  /* Texte blanc au survol */
+  transform: scale(1.05);
+  /* Légère augmentation au survol */
+}
+
+/* === FOOTER STYLES === */
+footer {
+  background-color: #34495E;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  /* Augmenté pour un meilleur espacement */
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95em;
+  /* Légèrement augmenté */
+}
+
+/* === AMÉLIORATION MOBILE === */
+@media (max-width: 768px) {
+  .don-page {
+    padding: 15px;
+  }
+
+  .don-header h1 {
+    font-size: 2em;
+    /* Taille réduite pour mobile */
+  }
+
+  .don-header .subtitle {
+    font-size: 1em;
+    /* Taille réduite pour mobile */
+  }
+
+  .don-section {
+    background-color: #455868;
+    backdrop-filter: blur(25px);
+    padding: 15px;
+  }
+
+  .don-section h2 {
+    font-size: 1.6em;
+    /* Ajusté pour mobile */
+  }
+
+  .don-section p,
+  .don-section ul li {
+    font-size: 1em;
+  }
+
+  .don-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+
+/* === HEADER STYLES === */
+
+nav ul li a:hover {
+  text-decoration: none;
+  /* Supprime le soulignement */
+  background-color: #005a87;
+  /* Garde l'effet de changement de couleur (optionnel) */
+  transform: scale(1.7);
+  /* Optionnel : effet de zoom */
+ 
+}
+
+/* Style de l'en-tête (header) */
+header {
+  background-color: #6B7E99;
+  /* Couleur de fond */
+  color: #fff;
+  /* Couleur du texte */
+  padding: 0%;
+  /* Espacement en haut et en bas */
+  text-align: center;
+  /* Centre le texte */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Ombre douce */
+  overflow: hidden;
+  /* Empêche le contenu du header de dépasser sa limite */
+  position: relative;
+  /* Définit le conteneur de référence pour le positionnement absolu */
+}
+
+/* Conteneur principal du header */
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Centre le contenu */
+}
+
+/* Style pour le logo dans le cadre vidéo */
+.logo-in-video {
+  position: absolute;
+  /* Positionnement relatif à .video-container */
+  top: 40px;
+  /* Ajuste la distance par rapport au haut du cadre */
+  left: 60px;
+  /* Ajuste la distance par rapport au côté gauche */
+  width: 100px;
+  /* Taille du logo */
+  border-radius: 50%;
+  /* Rend le logo circulaire */
+  overflow: hidden;
+  /* Assure que les bords sont bien coupés */
+  border: 2px solid white;
+  /* Optionnel : Ajoute une bordure blanche pour mieux ressortir */
+  height: auto;
+  /* Garde les proportions */
+  z-index: 2;
+  /* Assure que le logo reste au-dessus de la vidéo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-in-video:hover {
+  transform: scale(1.2);
+  /* Agrandit légèrement le logo au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Ajoute une ombre élégante */
+  cursor: pointer;
+  /* Change le curseur pour indiquer un lien cliquable */
+}
+
+header img:hover {
+  transform: scale(1.2);
+  /* Agrandit le logo à 110% lors du survol */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Ajoute une ombre élégante */
+  cursor: pointer;
+  /* Change le curseur pour indiquer un élément cliquable */
+}
+
+/* Titre principal du header */
+header h1 {
+  font-size: 1.4em;
+  /* Taille du texte */
+  margin: 0;
+  /* Supprime les marges */
+  flex: 1;
+  /* S'adapte à l'espace disponible */
+}
+
+
+
+header {
+  position: relative;
+  /* Définit le conteneur de référence pour le positionnement absolu */
+}
+
+/* Bandeau supérieur (en haut du header) */
+.top-bar {
+  background-color: #34495E;
+  /* Couleur du bandeau */
+  height: 60px;
+  /* Hauteur ajustée */
+  display: flex;
+  /* Flexbox pour aligner les éléments */
+  align-items: center;
+  /* Centrage vertical */
+  justify-content: space-between;
+  /* Sépare la phrase et les icônes */
+  padding: 0 20px;
+  /* Ajout de marges sur les côtés */
+  position: relative;
+  /* Nécessaire pour le centrage absolu */
+}
+
+/* Centrer la phrase */
+.top-bar-center {
+  position: absolute;
+  /* Permet de positionner la phrase indépendamment */
+  left: 50%;
+  /* Position horizontale au centre */
+  transform: translateX(-50%);
+  /* Recentre exactement au milieu */
+  text-align: center;
+  /* Centre le texte horizontalement */
+  z-index: 1;
+  /* S'assure que la phrase reste au-dessus */
+}
+
+/* Style de la phrase */
+.top-bar-text {
+  color: white;
+  /* Texte blanc */
+  font-size: 18px;
+  /* Taille du texte */
+  font-weight: bold;
+  /* Texte en gras */
+}
+
+/* Conteneur des icônes et bouton */
+.top-bar-right {
+  display: flex;
+  /* Aligne les éléments horizontalement */
+  gap: 15px;
+  /* Espacement entre les éléments */
+  margin-left: auto;
+  /* Garde les logos alignés à droite */
+  z-index: 2;
+  /* Priorité au-dessus du texte si nécessaire */
+}
+
+
+/* Bouton Espace Admin */
+.admin-button {
+  background-color: #ECC929;
+  color: #FFF;
+  padding: 7px;  /* Padding minimal */
+  font-size: 11px;  /* Texte ajusté */
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  border: 2px solid #f2f1ec;
+  border-radius: 12px;
+  line-height: 1; /* Réduit l'espacement vertical interne */
+  height: 3%;  /* Pas de hauteur forcée */
+  min-height: 0;  /* Supprime toute hauteur minimale */
+  margin: 0;  /* Supprime les marges externes */
+  vertical-align: middle; /* Aligne bien le texte */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Effets au survol */
+
+.admin-button:hover {
+  background-color: #ECC929; /* Couleur au survol */
+  border-color: #eae8e4;  /* Change aussi la couleur de la bordure au survol */
+  transform: scale(1.1); /* Agrandissement au survol */
+  color: #333;  /* Texte un peu plus foncé */
+}
+
+/* Logo Facebook */
+.top-bar .social-logo.facebook {
+  margin-right: 0px;  /* Ajoute un espace entre Facebook et YouTube */
+}
+
+/* Logo YouTube */
+.top-bar .social-logo.youtube {
+  margin: 0  /* Pas de décalage supplémentaire pour YouTube */
+}
+
+/* Style commun pour les logos */
+.top-bar .social-logo img {
+  height: 30px;
+  /* Taille des logos */
+  width: 30px;
+  /* Garde les proportions carrées */
+  border-radius: 50%;
+  /* Logos circulaires */
+  border: none;
+  /* Supprime toute bordure */
+}
+
+/* Style pour le logo Facebook */
+.top-bar .social-logo img {
+  height: 35px;
+  /* Taille réduite du logo */
+  width: 35px;
+  /* Taille égale pour rendre l'image carrée */
+  border-radius: 50%;
+  /* Rend l'image circulaire */
+  margin-right: 10px;
+  /* Espacement entre les icônes (si besoin) */
+}
+
+/* ====== Section Evenements ====== */
+
+.evenement-container {
+  display: flex; /* Active le mode flexbox */
+  align-items: center;  /* Centre le texte et l’image verticalement */
+  justify-content: space-between;  /* Répartit l’espace entre texte et image */
+  flex-wrap: wrap;  /* Permet l’adaptation en version mobile */
+  gap: 10px;   /* Espacement entre le texte et l’image */
+  max-width: 1000px; /* Limite la largeur pour éviter que ça s’étale trop */
+  margin: 0 auto; /* Centre le bloc */
+  padding: 20px; /* Ajoute un peu d’espace intérieur */
+}
+
+.evenement-texte {
+  flex: 1;  /* Prend tout l’espace disponible */
+  min-width: 300px;  /* Assure une lisibilité correcte */
+}
+
+.evenement-image-droite {
+  float: right;
+  margin-left: 50px; /* Réduit l’espacement pour éviter trop de décalage */
+  max-width: 40%; /* Augmente un peu la largeur */
+  border-radius: 10px;
+  border: 6px solid #f9fdff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.link-evenement {
+  display: flex;/* Aligne les liens sur la même ligne */
+  gap: 15px;/* Espacement entre les liens */
+  justify-content: center; /* Centre les liens horizontalement */
+  margin: 10px 0;
+}
+
+.link-evenement a {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #003b57;
+  /* Bleu foncé */
+  color: white;
+  text-decoration: none !important;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.link-evenement a:hover {
+  background-color: #fff;
+  /* Bleu plus clair au survol */
+  color: #02567e !important;
+  /* Texte blanc au survol */
+  text-decoration: underline;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+  .evenement-image-droite {
+    float: none; /* Désactive le float */
+    max-width: 100%; /* Image en pleine largeur */
+    margin-left: 0;
+    display: block;
+    margin: 0 auto; /* Centre l’image */
+  }
+}
+
+@media (max-width: 768px) {
+  .evenement-container, .contact-section, .diaporama-index {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .evenement-image-droite {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+}
+
+/* -----Diaporama asso page ---- */
+
+
+/* === NAVIGATION MENU === */
+
+/* === NAVIGATION MENU STICKY === */
+nav {
+  position: sticky; /*  Le menu reste visible en haut */
+  top: 0; /*  Fixe le menu en haut */
+  width: 100%; /*  Prend toute la largeur */
+  background-color: #6B7E99;/* Arrière-plan pour éviter la transparence */
+  z-index: 1000; /* S'assure qu'il passe au-dessus des autres éléments */
+  padding: 5px 0; /*  Ajoute un peu d’espace autour */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /*  Effet d’ombre pour démarquer le menu */
+  padding: 1px 0; /* Réduit l’espace vertical */
+}
+
+/* Liste des liens du menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Liens du menu */
+nav ul li a {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 0.9em;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 3px 6px;
+  background-color: #34495E; 
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+}
+
+/* Effet au survol */
+nav ul li a:hover {
+  background-color: #cddff2;
+  transform: scale(1.09);
+}
+
+
+/* === SOCIAL MEDIA ICONS Fb Youtube === */
+/* Style pour les logos des réseaux sociaux */
+.social-logo img {
+  display: inline-block;
+  /* S'assure que les images s'affichent bien */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  /* Animation douce */
+}
+
+/* Animation au survol des logos réseaux sociaux*/
+.social-logo img:hover {
+  transform: scale(1.5) rotate(20deg);
+  /* Agrandit et incline légèrement */
+  filter: brightness(1.8);
+  /* Rend le logo plus lumineux */
+}
+
+/* === MAIN CONTENT === */
+/* Contenu principal */
+main {
+  flex: 1;
+  padding: 20px;
+  /* Espacement intérieur */
+  max-width: 1200px;
+  /* Largeur maximale */
+  margin: 20px auto;
+  /* Centre le contenu */
+}
+
+/* Titres des sections principales */
+main h2 {
+  color: #2C3E50;
+  /* Couleur du texte */
+  font-size: 1.5em;
+  /* Taille du texte */
+}
+
+/* Paragraphes */
+main p {
+  margin: 10px 0;
+  /* Espacement vertical */
+  line-height: 1.6;
+  /* Hauteur de ligne */
+  color: #555;
+  /* Couleur du texte */
+}
+
+/* === SECTIONS === */
+/* Style des sections */
+section {
+  background-color: transparent;  /* Fond transparent */
+  color: #fff;  /* Couleur du texte */
+  padding: 10px;  /* Espacement intérieur */
+  margin-bottom: 20px;  /* Espacement en bas */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);  /* Ombre portée sur le texte */
+}
+
+/* === FOOTER STYLES === */
+/* Style du pied de page */
+footer {
+  background-color: #34495E;
+  /* Couleur de fond */
+  color: #fff;
+  /* Couleur du texte */
+  text-align: center;
+  /* Centre le contenu */
+  padding: 10px 0;
+  /* Espacement en haut et en bas */
+  margin-top: auto;
+  /* Place le footer en bas */
+  font-size: 0.9em;
+  /* Taille du texte légèrement augmentée */
+  line-height: 1.4;
+  /* Lisibilité améliorée */
+}
+
+footer p {
+  margin: 0;
+  /* Supprime les marges */
+  font-size: 0.9em;
+  /* Taille du texte */
+}
+
+/* === contact.html === */
+
+/* Contact Page Styles */
+.contact-page {
+  max-width: 800px !important;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fond blanc légèrement transparent */
+  border-radius: 10px;
+  /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Ombre autour de la section */
+}
+
+/* Formulaire de Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  /* Aligne les champs verticalement */
+  gap: 15px;
+  /* Espacement entre les champs */
+  width: 60%;
+  /* Ajustez la largeur selon votre besoin */
+  margin: 0 auto;
+  /* Centre le formulaire horizontalement */
+}
+
+@media (max-width: 768px) {
+  .contact-form, .don-page, .admin-login-page {
+    width: 90% !important;
+    max-width: none !important;
+  }
+}
+
+.contact-form label {
+  font-size: 1.1em;
+  /* Agrandit légèrement les labels pour une meilleure lisibilité */
+  margin-bottom: 5px;
+  /* Ajoute un espace sous les labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  /* Champs prennent toute la largeur disponible */
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* Ajoute un contour léger */
+  border-radius: 5px;
+  /* Coins arrondis */
+  font-size: 1em;
+}
+
+
+.contact-form button {
+  width: 50%;
+  /* Bouton réduit pour un style plus moderne */
+  padding: 10px;
+  background-color: #0d2238;
+  color: rgb(240, 235, 235);
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  /* Centre le bouton */
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0f4885;
+  /* Change la couleur au survol */
+}
+
+/* message de retour après envoie avec le formulaire */
+
+.message-success {
+  background-color: #dff0d8;
+  /* Vert pâle */
+  border: 1px solid #3c763d;
+  /* Vert plus foncé */
+  color: #3c763d;
+  /* Couleur du texte */
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.message-error {
+  background-color: #f2dede;
+  /* Rouge pâle */
+  border: 1px solid #a94442;
+  /* Rouge plus foncé */
+  color: #a94442;
+  /* Couleur du texte */
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Listes logo dans page contact */
+.logos {
+  display: flex;
+  justify-content: flex-end;
+  /* Aligne les logos à droite */
+  gap: 20px;
+  /* Espacement entre les icônes */
+  margin-right: 30px;
+  /* Optionnel : ajustez l'espace entre les icônes et le bord droit */
+  margin-top: -50px;
+  /* Remonte les logos en ajustant cette valeur */
+}
+
+.logos img {
+  width: 40px;
+  /* Ajustez la taille des icônes si nécessaire */
+  height: auto;
+  cursor: pointer;
+
+  /* animation logos contact.html */
+}
+
+.animated-logo {
+  transition: transform 0.3s ease, filter 0.8s ease;
+  /* Transition pour des animations douces */
+}
+
+.animated-logo:hover {
+  transform: rotate(30deg) scale(1.5);
+  /* Tourne légèrement et agrandit un peu */
+  filter: brightness(2.5);
+  /* Augmente la luminosité pour l'effet d'illumination */
+}
+
+.animated-logo.fb {
+  border-radius: 50%;
+  /* Rend l'image circulaire */
+  overflow: hidden;
+  /* S'assure que l'image reste bien dans le cercle */
+}
+
+/* Suivez-nous sur les réseaux */
+.contact-social-wrapper {
+  display: flex;
+  align-items: center;
+  /* Aligne le texte et les logos sur une même ligne */
+  justify-content: flex-end;
+  /* Aligne l'ensemble à droite du cadre */
+}
+
+.social-text {
+  margin-right: 30px !important;
+  /* Ajoute un espace entre le texte et les logos */
+  position: relative;
+  top: 10px;
+  /* Relève le texte au niveau du logo */
+}
+
+/* === Section contact-section === */
+.contact-section {
+  background-color: hsla(210, 29, 24, 0.3);
+  /* Bleu foncé pour le fond */
+  color: white;
+  /* Texte blanc */
+  padding: 20px;
+  border-radius: 10px;
+  /* Coins arrondis */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Ombre douce */
+  backdrop-filter: blur(15px);
+}
+
+/* Titres des sections */
+.contact-section h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #e5e5e5;
+  /* Gris clair */
+  margin-bottom: 15px;
+}
+
+/* Paragraphes */
+.contact-section p {
+  color: #dcdcdc;
+  /* Gris clair */
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+
+/* Texte au-dessus des logos sociaux */
+.social-text {
+  font-size: 16px;
+  /* Taille du texte */
+  color: #d4cbcb !important;
+  /* Couleur rouge forcée */
+  margin-bottom: 10px;
+  /* Espacement avec les logos */
+  font-weight: bold;
+  /* Met le texte en gras */
+  margin-left: 50px;
+  /* Décalage à droite */
+}
+
+/* Style spécifique pour la section don-section Téléphone Adresse Email */
+.don-section p strong {
+  color: #5a0505;
+  /* Rouge pour les labels */
+}
+
+.don-section a {
+  color: rgb(230, 218, 218);
+  /* Change la couleur contact Email*/
+  text-decoration: yes;
+  /* Supprime le soulignement */
+}
+
+.don-section a:hover {
+  color: #9c5f5f;
+  /* Rouge foncé lors du survol */
+  text-decoration: underline;
+  /* Ajoute un soulignement au survol */
+}
+
+
+/* === Section admin_login === */
+/* === Admin Login Page === */
+/* Conteneur principal pour la page de connexion admin */
+.admin-login-page {
+  max-width: 600px;
+  /* Largeur maximale du conteneur */
+  margin: 50px auto;
+  /* Centré horizontalement avec un espacement vertical */
+  padding: 20px;
+  /* Espacement interne */
+  border-radius: 10px;
+  /* Coins arrondis */
+}
+
+/* Style des titres dans la page de connexion admin */
+.admin-login-page h2 {
+  font-size: 2em;
+  /* Taille de la police */
+  color: #4b5255;
+  /* Couleur grise pour le titre */
+  margin-bottom: 15px;
+  /* Espacement avec l'élément suivant */
+}
+
+/* Style des champs de saisie dans la page admin */
+.admin-login-page input[type="text"],
+.admin-login-page input[type="password"] {
+  width: 100%;
+  /* Les champs occupent toute la largeur du conteneur */
+  padding: 10px;
+  /* Espacement interne */
+  margin-bottom: 15px;
+  /* Espacement entre chaque champ */
+  border: 1px solid #ccc;
+  /* Bordure grise claire */
+  border-radius: 5px;
+  /* Coins arrondis */
+}
+
+/* Style des boutons dans la page admin */
+.admin-login-page button {
+  background: #003b57;
+  /* Couleur de fond bleu foncé */
+  color: white;
+  /* Texte blanc */
+  padding: 10px 20px;
+  /* Espacement interne */
+  border: none;
+  /* Supprime la bordure */
+  border-radius: 5px;
+  /* Coins arrondis */
+  cursor: pointer;
+  /* Change le curseur en pointeur */
+}
+
+/* Style au survol des boutons */
+.admin-login-page button:hover {
+  background: #005a87;
+  /* Change la couleur de fond au survol */
+}
+
+/* === Login Form Container === */
+/* Conteneur principal du formulaire de connexion */
+.login-form-container {
+  max-width: 300px;
+  /* Largeur maximale du formulaire */
+  margin: 0 auto;
+  /* Centré horizontalement */
+  padding: 40px;
+  /* Marges internes */
+  background: #455868;
+  /* Couleur de fond gris-bleu */
+  border-radius: 10px;
+  /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombre douce autour du conteneur */
+}
+
+/* Style des labels pour les champs */
+.login-form-container label {
+  display: block;
+  /* Chaque label occupe une ligne distincte */
+  text-align: left;
+  /* Texte aligné à gauche */
+  margin-bottom: 5px;
+  /* Espacement entre le label et le champ */
+  font-weight: bold;
+  /* Texte en gras */
+  color: #ffffff;
+  /* Couleur blanche pour le texte */
+}
+
+/* Style des champs de saisie (e-mail et mot de passe) */
+.login-form-container input[type="email"],
+.login-form-container input[type="password"] {
+  display: block;
+  /* Chaque champ occupe une ligne distincte */
+  width: 80%;
+  /* Largeur totale */
+  padding: 10px;
+  /* Espacement interne */
+  font-size: 14px;
+  /* Taille du texte */
+  text-align: left;
+  /* Texte aligné à gauche */
+  border: 1px solid #ccc;
+  /* Bordure grise claire */
+  border-radius: 5px;
+  /* Coins arrondis */
+  margin-bottom: 25px;
+  /* Espacement entre les champs */
+}
+
+/* Effet visuel lors du focus sur les champs */
+.login-form-container input:focus {
+  outline: none;
+  /* Supprime le contour par défaut */
+  border-color: #0b0b0b;
+  /* Change la couleur de la bordure */
+  box-shadow: 0 0 5px rgba(0, 90, 135, 0.5);
+  /* Ajoute une ombre lumineuse */
+}
+
+/* Style du bouton de connexion */
+.login-form-container .don-button {
+  width: 40%;
+  /* Largeur réduite à 60% du conteneur */
+  padding: 8px;
+  /* Marges internes */
+  font-size: 14px;
+  /* Taille du texte */
+  font-weight: bold;
+  /* Texte en gras */
+  text-transform: uppercase;
+  /* Texte en majuscules */
+  color: #fff;
+  /* Texte blanc */
+  background-color: #4b6b7b;
+  /* Couleur de fond gris-bleu */
+  border: none;
+  /* Supprime la bordure */
+  border-radius: 5px;
+  /* Coins arrondis */
+  cursor: pointer;
+  /* Change le curseur en pointeur */
+  margin: 0 auto;
+  /* Centre le bouton dans le conteneur */
+  display: block;
+  /* Permet de centrer horizontalement */
+}
+
+/* Effet visuel au survol du bouton de connexion */
+.login-form-container .don-button:hover {
+  background-color: #306680;
+  /* Change la couleur de fond au survol */
+}
+
+/* Centrer "Connexion administrateur" */
+.admin-title {
+  text-align: center;
+  /* Aligne le titre à droite dans un conteneur flex */
+  font-size: 2em;
+  /* Ajuste la taille si nécessaire */
+  color: #003b57;
+  /* Couleur du texte */
+}
+
+/* Centrer message d'erreur d'identification de connexion */
+.flash-messages {
+  text-align: center;
+  /* Centre le texte horizontalement */
+  margin: 20px auto;
+  /* Ajoute un espacement autour du conteneur */
+}
+
+.flash-messages li {
+  font-size: 1.2em;
+  /* Taille du texte */
+  color: red;
+  /* Texte en rouge pour signaler une erreur */
+}
+
+/* Oeuil dans password admin login */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  display: block;
+  /* Chaque champ occupe une ligne distincte */
+  width: 80%;
+  /* Largeur totale */
+  padding: 10px;
+  /* Espacement interne */
+  font-size: 14px;
+  /* Taille du texte */
+  text-align: left;
+  /* Texte aligné à gauche */
+  border: 1px solid #ccc;
+  /* Bordure grise claire */
+  border-radius: 5px;
+  /* Coins arrondis */
+  margin-bottom: 25px;
+  /* Espacement entre les champs */
+}
+
+.eye-button {
+  position: absolute;
+  right: 30px;
+  /* Positionner à droite */
+  top: 50%;
+  /* Centrer verticalement */
+  transform: translateY(-70%);
+  /* Correction pour rester centré */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  /* Couleur de l'icône */
+}
+
+.eye-button:focus,
+.eye-button:hover {
+  outline: none;
+  /* Supprime le contour */
+  background: none;
+  /* Aucun changement de fond */
+  border: none;
+  /* Aucun changement de bordure */
+  transform: translateY(-70%);
+  /* Empêche tout déplacement */
+  color: #555;
+  /* Conserve la même couleur */
+}
