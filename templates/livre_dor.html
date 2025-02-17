@@ -28,11 +28,10 @@
       <header class="don-header">
         <div class="bandeau-texte">
               <p class="subtitle">Votre expérience à bord de Madcap nous tient à cœur. Partagez-la ! </p>
-            </div>
-          </header>
+        </div>
+      </header>
 
-          <!-- Affichage des messages de confirmation ou d'erreur -->
-
+      <!-- Affichage des messages de confirmation ou d'erreur -->
       {% if messages %}
       <div class="messages">
           {% for message in messages %}
@@ -41,7 +40,7 @@
               </div>
           {% endfor %}
       </div>
-  {% endif %}
+      {% endif %}
 
       <!-- Formulaire -->
 
@@ -102,7 +101,7 @@
                   {% csrf_token %}
   
                   <label for="nom">Nom et Prénom :</label>
-                  <input type="text" id="nom" name="nom" placeholder="Votre Nom et Prénom"{{ request.POST.nom }}" required>
+                  <input type="text" id="nom" name="nom" placeholder="Votre Nom et Prénom" value="{{ request.POST.nom }}" required>
                   
 
                   <label for="email">Email :</label>
@@ -112,7 +111,7 @@
                   <input type="text" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" value="{{ request.POST.telephone }}">
   
                   <label for="commentaire">Message :</label>
-                  <textarea id="commentaire" name="commentaire" placeholder="Racontez-nous (20 caractères minimum)..." required>{{ request.POST.commentaire }}</textarea>
+                  <textarea id="commentaire" name="commentaire" placeholder="Racontez-nous (20 caractères min)..." required>{{ request.POST.commentaire }}</textarea>
   
                   <label for="note">Note :</label>
                   <div class="star-rating">
@@ -121,8 +120,7 @@
                     <input type="radio" id="star-3" name="note" value="3"><label for="star-3" class="star">&#9733;</label>
                     <input type="radio" id="star-2" name="note" value="2"><label for="star-2" class="star">&#9733;</label>
                     <input type="radio" id="star-1" name="note" value="1"><label for="star-1" class="star">&#9733;</label>
-                </div>
-
+                  </div>
 
                    <!-- Champs pour uploader les photos -->
                   <label for="photo1">Photo 1 :</label>
@@ -134,7 +132,7 @@
                   <label for="photo3">Photo 3 :</label>
                   {{ form.photo3 }}
                   
-                  <label for="photo3">Photo 4 :</label>
+                  <label for="photo4">Photo 4 :</label>
                   {{ form.photo4 }}
   
                   <button type="submit">Envoyer</button>
@@ -142,8 +140,6 @@
           </section>
       </div>
   </main>
-
- 
 
     {% include 'footer.html' %}
 </body>
