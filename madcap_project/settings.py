@@ -22,7 +22,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
     "madcap_app",
+
+    # Cloudinary
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 # 📌 Middleware (ajout de Whitenoise pour Render)
@@ -103,8 +108,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  # 🔥 Optimisation pour Render
 
 # 📌 Gestion des fichiers médias (images uploadées)
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+DEBUG = True
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 📌 Paramètres de langue
 LANGUAGE_CODE = "fr"
@@ -117,5 +123,9 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 # 📌 Clé primaire par défaut
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+
 # 📌 Port (utile pour Render)
 PORT = os.getenv("PORT", "8000")
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / 'backups'}

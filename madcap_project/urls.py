@@ -28,5 +28,6 @@ urlpatterns = [
 ]
 
 # Ajout de la gestion des fichiers médias en mode développement
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

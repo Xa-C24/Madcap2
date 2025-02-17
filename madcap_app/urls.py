@@ -1,8 +1,12 @@
+"""
+URLs configuration for madcap_app.
+"""
+
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from . import views
-from django.contrib import admin
-from .views import change_language  #  Import de la fonction change_language
-
+from .views import change_language  # Import de la fonction change_language
 
 urlpatterns = [
     path('', views.index, name='index'),  # Page d'accueil
@@ -17,12 +21,13 @@ urlpatterns = [
     path('submit_contact/', views.submit_contact, name='submit_contact'),
 
     # Interface d'administration Django
-    path('admin/', admin.site.urls),  # Ajout de l’interface admin
-
-    # Routes spécifiques à l'administration
     path('admin-login/', views.admin_login, name='admin_login'),
     path('admin-dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('search-members/', views.search_members, name='search_members'),  # Route pour la recherche
 
-     path('change-language/<str:lang_code>/', change_language, name='change_language'),
+    # Change de langue
+    path('change-language/<str:lang_code>/', change_language, name='change_language'),
 ]
+
+# 🔥 CORRECTION : Servir les fichiers médias en production aussi ✅
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
