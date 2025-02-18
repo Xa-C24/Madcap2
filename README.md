@@ -50,6 +50,13 @@ Ajout des variables d’environnement (DATABASE_URL)
 - Résumé de l'histoire du bateau de 1874 à aujourd'hui.
 - Illustrations et descriptions des différentes époques.
 
+## 🏛️ À propos de l'Association (association.html)
+📜 Présentation de l’**histoire** et des **valeurs** de l’association Madcap1874  
+👥 Informations sur les **membres fondateurs** et les **bénévoles**  
+💡 Objectifs et **missions** de l’association  
+📌 **Comment adhérer** à l’association et devenir membre  
+🔗 [💖 Soutenir Madcap sur HelloAsso](https://www.helloasso.com/)  
+
 ### 🎣 Page Événements (`evenements.html`)
 - Calendrier des événements auxquels Madcap participera en 2025.
 
