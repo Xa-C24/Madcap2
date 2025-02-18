@@ -7,7 +7,9 @@
 Madcap1874 est un site web développé pour présenter l'histoire du bateau Madcap, promouvoir l'association, permettre l'inscription de nouveaux membres et recueillir les témoignages des visiteurs. Le site est également un espace interactif avec une météo en temps réel, des informations sur les événements à venir et des liens pour soutenir l'association.
 
 ## 🌐 Hébergement & Déploiement
-Le site Madcap1874 est hébergé sur Render 🎉  🌍 Visitez Madcap1874
+Le site Madcap1874 est hébergé sur Render 🎉  🌍 [🚀 Visitez Madcap1874](https://madcap-70h2.onrender.com/)
+
+![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/render_builtok.png)
 
 🚀 Déploiement sur Render
 Base de données
@@ -34,6 +36,8 @@ Ajout des variables d’environnement (DATABASE_URL)
 | **Traduction** | Django i18n (FR 🇫🇷 & EN 🇬🇧) |
 | **Hébergement** | Render (Base de données & serveur web) |
 
+
+![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Diagramme_web.png)
 
 ### ⛵ Page d'Accueil (`index.html`)
 - Présentation du Madcap avec une vidéo.
@@ -176,6 +180,9 @@ python3 manage.py runserver
 
     # Tester avec Django
     python manage.py test madcap_app.tests
+
+    ![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/unitest_urls.png)
+    
 ###  Outils de développement
     pip install pytest pytest-django dj-database-url
 
