@@ -1,5 +1,8 @@
 # Projet Madcap1874
 
+![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Maquette.png)
+
+
 ## ⛵ Présentation du Projet
 Madcap1874 est un site web développé pour présenter l'histoire du bateau Madcap, promouvoir l'association, permettre l'inscription de nouveaux membres et recueillir les témoignages des visiteurs. Le site est également un espace interactif avec une météo en temps réel, des informations sur les événements à venir et des liens pour soutenir l'association.
 
@@ -83,7 +86,7 @@ Ajout des variables d’environnement (DATABASE_URL)
     venv\Scripts\activate  # Activation (Windows)
 
     
-## 📊 Gestion des Bases de Données
+## 3. 📊 Gestion des Bases de Données
 ### 👨‍🌾 Table des Membres (`madcap_app_member`)
 ### 🔒 Créer un super-utilisateur
 ```bash
