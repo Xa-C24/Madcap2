@@ -208,8 +208,8 @@ Les balises {% trans %} et {% blocktrans %} permettent d’afficher du texte tra
       django-admin compilemessages
 
 Un sélecteur de langue est disponible sur le site permettant de basculer entre 
-français ![FR](<img src="{% static 'images/Flag_Fr.jpg'}"  width="20" />) 
-et anglais ![GB](https://twemoji.maxcdn.com/2/svg/1f1ec-1f1e7.svg).
+français ![FR](https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Fr.jpg?raw=true)  
+et anglais ![GB](https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Uk.jpg?raw=true).
 
 ## 6. 📜 Commandes pour exécuter les tests
 
