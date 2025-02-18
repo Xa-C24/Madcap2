@@ -4,6 +4,20 @@ import dj_database_url
 import logging
 from django.utils.translation import gettext_lazy as _
 
+
+
+# 📌 Détection de l'environnement
+ENVIRONMENT = os.getenv("DJANGO_ENV", "local")  # "local" par défaut
+
+# 📌 Configuration SMTP Gmail pour envoyer des emails en local et production
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")  # Récupère depuis .env
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")  # Récupère depuis .env
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 # 📌 Base directory of the project
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,8 +40,8 @@ INSTALLED_APPS = [
     "madcap_app",
 
     # Cloudinary
-    "cloudinary",
-    "cloudinary_storage",
+    #"cloudinary",
+    #"cloudinary_storage",
 ]
 
 # 📌 Middleware (ajout de Whitenoise pour Render)
@@ -81,12 +95,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # 📌 Configuration Email (exemple avec Gmail)
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "")
-EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "")
+# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
 
 # 📌 Logs
 logging.basicConfig(

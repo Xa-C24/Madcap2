@@ -41,6 +41,9 @@ import dns.resolver, re
 from .models import Avis  # Pour récupérer les avis
 from .forms import AvisForm  # Pour gérer le formulaire
 
+import logging
+import os
+
 # Changement de langue FR/E
 from django.utils.translation import activate
 from django.conf import settings
@@ -153,38 +156,47 @@ def validate_email_domain(email):
 
 # Formulaire de contact suite
 
+# 🔥 Initialisation du logger
+logger = logging.getLogger(__name__)
+
 def submit_contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
-        phone = request.POST.get('phone', '').strip()  # Supprime les espaces inutiles
+        phone = request.POST.get('phone', '').strip()
         message = request.POST.get('message')
 
-        # Validation des champs obligatoires
+        # 🔥 Log des données reçues
+        print(f"📩 Tentative d'envoi avec : {name}, {email}, {phone}, {message}")
+        logger.info(f"📩 Tentative d'envoi avec : {name}, {email}, {phone}, {message}")
+
+        # Vérification des champs obligatoires
         if not name or not email or not message:
-            messages.error(request, "Veuillez remplir tous les champs obligatoires.")
+            messages.error(request, "❌ Veuillez remplir tous les champs obligatoires.")
+            print("❌ Erreur : Champs manquants")
             return redirect('contact')
 
         # Validation de l'email
         try:
             validate_email(email)
-            validate_email_domain(email)
+            print(f"✅ Email valide : {email}")
         except ValidationError as e:
             messages.error(request, str(e))
+            print(f"❌ Erreur email : {str(e)}")
             return redirect('contact')
-
-        # Validation du téléphone (uniquement si renseigné)
-        if phone:
-            try:
-                phone = validate_phone_number(phone)  # Valide et normalise le numéro
-            except ValidationError as e:
-                messages.error(request, str(e))
-                return redirect('contact')
 
         # Vérification de la longueur du message
         if len(message) < 20:
-            messages.error(request, "Le message doit contenir au moins 20 caractères.")
+            messages.error(request, "❌ Le message doit contenir au moins 20 caractères.")
+            print("❌ Erreur : Message trop court")
             return redirect('contact')
+
+        # 🔥 Récupération des infos d'email depuis le .env
+        email_host_user = os.getenv("EMAIL_HOST_USER")
+        email_host_password = os.getenv("EMAIL_HOST_PASSWORD")
+
+        print(f"✅ EMAIL_HOST_USER = {email_host_user}")
+        print(f"✅ EMAIL_HOST_PASSWORD = {email_host_password}")
 
         # Préparation de l'email
         subject = f"Nouveau message de {name} via le formulaire de contact"
@@ -192,11 +204,15 @@ def submit_contact(request):
         recipient_list = ['xr.piallu@gmail.com']
 
         try:
-            send_mail(subject, message_body, email, recipient_list)
-            messages.success(request, 'Votre message a bien été envoyé. Nous reviendrons vers vous dans les meilleurs délais.')
+            print(f"📤 Tentative d'envoi d'email de {email_host_user} à {recipient_list}...")
+            send_mail(subject, message_body, email_host_user, recipient_list, fail_silently=False)
+            messages.success(request, '✅ Votre message a bien été envoyé 📤 Nous reviendrons vers vous dans les meilleurs délais.')
+            print("✅ Email envoyé avec succès !")
         except Exception as e:
-            messages.error(request, "Une erreur est survenue lors de l'envoi de votre message.")
-           
+            messages.error(request, "❌ Une erreur est survenue lors de l'envoi de votre message, veuillez réessayer.")
+            logger.error(f"❌ Erreur d'envoi d'email : {str(e)}")
+            print(f"❌ Erreur d'envoi d'email : {str(e)}")
+
         return redirect('contact')
 
     return render(request, 'contact.html')
