@@ -207,7 +207,7 @@ Les balises {% trans %} et {% blocktrans %} permettent d’afficher du texte tra
 3. Compiler les fichiers de traduction;
       django-admin compilemessages
 
-Un sélecteur de langue est disponible sur le site permettant de basculer entre français 🇫🇷 et anglais 🇬🇧 via les flags 🇫🇷 🇬🇧
+Un sélecteur de langue est disponible sur le site permettant de basculer entre français 🇫🇷 et anglais 🇬🇧 via les flags 🇫🇷 🇬🇧 🇫🇷
 
 ## 6. 📜 Commandes pour exécuter les tests
 
