@@ -207,9 +207,10 @@ Les balises {% trans %} et {% blocktrans %} permettent d’afficher du texte tra
 3. Compiler les fichiers de traduction;
       django-admin compilemessages
 
-Un sélecteur de langue est disponible sur le site permettant de basculer entre 
-français ![FR](https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Fr.jpg?raw=true)  
-et anglais ![GB](https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Uk.jpg?raw=true).
+Un sélecteur de langue est disponible sur le site permettant de basculer entre  
+français <img src="https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Fr.jpg?raw=true" width="25"/>  
+et anglais <img src="https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Uk.jpg?raw=true" width="25"/>.
+
 
 ## 6. 📜 Commandes pour exécuter les tests
 
