@@ -9,7 +9,7 @@ Madcap1874 est un site web développé pour présenter l'histoire du bateau Madc
 ## 🌐 Hébergement & Déploiement
 Le site Madcap1874 est hébergé sur Render 🎉   [⛵ Visitez Madcap1874 ⛵](https://madcap-70h2.onrender.com/)
 
-![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/render_builtok.png)
+![Déploiement Render ok](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/render_builtok.png)
 
 🚀 Déploiement sur Render
 Base de données
@@ -37,7 +37,7 @@ Ajout des variables d’environnement (DATABASE_URL)
 | **Hébergement** | Render (Base de données & serveur web) |
 
 
-![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Diagramme_web.png)
+![Architecture web](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Diagramme_web.png)
 
 ### ⛵ Page d'Accueil (`index.html`)
 - Présentation du Madcap avec une vidéo.
@@ -92,6 +92,9 @@ Ajout des variables d’environnement (DATABASE_URL)
     
 ## 3. 📊 Gestion des Bases de Données
 ### 👨‍🌾 Table des Membres (`madcap_app_member`)
+
+![Diagramme_database.drawio](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Diagramme_database.drawio.png)
+
 ### 🔒 Créer un super-utilisateur
 ```bash
 python3 manage.py createsuperuser
