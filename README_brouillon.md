@@ -115,7 +115,7 @@ Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau
       SELECT * FROM madcap_app_member;
 
 Une fois les modifications terminées, quittez le shell avec :
-      .quit
+      .quit _  exit()
 
 
 -----------------------
@@ -198,3 +198,7 @@ browser-sync --version
 browser-sync start --proxy "127.0.0.1:8000" --files "templates/**/*.html, static/**/*.css, static/**/*.js"
 
 http://localhost:3000/
+
+exemple avis
+
+"Naviguer sur le Madcap, c'est comme ouvrir un vieux grimoire rempli d'histoires de marins et d’aventures en haute mer. Ce côtre-pilote, le plus ancien encore en état de naviguer, est un véritable trésor flottant. Dès que l'on met le pied à bord, on ressent cette âme unique, forgée par les embruns et le temps. L’équipe passionnée qui le fait vivre est aux petits soins, toujours prête à partager anecdotes et récits fascinants. Entre les voiles gonflées par le vent et le clapotis des vagues contre la coque, on a l’impression de voyager à une époque où la mer dictait son propre tempo. Que ce soit pour une sortie en mer ou simplement pour admirer ce bijou d’architecture navale, le Madcap est une expérience inoubliable. Longue vie à ce fier navire et à ceux qui le font naviguer !"
