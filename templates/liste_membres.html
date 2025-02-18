@@ -1,0 +1,16 @@
+<!-- File pour unitest -->
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des Membres</title>
+</head>
+<body>
+    <h1>Liste des Membres</h1>
+    <ul>
+        {% for membre in membres %}
+            <li>{{ membre.name }} - {{ membre.phone }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
