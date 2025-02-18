@@ -182,12 +182,41 @@ python3 manage.py runserver
 
 ---
 
-## 📜 Commandes pour exécuter les tests
+## 5. 🌍 Version Multilingue (FR & EN)  
+Le site Madcap1874 est disponible en français et en anglais.
+La traduction est gérée avec Django et gettext, permettant aux utilisateurs de naviguer dans la langue de leur choix.
+
+### ⚙ Installation des bibliothèques pour la traduction
+
+    pip install babel django-babel
+
+### 📜 Comment ça fonctionne ?  
+Django utilise le middleware de traduction (LocaleMiddleware).  
+
+Les fichiers .po contiennent les traductions et sont compilés en .mo pour être utilisés par le site.  
+
+Les balises {% trans %} et {% blocktrans %} permettent d’afficher du texte traduit dans les templates.  
+
+### 🔄 Générer et mettre à jour les traductions
+1. Extraire les chaînes de caractères à traduire:  
+      django-admin makemessages -l en
+
+2. Modifier les fichiers de traduction (.po) dans 
+      locale/en/LC_MESSAGES/django.po. 
+
+3. Compiler les fichiers de traduction;
+      django-admin compilemessages
+
+Un sélecteur de langue est disponible sur le site permettant de basculer entre français 🇫🇷 et anglais 🇬🇧 via les flags 🇫🇷
+
+## 6. 📜 Commandes pour exécuter les tests
 
     # Tester avec Django
     python manage.py test madcap_app.tests
 
     ![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/unitest_urls.png)
+
+
     
 ###  Outils de développement
     pip install pytest pytest-django dj-database-url
