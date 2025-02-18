@@ -55,7 +55,7 @@ Ajout des variables d’environnement (DATABASE_URL)
 👥 Informations sur les **membres fondateurs** et les **bénévoles**  
 💡 Objectifs et **missions** de l’association  
 📌 **Comment adhérer** à l’association et devenir membre  
-🔗 [💖 Soutenir Madcap sur HelloAsso](https://www.helloasso.com/)  
+🔗 [💖 Soutenir Madcap sur HelloAsso](https://www.helloasso.com/associations/madcap-1874)  
 
 ### 🎣 Page Événements (`evenements.html`)
 - Calendrier des événements auxquels Madcap participera en 2025.
@@ -64,10 +64,6 @@ Ajout des variables d’environnement (DATABASE_URL)
 - Explication des différents moyens de soutenir Madcap.
 - Lien cliquable vers HelloAsso pour les dons.
 
-### 💬 Livre d'Or - Votre Expérience (`livre_dor.html`)
-- Formulaire pour **poster un commentaire** sur l'expérience vécue à bord du Madcap.
-- **Affichage des avis** du plus récent au plus ancien.
-- **Validation des avis** avant affichage sur le site.
 
 ### 📝 **Livre d’or & Avis** (`livre_dor.html`)
 - 🖊️ **Laisser un avis** avec une note sur 5 étoiles ⭐⭐⭐⭐⭐
