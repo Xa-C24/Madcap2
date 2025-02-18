@@ -215,7 +215,7 @@ Un sélecteur de langue est disponible sur le site permettant de basculer entre 
     # Tester avec Django
     python manage.py test madcap_app.tests
 
-Test ok
+
 ![Unitest_urls_ok](https://github.com/Xa-C24/Madcap/blob/main/static/images/image_docs/unitest_urls.jpg)
 
 
