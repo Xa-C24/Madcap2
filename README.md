@@ -3,6 +3,14 @@
 ## ⛵ Présentation du Projet
 Madcap1874 est un site web développé pour présenter l'histoire du bateau Madcap, promouvoir l'association, permettre l'inscription de nouveaux membres et recueillir les témoignages des visiteurs. Le site est également un espace interactif avec une météo en temps réel, des informations sur les événements à venir et des liens pour soutenir l'association.
 
+## 🌐 Hébergement & Déploiement
+Le site Madcap1874 est hébergé sur Render 🎉  🌍 Visitez Madcap1874
+
+🚀 Déploiement sur Render
+Base de données
+PostgreSQL est utilisé sur Render.com
+Ajout des variables d’environnement (DATABASE_URL)
+
 ## ⚙ Technologies Utilisées
 - **Framework Backend** : Django (Python)
 - **Base de données** : SQLite
@@ -12,6 +20,18 @@ Madcap1874 est un site web développé pour présenter l'histoire du bateau Madc
 - **Traduction du site** : Flask-Babel pour la gestion des langues (FR & EN)
 
 ## 🌐 Structure du Site
+
+## ⚙ **Technologies utilisées**
+| Technologie | Description |
+|------------|------------|
+| **Backend** | Django (Python) |
+| **Base de données** | PostgreSQL & SQLite |
+| **Frontend** | HTML, CSS, JavaScript |
+| **API météo** | Intégration de la carte **Windy** |
+| **Traduction** | Django i18n (FR 🇫🇷 & EN 🇬🇧) |
+| **Hébergement** | Render (Base de données & serveur web) |
+
+
 ### ⛵ Page d'Accueil (`index.html`)
 - Présentation du Madcap avec une vidéo.
 - Deux liens cliquables :
@@ -35,6 +55,11 @@ Madcap1874 est un site web développé pour présenter l'histoire du bateau Madc
 - **Affichage des avis** du plus récent au plus ancien.
 - **Validation des avis** avant affichage sur le site.
 
+### 📝 **Livre d’or & Avis** (`livre_dor.html`)
+- 🖊️ **Laisser un avis** avec une note sur 5 étoiles ⭐⭐⭐⭐⭐
+- 📃 **Afficher les avis** du plus récent au plus ancien
+- 🛠️ **Validation manuelle** avant publication
+
 ### 📞 Page Contact (`contact.html`)
 - Formulaire de contact.
 - Numéro de téléphone et email de l'association.
@@ -45,8 +70,34 @@ Madcap1874 est un site web développé pour présenter l'histoire du bateau Madc
 - Validation des avis avant publication.
 - Interface de recherche dynamique pour les membres.
 
+## 🛠 **Installation & Déploiement**
+### 📦 **1. Cloner le projet**
+
+    git clone https://github.com/utilisateur/Madcap1874.git
+    cd Madcap1874
+
+## 2. Créer & activer un environnement virtuel
+
+    python3 -m venv venv  # Création de l’environnement virtuel
+    source venv/bin/activate  # Activation (Linux/macOS)
+    venv\Scripts\activate  # Activation (Windows)
+
+    
 ## 📊 Gestion des Bases de Données
 ### 👨‍🌾 Table des Membres (`madcap_app_member`)
+### 🔒 Créer un super-utilisateur
+```bash
+python3 manage.py createsuperuser
+```
+
+### 📈 Gestion de la Base de Données SQLite
+```bash
+python3 manage.py dbshell
+.tables
+SELECT * FROM madcap_app_member;
+SELECT * FROM madcap_app_avis;
+```
+
 Stocke les informations des membres de l'association :
 ```sql
 CREATE TABLE madcap_app_member (
@@ -88,6 +139,7 @@ UPDATE madcap_app_avis SET valide = 1 WHERE id = 1;
 
 ## 🛠 Commandes Utiles
 ### ⚙ Installation des dépendances
+    pip install -r requirements.txt
 ```bash
 pip install flask flask-babel django
 ```
@@ -95,20 +147,10 @@ pip install flask flask-babel django
 ### ⚡ Démarrer le serveur Django
 ```bash
 python3 manage.py runserver
+    Accéder au site sur http://127.0.0.1:8000/ 🚀
 ```
 
-### 🔒 Créer un super-utilisateur
-```bash
-python3 manage.py createsuperuser
-```
 
-### 📈 Gestion de la Base de Données SQLite
-```bash
-python3 manage.py dbshell
-.tables
-SELECT * FROM madcap_app_member;
-SELECT * FROM madcap_app_avis;
-```
 
 ## 🎨 Outils de Développement
 - **Live Server** pour recharger les pages automatiquement :
@@ -118,12 +160,29 @@ SELECT * FROM madcap_app_avis;
   ```
 - **Extension VS Code** : Prettier pour le formatage du code.
 
+## 4. Configurer les variables d’environnement
+    DJANGO_SECRET_KEY=super_secret_key
+    DEBUG=True
+    ALLOWED_HOSTS=*
+    DATABASE_URL=postgres://user:password@host:port/dbname
+
+
 ---
 
+## 📜 Commandes pour exécuter les tests
+
+    # Tester avec Django
+    python manage.py test madcap_app.tests
+###  Outils de développement
+    pip install pytest pytest-django dj-database-url
+
+
+# Tester avec Pytest
+pytest madcap_app/tests/
 ## 🌟 Conclusion
 Le projet Madcap1874 vise à promouvoir et préserver l'histoire du bateau Madcap tout en facilitant l'implication des membres et des visiteurs. Le site est conçu pour être interactif, informatif et accessible.
 
-💡 **Prochaine étape :** Finaliser la page "À propos de l'association" et intégrer des améliorations graphiques.
+💡 **Prochaine étape :** Intégrer des améliorations graphiques.
 
 ---
 📖 **Dernière mise à jour :** [Date automatique lors de la mise à jour]
