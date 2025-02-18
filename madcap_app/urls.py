@@ -6,7 +6,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from . import views
-from .views import change_language  # Import de la fonction change_language
+from .views import change_language, liste_membres  # Import de la fonction change_language
 
 urlpatterns = [
     path('', views.index, name='index'),  # Page d'accueil
@@ -16,6 +16,8 @@ urlpatterns = [
     path('histoire/', views.histoire, name='histoire'),
     path('evenements/', views.evenements, name='evenements'),
     path('livre_dor/', views.livre_dor, name='livre_dor'),
+    path('membres/', views.liste_membres, name='liste_membres'),
+
 
     # Formulaire de contact
     path('submit_contact/', views.submit_contact, name='submit_contact'),
@@ -29,5 +31,5 @@ urlpatterns = [
     path('change-language/<str:lang_code>/', change_language, name='change_language'),
 ]
 
-# 🔥 CORRECTION : Servir les fichiers médias en production aussi ✅
+#  CORRECTION : Servir les fichiers médias en production aussi 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

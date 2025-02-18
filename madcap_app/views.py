@@ -195,8 +195,8 @@ def submit_contact(request):
         email_host_user = os.getenv("EMAIL_HOST_USER")
         email_host_password = os.getenv("EMAIL_HOST_PASSWORD")
 
-        print(f"✅ EMAIL_HOST_USER = {email_host_user}")
-        print(f"✅ EMAIL_HOST_PASSWORD = {email_host_password}")
+        print(f" EMAIL_HOST_USER = {email_host_user}")
+        print(f" EMAIL_HOST_PASSWORD = {email_host_password}")
 
         # Préparation de l'email
         subject = f"Nouveau message de {name} via le formulaire de contact"
@@ -302,3 +302,8 @@ def change_language(request, lang_code):
         return response
     
     return HttpResponseRedirect('/')
+
+def liste_membres(request):
+    """Affiche la liste des membres"""
+    membres = Member.objects.all()
+    return render(request, 'liste_membres.html', {'membres': membres})
