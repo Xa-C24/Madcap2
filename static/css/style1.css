@@ -31,13 +31,15 @@ input[type="text"] {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1em;
+  box-shadow: 0 2px 5px rgba(158, 14, 14, 0.1);
+  border: 2px solid #cf7979;
 }
 
 /* === STYLE DU TABLEAU === */
 #members-table {
   width: 100%;
   max-width: 100%;
-  overflow-x: auto; /* Activation du scroll horizontal */
+  overflow-x: auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -46,7 +48,7 @@ input[type="text"] {
   width: 100%;
   border-collapse: collapse;
   background-color: #f0d1d1;
-  min-width: 600px; /* Empêche l'écrasement des colonnes */
+  min-width: 600px;
 }
 
 #members-table th,
@@ -86,25 +88,39 @@ footer {
 }
 
 /* === LOGO CLIQUABLE === */
-a[href="{% url 'index' %}"] img {
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: auto;
+  z-index: 10;
 }
 
-a[href="{% url 'index' %}"] img:hover {
-  transform: scale(0.9);
-  box-shadow: 0 8px 10px rgba(209, 43, 43, 0.2);
+.logo-container a {
+  display: block; /* Assure que tout le logo est cliquable */
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   filter: brightness(1.2);
 }
 
-/* === BARRE DE RECHERCHE === */
-input[type="text"] {
-  box-shadow: 0 2px 5px rgba(158, 14, 14, 0.1);
-  border: 2px solid #cf7979;
+/* === ESPACEMENT POUR NE PAS CHEVAUCHER === */
+.header {
+  padding-top: 110px; /* Laisse de l’espace sous le logo */
 }
 
 /* === MEDIA QUERIES POUR RESPONSIVE === */
 
-/* 📱 Adaptation pour tablettes et smartphones (max 768px) */
+/* 📱 Adaptation pour tablettes et petits écrans */
 @media screen and (max-width: 768px) {
   body {
     padding: 10px;
@@ -125,7 +141,7 @@ input[type="text"] {
   }
 
   #members-table {
-    overflow-x: auto; /* Activation du scroll horizontal */
+    overflow-x: auto;
   }
 
   #members-table th,
@@ -137,9 +153,19 @@ input[type="text"] {
   footer {
     font-size: 0.8em;
   }
+
+  .logo-container {
+    top: 5px;
+    left: 5px;
+    width: 70px;
+  }
+
+  .header {
+    padding-top: 90px;
+  }
 }
 
-/* 📱 Adaptation pour petits smartphones (max 480px) */
+/* 📱 Adaptation pour petits smartphones */
 @media screen and (max-width: 480px) {
   body {
     padding: 5px;
@@ -171,5 +197,15 @@ input[type="text"] {
 
   footer {
     font-size: 0.7em;
+  }
+
+  .logo-container {
+    top: 5px;
+    left: 5px;
+    width: 60px;
+  }
+
+  .header {
+    padding-top: 80px;
   }
 }
