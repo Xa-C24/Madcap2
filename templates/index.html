@@ -24,7 +24,7 @@
   <!-- Script JavaScript Windy pour la carte -->
   <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
 
-  <script src="{% static 'js/diaporama_index.js' %}"></script>
+  <script src="{% static 'js/diaporama_index.js' %}" defer></script>
 
 
   <!-- Styles personnalisés pour la carte -->
@@ -73,7 +73,7 @@
         <div class="diaporama">
           <img src="{% static 'images/DiapoHeader3.jpg' %}" alt="Madcap en mer">
           <img src="{% static 'images/DiapoHeader2.jpg' %}" alt="Vue latérale">
-          <img src="{% static 'images/sunset_madcap - Copie.jpg' %}" alt="Vue latérale">
+          <img src="{% static 'images/sunset_madcap_Co.jpg' %}" alt="Sunset">
           <img src="{% static 'images/DiapoHeader1.jpg' %}" alt="Détail du voilier">
           <img src="{% static 'images/DiapoHeader4.jpg' %}" alt="Détail du voilier">
         </div>
@@ -89,32 +89,39 @@
 
       <section class="don-section">
         <h2>
-          L'association Madcap vous invite à découvrir ce voilier historique restauré avec passion.
+          {% trans "L'association Madcap vous invite à découvrir ce voilier historique restauré avec passion." %}
         </h2>
       
       
-      <h3>
-        <span style="display: inline-block; padding-left: 1.5cm;"></span> Madcap, témoin précieux de notre patrimoine
+      <h3>{% blocktrans %}
+        <span style="display: inline-block; padding-left: 1.5cm;"></span> 
+        
+        Madcap, témoin précieux de notre patrimoine
         maritime, vous invite à embarquer pour un voyage dans le temps. Restauré avec rigueur et minutie, ce bateau
         classé Monument Historique reflète l'excellence de l'artisanat naval de son époque. L'association se consacre à
         sa préservation et à la promotion du patrimoine maritime, permettant au public de découvrir les techniques de
         navigation à voile du XIXe siècle. Découvrez les secrets de sa construction, ses récits de navigation et les
         événements marquants qui ont façonné son histoire.
+        {% endblocktrans %}
       </h3>
 
-      <div id="presentation">
+      <div class="video-container-index" id="presentation">
 
-        <div class="video-container-index">
-          <iframe src="https://www.youtube.com/embed/_7lt_IaRsnc" title="YouTube video player" frameborder="0"
+          <iframe 
+            src="https://www.youtube.com/embed/_7lt_IaRsnc" 
+            title="YouTube video player" 
+            rameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
-        </div>
+        
       </div>
       
-      <h3><span style="display: inline-block; padding-left: 1.5cm;"></span>Plus qu’un simple bateau, Madcap est un
+      <h3><span style="display: inline-block; padding-left: 1.5cm;"></span>
+        {% blocktrans %} Plus qu’un simple bateau, Madcap est un
         témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de
         naviguer, offrant à chacun une immersion dans les navigations d’autrefois.
+        {% endblocktrans %}
       </h3>
     </section>
 
@@ -128,16 +135,16 @@
     <section class="don-section">
       <div class="content-container">
         <div class="text-content">
-          <h2>Embarquez à bord de Madcap, naviguez avec nous et plongez dans son histoire.</h2>
+          <h2>{% trans "Embarquez à bord de Madcap, naviguez avec nous et plongez dans son histoire." %}</h2>
 
         </div><br>
         <img src="{% static 'images/Photo_index_contact.jpg' %}" alt="Détail du voilier" class="don-image-index">
       </div>
-      <h2>Partagez des moments riches en émotions lors de nos sorties en mer.</h2>
+      <h2>{% trans "Partagez des moments riches en émotions lors de nos sorties en mer." %}</h2>
       <div class="cta-links">
         <a href="https://www.helloasso.com/associations/madcap-1874" target="_blank"
-          class="cta-button">Rejoignez-nous</a>
-        <a href="{% url 'contact' %}" class="cta-button">Contactez-nous</a>
+          class="cta-button">{% trans "Rejoignez-nous" %}</a>
+        <a href="{% url 'contact' %}" class="cta-button">{% trans "Contactez-nous" %}</a>
       </div>
     </section>
 
@@ -155,7 +162,7 @@
   <!-- Section 4 : Carte interactive Windy -->
  
     <section class="don-section">
-      <h2>Carte météo Windy</h2>
+      <h2>{% trans "Carte météo Windy" %}</h2>
       <div id="map-wrapper">
 
         <!-- Carte Windy interactive -->
@@ -168,7 +175,7 @@
         </div>
 
         <!-- Bouton pour afficher la carte en plein écran -->
-        <button id="fullscreen-btn">Afficher la carte en plein écran</button>
+        <button id="fullscreen-btn">{% trans "Afficher la carte en plein écran" %}</button>
       </div>
 
     </section>

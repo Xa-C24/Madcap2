@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 10:41+0100\n"
+"POT-Creation-Date: 2025-02-19 11:12+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,13 +26,14 @@ msgstr "Anglais"
 msgid "Anglais"
 msgstr ""
 
+# ---------Association-----------
 #: templates/association.html:8
 msgid "L'Association Madcap 1874"
-msgstr ""
+msgstr "The Madcap 1874 Association"
 
 #: templates/association.html:20
 msgid "Qui sommes-nous ?"
-msgstr ""
+msgstr "Who are we?"
 
 #: templates/association.html:21
 msgid ""
@@ -45,10 +46,18 @@ msgid ""
 "eu une vie avant nous, et il continuera à tracer sa route après nous.\n"
 "      "
 msgstr ""
+"\n"
+"        The MADCAP 1874 Association was founded on October 16, 2021, to "
+"ensure the preservation of the oldest Bristol Pilot Cutter, built in 1874 in "
+"Cardiff. Listed as a historical monument in both France and England, it is "
+"the oldest of the 17 pilot cutters still sailing worldwide. Our mission is "
+"to be history keepers: Madcap had a life before us, and it will continue its "
+"journey after us.\n"
+"      "
 
 #: templates/association.html:29
 msgid "Nos valeurs et nos actions"
-msgstr ""
+msgstr "Our values and actions"
 
 #: templates/association.html:30
 msgid ""
@@ -58,59 +67,64 @@ msgid ""
 "collaborons avec des associations spécialisées pour accompagner :\n"
 "      "
 msgstr ""
+"\n"
+"        For the founding members of the association, acquiring Madcap was "
+"about creating a space for social inclusion and sharing. We collaborate with "
+"specialized associations to support:\n"
+"      "
 
 #: templates/association.html:34
 msgid "Prévention des risques suicidaires chez les jeunes"
-msgstr ""
+msgstr "Suicide risk prevention among young people"
 
 #: templates/association.html:35
 msgid "Soutien aux personnes atteintes de syndromes post-traumatiques"
-msgstr ""
+msgstr "Support for individuals with post-traumatic stress disorders"
 
 #: templates/association.html:36
 msgid "Réinsertion de personnes en difficulté après un accident de la vie"
-msgstr ""
+msgstr "Reintegration of individuals facing life hardships"
 
 #: templates/association.html:37
 msgid "Sorties à la voile handi-valides"
-msgstr ""
+msgstr "Accessible sailing trips for people with disabilities"
 
 #: templates/association.html:38
 msgid "Promotion de la mixité dans le sport, notamment la voile"
-msgstr ""
+msgstr "Promotion of diversity in sports, particularly sailing"
 
 #: templates/association.html:45
 msgid "L’association ouvre également ses portes à diverses initiatives :"
-msgstr ""
+msgstr "The association also welcomes various initiatives:"
 
 #: templates/association.html:47
 msgid "Réinsertion pour les jeunes en difficulté"
-msgstr ""
+msgstr "Reintegration programs for struggling youth"
 
 #: templates/association.html:48
 msgid "Sorties organisées pour des clubs sportifs ou des associations"
-msgstr ""
+msgstr "Organized outings for sports clubs or associations"
 
 #: templates/association.html:49
 msgid "Séminaires et événements d'entreprise (team-building en mer)"
-msgstr ""
+msgstr "Corporate seminars and events (team-building at sea)"
 
 #: templates/association.html:50
 msgid ""
 "Ateliers d’initiation à la navigation et aux métiers du patrimoine maritime"
-msgstr ""
+msgstr "Workshops on sailing and maritime heritage professions"
 
 #: templates/association.html:51
 msgid "Événements éducatifs pour sensibiliser les jeunes au monde maritime"
-msgstr ""
+msgstr "Educational events to raise youth awareness of the maritime world"
 
 #: templates/association.html:52
 msgid "Sorties thématiques : histoire, faune marine, techniques de navigation"
-msgstr ""
+msgstr "Themed outings: history, marine wildlife, sailing techniques"
 
 #: templates/association.html:73
 msgid "Faites partie de l’équipage"
-msgstr ""
+msgstr "Become part of the crew"
 
 #: templates/association.html:74
 msgid ""
@@ -119,22 +133,25 @@ msgid ""
 "l’association :\n"
 "      "
 msgstr ""
+"\n"
+"        There are several ways to get involved in the association:\n"
+"      "
 
 #: templates/association.html:78
 msgid "Section navigation : chefs de bord et équipiers"
-msgstr ""
+msgstr "Navigation section: skippers and crew members"
 
 #: templates/association.html:79
 msgid "Travaux manuels : entretien et restauration du bateau"
-msgstr ""
+msgstr "Hands-on work: maintenance and restoration of the boat"
 
 #: templates/association.html:80
 msgid "Partie administrative et organisation des événements"
-msgstr ""
+msgstr "Administrative tasks and event organization"
 
 #: templates/association.html:89
 msgid "Financement et mécénat"
-msgstr ""
+msgstr "Funding and sponsorship"
 
 #: templates/association.html:90
 msgid ""
@@ -145,26 +162,39 @@ msgid ""
 "sources :\n"
 "      "
 msgstr ""
+"\n"
+"        Keeping Madcap in good condition requires significant financial "
+"commitment. The boat underwent a complete refit from 2014 to 2018 and major "
+"renovation work in 2022. Our financial resources come from several sources:\n"
+"      "
 
 #: templates/association.html:94
 msgid "Les cotisations des membres"
-msgstr ""
+msgstr "Membership fees"
 
 #: templates/association.html:95
 msgid "Le paiement des journées de navigation"
-msgstr ""
+msgstr "Payments for sailing days"
 
 #: templates/association.html:96
 msgid "Les dons de particuliers"
-msgstr ""
+msgstr "Private donations"
 
 #: templates/association.html:97
 msgid "Les subventions et le mécénat d’entreprises"
-msgstr ""
+msgstr "Grants and corporate sponsorship"
 
 #: templates/association.html:102
 msgid "Faire vivre l'association"
-msgstr ""
+msgstr "Keeping the association alive"
+
+#: templates/association.html:108 templates/index.html:146
+msgid "Rejoignez-nous"
+msgstr "Join us"
+
+#: templates/association.html:109 templates/index.html:147
+msgid "Contactez-nous"
+msgstr "Contact us"
 
 #: templates/association.html:114
 msgid ""
@@ -174,6 +204,22 @@ msgid ""
 "faire vivre Madcap pour les générations futures.\n"
 "        "
 msgstr ""
+"\n"
+"        By joining the association, you contribute to the preservation of a "
+"valuable maritime heritage. Your commitment helps keep Madcap alive for "
+"future generations.\n"
+"        "
+
+#: templates/association.html:126
+msgid "Comment faire un don ?"
+msgstr "How do I make a donation?"
+
+#: templates/association.html:128
+msgid "Faire un don"
+msgstr "Make a donation"
+
+
+
 
 #: templates/association.html:133
 msgid ""
@@ -182,13 +228,11 @@ msgid ""
 "bénéficier de réductions fiscales.\n"
 "      "
 msgstr ""
+"\n"
+"        As a public-interest association, we offer tax benefits for donors.\n"
+"      "
 
-
-
-/*-----------INDEX----------*/
-
-
-
+# ----------INDEX----------
 #: templates/index.html:59
 msgid "Un patrimoine maritime vivant"
 msgstr "A living maritime heritage"
@@ -222,8 +266,12 @@ msgid "Classé Monument Historique"
 msgstr "Listed as a Historical Monument"
 
 #: templates/index.html:92
-msgid "L'association Madcap vous invite à découvrir ce voilier historique restauré avec passion."
-msgstr "The Madcap Association invites you to discover this historic sailing vessel, carefully restored with passion."
+msgid ""
+"L'association Madcap vous invite à découvrir ce voilier historique restauré "
+"avec passion."
+msgstr ""
+"The Madcap Association invites you to discover this historic sailing vessel, "
+"carefully restored with passion."
 
 #: templates/index.html:96
 msgid ""
@@ -243,6 +291,21 @@ msgid ""
 "        événements marquants qui ont façonné son histoire.\n"
 "        "
 msgstr ""
+"\n"
+"        <span style=\"display: inline-block; padding-left: 1.5cm;\"></"
+"span> \n"
+"        \n"
+"        Madcap, a precious witness to our maritime heritage,\n"
+"        invites you to embark on a journey through time. Carefully and "
+"meticulously restored,\n"
+"        this Historical Monument reflects the excellence of 19th-century "
+"shipbuilding.\n"
+"        The association is dedicated to its preservation and the promotion "
+"of maritime heritage,\n"
+"        allowing the public to discover traditional sailing techniques.\n"
+"        Learn about its construction secrets, navigation stories, and the "
+"key events that shaped its history.\n"
+"        "
 
 #: templates/index.html:121
 msgid ""
@@ -253,31 +316,28 @@ msgid ""
 "d’autrefois.\n"
 "        "
 msgstr ""
+" More than just a boat, Madcap is a unique witness to maritime history.\n"
+"        Thanks to the dedicated work of its members, this heritage "
+"continues\n"
+"        to sail, offering everyone an immersion into 19th-century sailing.\n"
+"        "
 
 #: templates/index.html:138
 msgid ""
 "Embarquez à bord de Madcap, naviguez avec nous et plongez dans son histoire."
-msgstr ""
+msgstr "Step aboard Madcap, sail with us, and dive into its history."
 
 #: templates/index.html:143
 msgid "Partagez des moments riches en émotions lors de nos sorties en mer."
-msgstr ""
-
-#: templates/index.html:146
-msgid "Rejoignez-nous"
-msgstr ""
-
-#: templates/index.html:147
-msgid "Contactez-nous"
-msgstr ""
+msgstr "Share unforgettable moments during our sea outings."
 
 #: templates/index.html:165
 msgid "Carte météo Windy"
-msgstr ""
+msgstr "Windy weather map"
 
 #: templates/index.html:178
 msgid "Afficher la carte en plein écran"
-msgstr ""
+msgstr "View the map in full screen"
 
 #: venv/lib/python3.12/site-packages/_pytest/config/argparsing.py:474
 #, python-format
