@@ -5,8 +5,9 @@ URLs configuration for madcap_app.
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
+from .views import change_language
 from . import views
-from .views import change_language, liste_membres  # Import de la fonction change_language
+
 
 urlpatterns = [
     path('', views.index, name='index'),  # Page d'accueil
@@ -17,6 +18,7 @@ urlpatterns = [
     path('evenements/', views.evenements, name='evenements'),
     path('livre_dor/', views.livre_dor, name='livre_dor'),
     path('membres/', views.liste_membres, name='liste_membres'),
+    path('avis-ajax/', views.avis_ajax, name='avis_ajax'),
 
 
     # Formulaire de contact

@@ -38,8 +38,10 @@ from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 import dns.resolver, re
 
+import random
 from .models import Avis  # Pour récupérer les avis
 from .forms import AvisForm  # Pour gérer le formulaire
+
 
 import logging
 import os
@@ -291,12 +293,37 @@ def livre_dor(request):
     return render(request, 'livre_dor.html', {'form': form, 'avis_list': avis_list})
 
 
+  # Récupérer 4 Avis aléatoire pour page index.html
+
+def index(request):
+
+   # Récupérer tous les avis (sans validation)
+    avis_disponibles = Avis.objects.all()
+
+    # Sélectionner 4 avis aléatoires si au moins 4 existent
+    avis_aleatoires = random.sample(list(avis_disponibles), min(len(avis_disponibles), 4))
+
+    return render(request, 'index.html', {'avis_aleatoires': avis_aleatoires})
+
+
+def avis_ajax(request):
+    avis_disponibles = Avis.objects.all()
+    avis_aleatoires = random.sample(list(avis_disponibles), min(len(avis_disponibles), 4))
+
+    data = [
+        {"nom": avis.nom, "note": avis.note, "message": avis.message, "date": avis.date.strftime("%d/%m/%Y")}
+        for avis in avis_aleatoires
+    ]
+
+    return JsonResponse(data, safe=False)
+
+
 # Changement de langue FR/EN
 
 def change_language(request, lang_code):
     if lang_code in dict(settings.LANGUAGES).keys():
         activate(lang_code)  # 🔥 Active immédiatement la langue
-        request.session['django_language'] = lang_code  # 🔥 Stocke la langue dans la session
+        request.session['django_language'] = lang_code  #  Stocke la langue dans la session
         response = HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         response.set_cookie('django_language', lang_code, max_age=60*60*24*365)  # 🔥 Stocke aussi dans le cookie
         return response
