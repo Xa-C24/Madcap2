@@ -126,7 +126,25 @@
     </section>
 
     <br>
+    <br>
 
+        <!-- Avis aléatoire -->
+
+        <div class="avis-index-container">
+          <div class="avis-list">
+              {% for avis in avis_aleatoires %}   <!--  afficher chaque avis sélectionné aléatoirement.-->
+                  <div class="avis-card">
+                      <p><strong>{{ avis.nom }}</strong> ⭐ {{ avis.note }}/5</p>
+                      <p>"{{ avis.commentaire }}"</p>
+                      <small class="avis-date">Posté le : {{ avis.date|date:"d/m/Y" }}</small> <!-- Affichage du nom, note, message et date de publication.-->
+                      <a href="{% url 'livre_dor' %}" class="read-more">Lire tous les Avis</a>
+                  </div>
+              {% empty %}
+                  <p>Aucun avis disponible pour le moment.</p>
+              {% endfor %}
+          </div>
+      </div>
+      
     <main>
       <!-- Espace vide -->
     </main>
