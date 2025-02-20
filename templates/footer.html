@@ -1,8 +1,44 @@
-<footer style="background-color: #4f7093; color: white; padding: 20px 0; display: flex; justify-content: center; align-items: center; position: relative;">
-  
-  <!-- Texte centré -->
-  <p style="margin: 0; text-align: center; flex: 1;">
-    &copy; 2024 Madcap - Tous droits réservés <!-- Copyright message affiché au centre -->
-  </p>
-  
+{% load static %} <!-- Charger les fichiers statiques Django -->
+{% load i18n %} <!-- Fr vs En-->
+<footer>
+  <div class="footer-container">
+      <!-- Logo et description -->
+      <div class="footer-left">
+          <img src="{% static 'images/logo3.png' %}" alt="Logo Madcap">
+          <p>Madcap 1874 - Association pour la préservation du patrimoine maritime</p>
+      </div>
+
+      
+      <!-- Contact et réseaux sociaux -->
+      <div class="footer-right">
+         
+          <p>Email : <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a></p>
+          <p>Téléphone : +33 6 86 14 39 55</p>
+          <p>Adresse : Canet-en-Roussillon, France</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="{% static 'images/Fb_logo2.png' %}" alt="Facebook" width="25" height="25">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="{% static 'images/Youtube_logo.png' %}" alt="YouTube" width="25" height="25">
+            </a>
+        </div>
+      </div>
+  </div>
+<div class="footer-middle">
+          
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Histoire</a></li>
+            <li><a href="#">Événements</a></li>
+            <li><a href="#">Livre d'Or</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+  <div class="footer-bottom">
+      <p>© 2024 Madcap - Tous droits réservés</p>
+      <!-- Liens de navigation -->
+      
+
+  </div>
 </footer>
