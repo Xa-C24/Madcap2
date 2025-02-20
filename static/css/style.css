@@ -223,6 +223,98 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+
+/* Import Avis aléatoire */
+
+.avis-index-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.avis-index-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #455868;/* Bleu foncé */
+}
+
+.avis-list {
+  display: flex;
+  justify-content: space-evenly; /* Espacement entre les blocs */
+  align-items: flex-start; /* Chaque carte aura sa propre hauteur */
+  flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+  gap: 5px;
+}
+
+.avis-card {
+  background: #E6E9DD; /* Fond blanc */
+  padding: 4.12px;
+  border-radius: 5px;
+  border: 3px solid #455868;
+  width: calc(24% - 10px); /* 4 cartes sur une ligne */
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /*  Empêche les éléments internes de dépasser */
+  position: relative; /* Assure que l'ombre s'affiche correctement */
+  z-index: 2; /*  Met l'élément en avant pour éviter qu'il soit masqué */
+  flex-direction: column; /* Permet d'aligner les éléments internes */
+}
+
+.avis-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px #455868;; /* Augmente l'effet au survol */
+}
+
+.avis-card p {
+  margin: 12px 0;
+  color: #524e4f;
+  font-size: 16px; /*  Réduction légère de la taille du texte */
+  line-height: 1.4; /*  Espacement entre lignes réduit */
+}
+
+.avis-card .avis-date {
+  font-size: 13px;
+  color: #a71717;
+}
+
+.avis-card strong {
+  color: #003366; /* Bleu foncé */
+}
+
+.avis-card .stars {
+  color: gold;
+}
+
+.avis-card .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background: #005A87;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.avis-card .read-more:hover {
+  background: #003B57;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .avis-card {
+      width: calc(50% - 20px); /* 2 avis par ligne */
+  }
+}
+
+@media (max-width: 600px) {
+  .avis-card {
+      width: 100%; /* 1 avis par ligne */
+  }
+}
+
 /* Boutons "Rejoignez-nous" et "Contactez-nous" */
 
 .cta-links {
@@ -929,7 +1021,11 @@ blockquote {
   padding: 0;
 }
 
-
+.histoire-page section:hover {
+  box-shadow: 0 8px 35px #e4e5e6; /*  Ombre légèrement plus grande */
+  transform: translateY(-8px); /*  Fait légèrement remonter la section */
+  transition: all 0.5s ease-in-out;
+}
 
 /* Style pour l'image de la frégate dans l'histoire */
 .fregate-histoire {
@@ -1536,11 +1632,10 @@ a:hover {
 
 /* Modification ajoutée : animation au survol */
 .don-section:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 35px #f1f2f3; /* Ombre légèrement plus grande */
+  transform: translateY(-5px); /*  Fait légèrement remonter la section */
+  transition: all 0.5s ease-in-out;
 }
-
 /* Sous-titre */
 .don-section h2 {
   font-size: 1.8em;
@@ -1634,23 +1729,10 @@ a:hover {
   /* Légère augmentation au survol */
 }
 
-/* === FOOTER STYLES === */
-footer {
-  background-color: #34495E;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  /* Augmenté pour un meilleur espacement */
-  margin-top: auto;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.95em;
-  /* Légèrement augmenté */
-}
 
 /* === AMÉLIORATION MOBILE === */
+
+
 @media (max-width: 768px) {
   .don-page {
     padding: 15px;
@@ -2100,31 +2182,7 @@ section {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);  /* Ombre portée sur le texte */
 }
 
-/* === FOOTER STYLES === */
-/* Style du pied de page */
-footer {
-  background-color: #34495E;
-  /* Couleur de fond */
-  color: #fff;
-  /* Couleur du texte */
-  text-align: center;
-  /* Centre le contenu */
-  padding: 10px 0;
-  /* Espacement en haut et en bas */
-  margin-top: auto;
-  /* Place le footer en bas */
-  font-size: 0.9em;
-  /* Taille du texte légèrement augmentée */
-  line-height: 1.4;
-  /* Lisibilité améliorée */
-}
 
-footer p {
-  margin: 0;
-  /* Supprime les marges */
-  font-size: 0.9em;
-  /* Taille du texte */
-}
 
 /* === contact.html === */
 
@@ -2593,4 +2651,93 @@ footer p {
   /* Empêche tout déplacement */
   color: #555;
   /* Conserve la même couleur */
+}
+
+
+/* === FOOTER STYLES === */
+
+footer {
+  background-color: #9fa8b3;
+  color: white;
+  padding: 1px 0;
+  text-align: center;
+}
+
+.footer-right p {
+  font-size: 12px;
+  transform: translate(200px, 80px); /* Décale le texte vers la gauche */
+  margin: 1px 0;
+}
+
+.footer-left img {
+  width: 80px;
+  margin-bottom: 0px;
+  transform: translate(-400px, 70px); /* Décale le logo vers la gauche */
+
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+  padding-bottom: 10px 0;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px; /* Espacement entre les liens */
+}
+
+.footer-middle ul li {
+  margin: 0;
+}
+
+.footer-middle ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-middle ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Alignement horizontal du bas de page */
+.footer-bottom {
+  background-color: #1A252F;
+  padding: 2px 0;
+  margin-top: 5px;
+}
+
+.footer-bottom-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+
+.footer-bottom-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom-links li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 20px;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.5) rotate(20deg); /* Agrandit et incline légèrement au survol */
+  filter: brightness(1.8); /* Rend le logo plus lumineux */
 }
