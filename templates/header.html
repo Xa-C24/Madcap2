@@ -8,7 +8,7 @@
 <!-- Barre supérieure avec icônes et texte -->
 <div class="top-bar">
   <div class="top-bar-center">
-    <h2 class="top-bar-text">Madcap, le plus vieux côtre-pilote encore en état de naviguer</h2>
+    <h2 class="top-bar-text">{% trans "Madcap, le plus vieux côtre-pilote encore en état de naviguer" %}</h2>
   </div>
 
   <div class="top-bar-right">
@@ -21,7 +21,7 @@
     </a>
 
 
-    <a href="{% url 'admin_login' %}" class="admin-button">Espace Admin</a>
+    <a href="{% url 'admin_login' %}" class="admin-button">{% trans "Espace Admin" %}</a>
   </div>
 </div>
 
@@ -52,14 +52,14 @@
 </a>
 </div>
 
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/association">À propos de l'association</a></li>
-    <li><a href="/histoire">L'Histoire de Madcap</a></li>
-    <li><a href="/evenements">Événements</a></li>
-    <li><a href="/don">Soutenir le projet</a></li>
-    <li><a href="/livre_dor">Votre experience</a></li>
-    <li><a href="/contact">Nous Contacter</a></li>
-    
+        <li><a href="/">{% trans "Accueil" %}</a></li>
+        <li><a href="/association">{% trans "À propos de l'association" %}</a></li>
+        <li><a href="/histoire">{% trans "L'Histoire de Madcap" %}</a></li>
+        <li><a href="/evenements">{% trans "Événements" %}</a></li>
+        <li><a href="/don">{% trans "Soutenir le projet" %}</a></li>
+        <li><a href="/livre_dor">{% trans "Votre expérience" %}</a></li>
+        <li><a href="/contact">{% trans "Nous Contacter" %}</a></li>
+          
   </ul>
 
   <div class="language-switcher">
