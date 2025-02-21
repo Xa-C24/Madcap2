@@ -1,5 +1,6 @@
 {% load static %} <!-- Charger les fichiers statiques Django -->
 {% load i18n %} <!-- Fr vs En-->
+
 <footer>
   <div class="footer-container">
       <!-- Logo et description -->
@@ -10,25 +11,30 @@
 
       
       <!-- Contact et réseaux sociaux -->
+
       <div class="footer-right">
          
           <p>Email : <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a></p>
           <p>Téléphone : +33 6 86 14 39 55</p>
           <p>Adresse : Canet-en-Roussillon, France</p>
           <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank">
                 <img src="{% static 'images/Fb_logo2.png' %}" alt="Facebook" width="25" height="25">
             </a>
-            <a href="https://www.youtube.com" target="_blank">
+            <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank">
                 <img src="{% static 'images/Youtube_logo.png' %}" alt="YouTube" width="25" height="25">
             </a>
         </div>
       </div>
   </div>
+
+  <!-- Liens de navigation -->
+
 <div class="footer-middle">
           
         <ul>
-            <li><a href="#">Accueil</a></li>
+            <li><a href="{% url 'index' %}">Accueil</a></li>
+            <li><a href="#">A propos de l'Association</a></li>
             <li><a href="#">Histoire</a></li>
             <li><a href="#">Événements</a></li>
             <li><a href="#">Livre d'Or</a></li>
@@ -37,7 +43,7 @@
     </div>
   <div class="footer-bottom">
       <p>© 2024 Madcap - Tous droits réservés</p>
-      <!-- Liens de navigation -->
+      
       
 
   </div>
