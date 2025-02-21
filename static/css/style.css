@@ -125,7 +125,7 @@ body {
   display: flex;
   align-items: center;
   position: absolute; /* Permet de l'aligner tout à gauche */
-  left: 40px; /* Distance depuis le bord gauche */
+  right: 120px; /* Distance depuis le bord gauche */
   top: 50%; /* Alignement vertical */
   transform: translateY(-50%); /* Ajuste verticalement */
 } 
@@ -135,7 +135,7 @@ body {
   height: 50px; /* Taille ajustée */
   width: 60px;
   border-radius: 50%; /* Arrondi */
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition: transform 1.8s ease, filter 1.8s ease;
 }
 
 /* 🔹 Adaptation responsive pour tablettes et mobiles */
@@ -164,9 +164,32 @@ body {
 /* Effet au survol */
 .nav-weather-logo img:hover {
   transform: scale(1.0) rotate(5deg);
-  filter: brightness(1.5);
+  filter: brightness(1.1);
 }
 
+/* logo asso dans le header dans la bande du menu */
+
+.logo-asso-header {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Permet de l'aligner tout à gauche */
+  left: 30px; /* Distance depuis le bord gauche */
+  top: 50%; /* Alignement vertical */
+  transform: translateY(-50%); /* Ajuste verticalement */
+} 
+
+
+.logo-asso-header img {
+  height: 60px; /* Taille ajustée */
+  width: 70px;
+  border-radius: 50%; /* Arrondi */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logo-asso-header img:hover {
+  transform: scale(1.2); /* Zoom à 120% */
+  filter: brightness(1.5); /* Légère augmentation de la luminosité */
+}
 
 /* === SECTIONS Index === */
 
@@ -2130,7 +2153,7 @@ nav ul li a:hover {
 .social-logo img {
   display: inline-block;
   /* S'assure que les images s'affichent bien */
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
   /* Animation douce */
 }
 
@@ -2312,12 +2335,12 @@ section {
 }
 
 .animated-logo {
-  transition: transform 0.3s ease, filter 0.8s ease;
+  transition: transform 0.6s ease, 
   /* Transition pour des animations douces */
 }
 
 .animated-logo:hover {
-  transform: rotate(30deg) scale(1.5);
+  transform: rotate(20deg) scale(1.6);
   /* Tourne légèrement et agrandit un peu */
   filter: brightness(2.5);
   /* Augmente la luminosité pour l'effet d'illumination */
@@ -2657,49 +2680,88 @@ section {
 /* === FOOTER STYLES === */
 
 footer {
-  background-color: #9fa8b3;
-  color: white;
-  padding: 1px 0;
+  background-color: #d2d3d6;
+  color: rgb(235, 32, 32);
+  padding: 2px 0; /* Réduction du padding pour diminuer la hauteur */
   text-align: center;
 }
 
-.footer-right p {
-  font-size: 12px;
-  transform: translate(200px, 80px); /* Décale le texte vers la gauche */
-  margin: 1px 0;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Aligne les éléments correctement */
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+  padding: 5px 0; /* Éviter l’espace superflu */
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column; /* Garde les éléments en colonne */
+  align-items: center; /* Centre horizontalement */
+  margin-top: 55px; /* Ajoute un espace pour descendre le bloc */
+}
+
+/* --- Logo Madcap --- */
+
+.footer-left {
+  display: flex;
+  align-items: center; /* Aligne verticalement le logo et le texte */
+  gap: 10px; /* Espace entre le logo et le texte */
 }
 
 .footer-left img {
   width: 80px;
-  margin-bottom: 0px;
-  transform: translate(-400px, 70px); /* Décale le logo vers la gauche */
-
+  margin-left: 0px;
 }
 
+/* --- Texte contact à droite --- */
+.footer-right p {
+  font-size: 12px;
+  margin: 3px 0; /* Réduit l’espacement vertical */
+}
 
-.footer-container {
+.footer-left {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  flex-wrap: wrap;
-  padding-bottom: 10px 0;
+  align-items: center; /* Aligne verticalement le logo et le texte */
+  gap: 50px; /* Espace entre le logo et le texte */
 }
 
+/* --- Liens sociaux alignés horizontalement --- */
+.social-icons {
+  display: flex;
+  gap: 10px; /* Écart entre les icônes */
+  align-items: center;
+}
+
+.social-icons a img {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 20px;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.5); /* Effet hover plus subtil */
+}
+
+/* --- Liens de navigation horizontaux --- */
 .footer-middle ul {
   list-style: none;
   padding: 0;
+  margin: 5px 0;
   display: flex;
+  justify-content: center;
   gap: 15px; /* Espacement entre les liens */
 }
 
 .footer-middle ul li {
-  margin: 0;
+  display: inline-block;
 }
 
 .footer-middle ul li a {
-  color: white;
+  color: rgb(3, 3, 3);
   text-decoration: none;
   font-size: 12px;
 }
@@ -2708,11 +2770,12 @@ footer {
   text-decoration: underline;
 }
 
-/* Alignement horizontal du bas de page */
+/* --- Partie tout en bas du footer --- */
 .footer-bottom {
   background-color: #1A252F;
-  padding: 2px 0;
-  margin-top: 5px;
+  padding: 3px 0; /* Moins de padding */
+  margin-top: 0;
+  font-size: 12px;
 }
 
 .footer-bottom-links {
@@ -2726,18 +2789,9 @@ footer {
 .footer-bottom-links li a {
   color: white;
   text-decoration: none;
+  padding: 5px;
 }
 
 .footer-bottom-links li a:hover {
   text-decoration: underline;
-}
-
-.social-icons a img {
-  transition: transform 0.3s ease, filter 0.3s ease;
-  border-radius: 20px;
-}
-
-.social-icons a:hover img {
-  transform: scale(1.5) rotate(20deg); /* Agrandit et incline légèrement au survol */
-  filter: brightness(1.8); /* Rend le logo plus lumineux */
 }
