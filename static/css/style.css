@@ -350,19 +350,14 @@ body {
 
 .cta-button {
   display: inline-block;
-  padding: 8px 10px;
-  background-color: #003b57;
-  /* Couleur du bouton */
-  color: #fdfbff;
-  /* Couleur du texte */
+  padding: 3px 6px;
+  background-color: #003b57; /* Couleur du bouton */
+  color: #fdfbff; /* Couleur du texte */
   text-decoration: none !important;
-  font-size: 1.2em;
-  /* Taille du texte */
+  font-size: 0.9em;  /* Taille du texte */
   font-weight: bold;
-  border-radius: 8px;
-  /* Coins arrondis */
-  transition: all 0.3s ease;
-  /* Transition fluide pour tous les effets */
+  border-radius: 8px; /* Coins arrondis */
+  transition: all 0.5s ease;   /* Transition fluide pour tous les effets */
   position: relative;
 }
 
@@ -1569,10 +1564,8 @@ ul li strong {
 button,
 .don-button {
   display: inline-block;
-  background-color: #003b57;
-  /* Bleu marine */
-  color: #fff;
-  /* Texte blanc */
+  background-color: #003b57; /* Bleu marine */
+  color: #fff; /* Texte blanc */
   border: none !important;
   border-radius: 8px;
   padding: 10px 20px;
@@ -1592,7 +1585,7 @@ button:hover,
 
 /* === LIENS === */
 a {
-  color: #0078d7;
+  color: #580606;
   /* Bleu classique */
   text-decoration: none;
 }
@@ -1600,7 +1593,7 @@ a {
 a:hover {
   text-decoration: underline;
   /* Soulignement au survol */
-  color: #0056a3;
+  color: #005A87
   /* Bleu plus foncé */
 }
 
@@ -1788,7 +1781,7 @@ a:hover {
   }
 
   .don-button {
-    padding: 10px 20px;
+    padding: 2px 5px !important;
     font-size: 1em;
   }
 }
@@ -1808,7 +1801,7 @@ nav ul li a:hover {
 
 /* Style de l'en-tête (header) */
 header {
-  background-color: #6B7E99;
+  background-color: #96a0af;
   /* Couleur de fond */
   color: #fff;
   /* Couleur du texte */
@@ -1996,19 +1989,9 @@ header {
   /* Logos circulaires */
   border: none;
   /* Supprime toute bordure */
+  transition: all 0.5s ease-in-out; /* Durée et type d'animation */
 }
 
-/* Style pour le logo Facebook */
-.top-bar .social-logo img {
-  height: 35px;
-  /* Taille réduite du logo */
-  width: 35px;
-  /* Taille égale pour rendre l'image carrée */
-  border-radius: 50%;
-  /* Rend l'image circulaire */
-  margin-right: 10px;
-  /* Espacement entre les icônes (si besoin) */
-}
 
 /* ====== Section Evenements ====== */
 
@@ -2135,7 +2118,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   padding: 3px 6px;
-  background-color: #34495E; 
+  background-color: #6B7E99; 
   border-radius: 5px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   display: inline-block;
@@ -2153,7 +2136,7 @@ nav ul li a:hover {
 .social-logo img {
   display: inline-block;
   /* S'assure que les images s'affichent bien */
-  transition: transform 0.6s ease, filter 0.6s ease;
+  
   /* Animation douce */
 }
 
@@ -2326,23 +2309,22 @@ section {
 }
 
 .logos img {
-  width: 40px;
-  /* Ajustez la taille des icônes si nécessaire */
+  width: 40px; /* Ajustez la taille des icônes si nécessaire */
   height: auto;
   cursor: pointer;
-
-  /* animation logos contact.html */
+  transition: all 0.3s ease-in-out; /* Durée et type d'animation */
 }
 
+/* animation logos contact.html */
 .animated-logo {
-  transition: transform 0.6s ease, 
-  /* Transition pour des animations douces */
+  display: inline-block;
+  
 }
 
 .animated-logo:hover {
-  transform: rotate(20deg) scale(1.6);
+  transform: rotate(10deg) scale(1.2);
   /* Tourne légèrement et agrandit un peu */
-  filter: brightness(2.5);
+  filter: brightness(1.8);
   /* Augmente la luminosité pour l'effet d'illumination */
 }
 
@@ -2677,121 +2659,3 @@ section {
 }
 
 
-/* === FOOTER STYLES === */
-
-footer {
-  background-color: #d2d3d6;
-  color: rgb(235, 32, 32);
-  padding: 2px 0; /* Réduction du padding pour diminuer la hauteur */
-  text-align: center;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Aligne les éléments correctement */
-  max-width: 1000px;
-  margin: auto;
-  flex-wrap: wrap;
-  padding: 5px 0; /* Éviter l’espace superflu */
-}
-
-.footer-right {
-  display: flex;
-  flex-direction: column; /* Garde les éléments en colonne */
-  align-items: center; /* Centre horizontalement */
-  margin-top: 55px; /* Ajoute un espace pour descendre le bloc */
-}
-
-/* --- Logo Madcap --- */
-
-.footer-left {
-  display: flex;
-  align-items: center; /* Aligne verticalement le logo et le texte */
-  gap: 10px; /* Espace entre le logo et le texte */
-}
-
-.footer-left img {
-  width: 80px;
-  margin-left: 0px;
-}
-
-/* --- Texte contact à droite --- */
-.footer-right p {
-  font-size: 12px;
-  margin: 3px 0; /* Réduit l’espacement vertical */
-}
-
-.footer-left {
-  display: flex;
-  align-items: center; /* Aligne verticalement le logo et le texte */
-  gap: 50px; /* Espace entre le logo et le texte */
-}
-
-/* --- Liens sociaux alignés horizontalement --- */
-.social-icons {
-  display: flex;
-  gap: 10px; /* Écart entre les icônes */
-  align-items: center;
-}
-
-.social-icons a img {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.5s ease, filter 0.5s ease;
-  border-radius: 20px;
-}
-
-.social-icons a:hover img {
-  transform: scale(1.5); /* Effet hover plus subtil */
-}
-
-/* --- Liens de navigation horizontaux --- */
-.footer-middle ul {
-  list-style: none;
-  padding: 0;
-  margin: 5px 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px; /* Espacement entre les liens */
-}
-
-.footer-middle ul li {
-  display: inline-block;
-}
-
-.footer-middle ul li a {
-  color: rgb(3, 3, 3);
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.footer-middle ul li a:hover {
-  text-decoration: underline;
-}
-
-/* --- Partie tout en bas du footer --- */
-.footer-bottom {
-  background-color: #1A252F;
-  padding: 3px 0; /* Moins de padding */
-  margin-top: 0;
-  font-size: 12px;
-}
-
-.footer-bottom-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 0;
-}
-
-.footer-bottom-links li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px;
-}
-
-.footer-bottom-links li a:hover {
-  text-decoration: underline;
-}

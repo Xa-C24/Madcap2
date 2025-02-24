@@ -125,7 +125,7 @@ body {
   display: flex;
   align-items: center;
   position: absolute; /* Permet de l'aligner tout à gauche */
-  left: 40px; /* Distance depuis le bord gauche */
+  right: 120px; /* Distance depuis le bord gauche */
   top: 50%; /* Alignement vertical */
   transform: translateY(-50%); /* Ajuste verticalement */
 } 
@@ -135,7 +135,7 @@ body {
   height: 50px; /* Taille ajustée */
   width: 60px;
   border-radius: 50%; /* Arrondi */
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition: transform 1.8s ease, filter 1.8s ease;
 }
 
 /* 🔹 Adaptation responsive pour tablettes et mobiles */
@@ -164,9 +164,32 @@ body {
 /* Effet au survol */
 .nav-weather-logo img:hover {
   transform: scale(1.0) rotate(5deg);
-  filter: brightness(1.5);
+  filter: brightness(1.1);
 }
 
+/* logo asso dans le header dans la bande du menu */
+
+.logo-asso-header {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Permet de l'aligner tout à gauche */
+  left: 30px; /* Distance depuis le bord gauche */
+  top: 50%; /* Alignement vertical */
+  transform: translateY(-50%); /* Ajuste verticalement */
+} 
+
+
+.logo-asso-header img {
+  height: 60px; /* Taille ajustée */
+  width: 70px;
+  border-radius: 50%; /* Arrondi */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logo-asso-header img:hover {
+  transform: scale(1.2); /* Zoom à 120% */
+  filter: brightness(1.5); /* Légère augmentation de la luminosité */
+}
 
 /* === SECTIONS Index === */
 
@@ -221,6 +244,98 @@ body {
   font-size: 1.1em;
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
+}
+
+
+/* Import Avis aléatoire */
+
+.avis-index-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.avis-index-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #455868;/* Bleu foncé */
+}
+
+.avis-list {
+  display: flex;
+  justify-content: space-evenly; /* Espacement entre les blocs */
+  align-items: flex-start; /* Chaque carte aura sa propre hauteur */
+  flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+  gap: 5px;
+}
+
+.avis-card {
+  background: #E6E9DD; /* Fond blanc */
+  padding: 4.12px;
+  border-radius: 5px;
+  border: 3px solid #455868;
+  width: calc(24% - 10px); /* 4 cartes sur une ligne */
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /*  Empêche les éléments internes de dépasser */
+  position: relative; /* Assure que l'ombre s'affiche correctement */
+  z-index: 2; /*  Met l'élément en avant pour éviter qu'il soit masqué */
+  flex-direction: column; /* Permet d'aligner les éléments internes */
+}
+
+.avis-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px #455868;; /* Augmente l'effet au survol */
+}
+
+.avis-card p {
+  margin: 12px 0;
+  color: #524e4f;
+  font-size: 16px; /*  Réduction légère de la taille du texte */
+  line-height: 1.4; /*  Espacement entre lignes réduit */
+}
+
+.avis-card .avis-date {
+  font-size: 13px;
+  color: #a71717;
+}
+
+.avis-card strong {
+  color: #003366; /* Bleu foncé */
+}
+
+.avis-card .stars {
+  color: gold;
+}
+
+.avis-card .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background: #005A87;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.avis-card .read-more:hover {
+  background: #003B57;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .avis-card {
+      width: calc(50% - 20px); /* 2 avis par ligne */
+  }
+}
+
+@media (max-width: 600px) {
+  .avis-card {
+      width: 100%; /* 1 avis par ligne */
+  }
 }
 
 /* Boutons "Rejoignez-nous" et "Contactez-nous" */
@@ -929,7 +1044,11 @@ blockquote {
   padding: 0;
 }
 
-
+.histoire-page section:hover {
+  box-shadow: 0 8px 35px #e4e5e6; /*  Ombre légèrement plus grande */
+  transform: translateY(-8px); /*  Fait légèrement remonter la section */
+  transition: all 0.5s ease-in-out;
+}
 
 /* Style pour l'image de la frégate dans l'histoire */
 .fregate-histoire {
@@ -1536,11 +1655,10 @@ a:hover {
 
 /* Modification ajoutée : animation au survol */
 .don-section:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 35px #f1f2f3; /* Ombre légèrement plus grande */
+  transform: translateY(-5px); /*  Fait légèrement remonter la section */
+  transition: all 0.5s ease-in-out;
 }
-
 /* Sous-titre */
 .don-section h2 {
   font-size: 1.8em;
@@ -1634,23 +1752,10 @@ a:hover {
   /* Légère augmentation au survol */
 }
 
-/* === FOOTER STYLES === */
-footer {
-  background-color: #34495E;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  /* Augmenté pour un meilleur espacement */
-  margin-top: auto;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.95em;
-  /* Légèrement augmenté */
-}
 
 /* === AMÉLIORATION MOBILE === */
+
+
 @media (max-width: 768px) {
   .don-page {
     padding: 15px;
@@ -1703,7 +1808,7 @@ nav ul li a:hover {
 
 /* Style de l'en-tête (header) */
 header {
-  background-color: #6B7E99;
+  background-color: #96a0af;
   /* Couleur de fond */
   color: #fff;
   /* Couleur du texte */
@@ -2030,7 +2135,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   padding: 3px 6px;
-  background-color: #34495E; 
+  background-color: #6B7E99; 
   border-radius: 5px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   display: inline-block;
@@ -2048,7 +2153,7 @@ nav ul li a:hover {
 .social-logo img {
   display: inline-block;
   /* S'assure que les images s'affichent bien */
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
   /* Animation douce */
 }
 
@@ -2100,31 +2205,7 @@ section {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);  /* Ombre portée sur le texte */
 }
 
-/* === FOOTER STYLES === */
-/* Style du pied de page */
-footer {
-  background-color: #34495E;
-  /* Couleur de fond */
-  color: #fff;
-  /* Couleur du texte */
-  text-align: center;
-  /* Centre le contenu */
-  padding: 10px 0;
-  /* Espacement en haut et en bas */
-  margin-top: auto;
-  /* Place le footer en bas */
-  font-size: 0.9em;
-  /* Taille du texte légèrement augmentée */
-  line-height: 1.4;
-  /* Lisibilité améliorée */
-}
 
-footer p {
-  margin: 0;
-  /* Supprime les marges */
-  font-size: 0.9em;
-  /* Taille du texte */
-}
 
 /* === contact.html === */
 
@@ -2254,12 +2335,12 @@ footer p {
 }
 
 .animated-logo {
-  transition: transform 0.3s ease, filter 0.8s ease;
+  transition: transform 0.6s ease, 
   /* Transition pour des animations douces */
 }
 
 .animated-logo:hover {
-  transform: rotate(30deg) scale(1.5);
+  transform: rotate(20deg) scale(1.6);
   /* Tourne légèrement et agrandit un peu */
   filter: brightness(2.5);
   /* Augmente la luminosité pour l'effet d'illumination */
@@ -2594,3 +2675,5 @@ footer p {
   color: #555;
   /* Conserve la même couleur */
 }
+
+
