@@ -1,0 +1,66 @@
+{% load static %}
+{% load i18n %}  <!-- Chargement du module de traduction -->
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style_mentions_legales.css' %}">
+<!-- Favicon -->
+<link rel="icon" href="{% static 'images/logo3.png' %}" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+{% include 'header.html' %} <!-- Inclusion du header -->
+
+<div class="mentions-container">
+    <h1>{% trans "Mentions Légales" %}</h1>
+
+    <section>
+        <h2>{% trans "Éditeur du site" %}</h2>
+        <p><strong>{% trans "Association Madcap 1874" %}</strong></p>
+        <p>N° W821001521</p>
+        <p>66 Cité Ducau, 82100 Castelsarrasin, France</p>
+        <p><strong>{% trans "Président" %} :</strong> Christian Hurreau</p>
+    
+        <br>
+    
+        <h2>{% trans "Conception technique et hébergement" %}</h2>
+        <p>{% trans "[À compléter avec l’hébergeur et le développeur si nécessaire]" %}</p>
+    
+        <br>
+    
+        <h2>{% trans "Droit de modification" %}</h2>
+        <p>{% blocktrans %}L’internaute reconnaît que l’utilisation du site [URL du site Madcap] est régie par le droit français. Le contenu du site est mis à disposition pour un usage privé et non exclusif. Ce droit d’utilisation comprend le droit de stockage sur écran monoposte et le droit de reproduction aux conditions ci-après définies. Il interdit la récupération des bases de données.{% endblocktrans %}</p>
+    
+        <br>
+
+        <h2>{% trans "Copies ou reproductions" %}</h2>
+        <p>{% blocktrans %}Les photographies et vidéos présentes sur ce site ne peuvent être reproduites sans autorisation préalable mais doivent obligatoirement comporter la mention suivante : [URL du site Madcap].{% endblocktrans %}</p>
+        <p>{% blocktrans %}Les photographies, images fixes ou animées, ne peuvent être reproduites sans autorisation préalable. Si un droit de copie est accordé, la mention du copyright indiquée par l’administrateur du site devra impérativement figurer sur le support utilisé à cette fin.{% endblocktrans %}</p>
+        <p>{% blocktrans %}Les logos, visuels et marques présents sur ce site sont la propriété de [URL du site Madcap] ou de ses partenaires.{% endblocktrans %}</p>
+    
+        <br>
+  
+        <h2>{% trans "Responsabilité de l’éditeur" %}</h2>
+        <p>{% blocktrans %}Ce site peut contenir des liens vers des sites extérieurs. Il peut aussi, à son insu, avoir été relié à d’autres sites par le biais de liens hypermédia. L’association Madcap 1874 décline toute responsabilité concernant les informations présentées sur ces autres sites.{% endblocktrans %}</p>
+   
+        <br>
+    
+        <h2>{% trans "Collecte de données personnelles" %}</h2>
+        <p>{% blocktrans %}Conformément à l’article 32 de la loi « Informatique et Libertés » n°78-17 du 6 janvier 1978, modifiée par la loi n°2004-801 du 6 août 2004, les informations recueillies via les formulaires de contact font l’objet d’un traitement informatique destiné uniquement à ce que le responsable du traitement puisse répondre aux utilisateurs. Elles ne seront jamais utilisées à des fins non prévues ni transmises à des partenaires.{% endblocktrans %}</p>
+        <p>{% blocktrans %}Les données collectées ne sont pas conservées plus d’un an. Aucune information personnelle autre que celles demandées dans ce cadre n’est collectée à l’insu des utilisateurs.{% endblocktrans %}</p>
+        <p>{% blocktrans %}Conformément aux articles 39 et 40 de la loi susmentionnée, l’utilisateur de ce site bénéficie des droits d’interrogation, d’accès, de rectification et de suppression portant sur les données le concernant. Pour exercer ces droits, il peut adresser une demande à :{% endblocktrans %}</p>
+
+        <p><strong>{% trans "Association Madcap 1874" %}</strong></p>
+        <p>66 Cité Ducau, 82100 Castelsarrasin, France</p>
+        <p><strong>{% trans "Président" %} :</strong> Christian Hurreau</p>
+    
+        <br>
+    
+        <h2>{% trans "Crédits" %}</h2>
+        <h3>{% trans "Photos" %}</h3>
+        <p>{% blocktrans %}Les photos sont prises par les membres de l’association Madcap 1874 et par <a href="https://www.torveo.es/" target="_blank">Torveo</a>.{% endblocktrans %}</p>
+
+        <h3>{% trans "Vidéos" %}</h3>
+        <p>{% blocktrans %}Les vidéos présentes sur ce site ont été réalisées par Jean-Pierre Roussoulières, membre de l’association Madcap 1874.{% endblocktrans %}</p>
+    </section>
+</div>
+{% endblock %}
+{% include 'footer.html' %} <!-- Inclusion du footer -->
