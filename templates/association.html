@@ -104,16 +104,23 @@
         <br>
 
       <div class="cta-links">
+        <a href="{% static 'docs/adhésion_2025.pdf' %}" download class="cta-button">{% trans "Télécharger l'adhésion 2025 en format pdf" %}</a>
         <a href="https://www.helloasso.com/associations/madcap-1874" target="_blank"
-          class="cta-button">{% trans "Rejoignez-nous" %}</a>
+          class="cta-button">{% trans "Ahdésion 2025 via Helloasso" %}</a>
         <a href="{% url 'contact' %}" class="cta-button">{% trans "Contactez-nous" %}</a>
+
+        <li><a href="{% static 'docs/Réglement_intérieur_Madcap_1874.pdf' %}" download>
+          {% trans "Consulter le réglement Intérieur de l'association Madcap 1874" %}
+        </a></li>
        </div>
 
        <br>
-
+       <div>
       <li>{% blocktrans %}
         En adhérant à l’association, vous participez à la sauvegarde d’un patrimoine maritime précieux. Votre engagement permet de préserver et de faire vivre Madcap pour les générations futures.
         {% endblocktrans %}</li>
+      </div>
+       
 
         <br>
         <img src="{% static 'images/toutesvoiles.jpg' %}" alt="En avant !" class="fregate-histoire">
