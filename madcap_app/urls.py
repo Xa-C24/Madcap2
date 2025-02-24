@@ -20,6 +20,8 @@ urlpatterns = [
     path('membres/', views.liste_membres, name='liste_membres'),
     path('avis-ajax/', views.avis_ajax, name='avis_ajax'),
 
+    path('mentions-legales/', views.mentions_legales, name='mentions_legales'),
+
 
     # Formulaire de contact
     path('submit_contact/', views.submit_contact, name='submit_contact'),

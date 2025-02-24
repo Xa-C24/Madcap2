@@ -74,6 +74,9 @@ def histoire(request):
 def evenements(request):
     return render(request, 'evenements.html')
 
+def mentions_legales(request):
+    return render(request, 'mentions_legales.html')
+
 
 
 # Admin access
@@ -126,8 +129,8 @@ def search_members(request):
     query = request.GET.get('q', '').strip()
     if query:
         members = Member.objects.filter(
-            Q(name__icontains=query) | Q(address__icontains=query)
-        ).order_by('name')
+    Q(name__icontains=query) | Q(address__icontains=query) | Q(date_entree__icontains=query)
+    ).order_by('name')
     else:
         members = Member.objects.all().order_by('name')
 
@@ -136,7 +139,7 @@ def search_members(request):
             'name': member.name,
             'address': member.address,
             'phone': member.phone,
-            'date_entree': member.date_entree.strftime('%b. %d, %Y') if member.date_entree else ''
+            'date_entree':  str(member.date_entree) if member.date_entree else ''
         }
         for member in members
     ]
