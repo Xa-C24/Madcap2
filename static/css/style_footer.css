@@ -35,6 +35,7 @@ footer {
 .footer-left img {
   width: 80px;
   margin-left: 0px;
+  border-radius: 50%;
 }
 
 /* --- Texte contact à droite --- */
