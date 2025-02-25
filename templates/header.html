@@ -29,7 +29,7 @@
 <header>
   <div class="video-container-header">
     <a href="/">
-      <img src="{% static 'images/logo.png' %}" alt="Logo Madcap" class="logo-in-video">
+      <img src="{% static 'images/logo3.png' %}" alt="Logo Madcap" class="logo-in-video">
     </a>
     <video autoplay muted loop playsinline>
       <source src="{% static 'videos/gif.mp4' %}" type="video/mp4">
@@ -48,7 +48,7 @@
       <!-- Logo météo cliquable vers la carte Windy -->
       <div class="logo-asso-header ">
         <a href="#top" class="scroll-top" title="Revenir en haut">
-          <img src="{% static 'images/logo3.png' %}" alt="Météo Windy" />
+          <img src="{% static 'images/logo3.png' %}" alt="Logo Madcap bandeau header" />
       </a>
       </div>
 
@@ -72,7 +72,7 @@
   <div class="language-switcher">
     <button class="current-language">
       {% if request.LANGUAGE_CODE == "fr" %}
-        <img src="{% static 'images/Flag_Fr.jpg' %}" class="flag">
+        <img src="{% static 'images/Flag_France.jpg' %}" class="flag">
       {% else %}
         <img src="{% static 'images/Flag_Uk.jpg' %}" class="flag">
       {% endif %}

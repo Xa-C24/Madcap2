@@ -5,11 +5,12 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style_mentions_legales.css' %}">
 <!-- Favicon -->
-<link rel="icon" href="{% static 'images/logo3.png' %}" type="image/png">
+<link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 {% include 'header.html' %} <!-- Inclusion du header -->
 
 <div class="mentions-container">
+  <img src="{% static 'images/favicon_madcap.png' %}" alt="Logo Madcap">
     <h1>{% trans "Mentions Légales" %}</h1>
 
     <section>
