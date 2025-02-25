@@ -2,7 +2,7 @@
 /* Style global pour la mise en page */
 
 body {
-  background: url("../images/Voile.png") no-repeat center center fixed;
+  background: url("../images/Voile.jpg") no-repeat center center fixed;
   background-size: cover;
   background-position: center 95%;
   color: white;
@@ -180,8 +180,8 @@ body {
 
 
 .logo-asso-header img {
-  height: 60px; /* Taille ajustée */
-  width: 70px;
+  height: 55px; /* Taille ajustée */
+  width: 60px;
   border-radius: 50%; /* Arrondi */
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
