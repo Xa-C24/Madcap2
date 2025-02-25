@@ -14,12 +14,17 @@
 </head>
 <body>
         <!-- Logo cliquable -->
-        <a href="{% url 'index' %}" style="position: absolute; top: 60px; left: 80px;">
+        <a href="{% url 'index' %}" style="position: absolute; top: 60px; left: 80px; text-align: center; text-decoration: none;">
           <img src="{% static 'images/logo.png' %}" alt="Logo" style="width: 99px; height: 99px; border-radius: 50%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+          <p style="font-size: 14px; color: #521b1b; font-weight: bold; margin-top: 2px; text-decoration: none;">Clic pour retour à la page d'accueil</p>
         </a>
-        
+
+       
     <h1>Tableau de Bord Administrateur </h1>
     <h1> Liste des Membres <span>⚓⚓</span></h1>
+    <br>
+    <br>
+
     <form method="get" action="{% url 'admin_dashboard' %}">
       <input 
           type="text" 
@@ -31,6 +36,8 @@
   
   </form>
   
+  <br>
+  <br>
     <div id="members-table">
       <table>
         <thead>
