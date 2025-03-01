@@ -1,6 +1,6 @@
 # Projet Madcap1874
 
-![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/header.png)
+![Header du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/header.png)
 
 
 ## ⛵ Présentation du Projet
@@ -24,7 +24,7 @@ Ajout des variables d’environnement (DATABASE_URL)
 - **Système de gestion des avis** : Stockage et validation des avis avant affichage
 - **Traduction du site** : Flask-Babel pour la gestion des langues (FR & EN)
 
-![Liste des membres ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/windy.png)
+![Carte live Windy](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/windy.png)
 
 ## 🌐 Structure du Site
 
@@ -78,6 +78,7 @@ python3 manage.py runserver
 - 🖊️ **Laisser un avis** avec une note sur 5 étoiles ⭐⭐⭐⭐⭐
 - 📃 **Afficher les avis** du plus récent au plus ancien
 - 🛠️ **Validation manuelle** avant publication
+- 📸 **Ajout jusqu'a quatre photos** possible
 
 ### 📞 Page Contact (`contact.html`)
 - Formulaire de contact.
@@ -89,7 +90,7 @@ python3 manage.py runserver
 - Validation des avis avant publication.
 - Interface de recherche dynamique pour les membres.
 
-![Liste des membres ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/membres.png)
+![ Liste membres du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/membres.png)
 
 ### 🦶 Footer du site
 
@@ -97,7 +98,7 @@ Ajout d'un footer amélioré avec des liens vers les réseaux sociaux et des inf
 
 Affichage dynamique des mentions légales et des crédits du site.
 
-![Liste des membres ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/footer.png)
+![Footer du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/footer.png)
 
 ### 📄 Téléchargement des documents
 
@@ -134,6 +135,7 @@ SELECT * FROM madcap_app_member;
 SELECT * FROM madcap_app_avis;
 ```
 
+![Migrations deux tables](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/migrations2tables.png)
 
 Stocke les informations des membres de l'association :
 ```sql
@@ -147,7 +149,7 @@ CREATE TABLE madcap_app_member (
 ```
 **Exemples de requêtes SQL :**
 ```sql
-INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Xavier Dupont', '123 Rue de Paris', '0123456789', '2025-01-01');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Xavier Dupont', '123 Rue de Paris', '0123456789', '2025');
 SELECT * FROM madcap_app_member;
 DELETE FROM madcap_app_member WHERE id = 3;
 UPDATE madcap_app_member SET phone = '0987654321' WHERE id = 1;
@@ -167,6 +169,9 @@ CREATE TABLE madcap_app_avis (
     valide BOOLEAN DEFAULT FALSE
 );
 ```
+![Envois avis ok ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Envoi_ok.png)
+
+
 **Exemples de requêtes SQL :**
 ```sql
 INSERT INTO madcap_app_avis (nom, email, telephone, commentaire, note, valide) VALUES ('Jean Dupont', 'jean.dupont@example.com', '0601020304', 'Super expérience !', 5, 0);
