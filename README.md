@@ -135,7 +135,7 @@ SELECT * FROM madcap_app_member;
 SELECT * FROM madcap_app_avis;
 ```
 
-![Migrations deux tables](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/migrations2tables.png)
+![Migrations deux tables](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/migrations2tables.jpg)
 
 Stocke les informations des membres de l'association :
 ```sql
