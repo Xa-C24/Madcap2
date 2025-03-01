@@ -1,6 +1,6 @@
 # Projet Madcap1874
 
-![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Maquette.png)
+![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/header.png)
 
 
 ## ⛵ Présentation du Projet
@@ -18,11 +18,13 @@ Ajout des variables d’environnement (DATABASE_URL)
 
 ## ⚙ Technologies Utilisées
 - **Framework Backend** : Django (Python)
-- **Base de données** : SQLite
+- **Base de données** : Postgre
 - **Frontend** : HTML, CSS, JavaScript
 - **API météo** : Intégration de la carte Windy pour la météo en direct
 - **Système de gestion des avis** : Stockage et validation des avis avant affichage
 - **Traduction du site** : Flask-Babel pour la gestion des langues (FR & EN)
+
+![Liste des membres ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/windy.png)
 
 ## 🌐 Structure du Site
 
@@ -32,12 +34,19 @@ Ajout des variables d’environnement (DATABASE_URL)
 | **Backend** | Django (Python) |
 | **Base de données** | PostgreSQL & SQLite |
 | **Frontend** | HTML, CSS, JavaScript |
-| **API météo** | Intégration de la carte **Windy** |
+| **API météo** | Intégration de la carte **Windy** interactive en live avec mode plein écran |
 | **Traduction** | Django i18n (FR 🇫🇷 & EN 🇬🇧) |
 | **Hébergement** | Render (Base de données & serveur web) |
 
 
 ![Architecture web](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Diagramme_web.png)
+
+
+### ⚡ Démarrer le serveur Django
+```bash
+python3 manage.py runserver
+    Accéder au site sur http://127.0.0.1:8000/ 🚀
+```
 
 ### ⛵ Page d'Accueil (`index.html`)
 - Présentation du Madcap avec une vidéo.
@@ -80,6 +89,20 @@ Ajout des variables d’environnement (DATABASE_URL)
 - Validation des avis avant publication.
 - Interface de recherche dynamique pour les membres.
 
+![Liste des membres ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/membres.png)
+
+### 🦶 Footer du site
+
+Ajout d'un footer amélioré avec des liens vers les réseaux sociaux et des informations de contact.
+
+Affichage dynamique des mentions légales et des crédits du site.
+
+![Liste des membres ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/footer.png)
+
+### 📄 Téléchargement des documents
+
+Possibilité de télécharger le bulletin d'inscription 2025 et le règlement intérieur directement en local sur le PC.
+
 ## 🛠 **Installation & Déploiement**
 ### 📦 **1. Cloner le projet**
 
@@ -103,13 +126,14 @@ Ajout des variables d’environnement (DATABASE_URL)
 python3 manage.py createsuperuser
 ```
 
-### 📈 Gestion de la Base de Données SQLite
+### 📈 Gestion de la Base de Données Postgre
 ```bash
 python3 manage.py dbshell
 .tables
 SELECT * FROM madcap_app_member;
 SELECT * FROM madcap_app_avis;
 ```
+
 
 Stocke les informations des membres de l'association :
 ```sql
@@ -150,17 +174,13 @@ SELECT * FROM madcap_app_avis WHERE valide = 1;
 UPDATE madcap_app_avis SET valide = 1 WHERE id = 1;
 ```
 
+
+
 ## 🛠 Commandes Utiles
 ### ⚙ Installation des dépendances
     pip install -r requirements.txt
 ```bash
 pip install flask flask-babel django
-```
-
-### ⚡ Démarrer le serveur Django
-```bash
-python3 manage.py runserver
-    Accéder au site sur http://127.0.0.1:8000/ 🚀
 ```
 
 
@@ -229,8 +249,9 @@ pytest madcap_app/tests/
 ## 🌟 Conclusion
 Le projet Madcap1874 vise à promouvoir et préserver l'histoire du bateau Madcap tout en facilitant l'implication des membres et des visiteurs. Le site est conçu pour être interactif, informatif et accessible.
 
-💡 **Prochaine étape :** Intégrer des améliorations graphiques.
+💡 Prochaine étape :
 
----
-📖 **Dernière mise à jour :** [Date automatique lors de la mise à jour]
+Améliorer encore le design et l'expérience utilisateur.
+
+Développement d'une nouvelle version de Madcap en utilisant Django, React, Tailwind CSS et GSAP pour une interface plus moderne et dynamique. 🚀
 
