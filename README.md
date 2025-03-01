@@ -78,7 +78,7 @@ python3 manage.py runserver
 - 🖊️ **Laisser un avis** avec une note sur 5 étoiles ⭐⭐⭐⭐⭐
 - 📃 **Afficher les avis** du plus récent au plus ancien
 - 🛠️ **Validation manuelle** avant publication
-- 📸 **Ajout jusqu'a quatre photos** possible
+- 📸 **Ajout jusqu'à quatre photos** possible
 
 ### 📞 Page Contact (`contact.html`)
 - Formulaire de contact.
