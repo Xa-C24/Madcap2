@@ -1,4 +1,4 @@
-<h1 align="center">━━━━━━━━━━━ 🛟 Projet Madcap1874 ⛵ ━━━━━━━━━━━</h1>
+<h1 align="center">━━━━━━━━ 🛟 Projet Madcap1874 ⛵ ━━━━━━━━</h1>
 
 
 ![Header du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/header.png)
