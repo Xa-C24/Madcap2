@@ -62,7 +62,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
     SELECT * FROM madcap_app_member;
 
     Quitter le shell SQL :
-    .quit
+    \q
 
 Si tout va bien, membre ajouter a la base de données
 
@@ -80,7 +80,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
       SELECT * FROM madcap_app_member;
 
       Quitter le shell SQL :
-      .quit
+      \q
 
 Si tout va bien, membre supprimer a la base de données par l'ID
 
@@ -110,12 +110,17 @@ Lancer le shell de la base de données : python3 manage.py dbshell
   SET name = 'Nouveau Nom'
   WHERE id = 1;
 
+ou par le nom
+
+UPDATE madcap_app_member 
+SET address = 'FONTENAY LES ROSES( change adress)', date_entree = 2022 (change année)
+WHERE name = 'ROUSSELET	Thierry'; (Pour le nom en question)
 
 Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
       SELECT * FROM madcap_app_member;
 
 Une fois les modifications terminées, quittez le shell avec :
-      .quit _  exit()
+      \q _  exit()
 
 
 -----------------------
@@ -126,7 +131,7 @@ python3 manage.py dbshell
 
 Liste toutes les tables      .tables
 
-Pour voir la structure de la table Avis, tape :
+Pour voir la structure de la table Avis, taper :
     PRAGMA table_info(madcap_app_avis);
 
 Pour afficher tous les avis enregistrés :
@@ -202,3 +207,7 @@ http://localhost:3000/
 exemple avis
 
 "Naviguer sur le Madcap, c'est comme ouvrir un vieux grimoire rempli d'histoires de marins et d’aventures en haute mer. Ce côtre-pilote, le plus ancien encore en état de naviguer, est un véritable trésor flottant. Dès que l'on met le pied à bord, on ressent cette âme unique, forgée par les embruns et le temps. L’équipe passionnée qui le fait vivre est aux petits soins, toujours prête à partager anecdotes et récits fascinants. Entre les voiles gonflées par le vent et le clapotis des vagues contre la coque, on a l’impression de voyager à une époque où la mer dictait son propre tempo. Que ce soit pour une sortie en mer ou simplement pour admirer ce bijou d’architecture navale, le Madcap est une expérience inoubliable. Longue vie à ce fier navire et à ceux qui le font naviguer !"
+
+
+Compresser images
+https://www.iloveimg.com/
