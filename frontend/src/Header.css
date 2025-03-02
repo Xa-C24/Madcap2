@@ -1,0 +1,182 @@
+/* === HEADER STYLES === */
+
+/* Conteneur de la vidéo */
+.video-container-header {
+  position: relative;
+  /* Conteneur positionné */
+  width: 120%;
+  height: 420px;
+  /* Prend toute la largeur de la page */
+  max-height: 55vh;
+  /* Limite la hauteur à 60% de la hauteur de la fenêtre */
+  overflow: hidden;
+  /* Cache les parties qui débordent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  /* Arrondit les bords du conteneur */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* Ajoute une ombre douce */
+  border: 6px solid rgba(242, 243, 245, 0.993);
+  /* Bordure translucide */
+  background-color: #d5dae0;
+  /* Couleur de fond pour combler les espaces */
+  animation: glowing 3s infinite;
+  /* Animation continue */
+  border: none !important;
+
+}
+
+
+
+/* Video GIF Header */
+
+.video-container-header video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: scale(0.95);
+  /* Dézoome à 90% */
+  transition: transform 0.3s ease;
+  /* Transition fluide si besoin */
+  background: #000;
+}
+
+/*----------------- Conteneur principal pour le sélecteur de langue -------------- */
+
+.language-switcher {
+  position: absolute;
+  top: 50%;  /* Ajuster en fonction de la hauteur souhaitée */
+  right: 30px;  /* Ajuster selon la largeur souhaitée */
+  transform: translateY(-50%); /* Ajuste pour un bon alignement */
+  z-index: 1000;
+}
+
+.current-language {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.current-language .flag {
+  width: 25px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.current-language .arrow {
+  font-size: 14px;
+  color: #3b3a3a;
+  /* Couleur de la flèche */
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.language-options li {
+  padding: 5px 10px;
+}
+
+.language-options a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #dd1313;
+}
+
+.language-options a:hover {
+  background: #236EB1;
+}
+
+.language-options .language-flag {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+/* Affiche les options lorsque l'utilisateur survole ou clique */
+.language-switcher:hover .language-options {
+  display: block;
+}
+
+/* Conteneur du logo météo header*/
+
+.nav-weather-logo {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Permet de l'aligner tout à gauche */
+  right: 120px; /* Distance depuis le bord gauche */
+  top: 50%; /* Alignement vertical */
+  transform: translateY(-50%); /* Ajuste verticalement */
+} 
+
+/* Style du logo météo header */
+.nav-weather-logo img {
+  height: 50px; /* Taille ajustée */
+  width: 60px;
+  border-radius: 50%; /* Arrondi */
+  transition: transform 1.8s ease, filter 1.8s ease;
+}
+
+/* 🔹 Adaptation responsive pour tablettes et mobiles */
+@media (max-width: 1024px) {
+  .nav-weather-logo {
+    left: 5px; /* Réduction de l'écart */
+  }
+
+  .nav-weather-logo img {
+    height: 45px; /* Réduction de la taille */
+    width: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-weather-logo {
+    left: 5px; /* Encore plus proche du bord sur mobile */
+  }
+
+  .nav-weather-logo img {
+    height: 40px; /* Ajustement plus petit */
+    width: 45px;
+  }
+}
+
+/* Effet au survol */
+.nav-weather-logo img:hover {
+  transform: scale(1.0) rotate(5deg);
+  filter: brightness(1.1);
+}
+
+/* logo asso dans le header dans la bande du menu */
+
+.logo-asso-header {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Permet de l'aligner tout à gauche */
+  left: 30px; /* Distance depuis le bord gauche */
+  top: 50%; /* Alignement vertical */
+  transform: translateY(-50%); /* Ajuste verticalement */
+} 
+
+
+.logo-asso-header img {
+  height: 55px; /* Taille ajustée */
+  width: 60px;
+  border-radius: 50%; /* Arrondi */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logo-asso-header img:hover {
+  transform: scale(1.2); /* Zoom à 120% */
+  filter: brightness(1.5); /* Légère augmentation de la luminosité */
+}

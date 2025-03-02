@@ -1,6 +1,7 @@
-# Projet Madcap1874
+<h1>━━━━━━🛟 Projet Madcap1874 ⛵━━━━━━</h1>
 
-![Maquette du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Maquette.png)
+
+![Header du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/header.png)
 
 
 ## ⛵ Présentation du Projet
@@ -18,11 +19,13 @@ Ajout des variables d’environnement (DATABASE_URL)
 
 ## ⚙ Technologies Utilisées
 - **Framework Backend** : Django (Python)
-- **Base de données** : SQLite
+- **Base de données** : Postgre
 - **Frontend** : HTML, CSS, JavaScript
 - **API météo** : Intégration de la carte Windy pour la météo en direct
 - **Système de gestion des avis** : Stockage et validation des avis avant affichage
 - **Traduction du site** : Flask-Babel pour la gestion des langues (FR & EN)
+
+![Carte live Windy](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/windy.png)
 
 ## 🌐 Structure du Site
 
@@ -32,12 +35,19 @@ Ajout des variables d’environnement (DATABASE_URL)
 | **Backend** | Django (Python) |
 | **Base de données** | PostgreSQL & SQLite |
 | **Frontend** | HTML, CSS, JavaScript |
-| **API météo** | Intégration de la carte **Windy** |
+| **API météo** | Intégration de la carte **Windy** interactive en live avec mode plein écran |
 | **Traduction** | Django i18n (FR 🇫🇷 & EN 🇬🇧) |
 | **Hébergement** | Render (Base de données & serveur web) |
 
 
 ![Architecture web](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Diagramme_web.png)
+
+
+### ⚡ Démarrer le serveur Django
+```bash
+python3 manage.py runserver
+    Accéder au site sur http://127.0.0.1:8000/ 🚀
+```
 
 ### ⛵ Page d'Accueil (`index.html`)
 - Présentation du Madcap avec une vidéo.
@@ -69,6 +79,7 @@ Ajout des variables d’environnement (DATABASE_URL)
 - 🖊️ **Laisser un avis** avec une note sur 5 étoiles ⭐⭐⭐⭐⭐
 - 📃 **Afficher les avis** du plus récent au plus ancien
 - 🛠️ **Validation manuelle** avant publication
+- 📸 **Ajout jusqu'à quatre photos** possible
 
 ### 📞 Page Contact (`contact.html`)
 - Formulaire de contact.
@@ -79,6 +90,20 @@ Ajout des variables d’environnement (DATABASE_URL)
 - Gestion des membres de l'association.
 - Validation des avis avant publication.
 - Interface de recherche dynamique pour les membres.
+
+![ Liste membres du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/membres.png)
+
+### 🦶 Footer du site
+
+Ajout d'un footer amélioré avec des liens vers les réseaux sociaux et des informations de contact.
+
+Affichage dynamique des mentions légales et des crédits du site.
+
+![Footer du site Madcap](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/footer.png)
+
+### 📄 Téléchargement des documents
+
+Possibilité de télécharger le bulletin d'inscription 2025 et le règlement intérieur directement en local sur le PC.
 
 ## 🛠 **Installation & Déploiement**
 ### 📦 **1. Cloner le projet**
@@ -103,13 +128,15 @@ Ajout des variables d’environnement (DATABASE_URL)
 python3 manage.py createsuperuser
 ```
 
-### 📈 Gestion de la Base de Données SQLite
+### 📈 Gestion de la Base de Données Postgre
 ```bash
 python3 manage.py dbshell
 .tables
 SELECT * FROM madcap_app_member;
 SELECT * FROM madcap_app_avis;
 ```
+
+![Migrations deux tables](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/migrations2tables.jpg)
 
 Stocke les informations des membres de l'association :
 ```sql
@@ -123,7 +150,7 @@ CREATE TABLE madcap_app_member (
 ```
 **Exemples de requêtes SQL :**
 ```sql
-INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Xavier Dupont', '123 Rue de Paris', '0123456789', '2025-01-01');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Xavier Dupont', '123 Rue de Paris', '0123456789', '2025');
 SELECT * FROM madcap_app_member;
 DELETE FROM madcap_app_member WHERE id = 3;
 UPDATE madcap_app_member SET phone = '0987654321' WHERE id = 1;
@@ -143,6 +170,9 @@ CREATE TABLE madcap_app_avis (
     valide BOOLEAN DEFAULT FALSE
 );
 ```
+![Envois avis ok ](https://raw.githubusercontent.com/Xa-C24/Madcap/main/static/images/image_docs/Envoi_ok.png)
+
+
 **Exemples de requêtes SQL :**
 ```sql
 INSERT INTO madcap_app_avis (nom, email, telephone, commentaire, note, valide) VALUES ('Jean Dupont', 'jean.dupont@example.com', '0601020304', 'Super expérience !', 5, 0);
@@ -150,17 +180,13 @@ SELECT * FROM madcap_app_avis WHERE valide = 1;
 UPDATE madcap_app_avis SET valide = 1 WHERE id = 1;
 ```
 
+
+
 ## 🛠 Commandes Utiles
 ### ⚙ Installation des dépendances
     pip install -r requirements.txt
 ```bash
 pip install flask flask-babel django
-```
-
-### ⚡ Démarrer le serveur Django
-```bash
-python3 manage.py runserver
-    Accéder au site sur http://127.0.0.1:8000/ 🚀
 ```
 
 
@@ -207,7 +233,7 @@ Les balises {% trans %} et {% blocktrans %} permettent d’afficher du texte tra
 3. Compiler les fichiers de traduction;
       django-admin compilemessages
 
-Un sélecteur de langue est disponible sur le site permettant de basculer entre les flags FR <img src="https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Fr.jpg?raw=true" width="25"/> et UK <img src="https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Uk.jpg?raw=true" width="25"/>.
+Un sélecteur de langue est disponible sur le site permettant de basculer entre les flags FR <img src="https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_France.jpg?raw=true" width="25"/> et UK <img src="https://github.com/Xa-C24/Madcap/blob/main/static/images/Flag_Uk.jpg?raw=true" width="25"/>.
 
 
 ## 6. 📜 Commandes pour exécuter les tests
@@ -229,8 +255,9 @@ pytest madcap_app/tests/
 ## 🌟 Conclusion
 Le projet Madcap1874 vise à promouvoir et préserver l'histoire du bateau Madcap tout en facilitant l'implication des membres et des visiteurs. Le site est conçu pour être interactif, informatif et accessible.
 
-💡 **Prochaine étape :** Intégrer des améliorations graphiques.
+💡 Prochaine étape :
 
----
-📖 **Dernière mise à jour :** [Date automatique lors de la mise à jour]
+Améliorer encore le design et l'expérience utilisateur.
+
+Développement d'une nouvelle version de Madcap en utilisant Django, React, Tailwind CSS et GSAP pour une interface plus moderne et dynamique. 🚀
 

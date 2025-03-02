@@ -117,9 +117,14 @@ USE_TZ = True
 
 # 📌 Gestion des fichiers statiques (CSS, JS, images)
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
+
+STATICFILES_DIRS = [
+      BASE_DIR / "static",
+      BASE_DIR / "frontend/build/static", # Ajout du dossier React build
+      ]
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  # 🔥 Optimisation pour Render
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  #  Optimisation pour Render
 
 # 📌 Gestion des fichiers médias (images uploadées)
 DEBUG = True
