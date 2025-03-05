@@ -4,29 +4,26 @@ import dj_database_url
 import logging
 from django.utils.translation import gettext_lazy as _
 
-
-
 # 📌 Détection de l'environnement
 ENVIRONMENT = os.getenv("DJANGO_ENV", "local")  # "local" par défaut
 
-# 📌 Configuration SMTP Gmail pour envoyer des emails en local et production
+# 📌 Configuration SMTP Gmail pour envoyer des emails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")  # Récupère depuis .env
-EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")  # Récupère depuis .env
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-# 📌 Base directory of the project
+# 📌 Base directory du projet
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # 📌 Sécurité
-SECRET_KEY = os.getenv("SECRET_KEY", "change-me-in-prod")  # 🔴 Change cette valeur en production !
-DEBUG = os.getenv("DEBUG", "False") == "True"
+SECRET_KEY = os.getenv("SECRET_KEY", "change-me-in-prod")  # 🔴 Change en prod !
+DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "madcap-70h2.onrender.com,madcap1874.onrender.com,127.0.0.1,localhost").split(",")
-
 
 # 📌 Applications installées
 INSTALLED_APPS = [
@@ -36,15 +33,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     "madcap_app",
-
-    # Cloudinary
-    #"cloudinary",
-    #"cloudinary_storage",
 ]
 
-# 📌 Middleware (ajout de Whitenoise pour Render)
+# 📌 Middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -80,9 +72,9 @@ TEMPLATES = [
 # 📌 WSGI
 WSGI_APPLICATION = "madcap_project.wsgi.application"
 
-# 📌 Base de données (PostgreSQL sur Render)
+# 📌 Base de données (PostgreSQL ou SQLite par défaut)
 DATABASES = {
-    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+    "default": dj_database_url.config(default=os.getenv("DATABASE_URL", f"sqlite:///{BASE_DIR / 'db.sqlite3'}"))
 }
 
 # 📌 Validation des mots de passe
@@ -92,14 +84,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
-
-# 📌 Configuration Email (exemple avec Gmail)
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "")
-# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
 
 # 📌 Logs
 logging.basicConfig(
@@ -114,22 +98,20 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-#  Gestion des fichiers statiques (CSS, JS, images)
+# 📌 Gestion des fichiers statiques (CSS, JS, images)
 STATIC_URL = "/static/"
+STATICFILES_DIRS = [BASE_DIR / "static"]  # Assure-toi que ton dossier "static/" existe bien !
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Pour collectstatic en prod
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"  # On met "static" au lieu de "staticfiles"
-]
+# 📌 Gestion des fichiers médias
+if DEBUG:
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+else:
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = BASE_DIR / "media"  # Si tu ne veux pas Cloudinary en prod
 
-STATIC_ROOT = BASE_DIR / "staticfiles"  # Destiné au collectstatic (ne doit pas être dans STATICFILES_DIRS)
-
-
-# 📌 Gestion des fichiers médias (images uploadées)
-DEBUG = True
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# 📌 Paramètres de langue
+# 📌 Paramètres de langue et traductions
 LANGUAGE_CODE = "fr"
 LANGUAGES = [
     ('fr', _('Français')),
@@ -139,6 +121,3 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 
 # 📌 Clé primaire par défaut
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
-
