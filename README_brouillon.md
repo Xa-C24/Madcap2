@@ -58,6 +58,15 @@ Lancer le shell de la base de données : python3 manage.py dbshell
     INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('HURREAU Christian Skipper', 'CASTELSARRASIN 82100', '06 86 14 39 55', '2020-02-01');
     INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('PIEDALLU Xavier Développeur site Web', 'Bellevaux, 74470', '06 87 74 02 73', '2025-01-01');
 
+
+
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES (' Jean Michel. Test', 'Thonon, 74470', '06 11 22 33 44 55', '2025');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES (' Sarah Holberton. Directrice  ',' Thonon, 74500', '06 88 99 77 44', '2025');
+
+
+
+
+
     Vérifier les données insérées :
     SELECT * FROM madcap_app_member;
 
@@ -74,7 +83,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
       SELECT * FROM madcap_app_member;
 
      Supprimer un membre par son ID : Par exemple, pour supprimer le membre avec l'ID (1) par exemple:
-      DELETE FROM madcap_app_member WHERE id = 3;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (1, 2, 4); 
+      DELETE FROM madcap_app_member WHERE id = 91;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (1, 2, 4); 
     
       Vérifier que le membre a été supprimé :
       SELECT * FROM madcap_app_member;
@@ -114,7 +123,10 @@ ou par le nom
 
 UPDATE madcap_app_member 
 SET address = 'FONTENAY LES ROSES( change adress)', date_entree = 2022 (change année)
-WHERE name = 'ROUSSELET	Thierry'; (Pour le nom en question)
+UPDATE madcap_app_member SET name = 'Thierry ROUSSELET' WHERE id = 5;
+WHERE name = 'ROUSSELET	Thierry. (ajout "skipper")'; (Pour le nom en question)
+
+UPDATE madcap_app_member SET name = 'Thierry ROUSSELET' WHERE id = 5;
 
 Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
       SELECT * FROM madcap_app_member;
