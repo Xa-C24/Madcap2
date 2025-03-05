@@ -47,7 +47,6 @@ INSTALLED_APPS = [
 # 📌 Middleware (ajout de Whitenoise pour Render)
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # 🔥 Ajout pour gérer les fichiers statiques sur Render
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -115,16 +114,15 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# 📌 Gestion des fichiers statiques (CSS, JS, images)
+#  Gestion des fichiers statiques (CSS, JS, images)
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
-      BASE_DIR / "static",
-      BASE_DIR / "frontend/build/static", # Ajout du dossier React build
-      ]
+    BASE_DIR / "static"  # On met "static" au lieu de "staticfiles"
+]
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  #  Optimisation pour Render
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Destiné au collectstatic (ne doit pas être dans STATICFILES_DIRS)
+
 
 # 📌 Gestion des fichiers médias (images uploadées)
 DEBUG = True
@@ -143,8 +141,4 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-# 📌 Port (utile pour Render)
-PORT = os.getenv("PORT", "8000")
 
-DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
-DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / 'backups'}
