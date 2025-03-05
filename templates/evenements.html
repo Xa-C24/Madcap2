@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Événements</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     <!-- Favicon -->
     <link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -56,10 +57,14 @@
                   </li>
                   <br>
                   <p><strong>Date :</strong> 13 au 21 avril 2025</p>
+                  <a href="{% url 'admin_login' %}" class="btn-evenements">Inscription</a>
               </div>
+              
       
                   <img src="{% static 'images/carenage.jpg' %}" alt="Détail du voilier" class="evenement-image-droite">
               </div>
+               
+            
           </div>
       </section>
         
@@ -97,6 +102,7 @@
                 <li>Petit-déjeuner et repas du soir inclus</li>
                 <li>Forfait navigation : 25€/jour + caisse de bord</li>
             </ul>
+            <a href="{% url 'admin_login' %}" class="btn-evenements">Inscription</a>
             
         </section>
        
@@ -139,6 +145,8 @@
             <li>
               Un événement rassemblant les plus beaux voiliers traditionnels dans une atmosphère conviviale mêlant régates, festivités et partage autour du patrimoine maritime. Un événement incontournable pour les passionnés et amateur de patrimoine nautique
             </li>
+            <br>
+            <a href="{% url 'admin_login' %}" class="btn-evenements">Inscription</a>
         </section>
 
         <br>
@@ -170,6 +178,8 @@
               <li>
               Sous réserve d’un nombre suffisant d’équipiers.
               </li>
+              <br>
+              <a href="{% url 'admin_login' %}" class="btn-evenements">Inscription</a>
         </section>
 
         <br>
@@ -219,6 +229,8 @@
 
             <p><strong>Date :</strong> 21 au 29 août 2025 (Corsica Classic) + 10 au 13 septembre 2025 (Monaco) </p>
             <li>Sous réserve de l’acceptation du dossier d’inscription</li>
+            <br>
+            <a href="{% url 'admin_login' %}" class="btn-evenements">Inscription</a>
           </section>
         
             <br>
@@ -241,9 +253,9 @@
         
 
         <section class="don-section call-to-action">
-          <h2>Pour toute question ou inscription, contactez-nous  </h2> 
+          <h2>Pour toute question, contactez-nous  </h2> 
           <a href= "{% url 'contact' %}"    
-          class="don-button"> Formulaire</a>   
+          class="don-button"> Contact</a>   
 
     </main>
 

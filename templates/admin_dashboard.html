@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %} <!-- Fr vs En-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,8 +20,75 @@
           <p style="font-size: 14px; color: #521b1b; font-weight: bold; margin-top: 2px; text-decoration: none;">Clic pour retour à la page d'accueil</p>
         </a>
 
+        <br>
+        <br>
+        <br>
+        <br>
        
     <h1>Tableau de Bord Administrateur </h1>
+
+    
+    <body>
+
+      <section class="evenement">
+          
+          
+          <h2>{% trans "Inscription aux événements 2025" %}</h2>
+          <a href="{% url 'evenements' %}" class="btn-evenements">Descriptif des événements 2025</a>
+
+      
+          <div class="events-container">
+              <!-- Colonne de gauche -->
+              <div class="column">
+                  <a href="https://docs.google.com/spreadsheets/d/14zfH2i-LJTZ5JIcyzO2ADuuei1u-CZim/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Carénage du 13 au 21 avril 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/1q-2jBNQANnyBACtVumIsVIHI3TXEyhFQ/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Sorties d'hiver 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/18bDOXOwdkzJs-0teuZ_eQZ2nNkipKjEV/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Estartit 2025" %}</span>
+                  </a>
+              </div>
+      
+              <!-- Colonne de droite -->
+              <div class="column">
+                  <a href="https://docs.google.com/spreadsheets/d/1g6aX2AN6d9h6G7yyominjvdQc68EJw4A/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "La Grande Motte 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/1_rSqGOOrETnAYLVXVcPVBFPPAqL8x-6p/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Baléares 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/1GWdNQ3tKPtM0lJq37VUneqOb1Tgm2mMH/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Corsica et Monaco 2025" %}</span>
+                  </a>
+              </div>
+          </div>
+      
+          <h2>{% trans "Afin de nous permettre de faire un prévisionnel, merci de vous pré-inscrire avant le 30 mars 2025." %}</h2>
+      
+          <p>{% trans "Les pré-inscriptions se font via les fichiers d’inscriptions mis à votre disposition. En cliquant sur chaque lien, vous accèderez à un fichier sur lequel vous renseignerez votre Prénom, Nom, Téléphone, Mail et indiquerez vos présences en saisissant « X »." %}</p>
+      
+          <p>{% trans "En cas d’un nombre insuffisant d’équipiers ou de skipper, le séjour Baléares sera annulé." %}</p>
+      
+          <p>{% trans "Ces propositions d’activités sont soumises à l’acceptation de nos dossiers de candidature, à la participation des adhérents et des skippers, ainsi qu’aux aléas de la météo." %}</p>
+      
+      </section>
+      
+      </body>
+      
+    <br>
+
     <h1> Liste des Membres <span>⚓⚓</span></h1>
     <br>
     <br>
