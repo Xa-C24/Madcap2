@@ -7,7 +7,16 @@ from django.utils.translation import gettext_lazy as _
 # 📌 Détection de l'environnement
 ENVIRONMENT = os.getenv("DJANGO_ENV", "local")  # "local" par défaut
 
-# 📌 Configuration SMTP Gmail pour envoyer des emails
+# 📌 Base directory du projet
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# 📌 Sécurité
+SECRET_KEY = os.getenv("SECRET_KEY", "change-me-in-prod")  # 🔴 Change en prod !
+DEBUG = ENVIRONMENT == "local"  # DEBUG=True seulement en local
+
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "madcap-70h2.onrender.com,madcap1874.onrender.com,127.0.0.1,localhost").split(",")
+
+# 📌 Configuration Email (Gmail SMTP)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -15,15 +24,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-# 📌 Base directory du projet
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# 📌 Sécurité
-SECRET_KEY = os.getenv("SECRET_KEY", "change-me-in-prod")  # 🔴 Change en prod !
-DEBUG = os.getenv("DEBUG", "False").lower() == "true"
-
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "madcap-70h2.onrender.com,madcap1874.onrender.com,127.0.0.1,localhost").split(",")
 
 # 📌 Applications installées
 INSTALLED_APPS = [
@@ -72,10 +72,18 @@ TEMPLATES = [
 # 📌 WSGI
 WSGI_APPLICATION = "madcap_project.wsgi.application"
 
-# 📌 Base de données (PostgreSQL ou SQLite par défaut)
-DATABASES = {
-    "default": dj_database_url.config(default=os.getenv("DATABASE_URL", f"sqlite:///{BASE_DIR / 'db.sqlite3'}"))
-}
+# 📌 Base de données : SQLite en local, PostgreSQL en production
+if ENVIRONMENT == "local":
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
+else:
+    DATABASES = {
+        "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+    }
 
 # 📌 Validation des mots de passe
 AUTH_PASSWORD_VALIDATORS = [
@@ -100,16 +108,14 @@ USE_TZ = True
 
 # 📌 Gestion des fichiers statiques (CSS, JS, images)
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]  # Assure-toi que ton dossier "static/" existe bien !
-STATIC_ROOT = BASE_DIR / "staticfiles"  # Pour collectstatic en prod
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Pour Render et collectstatic
+
+if ENVIRONMENT == "local":
+    STATICFILES_DIRS = [BASE_DIR / "static"]  # Assure-toi que ce dossier existe
 
 # 📌 Gestion des fichiers médias
-if DEBUG:
-    MEDIA_URL = "/media/"
-    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-else:
-    MEDIA_URL = "/media/"
-    MEDIA_ROOT = BASE_DIR / "media"  # Si tu ne veux pas Cloudinary en prod
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # 📌 Paramètres de langue et traductions
 LANGUAGE_CODE = "fr"
