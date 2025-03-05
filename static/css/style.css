@@ -2048,6 +2048,31 @@ header {
   text-decoration: underline;
 }
 
+/* Bouton inscription */
+
+
+
+.btn-evenements {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #d9534f; /* Rouge Madcap */
+  color: white;
+  font-size: 16px;
+  margin-left: 400px;
+  font-weight: bold;
+  text-decoration: none !important;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-evenements:hover {
+  background: #c9302c;
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: #e7f0f5 !important;
+}
+
+
 /* Ajustement pour mobile */
 @media (max-width: 768px) {
   .evenement-image-droite {
