@@ -115,7 +115,7 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# 📌 Gestion des fichiers statiques (CSS, JS, images)
+# 📌 Gestion des fichiers statiques. (CSS, JS, images)
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
