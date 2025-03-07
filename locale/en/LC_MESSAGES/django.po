@@ -328,8 +328,6 @@ msgid "À propos de l'Association"
 msgstr "About the Association"
 
 #: templates/footer.html:40
-#, fuzzy
-#| msgid "L'Histoire de Madcap"
 msgid "L'histoire de Madcap"
 msgstr "The Madcap Story"
 
