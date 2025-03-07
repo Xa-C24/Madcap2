@@ -219,7 +219,7 @@ def submit_contact(request):
         try:
             print(f"📤 Tentative d'envoi d'email de {email_host_user} à {recipient_list}...")
             send_mail(subject, message_body, email_host_user, recipient_list, fail_silently=False)
-            messages.success(request, '✅ Votre message a bien été envoyé  Nous reviendrons vers vous dans les meilleurs délais.')
+            messages.success(request, '✅ Votre message a bien été envoyé. Nous reviendrons vers vous dans les meilleurs délais.')
             print("✅ Email envoyé avec succès !")
         except Exception as e:
             messages.error(request, "❌ Une erreur est survenue lors de l'envoi de votre message, veuillez réessayer.")
