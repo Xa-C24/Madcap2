@@ -1204,22 +1204,22 @@ blockquote {
 
 .alert {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
 }
 
 .alert-success {
-  background-color: #d4edda;
+  background-color: #fdfdfd;
   color: #155724;
-  border: 1px solid #c3e6cb;
+  border: 2px solid #b9f0c6;
 }
 
 .alert-error {
-  background-color: #f8d7da;
+  background-color: #ffffff;
   color: #721c24;
-  border: 1px solid #f5c6cb;
+  border: 2px solid #eeb1b7;
 }
 
 /* Etoile pour notation Avis */
@@ -2293,28 +2293,28 @@ section {
 /* message de retour après envoie avec le formulaire */
 
 .message-success {
-  background-color: #dff0d8;
+  background-color:  #ffffff;
   /* Vert pâle */
-  border: 1px solid #3c763d;
+  border: 2px solid #3c763d;
   /* Vert plus foncé */
   color: #3c763d;
   /* Couleur du texte */
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 10px 0;
   font-size: 16px;
   text-align: center;
 }
 
 .message-error {
-  background-color: #f2dede;
+  background-color: #ffffff;
   /* Rouge pâle */
-  border: 1px solid #a94442;
+  border: 2px solid #a94442;
   /* Rouge plus foncé */
   color: #a94442;
   /* Couleur du texte */
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 10px 0;
   font-size: 16px;
   text-align: center;
