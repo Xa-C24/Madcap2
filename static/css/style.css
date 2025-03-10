@@ -1921,7 +1921,7 @@ header {
 .top-bar-text {
   color: white;
   /* Texte blanc */
-  font-size: 18px;
+  font-size: 20px;
   /* Taille du texte */
   font-weight: bold;
   /* Texte en gras */
@@ -2121,8 +2121,8 @@ nav {
   background-color: #6B7E99;/* Arrière-plan pour éviter la transparence */
   z-index: 1000; /* S'assure qu'il passe au-dessus des autres éléments */
   padding: 5px 0; /*  Ajoute un peu d’espace autour */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /*  Effet d’ombre pour démarquer le menu */
-  padding: 1px 0; /* Réduit l’espace vertical */
+  box-shadow: 0px 8px 20px rgb(233, 227, 227); /*  Effet d’ombre pour démarquer le menu */
+  padding: 2px 0; /* Réduit l’espace vertical */
 }
 
 /* Liste des liens du menu */
@@ -2145,14 +2145,14 @@ nav ul li a {
   padding: 3px 6px;
   background-color: #6B7E99; 
   border-radius: 5px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease;
   display: inline-block;
 }
 
 /* Effet au survol */
 nav ul li a:hover {
-  background-color: #cddff2;
-  transform: scale(1.09);
+  background-color: #5b759b;
+  transform: scale(1.08);
 }
 
 
