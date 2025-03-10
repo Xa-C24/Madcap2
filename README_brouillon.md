@@ -60,8 +60,8 @@ Lancer le shell de la base de données : python3 manage.py dbshell
 
 
 
-INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Sarah Holberton. Directrice ', ' Thonon, 75000', '06 99 88 77 44', '2025');
-INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('  ',' , ', '06', '2025');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Sarah Holberton. Directrice ', 'Thonon , 74560', '06 88 99 77 44 55 ', '2025');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('T. skipper','Thonon, 74460 ', '06 88 44 55 66 ', '2025');
 
 
 
@@ -83,7 +83,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
       SELECT * FROM madcap_app_member;
 
      Supprimer un membre par son ID : Par exemple, pour supprimer le membre avec l'ID (1) par exemple:
-      DELETE FROM madcap_app_member WHERE id = 91;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (1, 2, 4); 
+      DELETE FROM madcap_app_member WHERE id = 98;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (94, 92, 93); 
     
       Vérifier que le membre a été supprimé :
       SELECT * FROM madcap_app_member;
@@ -135,7 +135,7 @@ Une fois les modifications terminées, quittez le shell avec :
       \q _  exit()
 
 
------------------------
+----------------------- voir tte les tables : \dt
 
 -------Commandes SQLite pour gérer les avis dans madcap_app_avis --------
 
@@ -151,7 +151,7 @@ Pour afficher tous les avis enregistrés :
 
 
 Supprimer un avis en fonction de son id (exemple : id = 3) 
-    DELETE FROM madcap_app_avis WHERE id = 3;
+    DELETE FROM madcap_app_avis WHERE id = 30;
 
  Supprimer TOUS les avis de la table :
     DELETE FROM madcap_app_avis;
