@@ -73,7 +73,7 @@ body {
 }
 
 .current-language .flag {
-  width: 25px;
+  width: 30px;
   height: auto;
   margin-right: 8px;
 }
@@ -126,16 +126,16 @@ body {
   align-items: center;
   position: absolute; /* Permet de l'aligner tout à gauche */
   right: 120px; /* Distance depuis le bord gauche */
-  top: 50%; /* Alignement vertical */
+  top: 60%; /* Alignement vertical */
   transform: translateY(-50%); /* Ajuste verticalement */
 } 
 
 /* Style du logo météo header */
 .nav-weather-logo img {
-  height: 50px; /* Taille ajustée */
-  width: 60px;
+  height: 60px; /* Taille ajustée */
+  width: 70px;
   border-radius: 50%; /* Arrondi */
-  transition: transform 1.8s ease, filter 1.8s ease;
+  transition: transform 1.1s ease, filter 1.2s ease;
 }
 
 /* 🔹 Adaptation responsive pour tablettes et mobiles */
@@ -163,7 +163,7 @@ body {
 
 /* Effet au survol */
 .nav-weather-logo img:hover {
-  transform: scale(1.0) rotate(5deg);
+  transform: scale(0.8) rotate(0deg);
   filter: brightness(1.1);
 }
 
@@ -174,7 +174,7 @@ body {
   align-items: center;
   position: absolute; /* Permet de l'aligner tout à gauche */
   left: 30px; /* Distance depuis le bord gauche */
-  top: 50%; /* Alignement vertical */
+  top: 60%; /* Alignement vertical */
   transform: translateY(-50%); /* Ajuste verticalement */
 } 
 
