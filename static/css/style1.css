@@ -3,7 +3,7 @@
 /* === STYLE GLOBAL === */
 body {
   font-family: 'Crimson Text', serif;
-  background-color: #dde0eb;
+  background-color: #ece7e7;
   margin: 0;
   padding: 20px;
   color: #cf7979;
@@ -34,13 +34,14 @@ h1 {
 .btn-evenements:hover {
   background-color: #ad5151;
   transform: translateY(-5x);
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
 }
 
 .evenement {
   max-width: 900px;
   margin: 50px auto;
   padding: 20px;
-  background: #E0E0E0;
+  background: #fffbfb;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
