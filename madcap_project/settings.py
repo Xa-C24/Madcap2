@@ -90,10 +90,15 @@ WSGI_APPLICATION = "madcap_project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "madcapdb",  # Vérifie bien que c'est le bon nom de base
+        "USER": "madcapuser",  # Utiliser "madcapuser" au lieu de "madcap_user"
+        "PASSWORD": "Basededonnemadcap",  # Mets ici ton vrai mot de passe
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
+
 
 # 📌 Validation des mots de passe
 AUTH_PASSWORD_VALIDATORS = [

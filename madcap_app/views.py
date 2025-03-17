@@ -129,7 +129,7 @@ def search_members(request):
     query = request.GET.get('q', '').strip()
     if query:
         members = Member.objects.filter(
-    Q(name__icontains=query) | Q(address__icontains=query) | Q(date_entree__icontains=query)
+    Q(name__icontains=query) | Q(address__icontains=query) | Q(annee_adhesion__icontains=query)
     ).order_by('name')
     else:
         members = Member.objects.all().order_by('name')
@@ -139,7 +139,7 @@ def search_members(request):
             'name': member.name,
             'address': member.address,
             'phone': member.phone,
-            'date_entree':  str(member.date_entree) if member.date_entree else ''
+            'annee_adhesion':  str(member.annee_adhesion) if member.annee_adhesion else ''
         }
         for member in members
     ]
