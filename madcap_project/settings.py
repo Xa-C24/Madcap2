@@ -82,8 +82,17 @@ TEMPLATES = [
 WSGI_APPLICATION = "madcap_project.wsgi.application"
 
 # 📌 Base de données (PostgreSQL sur Render)
+# DATABASES = {
+   # "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+# }
+
+# Base de donnée en local
+
 DATABASES = {
-    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
 }
 
 # 📌 Validation des mots de passe
