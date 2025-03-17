@@ -329,7 +329,7 @@ msgstr "About the Association"
 
 #: templates/footer.html:40
 msgid "L'histoire de Madcap"
-msgstr "The Madcap Story"
+msgstr"The Madcap Story"
 
 #: templates/footer.html:41 templates/header.html:58
 msgid "Événements"
