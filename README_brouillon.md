@@ -54,9 +54,18 @@ Lancer le shell de la base de données : python3 manage.py dbshell
 
     Insérer un membre avec une requête SQL :
     
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('ROUSSELET Thierry ', 'Sceau, 92330', '06 63 02 09 82', '2020-02-01');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('HURREAU Christian Skipper', 'CASTELSARRASIN 82100', '06 86 14 39 55', '2020-02-01');
-    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('PIEDALLU Xavier Développeur site Web', 'Bellevaux, 74470', '06 87 74 02 73', '2025-01-01');
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('ROUSSELET Thierry Skipper ', 'Sceau, 92330', '06 63 02 09 82', '2022');
+    INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('HURREAU Christian Président & Skipper ', 'CASTELSARRASIN 82100', '06 86 14 39 55', '2022');
+    INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES ('PIEDALLU Xavier Développeur site Web', 'Bellevaux, 74470', '06 87 74 02 73', '2025');
+
+
+
+INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES ('   .  ', '  , 74', '06   ', '2025');
+INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES ('       ',   '      , 06', '', '2024');
+
+
+
+
 
     Vérifier les données insérées :
     SELECT * FROM madcap_app_member;
@@ -74,7 +83,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
       SELECT * FROM madcap_app_member;
 
      Supprimer un membre par son ID : Par exemple, pour supprimer le membre avec l'ID (1) par exemple:
-      DELETE FROM madcap_app_member WHERE id = 3;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (1, 2, 4); 
+      DELETE FROM madcap_app_member WHERE id = 51;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN (52, 53);
     
       Vérifier que le membre a été supprimé :
       SELECT * FROM madcap_app_member;
@@ -114,7 +123,10 @@ ou par le nom
 
 UPDATE madcap_app_member 
 SET address = 'FONTENAY LES ROSES( change adress)', date_entree = 2022 (change année)
-WHERE name = 'ROUSSELET	Thierry'; (Pour le nom en question)
+UPDATE madcap_app_member SET name = 'Thierry ROUSSELET' WHERE id = 5;
+WHERE name = 'ROUSSELET	Thierry. (ajout "skipper")'; (Pour le nom en question)
+
+UPDATE madcap_app_member SET name = 'Thierry ROUSSELET' WHERE id = 5;
 
 Pour confirmer que la mise à jour a bien été effectuée, exécutez de nouveau :
       SELECT * FROM madcap_app_member;
@@ -123,13 +135,13 @@ Une fois les modifications terminées, quittez le shell avec :
       \q _  exit()
 
 
------------------------
+----------------------- voir tte les tables : \dt
 
 -------Commandes SQLite pour gérer les avis dans madcap_app_avis --------
 
 python3 manage.py dbshell
 
-Liste toutes les tables      .tables
+Liste toutes les tables     \ dt    .tables
 
 Pour voir la structure de la table Avis, taper :
     PRAGMA table_info(madcap_app_avis);
@@ -139,7 +151,7 @@ Pour afficher tous les avis enregistrés :
 
 
 Supprimer un avis en fonction de son id (exemple : id = 3) 
-    DELETE FROM madcap_app_avis WHERE id = 3;
+    DELETE FROM madcap_app_avis WHERE id = 30;
 
  Supprimer TOUS les avis de la table :
     DELETE FROM madcap_app_avis;

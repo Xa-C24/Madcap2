@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 11:19+0100\n"
+"POT-Creation-Date: 2025-03-05 08:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: madcap_project/settings.py:132
+#: madcap_project/settings.py:135
 msgid "Français"
 msgstr "Anglais"
 
-#: madcap_project/settings.py:133
+#: madcap_project/settings.py:136
 msgid "Anglais"
+msgstr ""
+
+#: templates/admin_dashboard.html:36
+msgid "Inscription aux événements 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:45
+msgid "Carénage du 13 au 21 avril 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:50
+msgid "Sorties d'hiver 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:55
+msgid "Estartit 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:63
+msgid "La Grande Motte 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:68
+msgid "Baléares 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:73
+msgid "Corsica et Monaco 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:78
+msgid ""
+"Afin de nous permettre de faire un prévisionnel, merci de vous pré-inscrire "
+"avant le 30 mars 2025."
+msgstr ""
+
+#: templates/admin_dashboard.html:80
+msgid ""
+"Les pré-inscriptions se font via les fichiers d’inscriptions mis à votre "
+"disposition. En cliquant sur chaque lien, vous accèderez à un fichier sur "
+"lequel vous renseignerez votre Prénom, Nom, Téléphone, Mail et indiquerez "
+"vos présences en saisissant « X »."
+msgstr ""
+
+#: templates/admin_dashboard.html:82
+msgid ""
+"En cas d’un nombre insuffisant d’équipiers ou de skipper, le séjour Baléares "
+"sera annulé."
+msgstr ""
+
+#: templates/admin_dashboard.html:84
+msgid ""
+"Ces propositions d’activités sont soumises à l’acceptation de nos dossiers "
+"de candidature, à la participation des adhérents et des skippers, ainsi "
+"qu’aux aléas de la météo."
 msgstr ""
 
 # ---------Association-----------
@@ -188,15 +243,23 @@ msgstr "Grants and corporate sponsorship"
 msgid "Faire vivre l'association"
 msgstr "Keeping the association alive"
 
-#: templates/association.html:108 templates/index.html:164
-msgid "Rejoignez-nous"
-msgstr "Join us"
+#: templates/association.html:107 templates/index.html:165
+msgid "Télécharger l'adhésion 2025 en format pdf"
+msgstr "Download the 2025 membership in pdf format"
 
-#: templates/association.html:109 templates/index.html:165
+#: templates/association.html:109
+msgid "Adhésion 2025 via Helloasso"
+msgstr "2025 membership via Helloasso"
+
+#: templates/association.html:110 templates/index.html:168
 msgid "Contactez-nous"
 msgstr "Contact us"
 
-#: templates/association.html:114
+#: templates/association.html:113
+msgid "Consulter le réglement Intérieur de l'association Madcap 1874"
+msgstr ""
+
+#: templates/association.html:119
 msgid ""
 "\n"
 "        En adhérant à l’association, vous participez à la sauvegarde d’un "
@@ -210,15 +273,15 @@ msgstr ""
 "future generations.\n"
 "        "
 
-#: templates/association.html:126
+#: templates/association.html:133
 msgid "Comment faire un don ?"
 msgstr "How do I make a donation?"
 
-#: templates/association.html:128
+#: templates/association.html:135
 msgid "Faire un don"
 msgstr "Make a donation"
 
-#: templates/association.html:133
+#: templates/association.html:140
 msgid ""
 "\n"
 "        Notre statut d’association d’intérêt général permet aux donateurs de "
@@ -229,51 +292,93 @@ msgstr ""
 "        As a public-interest association, we offer tax benefits for donors.\n"
 "      "
 
-#: templates/header.html:11
-msgid "Madcap, le plus vieux côtre-pilote encore en état de naviguer"
-msgstr "Madcap, the oldest pilot cutter still in sailing condition"
+#: templates/footer.html:12
+msgid "Madcap 1874 - Association pour la préservation du patrimoine maritime"
+msgstr "Association for the preservation of maritime heritage"
 
-#: templates/header.html:24
-msgid "Espace Admin"
-msgstr "Admin Space"
+# ---------Footer-----------
 
-#: templates/header.html:55
+#: templates/footer.html:17 templates/mentions_legales.html:18
+#: templates/mentions_legales.html:52
+msgid "Association Madcap 1874"
+msgstr "The Madcap 1874 Association"
+
+#: templates/footer.html:18
+msgid "N° W821001521"
+msgstr ""
+
+#: templates/footer.html:19
+msgid "Adresse du siège de l'association:"
+msgstr "Address of the association's head office:"
+
+#: templates/footer.html:21
+msgid "Téléphone"
+msgstr "Phone"
+
+#: templates/footer.html:22
+msgid "Email"
+msgstr "Email"
+
+#: templates/footer.html:38 templates/header.html:55
 msgid "Accueil"
 msgstr "Home"
 
-#: templates/header.html:56
-#| msgid "Faire vivre l'association"
-msgid "À propos de l'association"
+#: templates/footer.html:39 templates/header.html:56
+msgid "À propos de l'Association"
 msgstr "About the Association"
+
+#: templates/footer.html:40
+msgid "L'histoire de Madcap"
+msgstr"The Madcap Story"
+
+#: templates/footer.html:41 templates/header.html:58
+msgid "Événements"
+msgstr "Events"
+
+#: templates/footer.html:42 templates/header.html:59
+msgid "Soutenir le Projet"
+msgstr "Support the Project"
+
+#: templates/footer.html:43 templates/header.html:60
+msgid "Votre Expérience"
+msgstr "Your Experience"
+
+#: templates/footer.html:44 templates/header.html:61
+msgid "Nous Contacter"
+msgstr "Contact us"
+
+#: templates/footer.html:45 templates/mentions_legales.html:14
+msgid "Mentions Légales"
+msgstr "Legal information"
+
+#: templates/footer.html:47
+msgid "Réglement Intérieur Madcap 1874"
+msgstr "Madcap 1874 Internal Regulations"
+
+#: templates/footer.html:53
+msgid "Tous droits réservés"
+msgstr "All rights reserved"
+
+
+# ----- header---------#
+#: templates/header.html:11
+msgid "Madcap, le plus vieux côtre-pilote encore en état de naviguer"
+msgstr "Madcap, the oldest pilot cutter still sailing"
+
+#: templates/header.html:24
+msgid "Espace Admin"
+msgstr "Espace Admin"
 
 #: templates/header.html:57
 msgid "L'Histoire de Madcap"
-msgstr "The History of Madcap"
-
-#: templates/header.html:58
-msgid "Événements"
-msgstr "Event"
-
-#: templates/header.html:59
-#| msgid "Soutenir le projet"
-msgid "Soutenir le projet"
-msgstr "Support this Project"
-
-#: templates/header.html:60
-#| msgid "Votre expérience"
-msgid "Votre expérience"
-msgstr "Your Expérience"
-
-#: templates/header.html:61
-msgid "Nous Contacter"
-msgstr "Contact Us"
+msgstr "The Madcap Story"
 
 # ----------INDEX----------
-#: templates/index.html:59
+#: templates/index.html:61
 msgid "Un patrimoine maritime vivant"
 msgstr "A living maritime heritage"
 
-#: templates/index.html:61
+#: templates/index.html:63
 msgid ""
 "\n"
 "          Construit en 1874, Madcap est le plus ancien côtre-pilote encore à "
@@ -297,11 +402,11 @@ msgstr ""
 "Roussillon.\n"
 "          "
 
-#: templates/index.html:69
+#: templates/index.html:71
 msgid "Classé Monument Historique"
 msgstr "Listed as a Historical Monument"
 
-#: templates/index.html:92
+#: templates/index.html:94
 msgid ""
 "L'association Madcap vous invite à découvrir ce voilier historique restauré "
 "avec passion."
@@ -309,7 +414,7 @@ msgstr ""
 "The Madcap Association invites you to discover this historic sailing vessel, "
 "carefully restored with passion."
 
-#: templates/index.html:96
+#: templates/index.html:98
 msgid ""
 "\n"
 "        <span style=\"display: inline-block; padding-left: 1.5cm;\"></"
@@ -343,7 +448,7 @@ msgstr ""
 "key events that shaped its history.\n"
 "        "
 
-#: templates/index.html:121
+#: templates/index.html:123
 msgid ""
 " Plus qu’un simple bateau, Madcap est un\n"
 "        témoin unique de l’histoire maritime. Grâce au travail dévoué de ses "
@@ -358,22 +463,145 @@ msgstr ""
 "        to sail, offering everyone an immersion into 19th-century sailing.\n"
 "        "
 
-#: templates/index.html:156
+#: templates/index.html:158
 msgid ""
 "Embarquez à bord de Madcap, naviguez avec nous et plongez dans son histoire."
 msgstr "Step aboard Madcap, sail with us, and dive into its history."
 
-#: templates/index.html:161
+#: templates/index.html:163
 msgid "Partagez des moments riches en émotions lors de nos sorties en mer."
 msgstr "Share unforgettable moments during our sea outings."
 
-#: templates/index.html:183
-msgid "Carte météo Windy"
+#: templates/index.html:167
+msgid "Adhésion 2025 via Helloasso "
+msgstr "2025 membership via Helloasso"
+
+#: templates/index.html:186
+msgid "Live météo Windy"
 msgstr "Windy weather map"
 
-#: templates/index.html:196
+#: templates/index.html:199
 msgid "Afficher la carte en plein écran"
 msgstr "View the map in full screen"
+
+#: templates/mentions_legales.html:17
+msgid "Éditeur du site"
+msgstr ""
+
+#: templates/mentions_legales.html:21 templates/mentions_legales.html:54
+msgid "Président"
+msgstr ""
+
+#: templates/mentions_legales.html:25
+msgid "Conception technique et hébergement"
+msgstr ""
+
+#: templates/mentions_legales.html:26
+msgid "[À compléter avec l’hébergeur et le développeur si nécessaire]"
+msgstr ""
+
+#: templates/mentions_legales.html:30
+msgid "Droit de modification"
+msgstr ""
+
+#: templates/mentions_legales.html:31
+msgid ""
+"L’internaute reconnaît que l’utilisation du site [URL du site Madcap] est "
+"régie par le droit français. Le contenu du site est mis à disposition pour "
+"un usage privé et non exclusif. Ce droit d’utilisation comprend le droit de "
+"stockage sur écran monoposte et le droit de reproduction aux conditions ci-"
+"après définies. Il interdit la récupération des bases de données."
+msgstr ""
+
+#: templates/mentions_legales.html:35
+msgid "Copies ou reproductions"
+msgstr ""
+
+#: templates/mentions_legales.html:36
+msgid ""
+"Les photographies et vidéos présentes sur ce site ne peuvent être "
+"reproduites sans autorisation préalable mais doivent obligatoirement "
+"comporter la mention suivante : [URL du site Madcap]."
+msgstr ""
+
+#: templates/mentions_legales.html:37
+msgid ""
+"Les photographies, images fixes ou animées, ne peuvent être reproduites sans "
+"autorisation préalable. Si un droit de copie est accordé, la mention du "
+"copyright indiquée par l’administrateur du site devra impérativement figurer "
+"sur le support utilisé à cette fin."
+msgstr ""
+
+#: templates/mentions_legales.html:38
+msgid ""
+"Les logos, visuels et marques présents sur ce site sont la propriété de [URL "
+"du site Madcap] ou de ses partenaires."
+msgstr ""
+
+#: templates/mentions_legales.html:42
+msgid "Responsabilité de l’éditeur"
+msgstr ""
+
+#: templates/mentions_legales.html:43
+msgid ""
+"Ce site peut contenir des liens vers des sites extérieurs. Il peut aussi, à "
+"son insu, avoir été relié à d’autres sites par le biais de liens hypermédia. "
+"L’association Madcap 1874 décline toute responsabilité concernant les "
+"informations présentées sur ces autres sites."
+msgstr ""
+
+#: templates/mentions_legales.html:47
+msgid "Collecte de données personnelles"
+msgstr ""
+
+#: templates/mentions_legales.html:48
+msgid ""
+"Conformément à l’article 32 de la loi « Informatique et Libertés » n°78-17 "
+"du 6 janvier 1978, modifiée par la loi n°2004-801 du 6 août 2004, les "
+"informations recueillies via les formulaires de contact font l’objet d’un "
+"traitement informatique destiné uniquement à ce que le responsable du "
+"traitement puisse répondre aux utilisateurs. Elles ne seront jamais "
+"utilisées à des fins non prévues ni transmises à des partenaires."
+msgstr ""
+
+#: templates/mentions_legales.html:49
+msgid ""
+"Les données collectées ne sont pas conservées plus d’un an. Aucune "
+"information personnelle autre que celles demandées dans ce cadre n’est "
+"collectée à l’insu des utilisateurs."
+msgstr ""
+
+#: templates/mentions_legales.html:50
+msgid ""
+"Conformément aux articles 39 et 40 de la loi susmentionnée, l’utilisateur de "
+"ce site bénéficie des droits d’interrogation, d’accès, de rectification et "
+"de suppression portant sur les données le concernant. Pour exercer ces "
+"droits, il peut adresser une demande à :"
+msgstr ""
+
+#: templates/mentions_legales.html:58
+msgid "Crédits"
+msgstr ""
+
+#: templates/mentions_legales.html:59
+msgid "Photos"
+msgstr ""
+
+#: templates/mentions_legales.html:60
+msgid ""
+"Les photos sont prises par les membres de l’association Madcap 1874 et par "
+"<a href=\"https://www.torveo.es/\" target=\"_blank\">Torveo</a>."
+msgstr ""
+
+#: templates/mentions_legales.html:62
+msgid "Vidéos"
+msgstr ""
+
+#: templates/mentions_legales.html:63
+msgid ""
+"Les vidéos présentes sur ce site ont été réalisées par Jean-Pierre "
+"Roussoulières, membre de l’association Madcap 1874."
+msgstr ""
 
 #: venv/lib/python3.12/site-packages/_pytest/config/argparsing.py:474
 #, python-format
@@ -1608,3 +1836,6 @@ msgstr ""
 #: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Rejoignez-nous"
+#~ msgstr "Join us"

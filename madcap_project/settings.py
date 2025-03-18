@@ -22,7 +22,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # 📌 Sécurité
-SECRET_KEY = os.getenv("SECRET_KEY", "change-me-in-prod")  # 🔴 Change cette valeur en production !
+SECRET_KEY = os.getenv("SECRET_KEY", "change-me-in-prod")  # --🔴 Change cette valeur en production !--
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "madcap-70h2.onrender.com,madcap1874.onrender.com,127.0.0.1,localhost").split(",")
@@ -82,9 +82,23 @@ TEMPLATES = [
 WSGI_APPLICATION = "madcap_project.wsgi.application"
 
 # 📌 Base de données (PostgreSQL sur Render)
+# DATABASES = {
+   # "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+# }
+
+# Base de donnée en local
+
 DATABASES = {
-    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "madcapdb",  # Vérifie bien que c'est le bon nom de base
+        "USER": "madcapuser",  # Utiliser "madcapuser" au lieu de "madcap_user"
+        "PASSWORD": "Basededonnemadcap",  # Mets ici ton vrai mot de passe
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
 }
+
 
 # 📌 Validation des mots de passe
 AUTH_PASSWORD_VALIDATORS = [
@@ -115,16 +129,11 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# 📌 Gestion des fichiers statiques (CSS, JS, images)
+# 📌 Gestion des fichiers statiques. (CSS, JS, images)
 STATIC_URL = "/static/"
-
-STATICFILES_DIRS = [
-      BASE_DIR / "static",
-      BASE_DIR / "frontend/build/static", # Ajout du dossier React build
-      ]
-
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  #  Optimisation pour Render
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  # 🔥 Optimisation pour Render
 
 # 📌 Gestion des fichiers médias (images uploadées)
 DEBUG = True

@@ -1,11 +1,12 @@
 from django.db import models, IntegrityError  # Importation de "models" pour définir les tables de la base de données
 from django.core.exceptions import ValidationError  # Importation de "ValidationError" pour gérer les erreurs de validation personnalisées
 
+
 class Member(models.Model):
     name = models.CharField(max_length=100)
     address = models.TextField()
-    phone = models.CharField(max_length=15, unique=True)  # Téléphone unique
-    date_entree = models.DateField(null=True, blank=True)
+    phone = models.CharField(max_length=20, null=True, blank=True)  # Téléphone unique
+    annee_adhesion = models.IntegerField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         # Vérifie si un membre avec le même nom et numéro de téléphone existe déjà

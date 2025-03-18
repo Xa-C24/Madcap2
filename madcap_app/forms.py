@@ -27,4 +27,4 @@ class MemberForm(forms.ModelForm):
         return phone
   class Meta:
     model = Member
-    fields = ['name', 'address', 'phone', 'date_entree']
+    fields = ['name', 'address', 'phone', 'annee_adhesion']
