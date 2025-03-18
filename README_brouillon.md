@@ -67,6 +67,15 @@ INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES ('  
 
 
 
+
+
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Sarah Holberton. Directrice ', 'Thonon , 74560', '06 88 99 77 44 55 ', '2025');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('T. skipper','Thonon, 74460 ', '06 88 44 55 66 ', '2025');
+
+
+
+
+
     Vérifier les données insérées :
     SELECT * FROM madcap_app_member;
 
@@ -83,7 +92,11 @@ Lancer le shell de la base de données : python3 manage.py dbshell
       SELECT * FROM madcap_app_member;
 
      Supprimer un membre par son ID : Par exemple, pour supprimer le membre avec l'ID (1) par exemple:
+<<<<<<< HEAD
       DELETE FROM madcap_app_member WHERE id = 51;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN (52, 53);
+=======
+      DELETE FROM madcap_app_member WHERE id = 98;   Plusieurs   DELETE FROM madcap_app_member WHERE id IN = (94, 92, 93); 
+>>>>>>> 88c137f4778170234fe7d261ca7c5d695e71fdcc
     
       Vérifier que le membre a été supprimé :
       SELECT * FROM madcap_app_member;
