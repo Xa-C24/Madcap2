@@ -2145,13 +2145,13 @@ nav ul li a {
   padding: 3px 6px;
   background-color: #6B7E99; 
   border-radius: 5px;
-  transition: transform 0.5s ease, background-color 0.5s ease;
+  transition: transform 0.06s ease, background-color 0.06s ease;
   display: inline-block;
 }
 
 /* Effet au survol */
 nav ul li a:hover {
-  background-color: #5b759b;
+  background-color: #6B7E99;
   transform: scale(1.08);
 }
 
