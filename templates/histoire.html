@@ -1,4 +1,5 @@
 {% load static %} <!-- inclure des fichiers statiques -->
+{% load i18n %} <!-- Fr vs En-->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,7 +17,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Histoire du bateau - Madcap</title>
+  <title>{% trans "Histoire du bateau - Madcap" %}</title>
  
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/style_footer.css' %}">
@@ -30,11 +31,12 @@
   {% include 'header.html' %}
   <main>
     <section>
-      <h1>Une histoire riche en aventures</h1>
-      <h2>Construction et Caractéristiques Techniques</h2>
+      <h1>{% trans "Une histoire riche en aventures " %}</h1>
+      <h2>{% trans "Construction et Caractéristiques Techniques" %}</h2>
 
       <ul>
         <li>
+          {% blocktrans %}
           La lecture du « Cardiff Registered Ships » nous apprend que Williams Stephens, né en 1830 à Cardigan (Pays de Galles) et marin de son état, a effectué du 20 novembre au 30 décembre 1874 plusieurs opérations de pilotage dans la baie de Cardiff à bord du bateau-pilote n°11, nommé MADCAP.
 
           Construit en 1874 par les chantiers Davies & Plain, situés à Bute East Dock, Cardiff, au Pays de Galles, Madcap apparaît officiellement en 1879 dans la « Alphabetic List of British Registered Sailing Vessels » sous l’immatriculation n° 79381. Son propriétaire est alors William Jenkins, domicilié au 39 Adelaide Street, Cardiff.
@@ -42,6 +44,7 @@
           Destiné initialement au service de pilotage du port de Cardiff, Madcap était conçu pour naviguer dans les conditions exigeantes du canal de Bristol, réputé pour ses marées puissantes et ses courants forts.
           
           Le navire mesure 16,54 mètres de longueur pour 3,76 mètres de largeur, avec une étrave droite et un arrière à voûte. Sa surface de voile atteint 116 m². Sa structure repose sur une quille et des bordés en orme, une charpente transversale en chêne, ainsi que des hauts et un pont en pin d’Oregon. Pour assurer sa stabilité, il est doté d’un lest de 8 tonnes, constitué de 2 tonnes de plomb et 6 tonnes de béton pour un poids total de 24t.
+          {% endblocktrans %}
         </li> 
       </ul>
 
@@ -59,13 +62,15 @@
 
 
     <section>
-      <h2>Service en tant que Cotre-Pilote</h2>
+      <h2>{% trans "Service en tant que Cotre-Pilote" %}</h2>
 
       <ul>
         <li>
+          {% blocktrans %}
           À la fin du XIXe siècle, Cardiff, Newport et Swansea sont parmi les plus grands ports charbonniers du monde, et le commerce maritime y est florissant. Les cotres-pilotes, comme Madcap, sont alors indispensables pour guider les navires en approche dans ces eaux périlleuses.
           Le pilotage dans le canal de Bristol est une affaire de compétition. Plusieurs cotres sont en attente en haute mer, et lorsqu’un navire marchand apparaît à l’horizon, une véritable course s’engage pour être le premier à l’atteindre. Le pilote vainqueur gagne le droit d’accompagner le navire jusqu’au port, une tâche hautement rémunérée.
           Ces cotres étaient conçus pour être rapides et très manœuvrables. L’équipage était généralement réduit à deux ou trois marins, dont un mousse. Le rôle de ce dernier était crucial, car il devait ramer jusqu’au navire en attente pour déposer le pilote et revenir seul avec le cotre.
+          {% endblocktrans %}
         </li>
       </ul>
     <br>
@@ -73,36 +78,40 @@
       <img src="{% static 'images/fregate1903.png' %}" alt="Frégate improvisée en 1903" class="fregate-histoire">
 
          
-      <h2>Les Premiers Patrons de Madcap</h2>
+      <h2>{% trans "Les Premiers Patrons de Madcape" %}</h2>
 
       
-        Les archives révèlent plusieurs patrons ayant navigué à bord de Madcap :
+      {% trans "Les archives révèlent plusieurs patrons ayant navigué à bord de Madcap : " %}
       <br>
-      <li>- Williams Stephens (premier patron connu, en 1874) </li>
-      <li>- William Jenkins (en service à partir de 1878) </li>
-      <li>- William Henry Howe (propriétaire jusqu’en 1913, sa femme hérite ensuite du titre de pilotage)</li>
-      <li>- James Andrew Burgan (dernier pilote de Madcap, dans les années 1920)</li>
+      <li>{% trans "- Williams Stephens (premier patron connu, en 1874) " %}</li>
+      <li>{% trans "- William Jenkins (en service à partir de 1878) " %}</li>
+      <li>{% trans "- William Henry Howe (propriétaire jusqu’en 1913, sa femme hérite ensuite du titre de pilotage)" %}</li>
+      <li>{% trans "- James Andrew Burgan (dernier pilote de Madcap, dans les années 1920)" %}</li>
       <br>
-      D’autres pilotes gallois bien connus ont marqué l’histoire du pilotage dans le canal de Bristol, notamment James George Ray (1497) et George Ray (1837), qui pilotaient de célèbres navires comme le Great Western.
       </li>
     </section>
 
+
       <section>
-      <h2>Un Métier Périlleux</h2>
+      <h2>{% trans "Un Métier Périlleux" %}</h2>
 
     <ul>
       <li>
+        {% blocktrans %}
         L’apprentissage du métier de pilote commence dès l’âge de 14 ans, après plusieurs années passées comme mousse dès 11 ans. Après un long apprentissage d’une dizaine d’années, un pilote pouvait enfin commander son propre cotre et exercer ce métier prestigieux. cotre-pilote naviguait souvent avec seulement deux ou trois hommes d’équipage, dont un mousse. Ces marins devaient affronter des conditions météorologiques difficiles et parfois opérer seuls lorsque le pilote embarquait sur un navire en mer. Comme l’a rapporté le pilote George Buck (apprenti en 1900) :
-    </ul>
+        {% endblocktrans %}
+      </ul>
       </li>
     </section>
 
     <section>
-      <h2> Vie à Bord au XIXᵉ Siècle</h2>
+      <h2>{% trans " Vie à Bord au XIXᵉ Siècle " %}</h2>
 
     <ul>
       <li>
+        {% blocktrans %}
         Les cotres-pilotes du canal de Bristol étaient conçus pour être manœuvrés par seulement deux à trois hommes, dont un jeune mousse souvent inexpérimenté. Ces marins intrépides passaient de longues heures en mer, affrontant des vents hurlants et des vagues impitoyables qui faisaient tanguer leur frêle embarcation. Ils partaient parfois pour plusieurs jours, sans aucune garantie de succès, à la merci des courants violents et des marées capricieuses du canal de Bristol. Le froid mordant, la pluie incessante et l'humidité qui s'infiltrait partout faisaient partie du quotidien. La casse était monnaie courante : bâtiments malmenés, voiles déchirées, espars brisés sous la force des éléments. Pourtant, il fallait continuer, car chaque course vers un navire marchand représentait une chance de gain, une mission où seule la rapidité et la maîtrise du bateau pouvaient faire la différence entre une réussite et une défaite.
+        {% endblocktrans %}
       </li>
     </ul> 
 
@@ -111,8 +120,10 @@
       <img src="{% static 'images/archive.png' %}" alt="Photo archive" class="fregate-histoire">
       <br>
       <span style="display: inline-block; padding-left: 0.5cm;"></span> George Buck, apprenti pilote en 1900, nous raconte.
-  <blockquote>« Lors des embarquements de nuit dans des conditions de gros temps, nous étions toujours soulagés de voir le canot revenir à bord. » </blockquote>
-  <blockquote>«Nous prîmes un ris dans la grand-voile, et décidâmes
+  <blockquote>
+    {% blocktrans %}« Lors des embarquements de nuit dans des conditions de gros temps, nous étions toujours soulagés de voir le canot revenir à bord. » {% endblocktrans %} </blockquote>
+  <blockquote>
+    {% blocktrans %}«Nous prîmes un ris dans la grand-voile, et décidâmes
   de courir rapidement vers le canal. Vers les 8 heures du
   soir, nous avions amené complètement la grand-voile,
   arrisé encore la trinquette et nous mîmes à la cape. Nous
@@ -132,7 +143,7 @@
   nouvelle grand-voile et une bôme. Arrivés là-bas, nous
   apprîmes que le Manxman était au niveau de King Road
   et demandait l’aide d’un pilote. Nous n’avions pas seulement perdu une voile et une bôme, mais aussi un bon
-  navire qui payait bien.» </blockquote>
+  navire qui payait bien.»  {% endblocktrans %}</blockquote>
 
   <br>
 
@@ -148,34 +159,38 @@
 
     <section>
       <h2>
-        Transition vers la Plaisance
+        {% trans " Transition vers la Plaisance " %}
       </h2>
 
     <ul>
       <li>
+        {% blocktrans %}
         Dans les années 1930, après plusieurs décennies de service en tant que cotre-pilote,  Madcap est converti en navire de plaisance. Au fil des ans, il change de propriétaires et navigue principalement entre l'Irlande et la Bretagne, avec des voyages en Méditerranée, aux Açores et jusqu'au Groenland. 
         
         En 1996, il est intégré à la National Historic Fleet au Royaume-Uni, une distinction réservée aux voiliers britanniques exceptionnels.
+        {% endblocktrans %}
       </li>
     </ul>
 
-        <li>John Burfield, commandant de la Royal Navy, le modernise en 1936 en ajoutant un moteur</li>
-        <li>Adrian "Stu" Spence, un avocat irlandais, propriétaire en 1993, il fait naviguer Madcap jusqu’au Groenland et aux Açores</li>
-        <li>Olivier Guillemin, propriétaire de 2015 à 2020, il entreprend une restauration fidèle à l’original</li>
+        <li>{% trans "John Burfield, commandant de la Royal Navy, le modernise en 1936 en ajoutant un moteur" %}</li>
+        <li>{% trans "Adrian 'Stu' Spence, un avocat irlandais, propriétaire en 1993, il fait naviguer Madcap jusqu’au Groenland et aux Açores" %}</li>
+        <li>{% trans "Olivier Guillemin, propriétaire de 2015 à 2020, il entreprend une restauration fidèle à l’original" %}</li>
         <br>
 
         <img src="{% static 'images/mediterannée.jpg' %}" alt="Equipier de l'association" class="fregate-histoire">
         
-        Durant cette période,  Madcap participe à des régates historiques et reçoit même le prix du plus beau bateau du siècle dernier lors des fêtes de Douarnenez en 1998. En 2015, il est classé Monument Historique en France.
+        {% trans "Durant cette période,  Madcap participe à des régates historiques et reçoit même le prix du plus beau bateau du siècle dernier lors des fêtes de Douarnenez en 1998. En 2015, il est classé Monument Historique en France. " %}
     </section>
 
     <section>
       <h2>
-        Acquisition et Restauration
+        {% trans "Acquisition et Restauration" %}
       </h2>
 
       <li>
+        {% blocktrans %}
         En 2015,  Madcap est transféré à La Rochelle au chantier naval Despierres, un établissement réputé pour la restauration de bateaux patrimoniaux. Pendant plusieurs mois, il subit une remise en état complète visant à préserver son authenticité. Les charpentiers de marine remplacent certaines membrures et varangues endommagées, tandis que la voûte et une partie du bordé sont refaites en chêne et orme, respectant les matériaux d’origine. La mâture est également restaurée pour lui redonner sa configuration traditionnelle. Ces efforts aboutissent à son classement en tant que Monument Historique en France, reconnaissant sa valeur patrimoniale et son importance dans l’histoire maritime.
+        {% endblocktrans %}
       </li>
       <img src="{% static 'images/restauration.jpg' %}" alt="Equipier de l'association" class="fregate-histoire">
      
@@ -183,25 +198,31 @@
     </section>
 
     <section>
-       <h1>Une nouvelle vie en Méditerranée</h1>
+       <h1>{% trans "Une nouvelle vie en Méditerranée" %}</h1>
       <h2>
+        {% blocktrans %}
         L'association Madcap 1874 et ses formations à la navigation traditionnelle
+        {% endblocktrans %}
       </h2>
 
     <ul>
       <li>
+        {% blocktrans %}
         En 2022, il rejoint enfin la Méditerranée. Il bénéficie alors d’une rénovation au chantier Bernadou, où sa voûte est refaite en chêne et orme, respectant les essences d’origine. La même année, l’association Madcap 1874, fondée en 2020, développe ses programmes sociaux, favorisant l’accès à la navigation pour des publics variés et la transmission du patrimoine maritime.
+        {% endblocktrans %}
       </li>
     </ul>
 
       <img src="{% static 'images/asso.jpg' %}" alt="Equipier de l'association" class="fregate-histoire">
      
-      <h2>Aujourd’hui Madcap navigue pour transmettre</h2>
+      <h2>{% trans "Aujourd’hui Madcap navigue pour transmettre" %}</h2>
 
     <ul>
       <li>
+        {% blocktrans %}
          Madcap est un témoignage vivant du patrimoine maritime, naviguant pour partager son histoire et perpétuer l’héritage des cotres-pilote. À 150 ans en 2024, Madcap est le plus ancien des 17 cotres-pilotes encore en navigation. L’histoire de Madcap est celle d’un bateau hors du commun, qui a su traverser les époques et continuer à écrire son sillage sur les océans. Que ce soit en tant que cotre-pilote rapide et compétitif ou comme voilier de plaisance, son destin est intimement lié à la mer et à ceux qui l’aiment.
-      </li>
+         {% endblocktrans %}
+        </li>
     </ul>
       
   </section>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-05 08:39+0000\n"
+"POT-Creation-Date: 2025-04-08 16:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,49 +18,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: madcap_project/settings.py:135
+#: madcap_project/settings.py:146
 msgid "Français"
 msgstr "Anglais"
 
-#: madcap_project/settings.py:136
+#: madcap_project/settings.py:147
 msgid "Anglais"
-msgstr ""
+msgstr "Français"
 
-#: templates/admin_dashboard.html:36
+#: templates/admin_dashboard.html:48
 msgid "Inscription aux événements 2025"
 msgstr ""
 
-#: templates/admin_dashboard.html:45
+#: templates/admin_dashboard.html:57
 msgid "Carénage du 13 au 21 avril 2025"
 msgstr ""
 
-#: templates/admin_dashboard.html:50
+#: templates/admin_dashboard.html:62
 msgid "Sorties d'hiver 2025"
 msgstr ""
 
-#: templates/admin_dashboard.html:55
+#: templates/admin_dashboard.html:67
 msgid "Estartit 2025"
 msgstr ""
 
-#: templates/admin_dashboard.html:63
+#: templates/admin_dashboard.html:75
 msgid "La Grande Motte 2025"
 msgstr ""
 
-#: templates/admin_dashboard.html:68
+#: templates/admin_dashboard.html:80
 msgid "Baléares 2025"
 msgstr ""
 
-#: templates/admin_dashboard.html:73
+#: templates/admin_dashboard.html:85
 msgid "Corsica et Monaco 2025"
 msgstr ""
 
-#: templates/admin_dashboard.html:78
+#: templates/admin_dashboard.html:90
 msgid ""
 "Afin de nous permettre de faire un prévisionnel, merci de vous pré-inscrire "
 "avant le 30 mars 2025."
 msgstr ""
 
-#: templates/admin_dashboard.html:80
+#: templates/admin_dashboard.html:92
 msgid ""
 "Les pré-inscriptions se font via les fichiers d’inscriptions mis à votre "
 "disposition. En cliquant sur chaque lien, vous accèderez à un fichier sur "
@@ -68,13 +68,13 @@ msgid ""
 "vos présences en saisissant « X »."
 msgstr ""
 
-#: templates/admin_dashboard.html:82
+#: templates/admin_dashboard.html:94
 msgid ""
 "En cas d’un nombre insuffisant d’équipiers ou de skipper, le séjour Baléares "
 "sera annulé."
 msgstr ""
 
-#: templates/admin_dashboard.html:84
+#: templates/admin_dashboard.html:96
 msgid ""
 "Ces propositions d’activités sont soumises à l’acceptation de nos dossiers "
 "de candidature, à la participation des adhérents et des skippers, ainsi "
@@ -82,15 +82,15 @@ msgid ""
 msgstr ""
 
 # ---------Association-----------
-#: templates/association.html:8
+#: templates/association.html:19
 msgid "L'Association Madcap 1874"
 msgstr "The Madcap 1874 Association"
 
-#: templates/association.html:20
+#: templates/association.html:31
 msgid "Qui sommes-nous ?"
 msgstr "Who are we?"
 
-#: templates/association.html:21
+#: templates/association.html:32
 msgid ""
 "\n"
 "        L’association MADCAP 1874 a été créée le 16 octobre 2021 pour "
@@ -110,11 +110,11 @@ msgstr ""
 "journey after us.\n"
 "      "
 
-#: templates/association.html:29
+#: templates/association.html:40
 msgid "Nos valeurs et nos actions"
 msgstr "Our values and actions"
 
-#: templates/association.html:30
+#: templates/association.html:41
 msgid ""
 "\n"
 "        Pour les membres fondateurs de l’association, l’achat de Madcap "
@@ -128,60 +128,60 @@ msgstr ""
 "specialized associations to support:\n"
 "      "
 
-#: templates/association.html:34
+#: templates/association.html:45
 msgid "Prévention des risques suicidaires chez les jeunes"
 msgstr "Suicide risk prevention among young people"
 
-#: templates/association.html:35
+#: templates/association.html:46
 msgid "Soutien aux personnes atteintes de syndromes post-traumatiques"
 msgstr "Support for individuals with post-traumatic stress disorders"
 
-#: templates/association.html:36
+#: templates/association.html:47
 msgid "Réinsertion de personnes en difficulté après un accident de la vie"
 msgstr "Reintegration of individuals facing life hardships"
 
-#: templates/association.html:37
+#: templates/association.html:48
 msgid "Sorties à la voile handi-valides"
 msgstr "Accessible sailing trips for people with disabilities"
 
-#: templates/association.html:38
+#: templates/association.html:49
 msgid "Promotion de la mixité dans le sport, notamment la voile"
 msgstr "Promotion of diversity in sports, particularly sailing"
 
-#: templates/association.html:45
+#: templates/association.html:56
 msgid "L’association ouvre également ses portes à diverses initiatives :"
 msgstr "The association also welcomes various initiatives:"
 
-#: templates/association.html:47
+#: templates/association.html:58
 msgid "Réinsertion pour les jeunes en difficulté"
 msgstr "Reintegration programs for struggling youth"
 
-#: templates/association.html:48
+#: templates/association.html:59
 msgid "Sorties organisées pour des clubs sportifs ou des associations"
 msgstr "Organized outings for sports clubs or associations"
 
-#: templates/association.html:49
+#: templates/association.html:60
 msgid "Séminaires et événements d'entreprise (team-building en mer)"
 msgstr "Corporate seminars and events (team-building at sea)"
 
-#: templates/association.html:50
+#: templates/association.html:61
 msgid ""
 "Ateliers d’initiation à la navigation et aux métiers du patrimoine maritime"
 msgstr "Workshops on sailing and maritime heritage professions"
 
-#: templates/association.html:51
+#: templates/association.html:62
 msgid "Événements éducatifs pour sensibiliser les jeunes au monde maritime"
 msgstr "Educational events to raise youth awareness of the maritime world"
 
-#: templates/association.html:52
+#: templates/association.html:63
 msgid "Sorties thématiques : histoire, faune marine, techniques de navigation"
 msgstr "Themed outings: history, marine wildlife, sailing techniques"
 
-#: templates/association.html:73
+#: templates/association.html:84
 msgid "Faites partie de l’équipage"
 msgstr "Become part of the crew"
 
-#: templates/association.html:74
+#: templates/association.html:85
 msgid ""
 "\n"
 "        Il existe plusieurs façons de participer à la vie de "
@@ -192,23 +192,23 @@ msgstr ""
 "        There are several ways to get involved in the association:\n"
 "      "
 
-#: templates/association.html:78
+#: templates/association.html:89
 msgid "Section navigation : chefs de bord et équipiers"
 msgstr "Navigation section: skippers and crew members"
 
-#: templates/association.html:79
+#: templates/association.html:90
 msgid "Travaux manuels : entretien et restauration du bateau"
 msgstr "Hands-on work: maintenance and restoration of the boat"
 
-#: templates/association.html:80
+#: templates/association.html:91
 msgid "Partie administrative et organisation des événements"
 msgstr "Administrative tasks and event organization"
 
-#: templates/association.html:89
+#: templates/association.html:100
 msgid "Financement et mécénat"
 msgstr "Funding and sponsorship"
 
-#: templates/association.html:90
+#: templates/association.html:101
 msgid ""
 "\n"
 "        Conserver Madcap en bon état demande un engagement financier "
@@ -223,43 +223,45 @@ msgstr ""
 "renovation work in 2022. Our financial resources come from several sources:\n"
 "      "
 
-#: templates/association.html:94
+#: templates/association.html:105
 msgid "Les cotisations des membres"
 msgstr "Membership fees"
 
-#: templates/association.html:95
+#: templates/association.html:106
 msgid "Le paiement des journées de navigation"
 msgstr "Payments for sailing days"
 
-#: templates/association.html:96
+#: templates/association.html:107
 msgid "Les dons de particuliers"
 msgstr "Private donations"
 
-#: templates/association.html:97
+#: templates/association.html:108
 msgid "Les subventions et le mécénat d’entreprises"
 msgstr "Grants and corporate sponsorship"
 
-#: templates/association.html:102
+#: templates/association.html:113
 msgid "Faire vivre l'association"
 msgstr "Keeping the association alive"
 
-#: templates/association.html:107 templates/index.html:165
+#: templates/association.html:118 templates/index.html:176
 msgid "Télécharger l'adhésion 2025 en format pdf"
 msgstr "Download the 2025 membership in pdf format"
 
-#: templates/association.html:109
-msgid "Adhésion 2025 via Helloasso"
+#: templates/association.html:120
+#, fuzzy
+#| msgid "Adhésion 2025 via Helloasso"
+msgid "Ahdésion 2025 via Helloasso"
 msgstr "2025 membership via Helloasso"
 
-#: templates/association.html:110 templates/index.html:168
+#: templates/association.html:121 templates/index.html:179
 msgid "Contactez-nous"
 msgstr "Contact us"
 
-#: templates/association.html:113
+#: templates/association.html:124
 msgid "Consulter le réglement Intérieur de l'association Madcap 1874"
 msgstr ""
 
-#: templates/association.html:119
+#: templates/association.html:130
 msgid ""
 "\n"
 "        En adhérant à l’association, vous participez à la sauvegarde d’un "
@@ -273,15 +275,15 @@ msgstr ""
 "future generations.\n"
 "        "
 
-#: templates/association.html:133
+#: templates/association.html:144
 msgid "Comment faire un don ?"
 msgstr "How do I make a donation?"
 
-#: templates/association.html:135
+#: templates/association.html:146
 msgid "Faire un don"
 msgstr "Make a donation"
 
-#: templates/association.html:140
+#: templates/association.html:151
 msgid ""
 "\n"
 "        Notre statut d’association d’intérêt général permet aux donateurs de "
@@ -292,14 +294,415 @@ msgstr ""
 "        As a public-interest association, we offer tax benefits for donors.\n"
 "      "
 
+#: templates/evenements.html:33
+msgid "Découvrez la liste des événements et sorties prévus en 2025 auxquels l'association Madcap 1874 participera"
+msgstr "Discover the list of events and outings planned for 2025 in which the Madcap 1874 association will take part"
+
+
+#: templates/evenements.html:44
+msgid "Carénage"
+msgstr "Fairing"
+
+# ---- Evenements---- #
+#: templates/evenements.html:49
+msgid ""
+"\n"
+"                  Le carénage est une étape essentielle pour l’entretien du "
+"cotre-pilote qui aura 151 ans en 2025. Une occasion supplémentaire de "
+"participer à la préservation de Madcap afin qu'il garde toute sa splendeur "
+"pour une nouvelle saison de navigation.\n"
+"                  "
+msgstr ""
+"\n"
+"Careening is an essential step in maintaining the pilot cutter, which will "
+"celebrate its 151st anniversary in 2025. It’s another great opportunity to "
+"take part in preserving Madcap, ensuring it retains its splendour for a new "
+"sailing season.\n"
+"                  "
+
+#: templates/evenements.html:60
+msgid ""
+"\n"
+"                    Le carénage consiste en un entretien complet du bateau, "
+"incluant le nettoyage de la coque, la vérification\n"
+"                     des éléments structurels immergés. Ce travail minutieux "
+"permet d’optimiser la navigation, de préserver le bois et d’assurer \n"
+"                     la sécurité en mer. C’est aussi un moment de "
+"convivialité et de transmission du savoir-faire maritime, où les membres de "
+"l’association \n"
+"                     se retrouvent pour prendre soin de ce patrimoine "
+"flottant.\n"
+"                     "
+msgstr ""
+"\n"
+"Careening involves a complete overhaul of the boat, including cleaning the "
+"hull and checking the submerged structural elements. This meticulous work "
+"optimises sailing performance, preserves the wood, and ensures safety at "
+"sea. It is also a friendly and educational moment to share maritime know-"
+"how, where association members come together to care for this floating "
+"heritage.\n"
+"                     "
+
+#: templates/evenements.html:73
+msgid ""
+"Que vous soyez marin expérimenté ou novice curieux, chacun peut apporter sa "
+"pierre à l’édifice, une nouvelle occasion de se retrouver, d’apprendre et de "
+"transmettre le savoir-faire maritime."
+msgstr ""
+"Whether you’re an experienced sailor or a curious beginner, everyone can "
+"contribute, making it a great opportunity to come together, learn, and share "
+"maritime skills."
+
+#: templates/evenements.html:76 templates/evenements.html:121
+#: templates/evenements.html:167 templates/evenements.html:213
+#: templates/evenements.html:271
+msgid "Date :"
+msgstr "Date:"
+
+#: templates/evenements.html:76
+msgid "13 au 21 avril 2025"
+msgstr "13 to 21 April 2025"
+
+#: templates/evenements.html:77 templates/evenements.html:129
+#: templates/evenements.html:182 templates/evenements.html:222
+#: templates/evenements.html:277
+msgid "Inscription"
+msgstr "Register"
+
+#: templates/evenements.html:82 templates/evenements.html:200
+msgid "Détail du voilier"
+msgstr "Boat details"
+
+#: templates/evenements.html:95
+msgid "Régates d’Estartit"
+msgstr "Estartit Regattas"
+
+#: templates/evenements.html:99
+msgid ""
+"\n"
+"             La Régate d’Estartit est une compétition nautique "
+"incontournable qui se déroule à la mi-juin. Elle rassemble des voiliers "
+"classiques et modernes pour un week-end de course intense sur la côte "
+"catalane. L'événement combine sportivité, tradition et convivialité, offrant "
+"aux participants une expérience unique en mer.\n"
+"          \n"
+"            L’équipage de Madcap 1874 aura l’opportunité de naviguer aux "
+"côtés d’autres bateaux historiques et de représenter le patrimoine maritime. "
+"Le programme inclut un convoyage aller-retour, des régates sur trois jours "
+"et des moments de partage entre marins.\n"
+"          \n"
+"            Les frais d’inscription couvrent la participation aux courses, "
+"les repas du soir et le petit-déjeuner. Chaque membre doit également prévoir "
+"un forfait journalier pour la navigation et la caisse de bord (alimentation "
+"et carburant).\n"
+"            "
+msgstr ""
+"\n"
+"             The Estartit Regatta is a must-see nautical competition held in mid-June. It brings together classic and modern sailboats for an intense weekend of racing along the Catalan coast. The event combines sport, tradition, and conviviality, offering participants a unique experience at sea.\n"
+"\n"
+"            The crew of Madcap 1874 will have the opportunity to sail alongside other historic boats and represent maritime heritage. The program includes a round-trip convoy, three days of racing, and moments of camaraderie between sailors.\n"
+"\n"
+"            The registration fee covers race participation, evening meals, and breakfast. Each member must also budget for a daily navigation fee and the onboard kitty (food and fuel).\n"
+"            "
+
+
+#: templates/evenements.html:109
+msgid "Club Nautic d'Estartit"
+msgstr "Club Nautic d'Estartit"
+
+#: templates/evenements.html:112
+msgid "Une immersion dans la tradition maritime"
+msgstr "An immersion in maritime tradition"
+
+#: templates/evenements.html:117
+msgid ""
+"Nous nous mesurerons à d’autres bateaux dans une compétition amicale. Une "
+"occasion parfaite pour les membres de l’association de vivre une aventure "
+"maritime tout en perfectionnant votre navigation en conditions réelles."
+msgstr ""
+"We’ll race against other boats in a friendly competition. A perfect "
+"opportunity for members to enjoy a maritime adventure while improving their "
+"sailing skills in real conditions."
+
+#: templates/evenements.html:121
+msgid "Mi-juin 2025 (1 semaine, convoyage A/R + régate)"
+msgstr "Mid-June 2025 (1 week, round-trip convoy + regatta)"
+
+#: templates/evenements.html:122
+msgid ""
+"Les régates sont prévues le week-end (vendredi, samedi, dimanche), prévoir "
+"l’aller le jeudi et le retour le mardi."
+msgstr ""
+"The regattas are scheduled for the weekend (Friday, Saturday, Sunday); plan "
+"to depart on Thursday and return on Tuesday."
+
+#: templates/evenements.html:123 templates/evenements.html:173
+msgid "Tarif :"
+msgstr "Price:"
+
+#: templates/evenements.html:123
+msgid "180€/personne"
+msgstr "€180/person"
+
+#: templates/evenements.html:125
+msgid "Inscription régate incluse"
+msgstr "Regatta registration included"
+
+#: templates/evenements.html:126
+msgid "Petit-déjeuner et repas du soir inclus"
+msgstr "Breakfast and dinner included"
+
+#: templates/evenements.html:127
+msgid "Forfait navigation : 25€/jour + caisse de bord"
+msgstr "Navigation package: €25/day + on-board fund"
+
+#: templates/evenements.html:141
+msgid "Rassemblement des Vieux Gréements - La Grande Motte"
+msgstr "Gathering of Traditional Sailing Ships - La Grande Motte"
+
+#: templates/evenements.html:144
+msgid ""
+"Le Rassemblement des Vieux Gréements de La Grande Motte est un événement "
+"maritime emblématique mettant à l’honneur le patrimoine nautique et la "
+"navigation traditionnelle. Chaque année, ce rassemblement réunit des bateaux "
+"historiques, des cotres, des goélettes et des voiliers classiques, offrant "
+"une immersion unique dans l’univers des gréements d’antan."
+msgstr ""
+"The Gathering of Traditional Sailing Ships in La Grande Motte is a flagship "
+"event celebrating maritime heritage and traditional sailing. Every year, it "
+"brings together historic boats, cutters, schooners, and classic yachts, "
+"offering a unique immersion into the world of vintage rigs."
+
+#: templates/evenements.html:149
+msgid "Votre navigateur ne supporte pas la lecture des vidéos."
+msgstr "Your browser does not support video playback."
+
+#: templates/evenements.html:155
+msgid "Un événement dédié à la tradition maritime"
+msgstr "An event dedicated to maritime tradition"
+
+#: templates/evenements.html:158
+msgid "Association Atouvents"
+msgstr "Association Atouvents"
+
+#: templates/evenements.html:163
+msgid ""
+"Organisé dans le cadre pittoresque de La Grande Motte, ce rassemblement "
+"célèbre les savoir-faire anciens et permet aux visiteurs d’admirer de "
+"magnifiques voiliers restaurés avec passion. L’événement est ponctué de "
+"régates amicales, de parades nautiques et d’échanges entre marins, mettant "
+"en avant l’importance de la préservation du patrimoine maritime."
+msgstr ""
+"Set in the picturesque surroundings of La Grande Motte, this gathering "
+"celebrates traditional craftsmanship and lets visitors admire beautifully "
+"restored sailing boats. The event features friendly regattas, nautical "
+"parades, and exchanges between sailors, highlighting the importance of "
+"preserving maritime heritage."
+
+#: templates/evenements.html:167
+msgid "Dernier week-end de juin 2025"
+msgstr "Last weekend of June 2025"
+
+#: templates/evenements.html:170
+msgid ""
+"Prévoir l’aller le jeudi 26 juin et le retour le lundi 30 ou mardi 1er "
+"juillet"
+msgstr ""
+"Plan to depart on Thursday 26 June and return on Monday 30 June or Tuesday 1 "
+"July"
+
+#: templates/evenements.html:173
+msgid "25€/personne + caisse de bord"
+msgstr "€25/person + on-board fund"
+
+#: templates/evenements.html:177
+msgid ""
+"Un événement rassemblant les plus beaux voiliers traditionnels dans une "
+"atmosphère conviviale mêlant régates, festivités et partage autour du "
+"patrimoine maritime. Un événement incontournable pour les passionnés et "
+"amateurs de patrimoine nautique."
+msgstr ""
+"An event bringing together the finest traditional sailboats in a friendly "
+"atmosphere combining regattas, festivities, and sharing of maritime "
+"heritage. A must for sailing enthusiasts and lovers of maritime heritage."
+
+#: templates/evenements.html:192
+msgid "Séjour aux Baléares"
+msgstr "Trip to the Balearic Islands"
+
+#: templates/evenements.html:196
+msgid ""
+"Embarquez à bord de Madcap pour un voyage en mer à la découverte des îles "
+"Baléares. Ce voyage vous offrira une expérience mêlant navigation "
+"authentique, paysages époustouflants et moments de convivialité à bord du "
+"voilier."
+msgstr ""
+"Climb aboard Madcap for a sea voyage to discover the Balearic Islands. This "
+"trip offers an experience blending authentic sailing, breathtaking scenery, "
+"and friendly moments aboard the yacht."
+
+#: templates/evenements.html:204
+msgid "Cap sur les Baléares"
+msgstr "Destination: The Balearic Islands"
+
+#: templates/evenements.html:209
+msgid ""
+"Naviguez au gré du vent vers les eaux cristallines et les villages "
+"pittoresques des Baléares. Ce séjour est une nouvelle occasion d’apprendre "
+"ou de perfectionner vos compétences en navigation aux côtés de l’équipage de "
+"l'association. Moments de détente, plongées dans des eaux turquoise, "
+"couchers de soleil sur l'horizon et échanges maritimes rythmeront cette "
+"expédition."
+msgstr ""
+"Sail with the wind towards the crystal-clear waters and picturesque villages "
+"of the Balearics. This trip is another chance to learn or improve your "
+"sailing skills alongside the association's crew. Expect moments of "
+"relaxation, swimming in turquoise waters, sunsets on the horizon, and lively "
+"maritime exchanges throughout this adventure."
+
+#: templates/evenements.html:213
+msgid ""
+"5 au 20 juillet 2025 (ou jusqu’au 27 juillet selon disponibilité des "
+"différents skippers)"
+msgstr ""
+"5 to 20 July 2025 (or until 27 July depending on skippers' availability)"
+
+#: templates/evenements.html:217
+msgid "Sous réserve d’un nombre suffisant d’équipiers."
+msgstr "Subject to a sufficient number of crew members."
+
+#: templates/evenements.html:233
+msgid "Corsica Classic & Monaco Classic Week"
+msgstr "Corsica Classic & Monaco Classic Week"
+
+#: templates/evenements.html:237
+msgid ""
+"À cette occasion nous proposerons de convoyer MADCAP une semaine avant et "
+"une semaine après la Corsica pour profiter de la cote Corse, et former ceux "
+"qui le souhaitent à la navigation hauturière. A cette occasion vous "
+"découvrirez la vie en mer sur une période de 2 à 3 jours."
+msgstr ""
+"On this occasion, we’ll convoy MADCAP one week before and one week after the "
+"Corsica Classic to enjoy the Corsican coast and train those interested in "
+"offshore navigation. You’ll experience life at sea over a period of 2 to 3 "
+"days."
+
+#: templates/evenements.html:242
+msgid ""
+"La Corsica Classic est une prestigieuse régate qui se déroule chaque année "
+"autour des côtes spectaculaires de la Corse. Réservée aux voiliers "
+"classiques et aux yachts d’époque, cette compétition allie sport, tradition "
+"et découverte de paysages maritimes d’exception. Organisée sous l’égide de "
+"l’Association Corsica Classic Yachting, cette course itinérante s’étend sur "
+"plusieurs jours, avec des escales dans des ports emblématiques de l’île de "
+"Beauté, tels que Bonifacio, Ajaccio, Saint-Florent ou Calvi entre falaises "
+"majestueuses, eaux cristallines et villages côtiers pittoresques."
+msgstr ""
+"The Corsica Classic is a prestigious regatta held annually along the "
+"spectacular coasts of Corsica. Reserved for classic sailboats and vintage "
+"yachts, this race combines sport, tradition, and the discovery of "
+"exceptional maritime landscapes. Organized by the Corsica Classic Yachting "
+"Association, this travelling race spans several days, with stopovers in "
+"iconic ports such as Bonifacio, Ajaccio, Saint-Florent, or Calvi, between "
+"majestic cliffs, crystal-clear waters, and picturesque coastal villages."
+
+#: templates/evenements.html:246
+msgid "Corsica Classic"
+msgstr "Corsica Classic"
+
+#: templates/evenements.html:249
+msgid "Monaco Classic Week : L’élégance et la tradition à l'honneur"
+msgstr "Monaco Classic Week: Elegance and tradition take centre stage"
+
+#: templates/evenements.html:253
+msgid ""
+"Sur la route du retour, si notre dossier est accepté, nous participerons à "
+"la Monaco Classic Week du 10 au 13 septembre 2025. Avant de rentrer à Canet "
+"nous essaierons d’organiser une rencontre avec l’association des Pilotes "
+"Côtier de Marseille."
+msgstr ""
+"On the way back, if our application is accepted, we will take part in the "
+"Monaco Classic Week from 10 to 13 September 2025. Before returning to Canet, "
+"we will try to arrange a meeting with the Coastal Pilots Association of "
+"Marseille."
+
+#: templates/evenements.html:258
+msgid "Monaco Classic"
+msgstr "Monaco Classic"
+
+#: templates/evenements.html:259
+msgid "Association Pilotine"
+msgstr "Association Pilotine"
+
+#: templates/evenements.html:266
+msgid ""
+"La Monaco Classic Week est un événement prestigieux rassemblant les plus "
+"beaux voiliers classiques, yachts d’époque et canots automobiles dans le "
+"cadre exceptionnel de la Principauté de Monaco. Organisée tous les deux ans "
+"par le Yacht Club de Monaco, cette rencontre célèbre l’histoire maritime et "
+"l’élégance intemporelle des bateaux traditionnels. Pendant plusieurs jours, "
+"les équipages participent à des régates en Méditerranée, tandis que des "
+"concours d’élégance et des expositions mettent en lumière le savoir-faire "
+"artisanal de la construction navale."
+msgstr ""
+"The Monaco Classic Week is a prestigious event bringing together the finest "
+"classic sailing yachts, vintage motor yachts, and motorboats in the "
+"exceptional setting of the Principality of Monaco. Held every two years by "
+"the Yacht Club de Monaco, this gathering celebrates maritime history and the "
+"timeless elegance of traditional boats. Over several days, crews compete in "
+"Mediterranean regattas, while elegance contests and exhibitions showcase the "
+"craftsmanship of naval construction."
+
+#: templates/evenements.html:271
+msgid "21 au 29 août 2025 (Corsica Classic) + 10 au 13 septembre 2025 (Monaco)"
+msgstr ""
+"21 to 29 August 2025 (Corsica Classic) + 10 to 13 September 2025 (Monaco)"
+
+#: templates/evenements.html:273
+msgid "Sous réserve de l’acceptation du dossier d’inscription"
+msgstr "Subject to the acceptance of the application file"
+
+#: templates/evenements.html:286
+msgid "⚠️ Informations Importantes"
+msgstr "⚠️ Important Information"
+
+#: templates/evenements.html:288
+msgid "Toutes les sorties sont soumises à un forfait navigation de"
+msgstr "All outings are subject to a navigation fee of"
+
+#: templates/evenements.html:289
+msgid "Les régates nécessitent une"
+msgstr "Regattas require a"
+
+#: templates/evenements.html:289
+msgid "licence de la Fédération Française de Voile"
+msgstr "French Sailing Federation license"
+
+#: templates/evenements.html:291
+msgid ""
+"Ces propositions d’activités sont soumises : à l’acceptation de nos dossiers "
+"de candidature, à la participation des adhérents et des skippers, ainsi "
+"qu’aux aléas de la météo"
+msgstr ""
+"These activity proposals are subject to: the acceptance of our application "
+"files, the participation of members and skippers, as well as weather "
+"conditions."
+
+#: templates/evenements.html:303
+msgid "Pour toute question, contactez-nous "
+msgstr "If you have any questions, please contact us"
+
+#: templates/evenements.html:305
+msgid "Contact"
+msgstr "Contact us"
+
 #: templates/footer.html:12
 msgid "Madcap 1874 - Association pour la préservation du patrimoine maritime"
-msgstr "Association for the preservation of maritime heritage"
+msgstr "Madcap 1874 - Association for the preservation of maritime heritage"
 
 # ---------Footer-----------
-
-#: templates/footer.html:17 templates/mentions_legales.html:18
-#: templates/mentions_legales.html:52
+#: templates/footer.html:17 templates/mentions_legales.html:29
+#: templates/mentions_legales.html:63
 msgid "Association Madcap 1874"
 msgstr "The Madcap 1874 Association"
 
@@ -329,7 +732,7 @@ msgstr "About the Association"
 
 #: templates/footer.html:40
 msgid "L'histoire de Madcap"
-msgstr"The Madcap Story"
+msgstr "The Madcap Story"
 
 #: templates/footer.html:41 templates/header.html:58
 msgid "Événements"
@@ -347,7 +750,7 @@ msgstr "Your Experience"
 msgid "Nous Contacter"
 msgstr "Contact us"
 
-#: templates/footer.html:45 templates/mentions_legales.html:14
+#: templates/footer.html:45 templates/mentions_legales.html:25
 msgid "Mentions Légales"
 msgstr "Legal information"
 
@@ -355,10 +758,13 @@ msgstr "Legal information"
 msgid "Réglement Intérieur Madcap 1874"
 msgstr "Madcap 1874 Internal Regulations"
 
-#: templates/footer.html:53
+#: templates/footer.html:50
+msgid "Statut Association"
+msgstr ""
+
+#: templates/footer.html:56
 msgid "Tous droits réservés"
 msgstr "All rights reserved"
-
 
 # ----- header---------#
 #: templates/header.html:11
@@ -373,12 +779,452 @@ msgstr "Espace Admin"
 msgid "L'Histoire de Madcap"
 msgstr "The Madcap Story"
 
+# ---------Histoire-----------#
+# Translations for "Histoire" page
+#: templates/histoire.html:20
+msgid "Histoire du bateau - Madcap"
+msgstr "The Story of Madcap"
+
+#: templates/histoire.html:34
+msgid "Une histoire riche en aventures "
+msgstr "A history rich in adventure"
+
+#: templates/histoire.html:35
+msgid "Construction et Caractéristiques Techniques"
+msgstr "Construction and Technical Specifications"
+
+#: templates/histoire.html:39
+#, fuzzy
+#| msgid ""
+#| "La lecture du « Cardiff Registered Ships » nous apprend que Williams "
+#| "Stephens, né en 1830 à Cardigan (Pays de Galles) et marin de son état, a "
+#| "effectué du 20 novembre au 30 décembre 1874 plusieurs opérations de "
+#| "pilotage dans la baie de Cardiff à bord du bateau-pilote n°11, nommé "
+#| "MADCAP.\n"
+#| "\n"
+#| "Construit en 1874 par les chantiers Davies & Plain, situés à Bute East "
+#| "Dock, Cardiff, au Pays de Galles, Madcap apparaît officiellement en 1879 "
+#| "dans la « Alphabetic List of British Registered Sailing Vessels » sous "
+#| "l’immatriculation n° 79381. Son propriétaire est alors William Jenkins, "
+#| "domicilié au 39 Adelaide Street, Cardiff.\n"
+#| "\n"
+#| "Destiné initialement au service de pilotage du port de Cardiff, Madcap "
+#| "était conçu pour naviguer dans les conditions exigeantes du canal de "
+#| "Bristol, réputé pour ses marées puissantes et ses courants forts.\n"
+#| "\n"
+#| "Le navire mesure 16,54 mètres de longueur pour 3,76 mètres de largeur, "
+#| "avec une étrave droite et un arrière à voûte. Sa surface de voile atteint "
+#| "116 m². Sa structure repose sur une quille et des bordés en orme, une "
+#| "charpente transversale en chêne, ainsi que des hauts et un pont en pin "
+#| "d’Oregon. Pour assurer sa stabilité, il est doté d’un lest de 8 tonnes, "
+#| "constitué de 2 tonnes de plomb et 6 tonnes de béton pour un poids total "
+#| "de 24t."
+msgid ""
+"\n"
+"          La lecture du « Cardiff Registered Ships » nous apprend que "
+"Williams Stephens, né en 1830 à Cardigan (Pays de Galles) et marin de son "
+"état, a effectué du 20 novembre au 30 décembre 1874 plusieurs opérations de "
+"pilotage dans la baie de Cardiff à bord du bateau-pilote n°11, nommé "
+"MADCAP.\n"
+"\n"
+"          Construit en 1874 par les chantiers Davies & Plain, situés à Bute "
+"East Dock, Cardiff, au Pays de Galles, Madcap apparaît officiellement en "
+"1879 dans la « Alphabetic List of British Registered Sailing Vessels » sous "
+"l’immatriculation n° 79381. Son propriétaire est alors William Jenkins, "
+"domicilié au 39 Adelaide Street, Cardiff.\n"
+"          \n"
+"          Destiné initialement au service de pilotage du port de Cardiff, "
+"Madcap était conçu pour naviguer dans les conditions exigeantes du canal de "
+"Bristol, réputé pour ses marées puissantes et ses courants forts.\n"
+"          \n"
+"          Le navire mesure 16,54 mètres de longueur pour 3,76 mètres de "
+"largeur, avec une étrave droite et un arrière à voûte. Sa surface de voile "
+"atteint 116 m². Sa structure repose sur une quille et des bordés en orme, "
+"une charpente transversale en chêne, ainsi que des hauts et un pont en pin "
+"d’Oregon. Pour assurer sa stabilité, il est doté d’un lest de 8 tonnes, "
+"constitué de 2 tonnes de plomb et 6 tonnes de béton pour un poids total de "
+"24t.\n"
+"          "
+msgstr ""
+"Reading the 'Cardiff Registered Ships', we learn that Williams Stephens, "
+"born in 1830 in Cardigan (Wales) and a sailor by trade, carried out several "
+"pilotage operations between 20 November and 30 December 1874 in Cardiff Bay "
+"aboard pilot boat no. 11, named MADCAP.\n"
+"\n"
+"Built in 1874 by Davies & Plain shipyards, located at Bute East Dock in "
+"Cardiff, Wales, Madcap officially appeared in 1879 in the 'Alphabetic List "
+"of British Registered Sailing Vessels' under registration number 79381. Her "
+"owner at the time was William Jenkins, residing at 39 Adelaide Street, "
+"Cardiff.\n"
+"\n"
+"Originally intended for the pilotage service of Cardiff port, Madcap was "
+"designed to navigate the challenging conditions of the Bristol Channel, "
+"known for its powerful tides and strong currents.\n"
+"\n"
+"The vessel measures 16.54 meters in length and 3.76 meters in width, with a "
+"straight bow and a counter stern. Its sail area reaches 116 m². The "
+"structure is built with an elm keel and planking, an oak transverse frame, "
+"and pine topsides and deck made of Oregon pine. To ensure stability, it is "
+"fitted with 8 tonnes of ballast, composed of 2 tonnes of lead and 6 tonnes "
+"of concrete, for a total weight of 24 tonnes."
+
+#: templates/histoire.html:65
+msgid "Service en tant que Cotre-Pilote"
+msgstr "Service as a pilot cutter"
+
+#: templates/histoire.html:69
+#, fuzzy
+#| msgid ""
+#| "À la fin du XIXe siècle, Cardiff, Newport et Swansea sont parmi les plus "
+#| "grands ports charbonniers du monde, et le commerce maritime y est "
+#| "florissant. Les cotres-pilotes, comme Madcap, sont alors indispensables "
+#| "pour guider les navires en approche dans ces eaux périlleuses.\n"
+#| "Le pilotage dans le canal de Bristol est une affaire de compétition. "
+#| "Plusieurs cotres sont en attente en haute mer, et lorsqu’un navire "
+#| "marchand apparaît à l’horizon, une véritable course s’engage pour être le "
+#| "premier à l’atteindre. Le pilote vainqueur gagne le droit d’accompagner "
+#| "le navire jusqu’au port, une tâche hautement rémunérée.\n"
+#| "Ces cotres étaient conçus pour être rapides et très manœuvrables. "
+#| "L’équipage était généralement réduit à deux ou trois marins, dont un "
+#| "mousse. Le rôle de ce dernier était crucial, car il devait ramer jusqu’au "
+#| "navire en attente pour déposer le pilote et revenir seul avec le cotre."
+msgid ""
+"\n"
+"          À la fin du XIXe siècle, Cardiff, Newport et Swansea sont parmi "
+"les plus grands ports charbonniers du monde, et le commerce maritime y est "
+"florissant. Les cotres-pilotes, comme Madcap, sont alors indispensables pour "
+"guider les navires en approche dans ces eaux périlleuses.\n"
+"          Le pilotage dans le canal de Bristol est une affaire de "
+"compétition. Plusieurs cotres sont en attente en haute mer, et lorsqu’un "
+"navire marchand apparaît à l’horizon, une véritable course s’engage pour "
+"être le premier à l’atteindre. Le pilote vainqueur gagne le droit "
+"d’accompagner le navire jusqu’au port, une tâche hautement rémunérée.\n"
+"          Ces cotres étaient conçus pour être rapides et très manœuvrables. "
+"L’équipage était généralement réduit à deux ou trois marins, dont un mousse. "
+"Le rôle de ce dernier était crucial, car il devait ramer jusqu’au navire en "
+"attente pour déposer le pilote et revenir seul avec le cotre.\n"
+"          "
+msgstr ""
+"At the end of the 19th century, Cardiff, Newport, and Swansea were among the "
+"world's largest coal ports, with thriving maritime trade. Pilot cutters, "
+"like Madcap, were essential to guide approaching ships through these "
+"treacherous waters.\n"
+"Pilotage in the Bristol Channel was a competitive business. Several cutters "
+"waited offshore, and when a merchant ship appeared on the horizon, a real "
+"race began to reach it first. The winning pilot earned the right to "
+"accompany the ship to port, a highly paid task.\n"
+"These cutters were designed to be fast and highly maneuverable. The crew "
+"usually consisted of just two or three sailors, including a cabin boy. The "
+"role of the cabin boy was crucial, as he had to row to the incoming ship to "
+"drop off the pilot and return alone with the cutter."
+
+#: templates/histoire.html:81
+msgid "Les Premiers Patrons de Madcape"
+msgstr "The first Madcap skippers"
+
+#: templates/histoire.html:84
+msgid ""
+"Les archives révèlent plusieurs patrons ayant navigué à bord de Madcap : "
+msgstr ""
+
+#: templates/histoire.html:86
+msgid "- Williams Stephens (premier patron connu, en 1874) "
+msgstr ""
+
+#: templates/histoire.html:87
+msgid "- William Jenkins (en service à partir de 1878) "
+msgstr ""
+
+#: templates/histoire.html:88
+msgid ""
+"- William Henry Howe (propriétaire jusqu’en 1913, sa femme hérite ensuite du "
+"titre de pilotage)"
+msgstr ""
+
+#: templates/histoire.html:89
+msgid "- James Andrew Burgan (dernier pilote de Madcap, dans les années 1920)"
+msgstr ""
+
+#: templates/histoire.html:96
+msgid "Un Métier Périlleux"
+msgstr ""
+
+#: templates/histoire.html:100
+#, fuzzy
+#| msgid ""
+#| "L’apprentissage du métier de pilote commence dès l’âge de 14 ans, après "
+#| "plusieurs années passées comme mousse dès 11 ans. Après un long "
+#| "apprentissage d’une dizaine d’années, un pilote pouvait enfin commander "
+#| "son propre cotre et exercer ce métier prestigieux. Ces marins devaient "
+#| "affronter des conditions météorologiques difficiles et parfois opérer "
+#| "seuls lorsque le pilote embarquait sur un navire en mer. Comme l’a "
+#| "rapporté le pilote George Buck (apprenti en 1900) :"
+msgid ""
+"\n"
+"        L’apprentissage du métier de pilote commence dès l’âge de 14 ans, "
+"après plusieurs années passées comme mousse dès 11 ans. Après un long "
+"apprentissage d’une dizaine d’années, un pilote pouvait enfin commander son "
+"propre cotre et exercer ce métier prestigieux. cotre-pilote naviguait "
+"souvent avec seulement deux ou trois hommes d’équipage, dont un mousse. Ces "
+"marins devaient affronter des conditions météorologiques difficiles et "
+"parfois opérer seuls lorsque le pilote embarquait sur un navire en mer. "
+"Comme l’a rapporté le pilote George Buck (apprenti en 1900) :\n"
+"        "
+msgstr ""
+"Training to become a pilot began at the age of 14, after spending several "
+"years as a cabin boy from the age of 11. After a lengthy apprenticeship of "
+"around ten years, a pilot could finally command his own cutter and practice "
+"this prestigious profession. These sailors had to face harsh weather "
+"conditions and sometimes operate alone when the pilot boarded a ship at sea. "
+"As reported by pilot George Buck (apprentice in 1900):"
+
+#: templates/histoire.html:108
+msgid " Vie à Bord au XIXᵉ Siècle "
+msgstr ""
+
+#: templates/histoire.html:112
+#, fuzzy
+#| msgid ""
+#| "Les cotres-pilotes du canal de Bristol étaient conçus pour être manœuvrés "
+#| "par seulement deux à trois hommes, dont un jeune mousse souvent "
+#| "inexpérimenté. Ces marins intrépides passaient de longues heures en mer, "
+#| "affrontant des vents hurlants et des vagues impitoyables qui faisaient "
+#| "tanguer leur frêle embarcation. Ils partaient parfois pour plusieurs "
+#| "jours, sans aucune garantie de succès, à la merci des courants violents "
+#| "et des marées capricieuses du canal de Bristol. Le froid mordant, la "
+#| "pluie incessante et l'humidité qui s'infiltrait partout faisaient partie "
+#| "du quotidien. La casse était monnaie courante : bâtiments malmenés, "
+#| "voiles déchirées, espars brisés sous la force des éléments. Pourtant, il "
+#| "fallait continuer, car chaque course vers un navire marchand représentait "
+#| "une chance de gain, une mission où seule la rapidité et la maîtrise du "
+#| "bateau pouvaient faire la différence entre une réussite et une défaite."
+msgid ""
+"\n"
+"        Les cotres-pilotes du canal de Bristol étaient conçus pour être "
+"manœuvrés par seulement deux à trois hommes, dont un jeune mousse souvent "
+"inexpérimenté. Ces marins intrépides passaient de longues heures en mer, "
+"affrontant des vents hurlants et des vagues impitoyables qui faisaient "
+"tanguer leur frêle embarcation. Ils partaient parfois pour plusieurs jours, "
+"sans aucune garantie de succès, à la merci des courants violents et des "
+"marées capricieuses du canal de Bristol. Le froid mordant, la pluie "
+"incessante et l'humidité qui s'infiltrait partout faisaient partie du "
+"quotidien. La casse était monnaie courante : bâtiments malmenés, voiles "
+"déchirées, espars brisés sous la force des éléments. Pourtant, il fallait "
+"continuer, car chaque course vers un navire marchand représentait une chance "
+"de gain, une mission où seule la rapidité et la maîtrise du bateau pouvaient "
+"faire la différence entre une réussite et une défaite.\n"
+"        "
+msgstr ""
+"The Bristol Channel pilot cutters were designed to be handled by just two or "
+"three men, including a young and often inexperienced cabin boy. These "
+"fearless sailors spent long hours at sea, battling howling winds and "
+"ruthless waves that rocked their fragile boats. Sometimes, they would spend "
+"several days at sea with no guarantee of success, at the mercy of violent "
+"currents and the unpredictable tides of the Bristol Channel. Bitter cold, "
+"relentless rain, and dampness that crept into everything were part of their "
+"daily life. Breakages were common: battered hulls, torn sails, spars snapped "
+"by the force of the elements. Yet they had to press on, for every race "
+"towards a merchant ship represented a chance for profit—a mission where only "
+"speed and skill could make the difference between success and failure."
+
+#: templates/histoire.html:124
+msgid ""
+"« Lors des embarquements de nuit dans des conditions de gros temps, nous "
+"étions toujours soulagés de voir le canot revenir à bord. » "
+msgstr ""
+"“During nighttime boarding in rough weather, we were always relieved to see "
+"the dinghy return to the ship.”"
+
+#: templates/histoire.html:126
+msgid ""
+"«Nous prîmes un ris dans la grand-voile, et décidâmes\n"
+"  de courir rapidement vers le canal. Vers les 8 heures du\n"
+"  soir, nous avions amené complètement la grand-voile,\n"
+"  arrisé encore la trinquette et nous mîmes à la cape. Nous\n"
+"  étions alors entre les pointes Nash et Foreland […]. À\n"
+"  10 heures du soir, le pilote est sorti et le vent semblait\n"
+"  encore fraîchir, avec de violentes rafales et une mer\n"
+"  confuse, il me dit de relever la barre et de faire route pour\n"
+"  Barry Roads. Juste avant minuit, il me demanda de faire\n"
+"  une tasse de thé et d’appeler mon équipier. Je m’exécutai\n"
+"  et juste au moment où je revenais vers le cockpit avec la\n"
+"  tasse, j’entendis un crack. Quand je sortis, je vis que la\n"
+"  bôme s’était brisée en deux comme une carotte. La voile\n"
+"  et le bout de la bôme étaient à l’eau et la grand-voile en\n"
+"  lambeaux. Nous avons eu du mal à récupérer les pièces\n"
+"  brisées à bord, et, une fois tout sécurisé, nous faisions\n"
+"  route vers Pill, parce que nous devions demander une\n"
+"  nouvelle grand-voile et une bôme. Arrivés là-bas, nous\n"
+"  apprîmes que le Manxman était au niveau de King Road\n"
+"  et demandait l’aide d’un pilote. Nous n’avions pas seulement perdu une "
+"voile et une bôme, mais aussi un bon\n"
+"  navire qui payait bien.»  "
+msgstr ""
+
+#: templates/histoire.html:162
+msgid " Transition vers la Plaisance "
+msgstr ""
+
+#: templates/histoire.html:167
+msgid ""
+"\n"
+"        Dans les années 1930, après plusieurs décennies de service en tant "
+"que cotre-pilote,  Madcap est converti en navire de plaisance. Au fil des "
+"ans, il change de propriétaires et navigue principalement entre l'Irlande et "
+"la Bretagne, avec des voyages en Méditerranée, aux Açores et jusqu'au "
+"Groenland. \n"
+"        \n"
+"        En 1996, il est intégré à la National Historic Fleet au Royaume-Uni, "
+"une distinction réservée aux voiliers britanniques exceptionnels.\n"
+"        "
+msgstr ""
+
+#: templates/histoire.html:175
+msgid ""
+"John Burfield, commandant de la Royal Navy, le modernise en 1936 en ajoutant "
+"un moteur"
+msgstr ""
+
+#: templates/histoire.html:176
+msgid ""
+"Adrian 'Stu' Spence, un avocat irlandais, propriétaire en 1993, il fait "
+"naviguer Madcap jusqu’au Groenland et aux Açores"
+msgstr ""
+
+#: templates/histoire.html:177
+msgid ""
+"Olivier Guillemin, propriétaire de 2015 à 2020, il entreprend une "
+"restauration fidèle à l’original"
+msgstr ""
+
+#: templates/histoire.html:182
+msgid ""
+"Durant cette période,  Madcap participe à des régates historiques et reçoit "
+"même le prix du plus beau bateau du siècle dernier lors des fêtes de "
+"Douarnenez en 1998. En 2015, il est classé Monument Historique en France. "
+msgstr ""
+
+#: templates/histoire.html:187
+msgid "Acquisition et Restauration"
+msgstr ""
+
+#: templates/histoire.html:191
+#, fuzzy
+#| msgid ""
+#| "En 2015, Madcap est transféré à La Rochelle au chantier naval Despierres, "
+#| "un établissement réputé pour la restauration de bateaux patrimoniaux. "
+#| "Pendant plusieurs mois, il subit une remise en état complète visant à "
+#| "préserver son authenticité. Les charpentiers de marine remplacent "
+#| "certaines membrures et varangues endommagées, tandis que la voûte et une "
+#| "partie du bordé sont refaites en chêne et orme, respectant les matériaux "
+#| "d’origine. La mâture est également restaurée pour lui redonner sa "
+#| "configuration traditionnelle. Ces efforts aboutissent à son classement en "
+#| "tant que Monument Historique en France, reconnaissant sa valeur "
+#| "patrimoniale et son importance dans l’histoire maritime."
+msgid ""
+"\n"
+"        En 2015,  Madcap est transféré à La Rochelle au chantier naval "
+"Despierres, un établissement réputé pour la restauration de bateaux "
+"patrimoniaux. Pendant plusieurs mois, il subit une remise en état complète "
+"visant à préserver son authenticité. Les charpentiers de marine remplacent "
+"certaines membrures et varangues endommagées, tandis que la voûte et une "
+"partie du bordé sont refaites en chêne et orme, respectant les matériaux "
+"d’origine. La mâture est également restaurée pour lui redonner sa "
+"configuration traditionnelle. Ces efforts aboutissent à son classement en "
+"tant que Monument Historique en France, reconnaissant sa valeur patrimoniale "
+"et son importance dans l’histoire maritime.\n"
+"        "
+msgstr ""
+"In 2015, Madcap was transferred to the Despierres shipyard in La Rochelle, a "
+"shipyard renowned for restoring heritage boats. For several months, she "
+"underwent a complete overhaul to preserve her authenticity. Marine "
+"carpenters replaced certain damaged frames and floors, while the stern and "
+"part of the planking were rebuilt in oak and elm, respecting the original "
+"materials. The mast was also restored to its traditional configuration. "
+"These efforts led to her classification as a Monument Historique in France, "
+"recognizing her heritage value and significance in maritime history."
+
+#: templates/histoire.html:201
+msgid "Une nouvelle vie en Méditerranée"
+msgstr "A new life in the Mediterranean"
+
+#: templates/histoire.html:203
+#, fuzzy
+#| msgid ""
+#| "L'association Madcap 1874 et ses formations à la navigation traditionnelle"
+msgid ""
+"\n"
+"        L'association Madcap 1874 et ses formations à la navigation "
+"traditionnelle\n"
+"        "
+msgstr "The Madcap 1874 association and its traditional navigation training"
+
+#: templates/histoire.html:210
+#, fuzzy
+#| msgid ""
+#| "En 2022, il rejoint enfin la Méditerranée. Il bénéficie alors d’une "
+#| "rénovation au chantier Bernadou, où sa voûte est refaite en chêne et "
+#| "orme, respectant les essences d’origine. La même année, l’association "
+#| "Madcap 1874, fondée en 2020, développe ses programmes sociaux, favorisant "
+#| "l’accès à la navigation pour des publics variés et la transmission du "
+#| "patrimoine maritime."
+msgid ""
+"\n"
+"        En 2022, il rejoint enfin la Méditerranée. Il bénéficie alors d’une "
+"rénovation au chantier Bernadou, où sa voûte est refaite en chêne et orme, "
+"respectant les essences d’origine. La même année, l’association Madcap 1874, "
+"fondée en 2020, développe ses programmes sociaux, favorisant l’accès à la "
+"navigation pour des publics variés et la transmission du patrimoine "
+"maritime.\n"
+"        "
+msgstr ""
+"In 2022, she finally reached the Mediterranean. She underwent a renovation "
+"at the Bernadou shipyard, where her stern was rebuilt in oak and elm, "
+"respecting the original woods. In the same year, the Madcap 1874 "
+"association, founded in 2020, expanded its social programs, promoting access "
+"to sailing for a wide audience and preserving maritime heritage."
+
+#: templates/histoire.html:218
+msgid "Aujourd’hui Madcap navigue pour transmettre"
+msgstr ""
+
+#: templates/histoire.html:222
+#, fuzzy
+#| msgid ""
+#| "Madcap est un témoignage vivant du patrimoine maritime, naviguant pour "
+#| "partager son histoire et perpétuer l’héritage des cotres-pilote. À 150 "
+#| "ans en 2024, Madcap est le plus ancien des 17 cotres-pilotes encore en "
+#| "navigation. L’histoire de Madcap est celle d’un bateau hors du commun, "
+#| "qui a su traverser les époques et continuer à écrire son sillage sur les "
+#| "océans. Que ce soit en tant que cotre-pilote rapide et compétitif ou "
+#| "comme voilier de plaisance, son destin est intimement lié à la mer et à "
+#| "ceux qui l’aiment."
+msgid ""
+"\n"
+"         Madcap est un témoignage vivant du patrimoine maritime, naviguant "
+"pour partager son histoire et perpétuer l’héritage des cotres-pilote. À 150 "
+"ans en 2024, Madcap est le plus ancien des 17 cotres-pilotes encore en "
+"navigation. L’histoire de Madcap est celle d’un bateau hors du commun, qui a "
+"su traverser les époques et continuer à écrire son sillage sur les océans. "
+"Que ce soit en tant que cotre-pilote rapide et compétitif ou comme voilier "
+"de plaisance, son destin est intimement lié à la mer et à ceux qui "
+"l’aiment.\n"
+"         "
+msgstr ""
+"Madcap is a living testament to maritime heritage, sailing to share her "
+"story and perpetuate the legacy of pilot cutters. At 150 years old in 2024, "
+"Madcap is the oldest of the 17 pilot cutters still sailing. Her story is "
+"that of an extraordinary boat, which has withstood the test of time and "
+"continues to leave her mark on the oceans. Whether as a fast, competitive "
+"pilot cutter or a pleasure yacht, her destiny remains intimately linked to "
+"the sea and to those who cherish her."
+
 # ----------INDEX----------
-#: templates/index.html:61
+#: templates/index.html:72
 msgid "Un patrimoine maritime vivant"
 msgstr "A living maritime heritage"
 
-#: templates/index.html:63
+#: templates/index.html:74
 msgid ""
 "\n"
 "          Construit en 1874, Madcap est le plus ancien côtre-pilote encore à "
@@ -402,11 +1248,11 @@ msgstr ""
 "Roussillon.\n"
 "          "
 
-#: templates/index.html:71
+#: templates/index.html:82
 msgid "Classé Monument Historique"
 msgstr "Listed as a Historical Monument"
 
-#: templates/index.html:94
+#: templates/index.html:105
 msgid ""
 "L'association Madcap vous invite à découvrir ce voilier historique restauré "
 "avec passion."
@@ -414,7 +1260,7 @@ msgstr ""
 "The Madcap Association invites you to discover this historic sailing vessel, "
 "carefully restored with passion."
 
-#: templates/index.html:98
+#: templates/index.html:109
 msgid ""
 "\n"
 "        <span style=\"display: inline-block; padding-left: 1.5cm;\"></"
@@ -448,7 +1294,7 @@ msgstr ""
 "key events that shaped its history.\n"
 "        "
 
-#: templates/index.html:123
+#: templates/index.html:134
 msgid ""
 " Plus qu’un simple bateau, Madcap est un\n"
 "        témoin unique de l’histoire maritime. Grâce au travail dévoué de ses "
@@ -463,48 +1309,48 @@ msgstr ""
 "        to sail, offering everyone an immersion into 19th-century sailing.\n"
 "        "
 
-#: templates/index.html:158
+#: templates/index.html:169
 msgid ""
 "Embarquez à bord de Madcap, naviguez avec nous et plongez dans son histoire."
 msgstr "Step aboard Madcap, sail with us, and dive into its history."
 
-#: templates/index.html:163
+#: templates/index.html:174
 msgid "Partagez des moments riches en émotions lors de nos sorties en mer."
 msgstr "Share unforgettable moments during our sea outings."
 
-#: templates/index.html:167
+#: templates/index.html:178
 msgid "Adhésion 2025 via Helloasso "
 msgstr "2025 membership via Helloasso"
 
-#: templates/index.html:186
+#: templates/index.html:197
 msgid "Live météo Windy"
 msgstr "Windy weather map"
 
-#: templates/index.html:199
+#: templates/index.html:210
 msgid "Afficher la carte en plein écran"
 msgstr "View the map in full screen"
 
-#: templates/mentions_legales.html:17
+#: templates/mentions_legales.html:28
 msgid "Éditeur du site"
 msgstr ""
 
-#: templates/mentions_legales.html:21 templates/mentions_legales.html:54
+#: templates/mentions_legales.html:32 templates/mentions_legales.html:65
 msgid "Président"
 msgstr ""
 
-#: templates/mentions_legales.html:25
+#: templates/mentions_legales.html:36
 msgid "Conception technique et hébergement"
 msgstr ""
 
-#: templates/mentions_legales.html:26
+#: templates/mentions_legales.html:37
 msgid "[À compléter avec l’hébergeur et le développeur si nécessaire]"
 msgstr ""
 
-#: templates/mentions_legales.html:30
+#: templates/mentions_legales.html:41
 msgid "Droit de modification"
 msgstr ""
 
-#: templates/mentions_legales.html:31
+#: templates/mentions_legales.html:42
 msgid ""
 "L’internaute reconnaît que l’utilisation du site [URL du site Madcap] est "
 "régie par le droit français. Le contenu du site est mis à disposition pour "
@@ -513,18 +1359,18 @@ msgid ""
 "après définies. Il interdit la récupération des bases de données."
 msgstr ""
 
-#: templates/mentions_legales.html:35
+#: templates/mentions_legales.html:46
 msgid "Copies ou reproductions"
 msgstr ""
 
-#: templates/mentions_legales.html:36
+#: templates/mentions_legales.html:47
 msgid ""
 "Les photographies et vidéos présentes sur ce site ne peuvent être "
 "reproduites sans autorisation préalable mais doivent obligatoirement "
 "comporter la mention suivante : [URL du site Madcap]."
 msgstr ""
 
-#: templates/mentions_legales.html:37
+#: templates/mentions_legales.html:48
 msgid ""
 "Les photographies, images fixes ou animées, ne peuvent être reproduites sans "
 "autorisation préalable. Si un droit de copie est accordé, la mention du "
@@ -532,17 +1378,17 @@ msgid ""
 "sur le support utilisé à cette fin."
 msgstr ""
 
-#: templates/mentions_legales.html:38
+#: templates/mentions_legales.html:49
 msgid ""
 "Les logos, visuels et marques présents sur ce site sont la propriété de [URL "
 "du site Madcap] ou de ses partenaires."
 msgstr ""
 
-#: templates/mentions_legales.html:42
+#: templates/mentions_legales.html:53
 msgid "Responsabilité de l’éditeur"
 msgstr ""
 
-#: templates/mentions_legales.html:43
+#: templates/mentions_legales.html:54
 msgid ""
 "Ce site peut contenir des liens vers des sites extérieurs. Il peut aussi, à "
 "son insu, avoir été relié à d’autres sites par le biais de liens hypermédia. "
@@ -550,11 +1396,11 @@ msgid ""
 "informations présentées sur ces autres sites."
 msgstr ""
 
-#: templates/mentions_legales.html:47
+#: templates/mentions_legales.html:58
 msgid "Collecte de données personnelles"
 msgstr ""
 
-#: templates/mentions_legales.html:48
+#: templates/mentions_legales.html:59
 msgid ""
 "Conformément à l’article 32 de la loi « Informatique et Libertés » n°78-17 "
 "du 6 janvier 1978, modifiée par la loi n°2004-801 du 6 août 2004, les "
@@ -564,14 +1410,14 @@ msgid ""
 "utilisées à des fins non prévues ni transmises à des partenaires."
 msgstr ""
 
-#: templates/mentions_legales.html:49
+#: templates/mentions_legales.html:60
 msgid ""
 "Les données collectées ne sont pas conservées plus d’un an. Aucune "
 "information personnelle autre que celles demandées dans ce cadre n’est "
 "collectée à l’insu des utilisateurs."
 msgstr ""
 
-#: templates/mentions_legales.html:50
+#: templates/mentions_legales.html:61
 msgid ""
 "Conformément aux articles 39 et 40 de la loi susmentionnée, l’utilisateur de "
 "ce site bénéficie des droits d’interrogation, d’accès, de rectification et "
@@ -579,1262 +1425,28 @@ msgid ""
 "droits, il peut adresser une demande à :"
 msgstr ""
 
-#: templates/mentions_legales.html:58
+#: templates/mentions_legales.html:69
 msgid "Crédits"
 msgstr ""
 
-#: templates/mentions_legales.html:59
+#: templates/mentions_legales.html:70
 msgid "Photos"
 msgstr ""
 
-#: templates/mentions_legales.html:60
+#: templates/mentions_legales.html:71
 msgid ""
 "Les photos sont prises par les membres de l’association Madcap 1874 et par "
 "<a href=\"https://www.torveo.es/\" target=\"_blank\">Torveo</a>."
 msgstr ""
 
-#: templates/mentions_legales.html:62
+#: templates/mentions_legales.html:73
 msgid "Vidéos"
 msgstr ""
 
-#: templates/mentions_legales.html:63
+#: templates/mentions_legales.html:74
 msgid ""
 "Les vidéos présentes sur ce site ont été réalisées par Jean-Pierre "
 "Roussoulières, membre de l’association Madcap 1874."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/_pytest/config/argparsing.py:474
-#, python-format
-msgid "ambiguous option: %(option)s could match %(matches)s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/cloudinary/forms.py:55
-#: venv/lib/python3.12/site-packages/cloudinary/forms.py:124
-msgid "No file selected!"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:16
-msgid "Messages"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/contrib/sitemaps/apps.py:8
-msgid "Site Maps"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py:9
-msgid "Static Files"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/contrib/syndication/apps.py:7
-msgid "Syndication"
-msgstr ""
-
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:30
-msgid "…"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:32
-msgid "That page number is not an integer"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:33
-msgid "That page number is less than 1"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:34
-msgid "That page contains no results"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:22
-msgid "Enter a valid value."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:70
-msgid "Enter a valid domain name."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:155
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:768
-msgid "Enter a valid URL."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:216
-msgid "Enter a valid integer."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:227
-msgid "Enter a valid email address."
-msgstr ""
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: venv/lib/python3.12/site-packages/django/core/validators.py:310
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:318
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:330
-#: venv/lib/python3.12/site-packages/django/core/validators.py:339
-#: venv/lib/python3.12/site-packages/django/core/validators.py:353
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2215
-#, python-format
-msgid "Enter a valid %(protocol)s address."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:332
-msgid "IPv4"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:341
-#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:43
-msgid "IPv6"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:355
-msgid "IPv4 or IPv6"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:396
-msgid "Enter only digits separated by commas."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:402
-#, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:437
-#, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:446
-#, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:455
-#, python-format
-msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:462
-#, python-format
-msgid ""
-"Ensure this value is a multiple of step size %(limit_value)s, starting from "
-"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:494
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:512
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:535
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:359
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:398
-msgid "Enter a number."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:537
-#, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:542
-#, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:547
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:618
-#, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:680
-msgid "Null characters are not allowed."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/base.py:1572
-#: venv/lib/python3.12/site-packages/django/forms/models.py:908
-msgid "and"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/base.py:1574
-#, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/constraints.py:22
-#, python-format
-msgid "Constraint “%(name)s” is violated."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:134
-#, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:135
-msgid "This field cannot be null."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:136
-msgid "This field cannot be blank."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:137
-#, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
-
-#. Translators: The 'lookup_type' is one of 'date', 'year' or
-#. 'month'. Eg: "Title must be unique for pub_date year"
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:141
-#, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:180
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1156
-#, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1157
-#, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1159
-msgid "Boolean (Either True or False)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1209
-#, python-format
-msgid "String (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1211
-msgid "String (unlimited)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1320
-msgid "Comma-separated integers"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1421
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1425
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1560
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1429
-msgid "Date (without time)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1556
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1564
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1569
-msgid "Date (with time)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1696
-#, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1698
-msgid "Decimal number"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1859
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1863
-msgid "Duration"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1915
-msgid "Email address"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1940
-msgid "File path"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2018
-#, python-format
-msgid "“%(value)s” value must be a float."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2020
-msgid "Floating point number"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2060
-#, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2062
-msgid "Integer"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2158
-msgid "Big (8 byte) integer"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2175
-msgid "Small integer"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2183
-msgid "IPv4 address"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2214
-msgid "IP address"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2305
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2306
-#, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2308
-msgid "Boolean (Either True, False or None)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2359
-msgid "Positive big integer"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2374
-msgid "Positive integer"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2389
-msgid "Positive small integer"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2405
-#, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2441
-msgid "Text"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2521
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2525
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2529
-msgid "Time"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2637
-msgid "URL"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2661
-msgid "Raw binary data"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2726
-#, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2728
-msgid "Universally unique identifier"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:244
-msgid "File"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:420
-msgid "Image"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:24
-msgid "A JSON object"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:26
-msgid "Value must be valid JSON."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:932
-#, python-format
-msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:934
-msgid "Foreign Key (type determined by related field)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1228
-msgid "One-to-one relationship"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1285
-#, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1287
-#, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1335
-msgid "Many-to-many relationship"
-msgstr ""
-
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: venv/lib/python3.12/site-packages/django/forms/boundfield.py:185
-msgid ":?.!"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:95
-msgid "This field is required."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:308
-msgid "Enter a whole number."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:479
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1260
-msgid "Enter a valid date."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:502
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1261
-msgid "Enter a valid time."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:529
-msgid "Enter a valid date/time."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:563
-msgid "Enter a valid duration."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:564
-#, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:633
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:634
-msgid "No file was submitted."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:635
-msgid "The submitted file is empty."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:637
-#, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:642
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:710
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:882
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:968
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1592
-#, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:970
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1089
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1590
-msgid "Enter a list of values."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1090
-msgid "Enter a complete value."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1332
-msgid "Enter a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1362
-msgid "Enter a valid JSON."
-msgstr ""
-
-#. Translators: This is the default suffix added to form field labels
-#: venv/lib/python3.12/site-packages/django/forms/forms.py:94
-msgid ":"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/forms.py:230
-#, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:61
-#, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:65
-#, python-format
-msgid "Please submit at most %(num)d form."
-msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:70
-#, python-format
-msgid "Please submit at least %(num)d form."
-msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:484
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:491
-msgid "Order"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:499
-msgid "Delete"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:901
-#, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:906
-#, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:913
-#, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:922
-msgid "Please correct the duplicate values below."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1359
-msgid "The inline value did not match the parent instance."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1450
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1594
-#, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/utils.py:227
-#, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:461
-msgid "Clear"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:462
-msgid "Currently"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:463
-msgid "Change"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:800
-msgid "Unknown"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:801
-msgid "Yes"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:802
-msgid "No"
-msgstr ""
-
-#. Translators: Please do not add spaces around commas.
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:873
-msgid "yes,no,maybe"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:903
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:920
-#, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:922
-#, python-format
-msgid "%s KB"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:924
-#, python-format
-msgid "%s MB"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:926
-#, python-format
-msgid "%s GB"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:928
-#, python-format
-msgid "%s TB"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:930
-#, python-format
-msgid "%s PB"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:74
-msgid "p.m."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:75
-msgid "a.m."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:80
-msgid "PM"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:81
-msgid "AM"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:153
-msgid "midnight"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:155
-msgid "noon"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:7
-msgid "Monday"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:8
-msgid "Tuesday"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:9
-msgid "Wednesday"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:10
-msgid "Thursday"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:11
-msgid "Friday"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:12
-msgid "Saturday"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:13
-msgid "Sunday"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:16
-msgid "Mon"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:17
-msgid "Tue"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:18
-msgid "Wed"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:19
-msgid "Thu"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:20
-msgid "Fri"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:21
-msgid "Sat"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:22
-msgid "Sun"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:25
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:26
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:27
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:28
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:29
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:30
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:31
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:32
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:33
-msgid "September"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:34
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:35
-msgid "November"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:36
-msgid "December"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:39
-msgid "jan"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:40
-msgid "feb"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:41
-msgid "mar"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:42
-msgid "apr"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:43
-msgid "may"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:44
-msgid "jun"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:45
-msgid "jul"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:46
-msgid "aug"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:47
-msgid "sep"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:48
-msgid "oct"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:49
-msgid "nov"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:50
-msgid "dec"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:53
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:54
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:55
-msgctxt "abbrev. month"
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:56
-msgctxt "abbrev. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:57
-msgctxt "abbrev. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:58
-msgctxt "abbrev. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:59
-msgctxt "abbrev. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:60
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:61
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:62
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:63
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:64
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:67
-msgctxt "alt. month"
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:68
-msgctxt "alt. month"
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:69
-msgctxt "alt. month"
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:70
-msgctxt "alt. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:71
-msgctxt "alt. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:72
-msgctxt "alt. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:73
-msgctxt "alt. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:74
-msgctxt "alt. month"
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:75
-msgctxt "alt. month"
-msgid "September"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:76
-msgctxt "alt. month"
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:77
-msgctxt "alt. month"
-msgid "November"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:78
-msgctxt "alt. month"
-msgid "December"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:20
-msgid "This is not a valid IPv6 address."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/text.py:75
-#, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/text.py:286
-msgid "or"
-msgstr ""
-
-#. Translators: This string is used as a separator between list elements
-#: venv/lib/python3.12/site-packages/django/utils/text.py:305
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:135
-msgid ", "
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:8
-#, python-format
-msgid "%(num)d year"
-msgid_plural "%(num)d years"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:9
-#, python-format
-msgid "%(num)d month"
-msgid_plural "%(num)d months"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:10
-#, python-format
-msgid "%(num)d week"
-msgid_plural "%(num)d weeks"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:11
-#, python-format
-msgid "%(num)d day"
-msgid_plural "%(num)d days"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:12
-#, python-format
-msgid "%(num)d hour"
-msgid_plural "%(num)d hours"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:13
-#, python-format
-msgid "%(num)d minute"
-msgid_plural "%(num)d minutes"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:29
-msgid "Forbidden"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:30
-msgid "CSRF verification failed. Request aborted."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:34
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:40
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:45
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:54
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:60
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:66
-msgid "More information is available with DEBUG=True."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:44
-msgid "No year specified"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:64
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:115
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:214
-msgid "Date out of range"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:94
-msgid "No month specified"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:147
-msgid "No day specified"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:194
-msgid "No week specified"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:349
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:380
-#, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:652
-#, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:692
-#, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/detail.py:56
-#, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/list.py:70
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/list.py:77
-#, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/generic/list.py:169
-#, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/static.py:49
-msgid "Directory indexes are not allowed here."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/static.py:51
-#, python-format
-msgid "“%(path)s” does not exist"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/static.py:68
-#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:8
-#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:11
-#, python-format
-msgid "Index of %(directory)s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:7
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:204
-msgid "The install worked successfully! Congratulations!"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:206
-#, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:208
-#, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:217
-msgid "Django Documentation"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:218
-msgid "Topics, references, &amp; how-to’s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:226
-msgid "Tutorial: A Polling App"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:227
-msgid "Get started with Django"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:235
-msgid "Django Community"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:236
-msgid "Connect, get help, or contribute"
 msgstr ""
 
 #~ msgid "Rejoignez-nous"
