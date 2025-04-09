@@ -60,7 +60,7 @@ Lancer le shell de la base de données : python3 manage.py dbshell
 
 
 
-INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES ('   .  ', '  , 74', '06   ', '2025');
+INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES (' Jean-Michel Delavoile . Matelot ', ' Thonon , 74200', '06 88 99 55 22 ', '2025');
 INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES ('       ',   '      , 06', '', '2024');
 
 
@@ -69,8 +69,8 @@ INSERT INTO madcap_app_member (name, address, phone, annee_adhesion) VALUES ('  
 
 
 
-INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('Sarah Holberton. Directrice ', 'Thonon , 74560', '06 88 99 77 44 55 ', '2025');
-INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('T. skipper','Thonon, 74460 ', '06 88 44 55 66 ', '2025');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('   .   ', ' , ', '06  ', '2025');
+INSERT INTO madcap_app_member (name, address, phone, date_entree) VALUES ('. ',',  ', '6 ', '2025');
 
 
 

@@ -1,4 +1,6 @@
 {% load static %} <!-- Inclusion des fichiers statiques -->
+{% load i18n %} <!-- Chargement du module de traduction -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -46,41 +48,38 @@
 
         <!-- Section Titre Principal -->
         <header class="don-header">
-            
-            <div class="bandeau-texte">
-              Pour toute question ou information supplémentaire, remplissez le formulaire ci-dessous.
-            </p>
+          <div class="bandeau-texte">
+            <p class="subtitle">{% trans "Pour toute question ou information supplémentaire, remplissez le formulaire ci-dessous." %}</p>
           </div>
         </header>
 
         <!-- Formulaire de Contact -->
         <section class="don-section">
-            <h2>Formulaire de Contact</h2>
-            <form action="/submit_contact/" method="POST" class="contact-form">
-                {% csrf_token %} <!-- Sécurité Django pour les formulaires -->
-                
-                <!-- Champ Nom -->
-                <label for="name">Nom et Prénom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
-
-            
-               <!-- Champ Email -->
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="Votre adresse email" value="{{ request.POST.email }}" required>
-                 <!-- asssure la sauvegarde du message en cas de message d'erreur-->
-
-
-                <!-- Champ téléphone -->
-                <label for="Telephone">Téléphone (facultatif) :</label>
-                <input type="text" id="Telephone" name="phone" placeholder="Votre numéro de Téléphone">
-
-                <!-- Champ Message -->
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" placeholder="Votre message (min. 20 caractères)" rows="5" required></textarea>
-
-                <!-- Champ button -->
-                <button type="submit" class="don-button">Envoyer</button>
-            </form>
+          <h2>{% trans "Formulaire de Contact" %}</h2>
+          <form action="/submit_contact/" method="POST" class="contact-form">
+              {% csrf_token %} <!-- Sécurité Django pour les formulaires -->
+              
+              <!-- Champ Nom -->
+              <label for="name">{% trans "Nom et Prénom :" %}</label>
+              <input type="text" id="name" name="name" placeholder="{% trans 'Votre nom et prénom' %}" required>
+          
+              <!-- Champ Email -->
+              <label for="email">{% trans "Email :" %}</label>
+              <input type="email" id="email" name="email" placeholder="{% trans 'Votre adresse email' %}" value="{{ request.POST.email }}" required>
+              <!-- assure la sauvegarde du message en cas de message d'erreur -->
+          
+              <!-- Champ téléphone -->
+              <label for="Telephone">{% trans "Téléphone (facultatif) :" %}</label>
+              <input type="text" id="Telephone" name="phone" placeholder="{% trans 'Votre numéro de Téléphone' %}">
+          
+              <!-- Champ Message -->
+              <label for="message">{% trans "Message :" %}</label>
+              <textarea id="message" name="message" placeholder="{% trans 'Votre message (min. 20 caractères)' %}" rows="5" required></textarea>
+          
+              <!-- Champ button -->
+              <button type="submit" class="don-button">{% trans "Envoyer" %}</button>
+          </form>
+          
         </section>
         
         <br>
@@ -89,15 +88,17 @@
 
         <!-- Section Contact Direct -->
         <section class="don-section">
-            <h2>Nous Contacter Directement</h2>
-            <p><strong>Christian Hurreau,</strong><a> Président de l'Association Madcap-1874</a>
-
-            <p><strong>Email :</strong> 
-                <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a>
-                <div class="contact-info">
-                  <p><strong>Téléphone :</strong> <a href="tel:+33686143955">+33 6 86 14 39 55</a></p>
-              </div>
-
+          <h2>{% trans "Nous Contacter Directement" %}</h2>
+          <p><strong>Christian Hurreau,</strong> <a>{% trans "Président de l'Association Madcap-1874" %}</a></p>
+          
+          <p><strong>{% trans "Email :" %}</strong>
+              <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a>
+          </p>
+          
+          <div class="contact-info">
+              <p><strong>{% trans "Téléphone :" %}</strong> <a href="tel:+33686143955">+33 6 86 14 39 55</a></p>
+          </div>
+          
               <!-- Map Interactive -->
               <div style="display: flex; align-items: center; gap: 20px;">
                 <!-- Conteneur de la carte -->
@@ -105,11 +106,10 @@
             
                 <!-- Conteneur de l'adresse -->
                 <div style="color: white; font-size: 18px;">
-                    
-                    Quai de Barcelone <br>
-                    66140 Canet-en-Roussillon <br>
-                    France
-                </div>
+                  {% trans "Quai de Barcelone" %} <br>
+                  {% trans "66140 Canet-en-Roussillon" %} <br>
+                  {% trans "France" %}
+              </div>
             </div>
 
               <br>
@@ -117,7 +117,8 @@
 
             <!-- Conteneur pour les logos sociaux -->
             <div class="logos">
-                <p class="social-text">Suivez-nous sur les réseaux </p>
+              <p class="social-text">{% trans "Suivez-nous sur les réseaux" %}</p>
+
 
                 <!-- Logo Facebook -->
                 <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank" rel="noopener noreferrer">
