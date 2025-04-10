@@ -1,0 +1,11 @@
+# Fichier robots.txt pour Madcap1874
+
+# Autoriser tous les robots d'exploration à accéder à tout le site
+User-agent: *
+Disallow:
+
+# Bloquer l'accès aux pages d'administration Django
+Disallow: /admin/
+
+# Indiquer l'emplacement du sitemap pour aider à l'indexation
+Sitemap: https://madcap1874.com/sitemap.xml

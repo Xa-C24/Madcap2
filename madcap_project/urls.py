@@ -19,12 +19,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Route pour l'admin
     path('', include('madcap_app.urls')),  # Inclure les routes de l'application
+     # ... tes autres URL patterns ...
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
 ]
 
 # Ajout de la gestion des fichiers médias en mode développement
