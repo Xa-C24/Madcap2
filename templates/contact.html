@@ -82,11 +82,44 @@
           
         </section>
         
+        
+        
+        <br>
+        <br>
+        <br>
+          <!-- Demande de mécénat -->
+
+          <section class="don-section">
+            
+            <h1>{% trans "Devenez mécène de l'Association Madcap-1874" %}</h1>
+            <h3 style="text-indent: 1.5cm;">{% trans "En devenant mécène de Madcap-1874, vous participez à la préservation vivante d'un trésor maritime. Grâce à votre soutien, nous pouvons restaurer, entretenir, et faire naviguer ce voilier historique, pour que son histoire continue d'inspirer les générations futures." %}</h3>
+            
+            <div style="text-align: center;">
+              <form action="{% static 'docs/mécénatv01.pdf' %}" method="get" target="_blank">
+                  <button type="submit" class="don-button" title="{% trans 'Télécharger le dossier de mécénat de l\'Association Madcap-1874' %}">
+                      {% trans "📄 Télécharger le dossier de mécénat" %}
+                  </button>
+              </form>
+            </div>
+
+            <h2>{% trans "Une mission Social et éducative" %}</h2>
+            <ul>
+              <li><strong>{% trans "Réinsertion sociale :" %}</strong> {% trans "Organisation de sorties en mer pour des personnes en difficulté (chômeurs de longue durée, mineurs en sortie de peine, etc.)." %}</li>
+              <li><strong>{% trans "Soutien aux jeunes :" %}</strong> {% trans "Programme spécifique pour prévenir les risques suicidaires." %}</li>
+              <li><strong>{% trans "Handi-valides :" %}</strong> {% trans "Sorties de navigation inclusives pour favoriser les rencontres et les échanges." %}</li>
+              <li><strong>{% trans "Promotion de la mixité :" %}</strong> {% trans "Faire de la voile un sport accessible à tous, sans barrières sociales ou physiques." %}</li>
+          </ul>
+          
+          <h2>{% trans "Un projet associatif ambitieux" %}</h2>
+          
+        </section>
+
         <br>
         <br>
         <br>
 
         <!-- Section Contact Direct -->
+
         <section class="don-section">
           <h2>{% trans "Nous Contacter Directement" %}</h2>
           <p><strong>Christian Hurreau,</strong> <a>{% trans "Président de l'Association Madcap-1874" %}</a></p>

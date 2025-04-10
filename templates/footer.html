@@ -12,6 +12,7 @@
           <p>{% trans "Madcap 1874 - Association pour la préservation du patrimoine maritime" %}</p>
       </div>
 
+      
       <!-- Contact et réseaux sociaux -->
       <div class="footer-right">
         <p>{% trans "Association Madcap 1874" %}</p>
@@ -42,12 +43,15 @@
             <li><a href="{% url 'don' %}">{% trans "Soutenir le Projet" %}</a></li>
             <li><a href="{% url 'livre_dor' %}">{% trans "Votre Expérience" %}</a></li>
             <li><a href="{% url 'contact' %}">{% trans "Nous Contacter" %}</a></li>
+            <li><a href="{% static 'docs/mécénatv01.pdf' %}" target="_blank" rel="noopener noreferrer" title="Télécharger le dossier de mécénat de l'Association Madcap-1874" download>
+              {% trans "📄 Télécharger le dossier de mécénat" %}
+            </a></li>
             <li><a href="{% url 'mentions_legales' %}">{% trans "Mentions Légales" %}</a></li>
             <li><a href="{% static 'docs/Réglement_intérieur_Madcap_1874.pdf' %}" download>
-            {% trans "Réglement Intérieur Madcap 1874" %}
+            {% trans "📄 Réglement Intérieur Madcap 1874" %}
           </a></li>
           <li><a href="{% static 'docs/Statut_MADCAP.pdf' %}" download>
-            {% trans "Statut Association" %}
+            {% trans "📄 Statut Association" %}
           </a></li>
         </ul>
     </div>

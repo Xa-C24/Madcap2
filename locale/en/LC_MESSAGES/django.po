@@ -302,6 +302,7 @@ msgstr ""
 "      "
 
 # ------ Contact-----
+
 #: templates/contact.html:54
 msgid ""
 "Pour toute question ou information supplémentaire, remplissez le formulaire "
@@ -349,6 +350,48 @@ msgstr "Your message (min. 20 characters)"
 #: templates/contact.html:83 templates/livre_dor.html:151
 msgid "Envoyer"
 msgstr "Send"
+
+#: templates/contact.html:94
+msgid "Devenez mécène de l'Association Madcap-1874"
+msgstr "Become a patron of the Madcap-1874 Association"
+
+msgid "En devenant mécène de Madcap-1874, vous participez à la préservation vivante d'un trésor maritime. Grâce à votre soutien, nous pouvons restaurer, entretenir, et faire naviguer ce voilier historique, pour que son histoire continue d'inspirer les générations futures."
+msgstr "By becoming a patron of Madcap-1874, you contribute to the living preservation of a maritime treasure. Thanks to your support, we can restore, maintain, and sail this historic vessel, ensuring its story continues to inspire future generations."
+
+#: templates/index.html:42 templates/contact.html:88
+msgid "📄 Télécharger le dossier de mécénat"
+msgstr "📄 Download the sponsorship file"
+
+msgid "Une mission sociale et éducative"
+msgstr "A social and educational mission"
+
+msgid "Réinsertion sociale :"
+msgstr "Social reintegration:"
+
+msgid "Organisation de sorties en mer pour des personnes en difficulté (chômeurs de longue durée, mineurs en sortie de peine, etc.)."
+msgstr "Organizing sea outings for people in difficulty (long-term unemployed, minors released from detention, etc.)."
+
+msgid "Soutien aux jeunes :"
+msgstr "Support for young people:"
+
+msgid "Programme spécifique pour prévenir les risques suicidaires."
+msgstr "Specific program to prevent the risk of suicide."
+
+msgid "Handi-valides :"
+msgstr "Inclusive sailing:"
+
+msgid "Sorties de navigation inclusives pour favoriser les rencontres et les échanges."
+msgstr "Inclusive sailing outings to encourage meetings and exchanges."
+
+msgid "Promotion de la mixité :"
+msgstr "Promoting diversity:"
+
+msgid "Faire de la voile un sport accessible à tous, sans barrières sociales ou physiques."
+msgstr "Making sailing a sport accessible to all, without social or physical barriers."
+
+msgid "Un projet associatif ambitieux"
+msgstr "An ambitious community project"
+
 
 #: templates/contact.html:94
 msgid "Nous Contacter Directement"
@@ -1002,6 +1045,8 @@ msgstr "Your Experience"
 msgid "Nous Contacter"
 msgstr "Contact us"
 
+
+
 #: templates/footer.html:45 templates/mentions_legales.html:25
 msgid "Mentions Légales"
 msgstr "Legal information"
@@ -1137,9 +1182,6 @@ msgid "Les Premiers Patrons de Madcape"
 msgstr "The First Skippers of Madcap"
 
 #: templates/histoire.html:84
-#, fuzzy
-#| msgid ""
-#| "Les archives révèlent plusieurs patrons ayant navigué à bord de Madcap :"
 msgid ""
 "Les archives révèlent plusieurs patrons ayant navigué à bord de Madcap : "
 msgstr "Archives reveal several skippers who sailed aboard Madcap:"
@@ -1151,6 +1193,10 @@ msgstr "- Williams Stephens (first known skipper, in 1874)"
 #: templates/histoire.html:87
 msgid "- William Jenkins (en service à partir de 1878) "
 msgstr "- William Jenkins (in service from 1878)"
+
+#: templates/histoire.html::122
+msgid "George Buck, apprenti pilote en 1900, nous raconte."
+msgstr "George Buck, apprentice pilot in 1900, tells us his story."
 
 #: templates/histoire.html:88
 msgid ""
@@ -1727,7 +1773,7 @@ msgid ""
 "Les vidéos présentes sur ce site ont été réalisées par Jean-Pierre "
 "Roussoulières, membre de l’association Madcap 1874."
 msgstr ""
-"The videos on this site were made by Jean-Pierre Roussoulières, a member of "
+"The videos on this site were made by Jean-Pierre Roussoulières, Christian Arnal a members of "
 "the Madcap 1874 association."
 
 #: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:16
