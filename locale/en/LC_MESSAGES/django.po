@@ -352,11 +352,11 @@ msgid "Envoyer"
 msgstr "Send"
 
 #: templates/contact.html:94
-msgid "Devenez mécène de l'Association Madcap-1874"
-msgstr "Become a patron of the Madcap-1874 Association"
+msgid "Devenez mécène ou sponsor de l'Association Madcap-1874"
+msgstr "Become a patron or sponsor of the Madcap-1874 Association"
 
-msgid "En devenant mécène de Madcap-1874, vous participez à la préservation vivante d'un trésor maritime. Grâce à votre soutien, nous pouvons restaurer, entretenir, et faire naviguer ce voilier historique, pour que son histoire continue d'inspirer les générations futures."
-msgstr "By becoming a patron of Madcap-1874, you contribute to the living preservation of a maritime treasure. Thanks to your support, we can restore, maintain, and sail this historic vessel, ensuring its story continues to inspire future generations."
+msgid "En devenant mécène ou sponsor de Madcap-1874, vous participez à la préservation vivante d'un trésor maritime. Grâce à votre soutien, nous pouvons restaurer, entretenir, et faire naviguer ce voilier historique, pour que son histoire continue d'inspirer les générations futures."
+msgstr "By becoming a patron or sponsor of Madcap-1874, you contribute to the living preservation of a maritime treasure. Thanks to your support, we can restore, maintain, and sail this historic vessel, ensuring its story continues to inspire future generations."
 
 #: templates/index.html:42 templates/contact.html:88
 msgid "📄 Télécharger le dossier de mécénat"
