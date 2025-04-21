@@ -7,6 +7,8 @@ pip install flask-babel
 for run Django serer  
 python3 manage.py runserver
 
+gunicorn madcap_project.wsgi:application
+
 creation de la strucrure
 mkdir templates
   histoire.html
