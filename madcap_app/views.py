@@ -300,8 +300,24 @@ def livre_dor(request):
             #  Enregistrement de l'avis dans la base de données
             avis = form.save(commit=False)
             avis.telephone = telephone  # Stocke la version normalisée du numéro
+            avis.valide = False  # IMPORTANT : pas encore validé
             avis.save()
 
+            # Envoi de l'email à l'admin
+            send_mail(
+                subject="📝 Nouvel avis à valider",
+                message=(
+                    f"Nom : {nom}\n"
+                    f"Email : {email}\n"
+                    f"Téléphone : {telephone}\n"
+                    f"Note : {note}/5\n"
+                    f"Commentaire :\n{commentaire}\n\n"
+                    f"Rendez-vous dans l’admin pour le valider."
+                ),
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=["xr.piallu@gmail.com"],
+                fail_silently=False,
+            )
 
             #  Ajout du message de confirmation
             messages.success(request, "Votre partage d'expérience est bien pris en compte. Il sera en ligne dans les plus brefs délais après validation.")

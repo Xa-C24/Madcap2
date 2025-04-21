@@ -40,7 +40,8 @@ class Avis(models.Model):
     photo3 = models.ImageField(upload_to='avis_photos/', null=True, blank=True)
     photo4 = models.ImageField(upload_to='avis_photos/', null=True, blank=True)
 
-    valide = models.BooleanField(default=False)  # Ajout du champ pour validation des avis
+    valide = models.BooleanField(default=False)   # Ajout du champ pour validation des avis
+   
 
     def __str__(self):
         return f"{self.nom} - {self.note}/5"
@@ -50,3 +51,5 @@ class Avis(models.Model):
 
     def __str__(self):
         return f"{self.nom} - {self.note} étoiles"
+
+

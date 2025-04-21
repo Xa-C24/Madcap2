@@ -164,7 +164,7 @@ Pour afficher tous les avis enregistrés :
 
 
 Supprimer un avis en fonction de son id (exemple : id = 3) 
-    DELETE FROM madcap_app_avis WHERE id = 30;
+    DELETE FROM madcap_app_avis WHERE id = 4;
 
  Supprimer TOUS les avis de la table :
     DELETE FROM madcap_app_avis;
