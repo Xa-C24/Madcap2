@@ -1,4 +1,8 @@
 madcap_app/__pycache__/__init__.cpython-310.pyc
+venv/
+__pycache__/
+*.pyc
+.DS_Store
 madcap_app/__pycache__/urls.cpython-310.pyc
 madcap_app/__pycache__/views.cpython-310.pyc
 madcap_project/__pycache__/__init__.cpython-310.pyc
