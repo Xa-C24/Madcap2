@@ -76,7 +76,7 @@ footer {
   margin: 5px 0;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 8px;
 }
 
 .footer-middle ul li {

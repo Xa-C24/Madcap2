@@ -355,6 +355,8 @@ msgstr "Send"
 msgid "Devenez mécène ou sponsor de l'Association Madcap-1874"
 msgstr "Become a patron or sponsor of the Madcap-1874 Association"
 
+
+#: templates/contact.html:94 template/association.html:139
 msgid "En devenant mécène ou sponsor de Madcap-1874, vous participez à la préservation vivante d'un trésor maritime. Grâce à votre soutien, nous pouvons restaurer, entretenir, et faire naviguer ce voilier historique, pour que son histoire continue d'inspirer les générations futures."
 msgstr "By becoming a patron or sponsor of Madcap-1874, you contribute to the living preservation of a maritime treasure. Thanks to your support, we can restore, maintain, and sail this historic vessel, ensuring its story continues to inspire future generations."
 
@@ -1575,6 +1577,30 @@ msgstr "Step aboard Madcap, sail with us, and dive into its history."
 #: templates/index.html:174
 msgid "Partagez des moments riches en émotions lors de nos sorties en mer."
 msgstr "Share unforgettable moments during our sea outings."
+
+#: templates/index.html:176
+msgid "Télécharger le dossier de mécénat"
+msgstr "Download the sponsorship file"
+
+#: templates/index.html:184 template/association.html:98
+msgid "Bourse aux équipers"
+msgstr "Crew Exchange Program"
+
+#: templates/index.html:189 
+msgid ""
+"La bourse aux équipiers vous offre l'opportunité de prendre le large sans posséder votre propre voilier ni être un navigateur expérimenté. Grâce à ce système d'entraide, embarquez à bord de Madcap, ce cotre pilote historique, et vivez l'authenticité de la navigation traditionnelle. Participez aux manœuvres, apprenez aux côtés de marins expérimentés et plongez au cœur de la vie à bord. Que vous soyez débutant curieux ou navigateur confirmé, rejoignez l’équipage et laissez-vous porter par ce voilier qui a traversé le temps. Nous serons heureux de vous accueillir à bord."
+msgstr ""
+"The crew exchange program offers you the chance to set sail without owning your own boat or being an experienced sailor. Thanks to this collaborative system, come aboard Madcap, a historic pilot cutter, and experience the authenticity of traditional sailing. Take part in maneuvers, learn alongside seasoned sailors, and immerse yourself in life at sea. Whether you're a curious beginner or an experienced navigator, join the crew and let yourself be carried away by this vessel that has stood the test of time. We look forward to welcoming you on board."
+
+#: templates/index.html:197
+msgid "Conditions :"
+msgstr "Terms:"
+
+#: templates/index.html:199
+msgid ""
+"45€ d'adhésion annuelle à l'association, puis 25€ par jour de navigation, plus participation à la caisse de bord (nourriture, escales, etc.)."
+msgstr ""
+"€45 annual membership fee to the association, then €25 per day of sailing, plus contribution to the onboard expenses (food, stopovers, etc.)."
 
 #: templates/index.html:178
 msgid "Adhésion 2025 via Helloasso "

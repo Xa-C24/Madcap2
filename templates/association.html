@@ -94,6 +94,28 @@
       <br>
       <img src="{% static 'images/hautdumat.jpg' %}" alt="En haut du mat de Madcap monument historique" class="fregate-histoire">
       <br>
+
+      <h1>{% trans "Bourse aux équipers" %}</h1>
+
+          <li>{% blocktrans trimmed%}
+
+            La bourse aux équipiers vous offre l'opportunité de prendre le large sans posséder votre propre voilier ni être un navigateur expérimenté. 
+            Grâce à ce système d'entraide, embarquez à bord de Madcap, ce cotre pilote historique, et vivez l'authenticité de la navigation traditionnelle. 
+            Participez aux manœuvres, apprenez aux côtés de marins expérimentés et plongez au cœur de la vie à bord. Que vous soyez débutant curieux ou navigateur confirmé, 
+            rejoignez l’équipage et laissez-vous porter par ce voilier qui a traversé le temps.
+            {% endblocktrans %}
+          </li>
+
+          <ul>
+             <li><strong>{% trans "Conditions :" %}</strong><br></li>
+            <li>
+              {% trans "45€ d'adhésion annuelle à l'association, puis 25€ par jour de navigation, plus participation à la caisse de bord (nourriture, escales, etc.)." %}
+            </li>
+          </ul>
+
+          <div class="cta-links">
+          <a href="{% url 'contact' %}" class="cta-button">{% trans "Contactez-nous" %}</a>
+          </div>
     </section>
 
     <section>
@@ -107,6 +129,38 @@
         <p>{% trans "Les dons de particuliers" %}</p>
         <p>{% trans "Les subventions et le mécénat d’entreprises" %}</p>
       </ul>
+
+      
+            
+      <h2>{% trans "Devenez mécène ou sponsor de l'Association Madcap-1874" %}</h2>
+      <ul>
+        <li style="text-indent: 1.5cm;">
+          {% blocktrans trimmed%}
+          En devenant mécène ou sponsor de Madcap-1874, vous participez à la préservation vivante d'un trésor maritime. 
+          Grâce à votre soutien, nous pouvons restaurer, entretenir, et faire naviguer ce voilier historique, pour que son histoire continue d'inspirer les générations futures.
+        {% endblocktrans %}</li>
+        
+      </ul>
+        
+        <div style="text-align: center;">
+          <form action="{% static 'docs/mécénatv01.pdf' %}" method="get" target="_blank">
+              <button type="submit" class="don-button" title="{% trans 'Télécharger le dossier de mécénat de l\'Association Madcap-1874' %}">
+                  {% trans "📄 Télécharger le dossier de mécénat" %}
+              </button>
+          </form>
+        </div>
+
+        <h2>{% trans "Une mission Social et éducative" %}</h2>
+        <ul>
+          <li><strong>{% trans "Réinsertion sociale :" %}</strong> {% trans "Organisation de sorties en mer pour des personnes en difficulté (chômeurs de longue durée, mineurs en sortie de peine, etc.)." %}</li>
+          <li><strong>{% trans "Soutien aux jeunes :" %}</strong> {% trans "Programme spécifique pour prévenir les risques suicidaires." %}</li>
+          <li><strong>{% trans "Handi-valides :" %}</strong> {% trans "Sorties de navigation inclusives pour favoriser les rencontres et les échanges." %}</li>
+          <li><strong>{% trans "Promotion de la mixité :" %}</strong> {% trans "Faire de la voile un sport accessible à tous, sans barrières sociales ou physiques." %}</li>
+      </ul>
+      
+      <h2>{% trans "Un projet associatif ambitieux" %}</h2>
+
+   
     </section>
 
     <section>
