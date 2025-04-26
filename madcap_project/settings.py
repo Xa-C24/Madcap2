@@ -133,7 +133,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  # 🔥 Optimisation pour Render
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  #  Optimisation pour Render
 
 # 📌 Gestion des fichiers médias (images uploadées)
 DEBUG = True
