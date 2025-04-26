@@ -1,0 +1,176 @@
+{% load static %} <!-- Inclusion des fichiers statiques -->
+{% load i18n %} <!-- Chargement du module de traduction -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N35WL3N1WF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N35WL3N1WF');
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Madcap</title>
+
+    <!-- Lien vers les fichiers CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{% static 'js/map_contact.js' %}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
+</head>
+<body>
+    {% include 'header.html' %} <!-- Inclusion du header -->
+
+    <main class="don-page">
+      <!-- Messages Flash -->
+      {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+              <li class="message-{{ message.tags }}">{{ message }}</li>
+          {% endfor %}
+      </ul>
+  {% endif %}
+
+        <!-- Section Titre Principal -->
+        <header class="don-header">
+          <div class="bandeau-texte">
+            <p class="subtitle">{% trans "Pour toute question ou information supplémentaire, remplissez le formulaire ci-dessous." %}</p>
+          </div>
+        </header>
+
+        <!-- Formulaire de Contact -->
+        <section class="don-section">
+          <h2>{% trans "Formulaire de Contact" %}</h2>
+          <form action="/submit_contact/" method="POST" class="contact-form">
+              {% csrf_token %} <!-- Sécurité Django pour les formulaires -->
+              
+              <!-- Champ Nom -->
+              <label for="name">{% trans "Nom et Prénom :" %}</label>
+              <input type="text" id="name" name="name" placeholder="{% trans 'Votre nom et prénom' %}" required>
+          
+              <!-- Champ Email -->
+              <label for="email">{% trans "Email :" %}</label>
+              <input type="email" id="email" name="email" placeholder="{% trans 'Votre adresse email' %}" value="{{ request.POST.email }}" required>
+              <!-- assure la sauvegarde du message en cas de message d'erreur -->
+          
+              <!-- Champ téléphone -->
+              <label for="Telephone">{% trans "Téléphone (facultatif) :" %}</label>
+              <input type="text" id="Telephone" name="phone" placeholder="{% trans 'Votre numéro de Téléphone' %}">
+          
+              <!-- Champ Message -->
+              <label for="message">{% trans "Message :" %}</label>
+              <textarea id="message" name="message" placeholder="{% trans 'Votre message (min. 20 caractères)' %}" rows="5" required></textarea>
+          
+              <!-- Champ button -->
+              <button type="submit" class="don-button">{% trans "Envoyer" %}</button>
+          </form>
+          
+        </section>
+        
+        
+        
+        <br>
+        <br>
+        <br>
+          <!-- Demande de mécénat -->
+
+          <section class="don-section">
+            
+            <h1>{% trans "Devenez mécène ou sponsor de l'Association Madcap-1874" %}</h1>
+            <h3 style="text-indent: 1.5cm;">{% trans "En devenant mécène ou sponsor de Madcap-1874, vous participez à la préservation vivante d'un trésor maritime. Grâce à votre soutien, nous pouvons restaurer, entretenir, et faire naviguer ce voilier historique, pour que son histoire continue d'inspirer les générations futures." %}</h3>
+            
+            <div style="text-align: center;">
+              <form action="{% static 'docs/mécénatv01.pdf' %}" method="get" target="_blank">
+                  <button type="submit" class="don-button" title="{% trans 'Télécharger le dossier de mécénat de l\'Association Madcap-1874' %}">
+                      {% trans "📄 Télécharger le dossier de mécénat" %}
+                  </button>
+              </form>
+            </div>
+
+            <h2>{% trans "Une mission Social et éducative" %}</h2>
+            <ul>
+              <li><strong>{% trans "Réinsertion sociale :" %}</strong> {% trans "Organisation de sorties en mer pour des personnes en difficulté (chômeurs de longue durée, mineurs en sortie de peine, etc.)." %}</li>
+              <li><strong>{% trans "Soutien aux jeunes :" %}</strong> {% trans "Programme spécifique pour prévenir les risques suicidaires." %}</li>
+              <li><strong>{% trans "Handi-valides :" %}</strong> {% trans "Sorties de navigation inclusives pour favoriser les rencontres et les échanges." %}</li>
+              <li><strong>{% trans "Promotion de la mixité :" %}</strong> {% trans "Faire de la voile un sport accessible à tous, sans barrières sociales ou physiques." %}</li>
+          </ul>
+          
+          <h2>{% trans "Un projet associatif ambitieux" %}</h2>
+          
+        </section>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- Section Contact Direct -->
+
+        <section class="don-section">
+          <h2>{% trans "Nous Contacter Directement" %}</h2>
+          <p><strong>Christian Hurreau,</strong> <a>{% trans "Président de l'Association Madcap-1874" %}</a></p>
+          
+          <p><strong>{% trans "Email :" %}</strong>
+              <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a>
+          </p>
+          
+          <div class="contact-info">
+              <p><strong>{% trans "Téléphone :" %}</strong> <a href="tel:+33686143955">+33 6 86 14 39 55</a></p>
+          </div>
+          
+              <!-- Map Interactive -->
+              <div style="display: flex; align-items: center; gap: 20px;">
+                <!-- Conteneur de la carte -->
+                <div id="map" style="height: 300px; width: 450px;"></div>
+            
+                <!-- Conteneur de l'adresse -->
+                <div style="color: white; font-size: 18px;">
+                  {% trans "Quai de Barcelone" %} <br>
+                  {% trans "66140 Canet-en-Roussillon" %} <br>
+                  {% trans "France" %}
+              </div>
+            </div>
+
+              <br>
+              <br>
+
+            <!-- Conteneur pour les logos sociaux -->
+            <div class="logos">
+              <p class="social-text">{% trans "Suivez-nous sur les réseaux" %}</p>
+
+
+                <!-- Logo Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'images/Fb_logo2.png' %}" alt="Logo Facebook" class="logo animated-logo fb">
+                </a>
+
+                <!-- Logo YouTube -->
+                <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" class="logo animated-logo">
+                </a>
+            </div>
+         
+        </section>
+
+        <br>
+        <br> 
+
+    </main>
+
+    {% include 'footer.html' %} <!-- Inclusion du footer -->
+</body>
+</html>

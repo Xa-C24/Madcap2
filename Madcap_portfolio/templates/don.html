@@ -1,0 +1,137 @@
+{% load static %} <!-- inclure des fichiers statiques -->
+{% load i18n %} <!-- Fr vs En-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N35WL3N1WF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N35WL3N1WF');
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faites un don - Madcap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    {% include 'header.html' %} <!-- Inclusion du header -->
+
+    <main class="don-page">
+        <!-- Section titre principal -->
+        <header class="don-header">
+            <div class="bandeau-texte">
+              <p class="subtitle">{% trans "Contribuons ensemble à la préservation de ce patrimoine maritime" %}</p>
+            </div>
+          </header>
+
+        <!-- Section Pourquoi faire un don -->
+        <section class="don-section">
+          <h2>{% trans "Pourquoi faire un don ?" %}</h2>
+          <h3>{% trans "En contribuant à l'association Madcap1874, vous participez à :" %}</h3>
+          <ul>
+            <li>
+              <strong>{% trans "Préserver le patrimoine maritime :" %}</strong><br>
+              {% trans "Maintenir le cotre pilote Madcap en état de naviguer." %}
+            </li>
+            <li>
+              <strong>{% trans "Organiser des sorties en mer :" %}</strong><br>
+              {% trans "Permettre aux débutants et aux passionnés de vivre une expérience unique." %}
+            </li>
+            <li>
+              <strong>{% trans "Partager l’histoire :" %}</strong><br>
+              {% trans "Transmettre notre héritage aux générations futures." %}
+    </li>
+  </ul>
+</section>
+
+<br>
+<br>
+
+<section class="don-section">
+  <h2>{% trans "À quoi servent vos dons ?" %}</h2>
+<h3>{% trans "Les dons que vous effectuez à l'association Madcap-1874 sont essentiels pour :" %}</h3>
+<ul>
+  <li>
+    <strong>{% trans "Entretien du bateau :" %}</strong><br>
+    {% trans "Assurer les réparations nécessaires pour maintenir le cotre pilote en état de naviguer." %}
+  </li>
+  <li>
+    <strong>{% trans "Organisation des sorties en mer :" %}</strong><br>
+    {% trans "Financer les équipements de sécurité et l'entretien du matériel." %}
+  </li>
+  <li>
+    <strong>{% trans "Participation aux événements :" %}</strong><br>
+    {% trans "Représenter notre patrimoine lors d'expositions et de rassemblements maritimes." %}
+  </li>
+  <li>
+    <strong>{% trans "Préservation de l'histoire :" %}</strong><br>
+    {% trans "Partager l'héritage du cotre pilote à travers des actions éducatives et culturelles." %}
+  </li>
+  </ul>
+</section>
+
+<br>
+<br>
+
+        <!-- Section Avantages fiscaux 
+            <section class="don-section">
+               <h2>{% trans "Quels avantages fiscaux ?" %}</h2> #}
+              {<h3>{% trans "En faisant un don à une association d'intérêt général comme Madcap-1874 votre générosité est récompensée :" %}</h3> #}
+              <ul>
+                  <li>
+                      <strong>{% trans "Pour les particuliers :" %}</strong><br>
+                      {% trans "Déduction fiscale de" %} <strong>66%</strong> {% trans "du montant du don, dans la limite de 20% du revenu imposable." %}
+                  </li>
+                  <li>
+                      <strong>{% trans "Pour les entreprises :" %}</strong><br>
+                      {% trans "Déduction fiscale de" %} <strong>60%</strong> {% trans "du montant, dans la limite de 0,5% du chiffre d'affaires." %}
+                  </li>
+              </ul> #}
+              <p><em>{% trans "Un reçu fiscal vous sera envoyé automatiquement après votre don." %}</em></p> #}
+            </section> -->
+
+
+        <br>
+        <br>
+
+        <!-- Section À propos de HelloAsso -->
+        <section class="don-section">
+          <h2>{% trans "Qu'est-ce que HelloAsso ?" %}</h2>
+          <h3>{% trans "HelloAsso est une plateforme française dédiée au financement participatif des associations. Vos dons y sont :" %}</h3>
+          <ul class="don-list">
+              <li><strong>100%</strong> {% trans "Sécurisés." %}</li>
+              <li><strong>100%</strong> {% trans "Gratuits pour l'association." %}</li>
+              <li><strong>100%</strong> {% trans "Dédiés à nos projets, sans frais cachés." %}</li>
+          </ul>
+      </section>
+      
+        </section>
+
+<br>
+<br>
+        <!-- Section Faire un don -->
+        <section class="don-section call-to-action">
+            <h2>{% trans "Comment faire un don ?" %}</h2>
+            
+            <a href="https://www.helloasso.com/associations/madcap-1874/formulaires/1"
+               target="_blank"
+               class="don-button">{% trans "Faire un don via HelloAsso" %}</a>
+        </section>
+    </main>
+
+    {% include 'footer.html' %} <!-- Inclusion du footer -->
+</body>
+</html>
+
+
+

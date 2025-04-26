@@ -1,0 +1,230 @@
+{% load static %} <!-- Charger les fichiers statiques Django -->
+{% load i18n %} <!-- Fr vs En-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N35WL3N1WF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N35WL3N1WF');
+</script>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madcap</title>
+
+  <!-- Lien vers la feuille de style CSS principale -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.1">
+  <link rel="stylesheet" href="{% static 'css/style_footer.css' %}">
+
+
+
+  <!-- Favicon de la page (icône affichée dans l'onglet du navigateur) -->
+  <link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
+
+  <!-- Google Fonts : Pacifico pour le titre et Montserrat pour le texte -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Script JavaScript Windy pour la carte -->
+  <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+
+  <script src="{% static 'js/diaporama_index.js' %}" defer></script>
+
+
+  <!-- Styles personnalisés pour la carte -->
+  <style>
+    #map {
+      height: 45vh;
+      margin: 20px 0;
+    }
+   </style>
+
+    
+</head>
+
+<body>
+{% include 'header.html' %}
+
+
+<br>
+<br>
+<br>
+
+
+
+    <!-- Card Open Météo -->
+    <div class="card-wrapper">
+      <div class="meteo-card">
+        {% include 'card_meteoopen.html' %}
+      </div>
+  
+      <!-- Section 1 : Introduction -->
+      <section class="don-section">
+        <h1>{% trans "Un patrimoine maritime vivant" %}</h1>
+        <h3>
+          {% blocktrans %}
+          Construit en 1874, Madcap est le plus ancien côtre-pilote encore à flot.
+          Autrefois actif dans le canal de Bristol jusqu’au début des années 1920, 
+          il a ensuite été transformé en voilier de plaisance. Aujourd’hui, après avoir 
+          rejoint la Méditerranée en 2020, il continue de voguer sous la bannière de 
+          l’association Madcap 1874, basée à Canet-en-Roussillon.
+          {% endblocktrans %}
+        </h3>
+        <h1>{% trans "Classé Monument Historique" %}</h1>
+
+        <!-- Diaporama -->
+      <div class="diaporama-index">
+        <div class="diaporama">
+          <img src="{% static 'images/sunset_madcap_DiapHeader.jpg' %}" alt="Madcap en mer">
+          <img src="{% static 'images/DiapoHeader2.jpg' %}" alt="Vue latérale côtre-pilote monument historique">
+          <img src="{% static 'images/sunset_madcap_Co.jpg' %}" alt="Sunset à Collioure sur madcap-1874">
+          <img src="{% static 'images/DiapoHeader1.jpg' %}" alt="plan large de Madcap Torveo association madcap1874">
+          <img src="{% static 'images/DiapoHeader4.jpg' %}" alt="plan large monument historique Torveo association madcap1874">
+        </div>
+        <button class="precedent"></button>
+        <button class="suivant"></button>
+      </div>
+      </section>
+    </div> 
+  
+    <br>
+    <br>
+      
+
+      <section class="don-section">
+        <h2>
+          {% trans "L'association Madcap vous invite à découvrir ce voilier historique restauré avec passion." %}
+        </h2>
+      
+      
+      <h3>{% blocktrans %}
+        <span style="display: inline-block; padding-left: 1.5cm;"></span> 
+        
+        Madcap, témoin précieux de notre patrimoine
+        maritime, vous invite à embarquer pour un voyage dans le temps. Restauré avec rigueur et minutie, ce bateau
+        classé Monument Historique reflète l'excellence de l'artisanat naval de son époque. L'association se consacre à
+        sa préservation et à la promotion du patrimoine maritime, permettant au public de découvrir les techniques de
+        navigation à voile du XIXe siècle. Découvrez les secrets de sa construction, ses récits de navigation et les
+        événements marquants qui ont façonné son histoire.
+        {% endblocktrans %}
+      </h3>
+
+      <div class="video-container-index" id="presentation">
+
+          <iframe 
+            src="https://www.youtube.com/embed/_7lt_IaRsnc" 
+            title="YouTube video player" 
+            rameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        
+      </div>
+      
+      <h3><span style="display: inline-block; padding-left: 1.5cm;"></span>
+        {% blocktrans %} Plus qu’un simple bateau, Madcap est un
+        témoin unique de l’histoire maritime. Grâce au travail dévoué de ses membres, ce patrimoine continue de
+        naviguer, offrant à chacun une immersion dans les navigations d’autrefois.
+        {% endblocktrans %}
+      </h3>
+    </section>
+
+    <br>
+    <br>
+
+        <!-- Avis aléatoire -->
+
+        <div class="avis-index-container">
+          <div class="avis-list">
+              {% for avis in avis_aleatoires %}   <!--  afficher chaque avis sélectionné aléatoirement.-->
+                  <div class="avis-card">
+                      <p><strong>{{ avis.nom }}</strong> ⭐ {{ avis.note }}/5</p>
+                      <p>"{{ avis.commentaire }}"</p>
+                      <small class="avis-date">Posté le : {{ avis.date|date:"d/m/Y" }}</small> <!-- Affichage du nom, note, message et date de publication.-->
+                      <a href="{% url 'livre_dor' %}" class="read-more">Lire tous les Avis</a>
+                  </div>
+              {% empty %}
+                  <p>Aucun avis disponible pour le moment.</p>
+              {% endfor %}
+          </div>
+      </div>
+      
+    <main>
+      <!-- Espace vide -->
+    </main>
+
+    <!-- Section 2 : Invitation à rejoindre -->
+    <section class="don-section">
+      <div class="content-container">
+        <div class="text-content">
+          <h2>{% trans "Embarquez à bord de Madcap, naviguez avec nous et plongez dans son histoire." %}</h2>
+
+        </div><br>
+        <img src="{% static 'images/photo_index.jpg' %}" alt="Détail du voilier monument historique" class="don-image-index">
+      </div>
+      <h2>{% trans "Partagez des moments riches en émotions lors de nos sorties en mer." %}</h2>
+      <div class="cta-links">
+        <a href="{% static 'docs/mécénatv01.pdf' %}" download class="cta-button">{% trans "Télécharger le dossier de mécénat" %}</a>
+        <a href="{% static 'docs/adhésion_2025.pdf' %}" download class="cta-button">{% trans "Télécharger l'adhésion 2025 en format pdf" %}</a>
+        <a href="https://www.helloasso.com/associations/madcap-1874" target="_blank"
+          class="cta-button">{% trans "Adhésion 2025 via Helloasso " %}</a>
+        <a href="{% url 'contact' %}" class="cta-button">{% trans "Contactez-nous" %}</a>
+      </div>
+    </section>
+
+
+
+    <main>
+     
+      <!-- Espace vide -->
+    </main>
+   
+  
+  <br>
+  <br>
+  
+  <!-- Section 4 : Carte interactive Windy -->
+ 
+    <section class="don-section">
+      <h2>{% trans "Live météo Windy" %}</h2>
+      <div id="map-wrapper">
+
+        <!-- Carte Windy interactive -->
+        <div id="map-container">
+          <iframe width="950" height="450"
+          src="https://embed.windy.com/embed2.html?lat=42.7&lon=3.0&zoom=5&level=surface&overlay=waves&menu=&type=map"
+
+          frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Bouton pour afficher la carte en plein écran -->
+        <button id="fullscreen-btn">{% trans "Afficher la carte en plein écran" %}</button>
+      </div>
+
+    </section>
+  </main>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  {% include 'footer.html' %}
+
+  <script src="{% static 'js/weather.js' %}" defer></script>           <!-- Map Windy -->
+  <script src="{% static 'js/open_meteo.js' %}" defer></script>        <!-- Donnée Météo Open météo -->
+
+
+</body>
+
+</html>

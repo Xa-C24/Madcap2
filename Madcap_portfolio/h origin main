@@ -1,0 +1,265 @@
+* [33m332fd7a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Mise à jour du projet Madcap
+* [33m1a0122a[m setting ok
+* [33mbd327d9[m setting ok
+* [33mc6b833d[m add statif file pour render
+* [33ma031724[m delete
+* [33m42b227d[m Correction ortographe
+* [33md589de7[m readme brouillon
+* [33me333cb2[m ajout de style pour boutons de liens vers google doc et espace admin
+* [33m93f4650[m add photo asso
+* [33m7e47409[m add commentaire
+* [33m745eca1[m Traduction anglais
+* [33m0cf693c[m Traduction en anglais des html plus ajout du lien vers espace admin dans evenements
+* [33m59b7345[m[33m ([m[1;31morigin/main[m[33m)[m  Copie de Madcap dans Madcap2 puis push
+* [33m848fd2c[m  avis Vilolet Darange
+* [33mb5025ae[m  avis Vilolet Darange
+* [33m319f22d[m change favicon
+* [33m25edd43[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33m23c834e[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33mf918457[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33mcc8f601[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33mc216931[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33m0eebf8f[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33m0ce4696[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33m0642097[m Images doc pour readme.md
+* [33mfbf54b6[m Modification Readme, ajout d' images doc, ajout de la nouvelle partie Footer plus nouvelle conclusion
+* [33m6bb574b[m add photo doc database
+* [33m7ce36cc[m delate pour change photo
+* [33mcc53ee9[m Modif taille Logo footer
+* [33m71aa79e[m Petite modif texte live meteo windy
+* [33m9fdfe06[m Images doc pour readme.md
+* [33mb5ceaa5[m add header final
+* [33md1d2fd5[m Ajout de photo de fond dézippé pour le body
+* [33me7c15d5[m Ajout du border raduis pour lodo dans le header
+* [33m7a09202[m Ajout du favicon a toutes les pages HTML
+* [33m7b52d3e[m Photos dézipper
+* [33md90f7e3[m Delete images pour compression
+* [33mba81aa0[m Ajustement de la def valide phone numer pour formulaire et Avis. Numero fr et international ok
+* [33m47acf4e[m Correction erreur de frappe
+* [33m694380f[m Ajout du texte clic pour retour
+* [33m25a4a47[m Add photo de avis
+* [33m4b54ecf[m Style css pour template, footer et mentions legales
+* [33ma6390c2[m Create page html mentions légales
+* [33mb0b6da1[m add footer css
+* [33m910f03c[m Create footer
+* [33m0633ed4[m add adhésion a telecharger
+* [33me756647[m add doc pdf adhesion et reglement asso
+* [33mc78fbb4[m add path pour page mentions legales et def
+* [33mbd2e1f0[m add doc pdf adhesion et reglement asso
+* [33m9bcc8ee[m Change de alt
+* [33m3e2e571[m ajout du logo asso dans le header avec le menu
+* [33mf6a366e[m footer en construction
+* [33mc977703[m Footer et  petit logo dans le  header
+* [33mb56407a[m Modif de texte dans le titre
+* [33m71434fe[m Ajout de l'avis aléatoire sur la page index
+* [33mcd5d1ad[m ajout de balise <ul> pour une meilleure structure
+* [33ma22b335[m Ajout de div trans pour version anglaise
+* [33m4cfa4cd[m Ajout de <br>
+* [33m919970e[m ajout class pour footer
+* [33m96663a7[m Responsive style1 dashboard
+* [33mf7a4400[m create footer html
+* [33m2bd960f[m Photo d'un post avis
+* [33me6b4c3d[m Photo doc pour readme
+* [33m6111066[m add import render
+* [33m058e1e1[m add import render
+* [33m4869a0b[m Traduction en anglais du header
+* [33m942e2e5[m Delete et rename photo sunset pour panorama index html
+* [33mccbddaf[m Traduction anglaise des pages index et association html
+* [33mf5072aa[m Traduction page index en anglais
+* [33m9982eae[m Ajustement style css dashbord pour taille ecran smarphone
+* [33md2c9fa0[m Ajustement style css dashbord pour taille ecran smarphone
+* [33ma4c5ea9[m add urls test image
+* [33m7c6b9e7[m add urls test image
+* [33m77b0424[m Sauvegarde de mon travail avant pull
+* [33m46511ad[m add urls test image
+* [33mc2f3842[m Link test.urls
+* [33m5f668a4[m Link test.urls
+* [33m33d99ac[m Ajout Portfolio_ à .gitignore
+* [33mdc64d79[m Suppression du dossier Portfolio_
+* [33m9f0251a[m copy de Madcap projet Demo day dans Portfolio
+* [33m052424c[m copy de Madcap projet Demo day dans Portfolio
+* [33m2d03bf1[m add __init__  dans test pour unitest
+* [33m94d7576[m add path membres
+* [33m82630e0[m mise a jour
+* [33m6e22e1c[m add Multilingue
+* [33m4feb6d5[m add Multilingue
+* [33m1b9fb06[m add Multilingue
+* [33m9212a19[m add Multilingue
+* [33m3961255[m add Multilingue
+* [33m48673f0[m add Multilingue
+* [33m9b6dd67[m add Multilingue
+* [33m15e4cff[m add Multilingue
+* [33m2aba635[m add link vers Helloasso
+* [33m94bbc3f[m add link vers Helloasso
+* [33m0c4382d[m Add page association. html
+* [33mfdfad94[m add diagramme database
+* [33m2924206[m add diagramme database
+* [33m2a862dd[m add link vers Render
+* [33mecb9c8c[m Add images doc plus lien vers render
+* [33m6e48597[m add image maquette
+* [33m3a83878[m unitest ok
+* [33mf0447e1[m Create ce html pour initest membres
+* [33mbb163f9[m Enrichissement du readme.md, ajout de la page Avis, de Render
+* [33mce3613c[m Create doc image pour le readme + ajout des photos docs
+* [33m7e24e8d[m Ajout de log dans view pour gerer les erreurs d'envoi de messages via formulaire contact, ajout de mot de passe gmail dans env, modification de setting pour envoi des messages via formulaire contact
+* [33m500e0a3[m Create .env pour render
+* [33md95dc79[m Modification indentation
+* [33m37369f7[m Add database
+* [33mbfab447[m Modification pour Render
+* [33mfc4a2d5[m add photo movies avis
+* [33m561e5dd[m Change allowed host
+* [33mdc307d7[m Modif setting pour render
+* [33m7cced4b[m Correction settings pour Render
+* [33m2845dcc[m Modif de texte
+* [33mcf53d37[m Change allowed Hosts
+* [33mced3e1b[m add collect static
+* [33m0461443[m add requierement.txt
+* [33me342d8d[m add requierement.txt
+* [33mabe298a[m add photo baleares pour page évenement
+* [33m0c7be2e[m add requierement.txt
+* [33me775f7c[m modif host
+* [33m2ef19b8[m add requierement.txt
+* [33mca187a1[m add requierement.txt
+* [33mf2ab0cd[m add requierement.txt
+* [33mec03ef8[m add requierement.txt
+* [33m9ccefe6[m Modif Allowed Host
+* [33m885cf83[m Modif texte
+* [33ma868902[m Create page association html
+* [33m101e468[m html pour card meteo
+* [33m4d5839f[m adjout de la video de l'interieur pour la page histoire
+* [33m6745ee8[m file js pour gérer le changement de langue
+* [33m835fee5[m style css ok pour le moment
+* [33ma108db5[m add gitignore
+* [33m8a1fe4b[m Modification et ajout def change langage pour version anglaise
+* [33m95a21c3[m add mo pour file translate
+* [33m2f08eb8[m Readme brouillon
+* [33mbf0ef9b[m add Photo pour diapo asso plus photos illustration page asso
+* [33m32754ef[m Migrations
+* [33mbee2883[m Add photo de l'avis test
+* [33m129186d[m Page html livre d'or ok pour le moment
+* [33m90e96fd[m Style ok pour le moment
+* [33m969deef[m Configurations pour les Avis
+* [33md7f3864[m Creation page avec formulaire
+* [33m5cb8c0a[m Create class livre_dor
+* [33mb6e2349[m Ajout chemin vers admin/
+* [33me02f6d6[m Migration pour les avis
+* [33m8dc87f5[m Ajout de la def livre_dor pour poster un avis
+* [33m9121c51[m Modification pour la card
+* [33mc5697ea[m Modification indendation
+* [33m36812bc[m Base de donnée avec deux tables Member et Avis
+* [33m9d45d3a[m Première version Readme.md
+* [33m7ff6fac[m Add readme pour note
+* [33mc58fdd0[m add gitignore
+* [33m56d4651[m ajout de la def livre d'or
+* [33m53c115d[m ajout de livre d'or au path
+* [33m7a9adbe[m ajout de la class Avis
+* [33mbd483d9[m modif commentaire
+* [33mbd63be1[m create form. py pour la class Avis
+* [33m8271609[m style css ok pour le moment
+* [33mb5e3291[m Windy ok avec cartesss
+* [33m713b8ef[m Change un peu de texte
+* [33m53223d0[m Creation page Html pour laisser un avis
+* [33m4b394d5[m Ajustement pour affchage de la carte centré
+* [33mb0b23a8[m Retouche de texte ou formulation
+* [33mda84da9[m style css ok pour le moment, ajustement pour responsive et ajout du logo clic météo dans le header
+* [33ma2dd898[m Add pictures and logos
+* [33mb1cf11c[m I think is finish this page
+* [33m79c0551[m Ajout de la map OpenStreetMap
+* [33mcc2953d[m Create file js pour la map interactive OpenStreeMap pour la page contact
+* [33m93e752e[m Creation page histoire plus quelques modif sur les autres
+* [33m328240c[m modif style css pour la page Histoire
+* [33mc9c227f[m add Photos
+* [33m7519f41[m ok pour le moment
+* [33m35941f4[m ok pour le moment
+* [33m55306b9[m test
+* [33ma40052b[m Ajout du projet Madcap dans le Portfolio
+* [33mc919f73[m modif header html pour Sticky style and add picure logo
+* [33maf4d37d[m Just windy, delete open meteo
+* [33m2e2575d[m Modif pour style sticky
+* [33mf92825e[m Padding barre de menu
+* [33m7869cbb[m modif color admin access
+* [33m355f632[m add effet Sticky pour la barre de menu
+* [33m4f7d332[m add photo Baleares pour page évenement
+* [33meb9e022[m map windy ok
+* [33me767239[m nouveau code pour avoir la boucle du diapo
+* [33m6e66bcd[m Modif pour avoir la boucle sur le diapo index + change color header
+* [33m7275329[m Modif de l'index pour la carte météo
+* [33mcaa0408[m Creat file js pour la carte météo Windy
+* [33m5e009fa[m Windy api ok 1er étape
+* [33m5d014fa[m add video pour la grd motte pour la page évenements
+* [33maf45962[m Change logo favicon pour ne plus avoir le fond blanc
+* [33m99cebe8[m change tout ça
+* [33m4982822[m Quelques modifs de textes
+* [33m8b0f8f7[m setting pour json
+* [33m9b13d47[m Creation page Evenement html
+* [33m3ac92e6[m Add photos
+* [33me66c1ce[m Flag Fr et Uk
+* [33m069b1f9[m change text et add static diaporama indexjs
+* [33mec6fd61[m change text
+* [33m2feeb9f[m add photo contact et diaporama
+* [33m041ccc7[m add oeuil pour password
+* [33mb5331e5[m rename diaporamajs   diaporama index js
+* [33ma803526[m creat file JS pour diaporama index
+* [33m067c1cc[m add photo pour index contact
+* [33m42fd2be[m add style pour index  add diaporama index add photo index
+* [33m55927a0[m diaporama index
+* [33m78ea079[m add images
+* [33m57cc3e1[m delete images
+* [33m3e2f78a[m Change police
+* [33m5b042c9[m Modif video header et index
+* [33mcb8f4fb[m modif orthographe
+* [33m40df0e8[m modif orthographe
+* [33m987cd83[m add video for header
+* [33m3fb63e5[m modif style css for header
+* [33m8361b8a[m add video for header
+* [33m1bf788e[m Readme
+* [33m68e9afc[m Modif orthographe
+* [33m0a058f1[m Modif taille général, changement de police pour formulaire contact, modif taille logo acces admin
+* [33m3cfa1ac[m modification contener pour la video
+* [33m24d8d45[m Déplacement de la phrase au centre
+* [33m4a84eef[m style pour video index.html et style pour header.html
+* [33m56bd709[m modif text
+* [33m466ae1d[m Valide Phone number
+* [33m8411c1c[m modif titre
+* [33m734a259[m modif titre
+* [33mc14255c[m add style pour message retour après envoie mail via formulaire
+* [33m116c6d7[m change  name telephone
+* [33m47da174[m add def validate phone number
+* [33mfcb90bb[m change commentaire
+* [33m92e173f[m Readme
+* [33me0da69f[m add def submit contact pour formulaire de contact ligne 155
+* [33mec833eb[m add page dashboard et change name de pages
+* [33m2391cdb[m  add parametre SMTP gmail ligne 108
+* [33m8916c39[m Modification pour formualire de contatact add path submit contact ligne 14
+* [33m3ab722c[m Modification Header
+* [33m47543cf[m change name
+* [33m7d16913[m change name
+* [33m0a21f0c[m Modification Header
+* [33m91231ef[m Mise en page de contact html
+* [33m4c7a372[m change name
+* [33m7a75103[m Création deuxieme style css pour admin dashboard
+* [33m4a24e3a[m Modification Header mais rien de définitif
+* [33m465ad1b[m Creation data base + filtre de recherche. odre de rangement par ordre alphabetique ok. Mise en page css de admin_login
+* [33mbad7172[m Filtre recherche ok
+* [33m4c18050[m Readme
+* [33md637def[m Readme
+* [33m429919f[m modification de view py and models py pour éléver une erreur en cas de doublons de adhérent dans la base de donnée
+* [33m36e1f3f[m add Membre depuis dans la base de donnée
+* [33m7892837[m test
+* [33m03193f7[m test
+* [33m7a59690[m delete
+* [33mce90d30[m Readme
+* [33m4077bb8[m Creat .gitignore
+* [33m499c2d2[m Creat database
+* [33mff8587d[m delete
+* [33m2b66421[m Creat evenement.html
+* [33m6e84e6f[m create evenements.html
+* [33m5e8087b[m first commit with django already ok
+* [33mdbbc8d8[m Creation page contact.html
+* [33m97e51ea[m modif css
+* [33m17534c9[m le site avance . Ajout de logo lien clikable fb youtube, modif css, modif footer, html uniform
+* [33m1ebef12[m le site avance . Ajout de logo lien clikable fb youtube, modif css, modif footer, html uniform
+* [33m2225678[m add images, add files
+* [33m367dd6d[m create file stylecss
+* [33m2354ca8[m create file templates
+* [33m39f7552[m initial commit

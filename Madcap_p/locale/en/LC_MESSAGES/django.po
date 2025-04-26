@@ -1,0 +1,1841 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-05 08:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: madcap_project/settings.py:135
+msgid "Français"
+msgstr "Anglais"
+
+#: madcap_project/settings.py:136
+msgid "Anglais"
+msgstr ""
+
+#: templates/admin_dashboard.html:36
+msgid "Inscription aux événements 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:45
+msgid "Carénage du 13 au 21 avril 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:50
+msgid "Sorties d'hiver 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:55
+msgid "Estartit 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:63
+msgid "La Grande Motte 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:68
+msgid "Baléares 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:73
+msgid "Corsica et Monaco 2025"
+msgstr ""
+
+#: templates/admin_dashboard.html:78
+msgid ""
+"Afin de nous permettre de faire un prévisionnel, merci de vous pré-inscrire "
+"avant le 30 mars 2025."
+msgstr ""
+
+#: templates/admin_dashboard.html:80
+msgid ""
+"Les pré-inscriptions se font via les fichiers d’inscriptions mis à votre "
+"disposition. En cliquant sur chaque lien, vous accèderez à un fichier sur "
+"lequel vous renseignerez votre Prénom, Nom, Téléphone, Mail et indiquerez "
+"vos présences en saisissant « X »."
+msgstr ""
+
+#: templates/admin_dashboard.html:82
+msgid ""
+"En cas d’un nombre insuffisant d’équipiers ou de skipper, le séjour Baléares "
+"sera annulé."
+msgstr ""
+
+#: templates/admin_dashboard.html:84
+msgid ""
+"Ces propositions d’activités sont soumises à l’acceptation de nos dossiers "
+"de candidature, à la participation des adhérents et des skippers, ainsi "
+"qu’aux aléas de la météo."
+msgstr ""
+
+# ---------Association-----------
+#: templates/association.html:8
+msgid "L'Association Madcap 1874"
+msgstr "The Madcap 1874 Association"
+
+#: templates/association.html:20
+msgid "Qui sommes-nous ?"
+msgstr "Who are we?"
+
+#: templates/association.html:21
+msgid ""
+"\n"
+"        L’association MADCAP 1874 a été créée le 16 octobre 2021 pour "
+"assurer la préservation du plus vieux Cotre Pilote de Bristol construit en "
+"1874 à Cardiff. Classé au titre des monuments historiques en France et en "
+"Angleterre, il est le plus ancien des 17 cotres pilotes encore en navigation "
+"dans le monde. Notre mission est d’être des passeurs d’histoire : Madcap a "
+"eu une vie avant nous, et il continuera à tracer sa route après nous.\n"
+"      "
+msgstr ""
+"\n"
+"        The MADCAP 1874 Association was founded on October 16, 2021, to "
+"ensure the preservation of the oldest Bristol Pilot Cutter, built in 1874 in "
+"Cardiff. Listed as a historical monument in both France and England, it is "
+"the oldest of the 17 pilot cutters still sailing worldwide. Our mission is "
+"to be history keepers: Madcap had a life before us, and it will continue its "
+"journey after us.\n"
+"      "
+
+#: templates/association.html:29
+msgid "Nos valeurs et nos actions"
+msgstr "Our values and actions"
+
+#: templates/association.html:30
+msgid ""
+"\n"
+"        Pour les membres fondateurs de l’association, l’achat de Madcap "
+"devait permettre d’en faire un lieu de mixité sociale et de partage. Nous "
+"collaborons avec des associations spécialisées pour accompagner :\n"
+"      "
+msgstr ""
+"\n"
+"        For the founding members of the association, acquiring Madcap was "
+"about creating a space for social inclusion and sharing. We collaborate with "
+"specialized associations to support:\n"
+"      "
+
+#: templates/association.html:34
+msgid "Prévention des risques suicidaires chez les jeunes"
+msgstr "Suicide risk prevention among young people"
+
+#: templates/association.html:35
+msgid "Soutien aux personnes atteintes de syndromes post-traumatiques"
+msgstr "Support for individuals with post-traumatic stress disorders"
+
+#: templates/association.html:36
+msgid "Réinsertion de personnes en difficulté après un accident de la vie"
+msgstr "Reintegration of individuals facing life hardships"
+
+#: templates/association.html:37
+msgid "Sorties à la voile handi-valides"
+msgstr "Accessible sailing trips for people with disabilities"
+
+#: templates/association.html:38
+msgid "Promotion de la mixité dans le sport, notamment la voile"
+msgstr "Promotion of diversity in sports, particularly sailing"
+
+#: templates/association.html:45
+msgid "L’association ouvre également ses portes à diverses initiatives :"
+msgstr "The association also welcomes various initiatives:"
+
+#: templates/association.html:47
+msgid "Réinsertion pour les jeunes en difficulté"
+msgstr "Reintegration programs for struggling youth"
+
+#: templates/association.html:48
+msgid "Sorties organisées pour des clubs sportifs ou des associations"
+msgstr "Organized outings for sports clubs or associations"
+
+#: templates/association.html:49
+msgid "Séminaires et événements d'entreprise (team-building en mer)"
+msgstr "Corporate seminars and events (team-building at sea)"
+
+#: templates/association.html:50
+msgid ""
+"Ateliers d’initiation à la navigation et aux métiers du patrimoine maritime"
+msgstr "Workshops on sailing and maritime heritage professions"
+
+#: templates/association.html:51
+msgid "Événements éducatifs pour sensibiliser les jeunes au monde maritime"
+msgstr "Educational events to raise youth awareness of the maritime world"
+
+#: templates/association.html:52
+msgid "Sorties thématiques : histoire, faune marine, techniques de navigation"
+msgstr "Themed outings: history, marine wildlife, sailing techniques"
+
+#: templates/association.html:73
+msgid "Faites partie de l’équipage"
+msgstr "Become part of the crew"
+
+#: templates/association.html:74
+msgid ""
+"\n"
+"        Il existe plusieurs façons de participer à la vie de "
+"l’association :\n"
+"      "
+msgstr ""
+"\n"
+"        There are several ways to get involved in the association:\n"
+"      "
+
+#: templates/association.html:78
+msgid "Section navigation : chefs de bord et équipiers"
+msgstr "Navigation section: skippers and crew members"
+
+#: templates/association.html:79
+msgid "Travaux manuels : entretien et restauration du bateau"
+msgstr "Hands-on work: maintenance and restoration of the boat"
+
+#: templates/association.html:80
+msgid "Partie administrative et organisation des événements"
+msgstr "Administrative tasks and event organization"
+
+#: templates/association.html:89
+msgid "Financement et mécénat"
+msgstr "Funding and sponsorship"
+
+#: templates/association.html:90
+msgid ""
+"\n"
+"        Conserver Madcap en bon état demande un engagement financier "
+"important. Le bateau a bénéficié d’un refit complet de 2014 à 2018 et de "
+"gros travaux en 2022. Nos ressources financières proviennent de plusieurs "
+"sources :\n"
+"      "
+msgstr ""
+"\n"
+"        Keeping Madcap in good condition requires significant financial "
+"commitment. The boat underwent a complete refit from 2014 to 2018 and major "
+"renovation work in 2022. Our financial resources come from several sources:\n"
+"      "
+
+#: templates/association.html:94
+msgid "Les cotisations des membres"
+msgstr "Membership fees"
+
+#: templates/association.html:95
+msgid "Le paiement des journées de navigation"
+msgstr "Payments for sailing days"
+
+#: templates/association.html:96
+msgid "Les dons de particuliers"
+msgstr "Private donations"
+
+#: templates/association.html:97
+msgid "Les subventions et le mécénat d’entreprises"
+msgstr "Grants and corporate sponsorship"
+
+#: templates/association.html:102
+msgid "Faire vivre l'association"
+msgstr "Keeping the association alive"
+
+#: templates/association.html:107 templates/index.html:165
+msgid "Télécharger l'adhésion 2025 en format pdf"
+msgstr "Download the 2025 membership in pdf format"
+
+#: templates/association.html:109
+msgid "Adhésion 2025 via Helloasso"
+msgstr "2025 membership via Helloasso"
+
+#: templates/association.html:110 templates/index.html:168
+msgid "Contactez-nous"
+msgstr "Contact us"
+
+#: templates/association.html:113
+msgid "Consulter le réglement Intérieur de l'association Madcap 1874"
+msgstr ""
+
+#: templates/association.html:119
+msgid ""
+"\n"
+"        En adhérant à l’association, vous participez à la sauvegarde d’un "
+"patrimoine maritime précieux. Votre engagement permet de préserver et de "
+"faire vivre Madcap pour les générations futures.\n"
+"        "
+msgstr ""
+"\n"
+"        By joining the association, you contribute to the preservation of a "
+"valuable maritime heritage. Your commitment helps keep Madcap alive for "
+"future generations.\n"
+"        "
+
+#: templates/association.html:133
+msgid "Comment faire un don ?"
+msgstr "How do I make a donation?"
+
+#: templates/association.html:135
+msgid "Faire un don"
+msgstr "Make a donation"
+
+#: templates/association.html:140
+msgid ""
+"\n"
+"        Notre statut d’association d’intérêt général permet aux donateurs de "
+"bénéficier de réductions fiscales.\n"
+"      "
+msgstr ""
+"\n"
+"        As a public-interest association, we offer tax benefits for donors.\n"
+"      "
+
+#: templates/footer.html:12
+msgid "Madcap 1874 - Association pour la préservation du patrimoine maritime"
+msgstr "Association for the preservation of maritime heritage"
+
+# ---------Footer-----------
+
+#: templates/footer.html:17 templates/mentions_legales.html:18
+#: templates/mentions_legales.html:52
+msgid "Association Madcap 1874"
+msgstr "The Madcap 1874 Association"
+
+#: templates/footer.html:18
+msgid "N° W821001521"
+msgstr ""
+
+#: templates/footer.html:19
+msgid "Adresse du siège de l'association:"
+msgstr "Address of the association's head office:"
+
+#: templates/footer.html:21
+msgid "Téléphone"
+msgstr "Phone"
+
+#: templates/footer.html:22
+msgid "Email"
+msgstr "Email"
+
+#: templates/footer.html:38 templates/header.html:55
+msgid "Accueil"
+msgstr "Home"
+
+#: templates/footer.html:39 templates/header.html:56
+msgid "À propos de l'Association"
+msgstr "About the Association"
+
+#: templates/footer.html:40
+msgid "L'histoire de Madcap"
+msgstr"The Madcap Story"
+
+#: templates/footer.html:41 templates/header.html:58
+msgid "Événements"
+msgstr "Events"
+
+#: templates/footer.html:42 templates/header.html:59
+msgid "Soutenir le Projet"
+msgstr "Support the Project"
+
+#: templates/footer.html:43 templates/header.html:60
+msgid "Votre Expérience"
+msgstr "Your Experience"
+
+#: templates/footer.html:44 templates/header.html:61
+msgid "Nous Contacter"
+msgstr "Contact us"
+
+#: templates/footer.html:45 templates/mentions_legales.html:14
+msgid "Mentions Légales"
+msgstr "Legal information"
+
+#: templates/footer.html:47
+msgid "Réglement Intérieur Madcap 1874"
+msgstr "Madcap 1874 Internal Regulations"
+
+#: templates/footer.html:53
+msgid "Tous droits réservés"
+msgstr "All rights reserved"
+
+
+# ----- header---------#
+#: templates/header.html:11
+msgid "Madcap, le plus vieux côtre-pilote encore en état de naviguer"
+msgstr "Madcap, the oldest pilot cutter still sailing"
+
+#: templates/header.html:24
+msgid "Espace Admin"
+msgstr "Espace Admin"
+
+#: templates/header.html:57
+msgid "L'Histoire de Madcap"
+msgstr "The Madcap Story"
+
+# ----------INDEX----------
+#: templates/index.html:61
+msgid "Un patrimoine maritime vivant"
+msgstr "A living maritime heritage"
+
+#: templates/index.html:63
+msgid ""
+"\n"
+"          Construit en 1874, Madcap est le plus ancien côtre-pilote encore à "
+"flot.\n"
+"          Autrefois actif dans le canal de Bristol jusqu’au début des années "
+"1920, \n"
+"          il a ensuite été transformé en voilier de plaisance. Aujourd’hui, "
+"après avoir \n"
+"          rejoint la Méditerranée en 2020, il continue de voguer sous la "
+"bannière de \n"
+"          l’association Madcap 1874, basée à Canet-en-Roussillon.\n"
+"          "
+msgstr ""
+"\n"
+"          Built in 1874, Madcap is the oldest pilot cutter still afloat.\n"
+"          Once active in the Bristol Channel until the early 1920s, \n"
+"          it was later converted into a pleasure yacht. Today, after \n"
+"          reaching the Mediterranean in 2020, it continues to sail under "
+"the \n"
+"          banner of the Madcap 1874 association, based in Canet-en-"
+"Roussillon.\n"
+"          "
+
+#: templates/index.html:71
+msgid "Classé Monument Historique"
+msgstr "Listed as a Historical Monument"
+
+#: templates/index.html:94
+msgid ""
+"L'association Madcap vous invite à découvrir ce voilier historique restauré "
+"avec passion."
+msgstr ""
+"The Madcap Association invites you to discover this historic sailing vessel, "
+"carefully restored with passion."
+
+#: templates/index.html:98
+msgid ""
+"\n"
+"        <span style=\"display: inline-block; padding-left: 1.5cm;\"></"
+"span> \n"
+"        \n"
+"        Madcap, témoin précieux de notre patrimoine\n"
+"        maritime, vous invite à embarquer pour un voyage dans le temps. "
+"Restauré avec rigueur et minutie, ce bateau\n"
+"        classé Monument Historique reflète l'excellence de l'artisanat naval "
+"de son époque. L'association se consacre à\n"
+"        sa préservation et à la promotion du patrimoine maritime, permettant "
+"au public de découvrir les techniques de\n"
+"        navigation à voile du XIXe siècle. Découvrez les secrets de sa "
+"construction, ses récits de navigation et les\n"
+"        événements marquants qui ont façonné son histoire.\n"
+"        "
+msgstr ""
+"\n"
+"        <span style=\"display: inline-block; padding-left: 1.5cm;\"></"
+"span> \n"
+"        \n"
+"        Madcap, a precious witness to our maritime heritage,\n"
+"        invites you to embark on a journey through time. Carefully and "
+"meticulously restored,\n"
+"        this Historical Monument reflects the excellence of 19th-century "
+"shipbuilding.\n"
+"        The association is dedicated to its preservation and the promotion "
+"of maritime heritage,\n"
+"        allowing the public to discover traditional sailing techniques.\n"
+"        Learn about its construction secrets, navigation stories, and the "
+"key events that shaped its history.\n"
+"        "
+
+#: templates/index.html:123
+msgid ""
+" Plus qu’un simple bateau, Madcap est un\n"
+"        témoin unique de l’histoire maritime. Grâce au travail dévoué de ses "
+"membres, ce patrimoine continue de\n"
+"        naviguer, offrant à chacun une immersion dans les navigations "
+"d’autrefois.\n"
+"        "
+msgstr ""
+" More than just a boat, Madcap is a unique witness to maritime history.\n"
+"        Thanks to the dedicated work of its members, this heritage "
+"continues\n"
+"        to sail, offering everyone an immersion into 19th-century sailing.\n"
+"        "
+
+#: templates/index.html:158
+msgid ""
+"Embarquez à bord de Madcap, naviguez avec nous et plongez dans son histoire."
+msgstr "Step aboard Madcap, sail with us, and dive into its history."
+
+#: templates/index.html:163
+msgid "Partagez des moments riches en émotions lors de nos sorties en mer."
+msgstr "Share unforgettable moments during our sea outings."
+
+#: templates/index.html:167
+msgid "Adhésion 2025 via Helloasso "
+msgstr "2025 membership via Helloasso"
+
+#: templates/index.html:186
+msgid "Live météo Windy"
+msgstr "Windy weather map"
+
+#: templates/index.html:199
+msgid "Afficher la carte en plein écran"
+msgstr "View the map in full screen"
+
+#: templates/mentions_legales.html:17
+msgid "Éditeur du site"
+msgstr ""
+
+#: templates/mentions_legales.html:21 templates/mentions_legales.html:54
+msgid "Président"
+msgstr ""
+
+#: templates/mentions_legales.html:25
+msgid "Conception technique et hébergement"
+msgstr ""
+
+#: templates/mentions_legales.html:26
+msgid "[À compléter avec l’hébergeur et le développeur si nécessaire]"
+msgstr ""
+
+#: templates/mentions_legales.html:30
+msgid "Droit de modification"
+msgstr ""
+
+#: templates/mentions_legales.html:31
+msgid ""
+"L’internaute reconnaît que l’utilisation du site [URL du site Madcap] est "
+"régie par le droit français. Le contenu du site est mis à disposition pour "
+"un usage privé et non exclusif. Ce droit d’utilisation comprend le droit de "
+"stockage sur écran monoposte et le droit de reproduction aux conditions ci-"
+"après définies. Il interdit la récupération des bases de données."
+msgstr ""
+
+#: templates/mentions_legales.html:35
+msgid "Copies ou reproductions"
+msgstr ""
+
+#: templates/mentions_legales.html:36
+msgid ""
+"Les photographies et vidéos présentes sur ce site ne peuvent être "
+"reproduites sans autorisation préalable mais doivent obligatoirement "
+"comporter la mention suivante : [URL du site Madcap]."
+msgstr ""
+
+#: templates/mentions_legales.html:37
+msgid ""
+"Les photographies, images fixes ou animées, ne peuvent être reproduites sans "
+"autorisation préalable. Si un droit de copie est accordé, la mention du "
+"copyright indiquée par l’administrateur du site devra impérativement figurer "
+"sur le support utilisé à cette fin."
+msgstr ""
+
+#: templates/mentions_legales.html:38
+msgid ""
+"Les logos, visuels et marques présents sur ce site sont la propriété de [URL "
+"du site Madcap] ou de ses partenaires."
+msgstr ""
+
+#: templates/mentions_legales.html:42
+msgid "Responsabilité de l’éditeur"
+msgstr ""
+
+#: templates/mentions_legales.html:43
+msgid ""
+"Ce site peut contenir des liens vers des sites extérieurs. Il peut aussi, à "
+"son insu, avoir été relié à d’autres sites par le biais de liens hypermédia. "
+"L’association Madcap 1874 décline toute responsabilité concernant les "
+"informations présentées sur ces autres sites."
+msgstr ""
+
+#: templates/mentions_legales.html:47
+msgid "Collecte de données personnelles"
+msgstr ""
+
+#: templates/mentions_legales.html:48
+msgid ""
+"Conformément à l’article 32 de la loi « Informatique et Libertés » n°78-17 "
+"du 6 janvier 1978, modifiée par la loi n°2004-801 du 6 août 2004, les "
+"informations recueillies via les formulaires de contact font l’objet d’un "
+"traitement informatique destiné uniquement à ce que le responsable du "
+"traitement puisse répondre aux utilisateurs. Elles ne seront jamais "
+"utilisées à des fins non prévues ni transmises à des partenaires."
+msgstr ""
+
+#: templates/mentions_legales.html:49
+msgid ""
+"Les données collectées ne sont pas conservées plus d’un an. Aucune "
+"information personnelle autre que celles demandées dans ce cadre n’est "
+"collectée à l’insu des utilisateurs."
+msgstr ""
+
+#: templates/mentions_legales.html:50
+msgid ""
+"Conformément aux articles 39 et 40 de la loi susmentionnée, l’utilisateur de "
+"ce site bénéficie des droits d’interrogation, d’accès, de rectification et "
+"de suppression portant sur les données le concernant. Pour exercer ces "
+"droits, il peut adresser une demande à :"
+msgstr ""
+
+#: templates/mentions_legales.html:58
+msgid "Crédits"
+msgstr ""
+
+#: templates/mentions_legales.html:59
+msgid "Photos"
+msgstr ""
+
+#: templates/mentions_legales.html:60
+msgid ""
+"Les photos sont prises par les membres de l’association Madcap 1874 et par "
+"<a href=\"https://www.torveo.es/\" target=\"_blank\">Torveo</a>."
+msgstr ""
+
+#: templates/mentions_legales.html:62
+msgid "Vidéos"
+msgstr ""
+
+#: templates/mentions_legales.html:63
+msgid ""
+"Les vidéos présentes sur ce site ont été réalisées par Jean-Pierre "
+"Roussoulières, membre de l’association Madcap 1874."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/_pytest/config/argparsing.py:474
+#, python-format
+msgid "ambiguous option: %(option)s could match %(matches)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/cloudinary/forms.py:55
+#: venv/lib/python3.12/site-packages/cloudinary/forms.py:124
+msgid "No file selected!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:16
+msgid "Messages"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:30
+msgid "…"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:32
+msgid "That page number is not an integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:33
+msgid "That page number is less than 1"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:34
+msgid "That page contains no results"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:70
+msgid "Enter a valid domain name."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:155
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:768
+msgid "Enter a valid URL."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:216
+msgid "Enter a valid integer."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:227
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/lib/python3.12/site-packages/django/core/validators.py:310
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:318
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:330
+#: venv/lib/python3.12/site-packages/django/core/validators.py:339
+#: venv/lib/python3.12/site-packages/django/core/validators.py:353
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2215
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:332
+msgid "IPv4"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:341
+#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:43
+msgid "IPv6"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:355
+msgid "IPv4 or IPv6"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:396
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:402
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:437
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:446
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:455
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:462
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:494
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:512
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:535
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:359
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:398
+msgid "Enter a number."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:537
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:542
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:547
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:618
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:680
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/base.py:1572
+#: venv/lib/python3.12/site-packages/django/forms/models.py:908
+msgid "and"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/base.py:1574
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:135
+msgid "This field cannot be null."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:136
+msgid "This field cannot be blank."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1156
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1157
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1159
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1209
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1211
+msgid "String (unlimited)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1320
+msgid "Comma-separated integers"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1421
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1425
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1560
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1429
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1556
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1564
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1569
+msgid "Date (with time)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1696
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1698
+msgid "Decimal number"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1859
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1863
+msgid "Duration"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1915
+msgid "Email address"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1940
+msgid "File path"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2018
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2020
+msgid "Floating point number"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2060
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2062
+msgid "Integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2158
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2175
+msgid "Small integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2183
+msgid "IPv4 address"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2214
+msgid "IP address"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2305
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2306
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2308
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2359
+msgid "Positive big integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2374
+msgid "Positive integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2389
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2405
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2441
+msgid "Text"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2521
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2525
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2529
+msgid "Time"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2637
+msgid "URL"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2661
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2726
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2728
+msgid "Universally unique identifier"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:244
+msgid "File"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:420
+msgid "Image"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:24
+msgid "A JSON object"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:26
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:932
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:934
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1228
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1285
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1287
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1335
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: venv/lib/python3.12/site-packages/django/forms/boundfield.py:185
+msgid ":?.!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:95
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:308
+msgid "Enter a whole number."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:479
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1260
+msgid "Enter a valid date."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:502
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1261
+msgid "Enter a valid time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:529
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:563
+msgid "Enter a valid duration."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:564
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:633
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:634
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:635
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:637
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:642
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:710
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:882
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:968
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:970
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1089
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1590
+msgid "Enter a list of values."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1090
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1332
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1362
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.12/site-packages/django/forms/forms.py:94
+msgid ":"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/forms.py:230
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:484
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:491
+msgid "Order"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:499
+msgid "Delete"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:922
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/utils.py:227
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:461
+msgid "Clear"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:462
+msgid "Currently"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:463
+msgid "Change"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:800
+msgid "Unknown"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:801
+msgid "Yes"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:802
+msgid "No"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:903
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:74
+msgid "p.m."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:75
+msgid "a.m."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:80
+msgid "PM"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:81
+msgid "AM"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:153
+msgid "midnight"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:155
+msgid "noon"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:12
+msgid "Saturday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:21
+msgid "Sat"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:25
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:26
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:27
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:28
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:29
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:30
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:31
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:32
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:33
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:34
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:35
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:36
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:39
+msgid "jan"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:40
+msgid "feb"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:41
+msgid "mar"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:42
+msgid "apr"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:43
+msgid "may"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:44
+msgid "jun"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:45
+msgid "jul"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:46
+msgid "aug"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:47
+msgid "sep"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:48
+msgid "oct"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:49
+msgid "nov"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:50
+msgid "dec"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/text.py:75
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/text.py:286
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.12/site-packages/django/utils/text.py:305
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:135
+msgid ", "
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:29
+msgid "Forbidden"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:64
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:115
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:349
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:68
+#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:8
+#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:7
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:217
+msgid "Django Documentation"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:227
+msgid "Get started with Django"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:235
+msgid "Django Community"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#~ msgid "Rejoignez-nous"
+#~ msgstr "Join us"

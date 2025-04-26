@@ -1,0 +1,38 @@
+# 🔹 Node.js (évite d'envoyer les dépendances installées)
+node_modules/
+yarn.lock
+package-lock.json
+
+# 🔹 Fichiers de configuration et de build (déjà générés localement)
+dist/
+.vite/
+.vscode/
+.DS_Store
+
+# 🔹 Environnements virtuels Python (si tu l’utilises)
+venv/
+venv/bin/
+venv/lib/
+venv/include/
+pyvenv.cfg
+
+# 🔹 Fichiers spécifiques à ton système (Windows, macOS, Linux)
+*.log
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.cache
+
+# 🔹 Clés et fichiers sensibles (ex: API keys)
+.env
+.env.local
+.env.development
+.env.production
+
+# 🔹 Scripts d'activation de l'environnement (Python, shell, etc.)
+activate
+activate.csh
+activate.fish
+Activate.ps1

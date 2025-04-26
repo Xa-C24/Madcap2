@@ -1,0 +1,66 @@
+/* Style général de la page */
+.mentions-container {
+  font-family: 'Playfair Display', sans-serif;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #faf8f8;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1); /* Réduction du flou */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-rendering: optimizeLegibility;   /* Optimise l'affichage des polices pour une meilleure netteté. */
+    -webkit-font-smoothing: antialiased; /* Améliore le lissage des polices sur Chrome et Safari.*/
+    -moz-osx-font-smoothing: grayscale; /* Améliore la netteté sur Firefox (Mac). */
+}
+
+/* Titre principal */
+.mentions-container h1 {
+  text-align: center;
+  font-family: 'Playfair Display', sans-serif;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #1d1c1c;
+}
+
+/* Titres des sections */
+.mentions-container h2 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 22px;
+  margin-top: 20px;
+  color:  #111;
+  border-bottom: 1px solid #771d1d;
+  padding-bottom: 5px;
+}
+
+/* Paragraphe */
+.mentions-container p {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color:  #252c35;
+  font-weight: 500; /* Assure un poids de texte standard */
+}
+
+/* Lien */
+.mentions-container a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mentions-container a:hover {
+  text-decoration: underline;
+}
+
+/* Couleur spécifique pour "Photos" et "Vidéos" */
+.mentions-container h3 {
+  font-family: 'Playfair Display', sans-serif;
+  color: #1d1c1c; 
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* Espacement entre les sections */
+.mentions-container section {
+  margin-bottom: 20px;
+}

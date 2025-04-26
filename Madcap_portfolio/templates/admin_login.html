@@ -1,0 +1,103 @@
+{% load static %} <!-- Charger les fichiers statiques Django -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N35WL3N1WF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N35WL3N1WF');
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon de la page -->
+    <link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
+    
+    <!-- Polices d'écriture -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Titre de la page -->
+    <title>Connexion Admin</title>
+    
+    <!-- Inclusion de la feuille de style principale -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- Inclure la bibliothèque FontAwesome pour les icônes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</head>
+<body>
+    <!-- Inclusion de l'en-tête -->
+    {% include 'header.html' %}
+    
+    <!-- Titre principal de la page -->
+    <h1 class="admin-title">Connexion Administrateur</h1>
+    
+    <br>
+    
+    <!-- Conteneur du formulaire de connexion -->
+    <section class="don-section login-form-container">
+        <!-- Formulaire de connexion -->
+        <form method="POST">
+            <!-- Token CSRF pour protéger le formulaire contre les attaques CSRF -->
+            {% csrf_token %}
+            
+            <!-- Champ pour l'adresse e-mail -->
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <!-- Champ pour le mot de passe avec icône pour afficher/masquer -->
+            <label for="password">Mot de passe :</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <!-- Bouton pour afficher/masquer le mot de passe -->
+                <button type="button" id="togglePassword" class="eye-button">
+                    <i class="fas fa-eye"></i> <!-- Icône de l'œil -->
+                </button>
+            </div>
+            
+            <!-- Bouton de soumission -->
+            <button type="submit" class="don-button">Connexion</button>
+        </form>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Messages flash pour afficher les erreurs ou confirmations -->
+    {% if messages %}
+    <ul class="flash-messages">
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <!-- Inclusion du pied de page -->
+    {% include 'footer.html' %}
+    
+    <!-- Script pour gérer l'affichage/masquage du mot de passe avec l'oeuil -->
+    <script>
+        const togglePassword = document.getElementById('togglePassword'); // Bouton pour l'icône de l'œil
+        const passwordInput = document.getElementById('password'); // Champ mot de passe
+
+        togglePassword.addEventListener('click', () => {
+            // Alterner entre "password" et "text" pour afficher ou masquer le mot de passe
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Changer l'icône (œil ouvert ou barré)
+            togglePassword.innerHTML = 
+                type === 'password' 
+                ? '<i class="fas fa-eye"></i>' 
+                : '<i class="fas fa-eye-slash"></i>';
+        });
+    </script>
+</body>
+</html>

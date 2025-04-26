@@ -1,0 +1,78 @@
+/* Import d'une belle police */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Styles généraux */
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    background-color: #2c3e50; /* 🌟 Couleur de fond de secours */
+    margin: 0;
+    padding: 0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Titre */
+h1 {
+    margin-top: 20px;
+    font-size: 36px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Boutons */
+button {
+    font-size: 22px;
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Couleurs des boutons */
+button:nth-child(1) {
+    background-color: #ff9800; /* Pierre */
+    color: white;
+}
+
+button:nth-child(2) {
+    background-color: #4caf50; /* Papier */
+    color: white;
+}
+
+button:nth-child(3) {
+    background-color: #2196F3; /* Ciseaux */
+    color: white;
+}
+
+/* Effet au survol des boutons */
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Résultat */
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation d'apparition pour le résultat */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

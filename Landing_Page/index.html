@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madcap Version 1</title>
+    <img src="images/favicon_madcap.png" alt="LogoMadcap1874" class="w-full h-10 object-cover rounded-md">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md p-4 fixed w-full top-0">
+        <div class="container mx-auto flex justify-between">
+            <h1 class="text-2xl font-bold">Madcap v1</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#features" class="text-blue-500">Caractéristiques</a></li>
+                <li><a href="#about" class="text-blue-500">À propos</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-5xl font-bold">Bienvenue sur Madcap v1</h1>
+        <img src="images/Madcap1874.png" alt="Madcap1874" class="w-full h-40 object-cover rounded-md">
+        <p class="mt-4 text-lg">Une plateforme construite avec HTML, CSS, Django et JavaScript.</p>
+        <a href="#" class="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg">Accéder à l'application</a>
+    </section>
+    
+    <!-- Feature Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">Caractéristiques Clés</h2>
+            <img src="images/Maquette.png" alt="Maquette_Header" class="w-full h-40 object-cover rounded-md">
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <img src="feature1.jpg" alt="Gestion des Membres" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Gestion des Membres</h3>
+                    <p class="text-gray-600">Système Django permettant l'ajout, la modification et la suppression de membres.</p>
+                    <img src="images/membres.png" alt="Liste des membres" class="w-full h-40 object-cover rounded-md">
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <img src="feature2.jpg" alt="Météo Interactive" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Carte Météo Interactive</h3>
+                    <p class="text-gray-600">Intégration de la carte Windy pour afficher les conditions météo en direct.</p>
+                    <img src="images/windy.png" alt="Live Météo Windy" class="w-full h-40 object-cover rounded-md">
+                    
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <img src="feature3.jpg" alt="Livre d'Or" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Livre d'Or Numérique</h3>
+                    <p class="text-gray-600">Système d'avis avec validation avant publication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">À propos du projet</h2>
+            <p class="mt-4 text-gray-600">Madcap v1 est un projet développé avec Django, HTML, CSS et JavaScript. Il vise à moderniser la gestion des membres et des événements pour l'association Madcap1874.</p>
+            <img src="images/asso.jpg" alt="Madcap1874" class="w-full h-40 object-cover rounded-md">
+          
+            <p class="mt-2 text-gray-600">Ce projet a été initié dans le cadre du Portfolio Project de Holberton School.</p>
+            <a href="https://github.com" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg">Voir le GitHub du projet</a>
+            <div class="mt-6">
+                <h3 class="text-2xl font-semibold">Équipe: PIEDALLU Xavier Dévellopeur Web</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="https://linkedin.com" class="text-blue-500">LinkedIn</a> | <a href="https://github.com" class="text-blue-500">GitHub</a>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-6 bg-white text-center shadow-md">
+        <p class="text-gray-600">© 2025 Madcap1874 v1 - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

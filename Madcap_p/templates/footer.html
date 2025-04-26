@@ -1,0 +1,60 @@
+{% load static %} <!-- Charger les fichiers statiques Django -->
+{% load i18n %} <!-- Fr vs En-->
+
+<!-- Lien vers la feuille de style CSS principale -->
+<link rel="stylesheet" href="{% static 'css/style_footer.css' %}">
+
+
+<footer>
+  <div class="footer-container">
+      <!-- Logo et description -->
+      <div class="footer-left">
+          <img src="{% static 'images/logo3.png' %}" alt="Logo Madcap">
+          <p>Madcap 1874 - Association pour la préservation du patrimoine maritime</p>
+      </div>
+
+      
+      <!-- Contact et réseaux sociaux -->
+
+      <div class="footer-right">
+        <p> Association Madcap 1874</p>
+          <p>N° W821001521</p>
+          <p>Adresse du siège de l'association:</p>
+           <p> 66 Cité Ducau, 82100 Castelsarrasin, France</p>
+          <p>Téléphone : +33 6 86 14 39 55</p>
+          <p>Email : <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a></p>
+          
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank">
+                <img src="{% static 'images/Fb_logo2.png' %}" alt="Facebook" width="25" height="25">
+            </a>
+            <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank">
+                <img src="{% static 'images/Youtube_logo.png' %}" alt="YouTube" width="25" height="25">
+            </a>
+        </div>
+      </div>
+  </div>
+
+  <!-- Liens de navigation -->
+
+<div class="footer-middle">
+          
+        <ul>
+            <li><a href="{% url 'index' %}">Accueil</a></li>
+            <li><a href="{% url 'association' %}">A propos de l'Association</a></li>
+            <li><a href="{% url 'histoire' %}">l'histoire de Madcap</a></li>
+            <li><a href="{% url 'evenements' %}">Événements</a></li>
+            <li><a href="{% url 'don' %}">Votre Expérience</a></li>
+            <li><a href="{% url 'livre_dor' %}">Soutenir le Projet</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'mentions_legales' %}">Mentions Légales</a></li>
+            <li><a href="{% static 'docs/Réglement_intérieur_Madcap_1874.pdf' %}" download>
+            {% trans "Réglement Intérieur Madcap 1874" %}
+          </a></li>
+        </ul>
+    </div>
+  <div class="footer-bottom">
+      <p>© 2024 Madcap - Tous droits réservés</p>
+      
+  </div>
+</footer>

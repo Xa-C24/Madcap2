@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+
+
+    <title>Pierre-Papier-Ciseaux</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { font-size: 20px; margin: 10px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Pierre🪨-Papier📄-Ciseaux✂️</h1>
+    <button onclick="play('pierre')">✊ Pierre</button>
+    <button onclick="play('papier')">📄 Papier</button>
+    <button onclick="play('ciseaux')">✂️ Ciseaux</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function play(userChoice) {
+            const choices = ['pierre', 'papier', 'ciseaux'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            let result = '';
+
+            if (userChoice === computerChoice) {
+                result = "Égalité ! 😐";
+            } else if (
+                (userChoice === 'pierre' && computerChoice === 'ciseaux') ||
+                (userChoice === 'papier' && computerChoice === 'pierre') ||
+                (userChoice === 'ciseaux' && computerChoice === 'papier')
+            ) {
+                result = "Bravo, tu as gagné ! 🎉";
+            } else {
+                result = "Dommage, l'ordinateur a gagné ! 😢";
+            }
+
+            document.getElementById('result').innerHTML = `Tu as choisi : ${userChoice}<br> L'ordi a choisi : ${computerChoice}<br><strong>${result}</strong>`;
+        }
+    </script>
+</body>
+</html>

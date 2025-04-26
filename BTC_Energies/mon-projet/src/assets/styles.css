@@ -1,0 +1,539 @@
+/* ========================
+   VARIABLES & BASE
+=========================*/
+
+/* Variables personnalisées */
+:root {
+  --primary-color: #003b46;       /* Couleur de fond principale */
+  --secondary-color: #f1642c;     /* Couleur secondaire pour les accents */
+  --text-color: #ffffff;          /* Couleur du texte principal */
+  --background-color: #f4f4f4;    /* Couleur de fond générale */
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Bouton personnalisé */
+.btn-custom {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-custom:hover {
+  background-color: #019d92; 
+}
+
+/* ========================
+   SIDEBAR
+=========================*/
+
+.sidebar {
+  background: linear-gradient(to right, #000417, #040c29, #0c2049, #1a2f5e);
+  font-family: 'Urbanist', sans-serif;
+  font-weight: bold;
+  position: fixed; /* Sidebar fixe par défaut sur desktop */
+  left: 0;
+  top: 0;
+  z-index: 10;         /* Pour s'assurer qu'elle soit au-dessus du contenu */
+  padding-top: .5rem; /* Espace en haut pour le logo / menu */
+  
+  /* Largeur définie en % ou vw pour s’adapter */
+  width: 20vw;         /* Sur grands écrans : 20% de la fenêtre */
+  min-width: 200px;    /* Taille minimale pour ne pas trop rétrécir */
+  max-width: 300px;    /* Évite qu’elle devienne trop large */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 0.4rem 0.8rem;
+}
+
+.sidebar ul li a {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #22b17a;
+}
+
+/* Zone du logo */
+.logo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Trois variantes de logo (si besoin) */
+.logo-containerL img {
+  width: 120px; 
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-containerS img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Liste déroulante scrollable */
+.scrollable-list {
+  max-height: 50vh;      /* Limite la hauteur */
+  overflow-y: auto;      
+  padding-right: 0.6rem; /* Évite la superposition scrollbar/texte */
+  margin-top: 1.25rem;
+
+  /* Personnalisation scrollbar (Firefox & Webkit) */
+  scrollbar-width: thin;   
+  scrollbar-color: transparent transparent; 
+}
+.scrollable-list::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollable-list::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
+.scrollable-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Flèches scrollbar webkit */
+.scrollable-list::-webkit-scrollbar-button:vertical:start {
+  content: "";
+  display: block;
+  width: 12px; height: 12px;
+  background-color: transparent;
+  border-left: 2px solid #22b17a;
+  border-bottom: 2px solid #22b17a;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+.scrollable-list::-webkit-scrollbar-button:vertical:end {
+  content: "";
+  display: block;
+  width: 12px; height: 12px;
+  background-color: transparent;
+  border-left: 2px solid #22b17a;
+  border-top: 2px solid #22b17a;
+  transform: rotate(225deg);
+  margin: 0 auto;
+}
+
+/* Flèches au-dessus du menu */
+.menu-arrow_H,
+.menu-arrow_B {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border-left: 3px solid #22b17a;
+  border-bottom: 3px solid #22b17a;
+  margin: 0 auto;
+}
+.menu-arrow_H {
+  transform: rotate(135deg);
+  margin-bottom: 0.1px;
+}
+.menu-arrow_B {
+  transform: rotate(318deg);
+  margin-bottom: 0.6rem;
+}
+
+.active-link {
+  color: #22b17a;
+  font-weight: bold;
+}
+
+/* ========================
+   VIDEO EN ARRIERE-PLAN (App.vue)
+=========================*/
+
+/* Video boucle en haut */
+.video-wrapper {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container-appGIF {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* S'assure que la vidéo prend tout l'espace */
+}
+
+/* ========================
+   BANDEAU BLEU
+=========================*/
+
+.bandeau_bleu {
+  position: relative;
+  background: linear-gradient(to right, #060A27, #152742, #5f7b9e);
+  padding: 5vw 0;
+  width: 100%;
+  max-width: 100%;
+  left: 0; right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+/* Container texte dans le bandeau */
+.bandeau_bleu-text-container {
+  max-width: 85%;
+  margin: 0 auto;
+  margin-right: 2vw;
+  padding: 0 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+}
+
+/* Texte du bandeau */
+.bandeau_bleu-text {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  color: rgb(238, 232, 232);
+  letter-spacing: 1.5px;
+  white-space: normal; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Traits au-dessus et en dessous du texte */
+.bandeau_bleu-text-container::before,
+.bandeau_bleu-text-container::after {
+  content: "";
+  width: 15vw;
+  height: 4px;
+  background: linear-gradient(to right, #22b17a, #4fad89, #74b19a);
+  display: block;
+}
+
+/* ========================
+   PAGE BLANCHE (Nos services, etc.)
+=========================*/
+
+.page-blanche_app {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: #F4F4F4;
+}
+
+.page-blanche_app-wrapper {
+  max-width: 900px; 
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 30px 60px rgba(49, 151, 107, 0.1);
+}
+
+/* Titre page blanche */
+.page-blanche_app-title {
+  font-size: 2.375rem; /* 38px approx. */
+  font-weight: bold;
+  color: #777777;
+  margin-bottom: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;  /* On centre le titre */
+}
+
+/* Trait sous le titre */
+.page-blanche_app-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #8BC367;
+  margin: 8px auto 0;
+}
+
+/* Blocs internes */
+.page-blanche_app-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Logos */
+.page-blanche_app-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Texte interne */
+.page-blanche_app-content {
+  max-width: 80%;
+  text-align: center;
+}
+.page-blanche_app-content h3 {
+  font-size: 22px;
+  color: #8BC34A;
+  margin: 15px 0;
+}
+.page-blanche_app-content p {
+  font-size: 16px;
+  color: #888484;
+  margin: 15px 0;
+}
+
+/* Trait de séparation */
+.border-t-2 {
+  border-top: 2px solid #8BC367;
+  width: 80%;
+  max-width: 800px;
+  margin: 2px auto;
+}
+
+/* ========================
+   VIDEO NOTRE CONSTAT
+=========================*/
+
+.video-app-constat {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  margin: 2rem auto;
+  overflow: hidden;
+  box-shadow: 0px 30px 50px rgba(164, 212, 172, 0.1);
+}
+
+.video-app-constat iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+
+/* ========================
+   TROMBINOSCOPE
+=========================*/
+
+.trombinoscope-app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; 
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 30px;
+  border: 2px solid #8BC367;
+}
+
+.profile-name {
+  font-size: 1.125rem; /* 18px */
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+.profile-title {
+  font-size: 1.125rem; 
+  font-style: italic;
+  font-family: "Georgia", serif;
+  color: #555;
+}
+.profile-phone {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #25A875;
+}
+.profile-role {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* ========================
+   MEDIA QUERIES
+=========================*/
+
+/* --- 1) Grandes tablettes/écrans moyens --- 
+  .sidebar {
+    width: 25vw;
+    min-width: 180px; 
+    max-width: 250px;
+  }
+  .page-blanche_app-wrapper {
+    margin-left: 180px; 
+  }
+  .border-t-2 {
+    margin-left: 15vw;
+  }
+  .video-app-constat iframe {
+    height: 400px;
+  }
+}
+
+/* --- 2) Tablettes et écrans intermédiaires (max 768px) --- 
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.25rem; 
+  }
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    position: relative;  /* Ne sera plus fixée, évite chevauchement 
+    padding: 1rem 0;
+  }
+  .sidebar ul li {
+    text-align: center;
+  }
+
+  /* Logo sidebar 
+  .logo-container img {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* Vidéo App.vue 
+  .video-container-appGIF {
+    top: 0;
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  /* Bandeau bleu 
+  .bandeau_bleu {
+    padding: 10vw 0;
+  }
+  .bandeau_bleu-text-container {
+    max-width: 95%;
+    padding: 0 2vw;
+  }
+  .bandeau_bleu-text {
+    font-size: 1.2rem;
+  }
+
+  /* Section page blanche 
+  .page-blanche_app-section {
+    padding: 2rem 1rem;
+  }
+  .page-blanche_app-wrapper {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .page-blanche_app-title {
+    font-size: 1.375rem; /* ~22px 
+  }
+  .page-blanche_app-content h3 {
+    font-size: 1rem;
+  }
+  .page-blanche_app-content p {
+    font-size: 0.9rem;
+  }
+  .border-t-2 {
+    width: 90%;
+    margin-left: auto;
+  }
+
+  /* Vidéo Notre Constat 
+  .video-app-constat iframe {
+    height: 250px;
+  }
+
+  /* Trombinoscope 
+  .trombinoscope-app-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+  }
+  .profile-name {
+    font-size: 1rem;
+  }
+  .profile-title {
+    font-size: 0.9rem;
+  }
+  .profile-phone,
+  .profile-role {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- 3) Petits smartphones (max 480px) --- 
+@media (max-width: 480px) {
+  body {
+    font-size: 0.8rem;
+  }
+  .sidebar {
+    padding: 0.5rem 0;
+  }
+  .sidebar ul li a {
+    font-size: 0.9rem; 
+  }
+
+  .video-container-appGIF {
+    height: 40vh;
+  }
+
+  .bandeau_bleu {
+    padding: 12vw 0; 
+  }
+  .bandeau_bleu-text {
+    font-size: 1rem;
+  }
+
+  .page-blanche_app-wrapper {
+    padding: 1rem;
+  }
+  .page-blanche_app-title {
+    font-size: 1.2rem;
+  }
+  .video-app-constat iframe {
+    height: 200px;
+  }
+  .profile img {
+    width: 120px;
+    height: 120px;
+  }
+}
+*/

@@ -1,0 +1,191 @@
+{% load static %}
+{% load i18n %} <!-- Fr vs En-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N35WL3N1WF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N35WL3N1WF');
+</script>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Admin</title>
+    <script src="{% static 'js/search.js' %}"></script>
+    <link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <!-- Logo cliquable -->
+        <a href="{% url 'index' %}" style="position: absolute; top: 60px; left: 80px; text-align: center; text-decoration: none;">
+          <img src="{% static 'images/logo3.png' %}" alt="Logo Madcap1874 Association" style="width: 99px; height: 99px; border-radius: 50%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+         <!-- <p style="font-size: 14px; color: #521b1b; font-weight: bold; margin-top: 2px; text-decoration: none;">Clic pour retour à la page d'accueil</p> -->
+        </a>
+
+        <br>
+        <br>
+        <br>
+        <br>
+       
+    <h1>Tableau de Bord Administrateur </h1>
+
+    
+    <body>
+
+      <section class="evenement">
+          
+          
+          <h2>{% trans "Inscription aux événements 2025" %}</h2>
+          <a href="{% url 'evenements' %}" class="btn-evenements">Descriptif des événements 2025</a>
+
+      
+          <div class="events-container">
+              <!-- Colonne de gauche -->
+              <div class="column">
+                  <a href="https://docs.google.com/spreadsheets/d/14zfH2i-LJTZ5JIcyzO2ADuuei1u-CZim/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Carénage du 13 au 21 avril 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/1q-2jBNQANnyBACtVumIsVIHI3TXEyhFQ/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Sorties d'hiver 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/18bDOXOwdkzJs-0teuZ_eQZ2nNkipKjEV/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Estartit 2025" %}</span>
+                  </a>
+              </div>
+      
+              <!-- Colonne de droite -->
+              <div class="column">
+                  <a href="https://docs.google.com/spreadsheets/d/1g6aX2AN6d9h6G7yyominjvdQc68EJw4A/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "La Grande Motte 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/1_rSqGOOrETnAYLVXVcPVBFPPAqL8x-6p/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Baléares 2025" %}</span>
+                  </a>
+      
+                  <a href="https://docs.google.com/spreadsheets/d/1GWdNQ3tKPtM0lJq37VUneqOb1Tgm2mMH/edit?gid=984038400" target="_blank" class="event">
+                      
+                      <span>{% trans "Corsica et Monaco 2025" %}</span>
+                  </a>
+              </div>
+          </div>
+      
+          <h2>{% trans "Afin de nous permettre de faire un prévisionnel, merci de vous pré-inscrire avant le 30 mars 2025." %}</h2>
+      
+          <p>{% trans "Les pré-inscriptions se font via les fichiers d’inscriptions mis à votre disposition. En cliquant sur chaque lien, vous accèderez à un fichier sur lequel vous renseignerez votre Prénom, Nom, Téléphone, Mail et indiquerez vos présences en saisissant « X »." %}</p>
+      
+          <p>{% trans "En cas d’un nombre insuffisant d’équipiers ou de skipper, le séjour Baléares sera annulé." %}</p>
+      
+          <p>{% trans "Ces propositions d’activités sont soumises à l’acceptation de nos dossiers de candidature, à la participation des adhérents et des skippers, ainsi qu’aux aléas de la météo." %}</p>
+      
+      </section>
+      
+      </body>
+      
+    <br>
+
+    <h1> Liste des Membres <span>⚓⚓</span></h1>
+    <br>
+    <br>
+
+    <form method="get" action="{% url 'admin_dashboard' %}">
+      <input 
+          type="text" 
+          id="search-input" 
+          name="q" 
+          placeholder="Rechercher un membre..." 
+          value="{{ query }}" 
+          aria-label="Rechercher un membre"> 
+  
+  </form>
+  
+  <br>
+  <br>
+    <div id="members-table">
+      <table>
+        <thead>
+            <tr>
+                <th>Nom - Prénom - Fonction </th>
+                <th>Adresse</th>
+                <th>Téléphone</th>
+                <th>Membre depuis</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+            <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.address }}</td>
+                <td>{{ member.phone }}</td>
+                <td>{{ member.annee_adhesion }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+      
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Importation de la bibliothèque jQuery -->
+<script>
+    $(document).ready(function () {
+        // Lorsque le document est entièrement chargé
+        $("#search-input").on("input", function () {
+            // Récupère la valeur entrée dans le champ de recherche
+            const query = $(this).val();
+
+            // Affiche un message temporaire indiquant que le chargement est en cours
+            $("#members-table tbody").html("<tr><td colspan='4'>Chargement...</td></tr>");
+
+            // Envoie une requête AJAX pour effectuer la recherche
+            $.ajax({
+                url: "{% url 'search_members' %}",  // URL de la vue Django qui gère la recherche
+                data: { q: query },  // Envoie la recherche comme paramètre à la vue
+                success: function (data) {
+                    // Récupère les résultats retournés par le serveur
+                    let results = data.results;
+                    let tableRows = "";
+
+                    // Parcourt les résultats et génère les lignes HTML pour le tableau
+                    results.forEach(member => {
+                        tableRows += `
+                            <tr>
+                                <td>${member.name}</td>
+                                <td>${member.address}</td>
+                                <td>${member.phone}</td>
+                                <td>${member.annee_adhesion}</td>
+                            </tr>`;
+                    });
+
+                    // Met à jour le contenu du tableau avec les nouvelles lignes
+                    $("#members-table tbody").html(tableRows);
+                },
+                error: function () {
+                    // En cas d'erreur, affiche un message d'erreur dans le tableau
+                    console.error("Erreur lors de la récupération des résultats.");
+                    $("#members-table tbody").html("<tr><td colspan='4'>Une erreur est survenue.</td></tr>");
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

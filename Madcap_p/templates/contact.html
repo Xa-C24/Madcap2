@@ -1,0 +1,131 @@
+{% load static %} <!-- Inclusion des fichiers statiques -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Madcap</title>
+
+    <!-- Lien vers les fichiers CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{% static 'js/map_contact.js' %}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon_madcap.png' %}" type="image/png">
+</head>
+<body>
+    {% include 'header.html' %} <!-- Inclusion du header -->
+
+    <main class="don-page">
+      <!-- Messages Flash -->
+      {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+              <li class="message-{{ message.tags }}">{{ message }}</li>
+          {% endfor %}
+      </ul>
+  {% endif %}
+
+        <!-- Section Titre Principal -->
+        <header class="don-header">
+            
+            <div class="bandeau-texte">
+              Pour toute question ou information supplémentaire, remplissez le formulaire ci-dessous.
+            </p>
+          </div>
+        </header>
+
+        <!-- Formulaire de Contact -->
+        <section class="don-section">
+            <h2>Formulaire de Contact</h2>
+            <form action="/submit_contact/" method="POST" class="contact-form">
+                {% csrf_token %} <!-- Sécurité Django pour les formulaires -->
+                
+                <!-- Champ Nom -->
+                <label for="name">Nom et Prénom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+
+            
+               <!-- Champ Email -->
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" value="{{ request.POST.email }}" required>
+                 <!-- asssure la sauvegarde du message en cas de message d'erreur-->
+
+
+                <!-- Champ téléphone -->
+                <label for="Telephone">Téléphone (facultatif) :</label>
+                <input type="text" id="Telephone" name="phone" placeholder="Votre numéro de Téléphone">
+
+                <!-- Champ Message -->
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" placeholder="Votre message (min. 20 caractères)" rows="5" required></textarea>
+
+                <!-- Champ button -->
+                <button type="submit" class="don-button">Envoyer</button>
+            </form>
+        </section>
+        
+        <br>
+        <br>
+        <br>
+
+        <!-- Section Contact Direct -->
+        <section class="don-section">
+            <h2>Nous Contacter Directement</h2>
+            <p><strong>Christian Hurreau,</strong><a> Président de l'Association Madcap-1874</a>
+
+            <p><strong>Email :</strong> 
+                <a href="mailto:association.madcap.1874@gmail.com">association.madcap.1874@gmail.com</a>
+                <div class="contact-info">
+                  <p><strong>Téléphone :</strong> <a href="tel:+33686143955">+33 6 86 14 39 55</a></p>
+              </div>
+
+              <!-- Map Interactive -->
+              <div style="display: flex; align-items: center; gap: 20px;">
+                <!-- Conteneur de la carte -->
+                <div id="map" style="height: 300px; width: 450px;"></div>
+            
+                <!-- Conteneur de l'adresse -->
+                <div style="color: white; font-size: 18px;">
+                    
+                    Quai de Barcelone <br>
+                    66140 Canet-en-Roussillon <br>
+                    France
+                </div>
+            </div>
+
+              <br>
+              <br>
+
+            <!-- Conteneur pour les logos sociaux -->
+            <div class="logos">
+                <p class="social-text">Suivez-nous sur les réseaux </p>
+
+                <!-- Logo Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=100077266193402&locale=fr_FR" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'images/Fb_logo2.png' %}" alt="Logo Facebook" class="logo animated-logo fb">
+                </a>
+
+                <!-- Logo YouTube -->
+                <a href="https://www.youtube.com/@AssociationMadcap1874" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'images/Youtube_logo.png' %}" alt="Logo YouTube" class="logo animated-logo">
+                </a>
+            </div>
+         
+        </section>
+
+        <br>
+        <br> 
+
+    </main>
+
+    {% include 'footer.html' %} <!-- Inclusion du footer -->
+</body>
+</html>

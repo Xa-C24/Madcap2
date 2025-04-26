@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Madcap",
+			"path": "../Madcap"
+		}
+	],
+  "settings": {
+    "liveServer.settings.port": 8001
+  }
+}
